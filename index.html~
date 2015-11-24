@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2015-11-23 Mon 23:04 -->
+<!-- 2015-11-23 Mon 23:54 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Towalker" />
@@ -157,8 +157,18 @@ I have obtained my Doctorate in Microelectronics at the University of São Paulo
 <h2 id="sec-2">Research Interests</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-My main research interests are CAD tools for analog integrated circuits, optimization and artificial intelligence techniques.
+My main research interests are: 
 </p>
+<ul class="org-ul">
+<li>CAD tools for analog integrated circuits
+</li>
+<li>optimization and metaheuristics
+</li>
+<li>analog integrated circuit design
+</li>
+<li>artificial intelligence techniques.
+</li>
+</ul>
 </div>
 </div>
 
@@ -217,9 +227,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h3 id="sec-4-1">Journal publications</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012;
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012; <a href="http://link.springer.com/article/10.1007%252Fs10470-012-9939-z">Link</a>
 </li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012.
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012. <a href="http://www.sbmicro.org.br/jics/html/volume7n1.html">Link</a>
 </li>
 </ul>
 </div>
@@ -229,7 +239,7 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h3 id="sec-4-2">Book chapter</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012.
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a>
 </li>
 </ul>
 </div>
@@ -240,15 +250,15 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h3 id="sec-4-3">Conference publications</h3>
 <div class="outline-text-3" id="text-4-3">
 <ul class="org-ul">
-<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013;
+<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013; <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6644878&url=http%253A%252F%252Fieeexplore.ieee.org%252Fxpls%252Fabs_all.jsp%253Farnumber%253D6644878">Link</a>
 </li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011;
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&arnumber=5750289">Link</a>
 </li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011.
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="http://dl.acm.org/citation.cfm?id=2020897">Link</a>
 </li>
-<li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009
+<li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009 <a href="http://www.ing.unlp.edu.ar/cetad/iberchip/finalprogram.htm">Link</a>
 </li>
-<li>HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05$&mu;$m <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008
+<li>HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05um <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008
 </li>
 </ul>
 </div>
