@@ -1,0 +1,578 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; File name: ` ~/.emacs '
+;;; ---------------------
+;;; Author: Tiago Weber
+
+;;***************************************
+;; Personal Notes
+;;***************************************
+;; To create multiple shells: C-u M-x shell
+;; Publishing Org-mode files to HTML: http://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html
+
+
+;;***************************************
+;; Publish Website 
+;;***************************************
+(require 'ox-publish)
+(setq org-publish-project-alist
+      '(
+
+	("org-notes"
+	 :base-directory "~/projects/gitwebsite/org/"
+	 :base-extension "org"
+	 :publishing-directory "~/projects/gitwebsite/tiagoweber.github.io/"
+	 :recursive t
+	 :publishing-function org-html-publish-to-html
+	 :headline-levels 4             ; Just the default for this project.
+	 :auto-preamble t	 
+	 :section-numbers nil
+	 :table-of-contents nil
+	               :style "<link rel=\"stylesheet\"
+                     href=\"../css/worg.css\"
+                     type=\"text/css\"/>")
+
+	("org-static"
+	 :base-directory "~/projects/gitwebsite/org/"
+	 :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|txt"
+	 :publishing-directory "~/projects/gitwebsite/tiagoweber.github.io/"
+	 :recursive t
+	 :publishing-function org-publish-attachment
+	 )
+	
+	))
+
+
+
+;;***************************************
+;; MELPA PACKAGE
+;;***************************************
+
+;; MELPA (Milkypostman’s Emacs Lisp Package Archive) 
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+;;color-theme
+(color-theme-initialize)
+;;(load-theme 'planet t)
+(load-theme 'adwaita t)
+
+;;***************************************
+;; WindMove - http://www.emacswiki.org/emacs/WindMove
+;; Description: switch windows 
+;;***************************************
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+
+
+;;***************************************
+;; org-mode and org-agenda
+;; Link: http://orgmode.org/worg/org-tutorials/orgtutorial_dto.html
+;;***************************************
+
+(setq org-agenda-todo-list-sublevels t) ;; default
+
+(setq org-todo-keywords
+      '((sequence "TODO" "STARTED" "|" "DONE" "DELEGATED" "CANCELED")))
+
+(setq org-todo-keyword-faces
+           '(("TODO" . org-warning) ("STARTED" . "goldenrod")
+             ("CANCELED" . (:foreground "blue" :weight bold))))
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+(setq org-agenda-files (list "~/Documents/shared/org/org_central.org"
+			     "~/Documents/shared/org/orgcern/org_integration/org_integration.org"
+			     "~/Documents/shared/org/orgresearch/orgresearch.org"
+			     "~/Documents/shared/org/orgcern/orgcern.org"
+			     "~/Documents/shared/org/org_health.org"
+			     "~/Documents/shared/org/orgconcurso/orgconcurso.org"
+			     "~/Documents/shared/org/orgcompanies/org_companies.org"
+			     ))
+
+;; breadcrumbs in agenda
+;; Link: http://stackoverflow.com/questions/22888785/is-it-possible-to-get-org-mode-to-show-breadcrumbs-in-agenda-todo-list
+
+;; // personal code that adds \t in the Global-List of org-agenda
+(defun print-elements-of-list (list)
+  "Print each element of LIST on a line of its own."
+  (setq aststring "")
+  (while list
+    (setq list (cdr list))
+    (setq aststring (concat aststring "\t"))
+    )
+  aststring
+  )
+(setq org-agenda-prefix-format "%i %-12:c %( print-elements-of-list (org-get-outline-path) )")
+
+
+;;***************************************
+;; calendar framework (calfw)
+;;***************************************
+(require 'calfw)
+(require 'calfw-org)
+(custom-set-variables ;; only one per file
+ '(cfw:display-calendar-holidays nil)
+ )
+(defun my-open-calendar ()
+  (interactive)
+  (cfw:open-calendar-buffer
+   :contents-sources
+   (list
+    (cfw:org-create-file-source "General" "~/Documents/shared/general_schedule.org" "Green")  ; orgmode source
+;;    (cfw:org-create-source "Green")  ; orgmode source
+;;   (cfw:howm-create-source "Blue")  ; howm source
+;;    (cfw:cal-create-source "Orange") ; diary source
+;;    (cfw:ical-create-source "Moon" "~/moon.ics" "Gray")  ; ICS source1
+;;    (cfw:ical-create-source "gcal" "https://..../basic.ics" "IndianRed") ; google calendar ICS
+    )))
+
+(global-set-key (kbd "C-x c")  'my-open-calendar)
+;;(global-set-key (kbd "C-x e")  '(find-file "/home/tweber/Documents/shared/general_schedule.org") )
+(global-set-key (kbd "C-x e")  (lambda () (interactive) (find-file "~/Documents/shared/general_schedule.org") ))
+
+;;***************************************
+;; latex configuration
+;;***************************************
+
+(setq latex-run-command "pdflatex")
+(setq tex-command "pdftex")
+
+(defun tex-view ()
+    (interactive)
+    (tex-send-command "okular" (tex-append tex-print-file ".pdf")))
+
+;;***************************************
+;; org-babel
+;;***************************************
+
+;; load the following languages
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((R . t)
+	(sh . t)
+	(octave . t)
+	(matlab . t)
+	(ditaa . t)))
+ ;; do not ask confimation to run octave, matlab and latex code
+(defun ck/org-confirm-babel-evaluate (lang body)
+  (not (or (string= lang "octave") (string= lang "matlab") (string= lang "latex"))))
+(setq org-confirm-babel-evaluate 'ck/org-confirm-babel-evaluate)
+
+;; fontify blocks
+(setq org-src-fontify-natively t)
+
+;; ;;******************************************
+;; ;; export codes to latex with highlighting 
+;; ;;******************************************
+;; ;; http://joat-programmer.blogspot.com.br/2013/07/org-mode-version-8-and-pdf-export-with.html
+
+;; ;; ;; Include the latex-exporter
+;; (require 'ox-latex)
+;; ;; Add minted to the defaults packages to include when exporting.
+;; (add-to-list 'org-latex-packages-alist '("" "minted"))
+;; ;; Tell the latex export to use the minted package for source
+;; ;; code coloration.
+;; (setq org-latex-listings 'minted)
+;; ;; Let the exporter use the -shell-escape option to let latex
+;; ;; execute external programs.
+;; ;; This obviously and can be dangerous to activate!
+
+;;  (setq org-latex-pdf-process
+;;        '("xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
+
+
+
+;; org-present-mode
+
+;;(add-to-list 'load-path "~/path/to/org-present")
+(autoload 'org-present "org-present" nil t)
+
+(add-hook 'org-present-mode-hook
+	  (lambda ()
+	    (org-present-big)
+	    (org-display-inline-images)))
+
+(add-hook 'org-present-mode-quit-hook
+	  (lambda ()
+	    (org-present-small)
+	    (org-remove-inline-images)))
+
+
+;;***************************************
+;; chronometer -> display error, but works
+;;***************************************
+;;(add-to-list 'load-path "~/.emacs.d/chronometer/")
+;;(require 'chronometer)
+
+;;***************************************
+;; artist-mode
+;;***************************************
+(add-hook 'artist-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "<f1>") 'org-mode)
+	    (local-set-key (kbd "<f2>") 'artist-select-op-pen-line) ; f2 = pen mode
+            (local-set-key (kbd "<f3>") 'artist-select-op-line)     ; f3 = line
+	    (local-set-key (kbd "<f4>") 'artist-select-op-square)   ; f4 = rectangle
+	    (local-set-key (kbd "<f5>") 'artist-select-op-ellipse)  ; f5 = ellipse
+	    (local-set-key (kbd "C-z") 'undo)
+     ))
+
+;;***************************************
+;; PlantUML
+;;***************************************
+(setq org-plantuml-jar-path "~/.emacs.d/ob-plantuml/plantuml.jar")
+(add-to-list 'load-path "~/.emacs.d/ob-plantuml/")
+(require 'ob-plantuml)
+
+
+;;***************************************
+;; AucTEX - previewing formulas and images in latex files (among other things)
+;;***************************************
+;(load "preview-latex.el" nil t t)
+
+;;***************************************
+;; IDO
+;;***************************************
+(require 'ido)
+(ido-mode 1)
+(setq autocomplete-mode 0)
+(setq ido-ignore-extensions t)
+
+(eval-after-load "ido"
+  '(progn
+     (setq ido-ignore-buffers (append
+                               ido-ignore-buffers
+                               '(
+                                 "\\` "
+                                 "\\`\\*.*\\*"
+                                 "_region_"
+                                 )))
+     ;; (setq ido-ignore-directories (append
+     ;;                               ido-ignore-directories
+     ;;                               '(
+     ;;                                 "^auto/$"
+     ;;                                 "\\.prv/"
+     ;;                                 "_region_"
+     ;;                                 )))
+     ;; (setq ido-ignore-files (append
+     ;;                         ido-ignore-files
+     ;;                         '(
+     ;;                           "^auto/$"
+     ;;                           "_region_"
+     ;;                           )))
+     ;;(fset 'ido-directory-too-big-p #'ignore)
+     ))
+
+
+;;***************************************
+;; General options
+;;***************************************
+(setq inhibit-splash-screen t)
+(toggle-frame-maximized)
+(setq-default ispell-program-name "aspell")
+
+;;***************************************
+;; Open With minor mode: File associations 
+;;***************************************
+(setq org-file-apps
+      '((auto-mode . emacs)
+        ("\\.x?html?\\'" . "google-chrome %s")
+        ("\\.pdf\\'" . "okular \"%s\"")
+	("\\.ods\\'" . "soffice -calc \"%s\"")
+        ("\\.pdf::\\([0-9]+\\)\\'" . "okular \"%s\" -p %1")
+        ("\\.pdf.xoj" . "xournal %s")))
+
+;; (custom-set-variables
+;;      '(org-file-apps
+;;        (quote
+;;         ((auto-mode . emacs)
+;;          ("\\.mm\\'" . default)
+;;          ("\\.x?html?\\'" . default)
+;;          ("\\.pdf\\'" . gv))))
+;;      '(org-file-apps-defaults-gnu
+;;        (quote
+;;         ((remote . emacs)
+;;          (system . "xdg-open %s")
+;;          (t . mailcap))) t))
+
+;;***************************************
+;; Short commands
+;;***************************************
+(defun reloademacs ()
+  "Reloads .emacs"
+  (interactive)
+  (load-file "~/.emacs"))
+
+(defun recents ()
+ "Reloads .emacs"
+ (interactive)
+ (recentf-open-files))
+
+;;***************************************
+;; Games
+;;***************************************
+(add-to-list 'load-path "~/.emacs.d/games/")
+(require 'poker)
+(require 'malyon)
+					;(require 'mine-sweeper)
+
+
+;;***************************************
+;; EMMS - The Emacs Multi-Media System
+;;***************************************
+(add-to-list 'load-path "~/.emacs.d/emms-3.0/")
+(require 'emms-setup)
+(emms-standard)
+;;(emms-all)
+;;(emms-default-players)
+(setq emms-player-list '(emms-player-mplayer
+			 emms-player-mplayer-playlist))
+(setq emms-source-file-default-directory "~/Music/")
+(require 'emms-streams) ; http://www.gnu.org/software/emms/manual/Streaming-Audio.html
+(emms-stream-toggle-default-action) ; "*The default action when you press RET in the EMMS Stream interface. Can be either \"add\" or \"play\". The default is \"add\"."
+
+;;(emms-add-playlist "~/Music/first")
+(emms-add-playlist "~/Music/all")
+(emms-shuffle)
+
+;; keys
+(global-set-key [(XF86AudioPrev)] 'emms-previous)
+(global-set-key [(XF86AudioPlay)] 'emms-pause)
+(global-set-key [(XF86AudioNext)] 'emms-next)
+;;
+
+
+
+;;***************************************
+;; Recent files
+;;***************************************
+(require 'recentf)
+(recentf-mode 1)
+(setq recentf-max-menu-items 50)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+;;***************************************
+;; Org-mode hooks for links
+;;***************************************
+
+(add-hook 'org-mode-hook
+      '(lambda ()
+         (delete '("\\.svg\\'" . default) org-file-apps)
+         (add-to-list 'org-file-apps '("\\.svg\\'" . "inkscape %s"))))
+
+
+
+;;***************************************
+;; GNUS: mail reader
+;;***************************************
+
+;; Makes Gnus not try to use full screen 
+(setq gnus-use-full-window nil)
+
+;;***************************************
+;; org-format-latex options
+;;***************************************
+; useful for printing formulas in the right size
+;; Options for org-format-latex-options - http://comments.gmane.org/gmane.emacs.orgmode/76595
+(setq org-format-latex-options
+      '(:foreground default
+        :background default
+	:scale 1.5
+	:html-foreground "Black"
+	:html-background "Transparent"
+	:html-scale 1.0 
+        :matchers ("begin" "$1" "$" "$$" "\\(" "\\[")))
+
+;; http://comments.gmane.org/gmane.emacs.orgmode/59504
+;(setq org-image-actual-width nil)
+(setq org-image-actual-width 1800)
+
+
+
+;;***************************************
+;; Loading some modes
+;;***************************************
+
+;SLIME  (LISP interface for emacs)
+(add-to-list 'load-path "/opt/slime")
+(require 'slime-autoloads)
+(setq inferior-lisp-program "/usr/bin/clisp")
+
+;; outline-presentation
+(add-to-list 'load-path "~/.emacs.d/outline-presentation/")
+(load "outline-presentation")
+
+;; W3m web browser
+(add-to-list 'load-path "~/.emacs.d/emacs-w3m/")
+(load "w3m")
+
+;; MATLAB-MODE
+;; (add-to-list 'load-path "~/.emacs.d/matlab-emacs")
+;; (load-library "matlab-load")
+
+;; (autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
+;;  (add-to-list
+;;   'auto-mode-alist
+;;   '("\\.m$" . matlab-mode))
+;; (setq matlab-indent-function t)
+;; (setq matlab-shell-command "matlab")
+
+(autoload 'matlab-mode "matlab" "Matlab Editing Mode" t)
+ (add-to-list
+  'auto-mode-alist
+  '("\\.m$" . matlab-mode))
+ (setq matlab-indent-function t)
+ (setq matlab-shell-command "matlab") ;; this is not the one used by org-babel
+;; matlab -nojvm -r "testtest; quit" |tail -n +7
+
+
+
+;; Read SKILL/OCEAN script as lisp
+ (add-to-list
+  'auto-mode-alist
+  '("\\.ocn$" . lisp-mode))
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;
+;;; Test of Emacs derivates
+;;; -----------------------
+(if (string-match "XEmacs\\|Lucid" emacs-version)
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;; XEmacs
+  ;;; ------
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (progn
+     (if (file-readable-p "~/.xemacs/init.el")
+        (load "~/.xemacs/init.el" nil t))
+  )
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;;; GNU-Emacs
+  ;;; ---------
+  ;;; load ~/.gnu-emacs or, if not exists /etc/skel/.gnu-emacs
+  ;;; For a description and the settings see /etc/skel/.gnu-emacs
+  ;;;   ... for your private ~/.gnu-emacs your are on your one.
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (if (file-readable-p "~/.gnu-emacs")
+      (load "~/.gnu-emacs" nil t)
+    (if (file-readable-p "/etc/skel/.gnu-emacs")
+	(load "/etc/skel/.gnu-emacs" nil t)))
+
+  ;; Custom Settings
+  ;; ===============
+  ;; To avoid any trouble with the customization system of GNU emacs
+  ;; we set the default file ~/.gnu-emacs-custom
+  (setq custom-file "~/.gnu-emacs-custom")
+  (load "~/.gnu-emacs-custom" t t)
+;;;
+)
+;;;
+
+
+;;***************************************
+;; SCREENSHOT FUNCTION
+;;***************************************
+(defun my-org-screenshot ()
+  "Take a screenshot into a time stamped unique-named file in the
+same directory as the org-buffer and insert a link to this file."
+  (interactive)
+  (setq filename
+        (concat
+         (make-temp-name
+          (concat (buffer-file-name)
+                  "_"
+                  (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+					;  (call-process "import" nil nil nil filename)
+  ;;  (suspend-frame)
+  (iconify-frame)
+  (call-process "scrot" nil nil nil "-s" filename)
+  (insert (concat "[[" filename "]]"))
+  (make-frame-visible)
+  (org-display-inline-images))
+
+;; (defun my-org-screenshot2 ()
+;;   "Take a screenshot into a time stamped unique-named file in the
+;; same directory as the org-buffer and insert a link to this file."
+;;   (interactive)
+;;   (setq filesplitlist
+;; 	split-string buffer-file-name "\/")
+	
+;;   (setq filename
+;;         (concat
+;;          (make-temp-name
+;;           (concat (
+;; 		   (loop for i in filesplitlist do
+;; 			 list 
+
+		   
+;; 		   (subseq (split-string buffer-file-name "\/")
+;; 			   1
+;; 			   (-
+;; 			    (length (
+;; 				     split-string buffer-file-name "\/"))
+;; 			    1))
+		   
+;;                   "_"
+;;                   (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+;; ;  (call-process "import" nil nil nil filename)
+;;   (call-process "scrot" nil nil nil "-s" filename)
+;;   (insert (concat "[[" "file:" filename "]]"))
+;;   (org-display-inline-images))
+
+
+
+;;***************************************
+;; FONT-LOCK THINGS
+;;***************************************
+;; http://emacs.stackexchange.com/questions/12089/show-math-formula-in-emacs-when-coding
+;; http://www.gnu.org/software/emacs/manual/html_node/elisp/Font-Lock-Mode.html#Font-Lock-Mode
+
+					; REGULAR EXPRESSION TUTORIAL
+					;http://www.gnu.org/software/emacs/manual/html_node/elisp/Regular-Expressions.html#Regular-Expressions
+
+;; FONT-LOCK CASE: %...% 
+(defface font-lock-doxygen-myfield
+  '((nil (:foreground "Gray" :background "#BBBBBB")))
+  "Special face to highlight % ... %"
+  :group 'font-lock-highlighting-faces)
+(defface font-lock-doxygen-myfieldin
+  '((nil (:foreground "Red" :background "#BBBBBB")))
+  "Special face to highlight % ... %"
+  :group 'font-lock-highlighting-faces)
+
+(font-lock-add-keywords 'org-mode
+			'(
+			  ("\\(%\\)\\(.*\\)\\(%\\)" 1 'font-lock-doxygen-myfield t)
+			  ("\\(%\\)\\(.*\\)\\(%\\)" 2 'font-lock-doxygen-myfieldin t)
+			  ("\\(%\\)\\(.*\\)\\(%\\)" 3 'font-lock-doxygen-myfield t)
+			  )
+			)
+
+
+;;***************************************
+;; Beamer class for org-mode-export
+;;***************************************
+(require 'ox-latex)
+(add-to-list 'org-latex-classes
+             '("beamer"
+               "\\documentclass\[presentation\]\{beamer\}"
+               ("\\section\{%s\}" . "\\section*\{%s\}")
+               ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+               ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
+(require 'ox-beamer)
