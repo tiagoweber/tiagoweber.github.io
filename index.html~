@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2015-11-23 Mon 22:21 -->
+<!-- 2015-11-23 Mon 22:37 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Towalker" />
@@ -141,7 +141,7 @@ for the JavaScript code in this tag.
 <h1 class="title">Tiago Oliveira Weber</h1>
 
 <div class="figure">
-<p><img src="img/foto.gif" alt="foto.gif" width="350px image" title="Photo" align="right" />
+<p><img src="img/foto.gif" alt="foto.gif" width="250px image" title="Photo" align="right" />
 </p>
 </div>
 <div id="outline-container-sec-1" class="outline-2">
@@ -162,9 +162,56 @@ My main research interests are CAD tools for analog integrated circuits, optimiz
 </div>
 </div>
 
+
 <div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Curriculum</h2>
+<h2 id="sec-3">Publications</h2>
 <div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Journal publications</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012;
+</li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">Book chapter</h3>
+<div class="outline-text-3" id="text-3-2">
+</div><div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1">WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012.</h4>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">Conference publications</h3>
+<div class="outline-text-3" id="text-3-3">
+</div><div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1">WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013;</h4>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2">WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011;</h4>
+</div>
+<div id="outline-container-sec-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3">WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011.</h4>
+</div>
+<div id="outline-container-sec-3-3-4" class="outline-4">
+<h4 id="sec-3-3-4">WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009</h4>
+</div>
+<div id="outline-container-sec-3-3-5" class="outline-4">
+<h4 id="sec-3-3-5">HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05$&mu;$m <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Curriculum</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><a href="data/tweber-cv-english.pdf">Vitae</a>
 </li>
@@ -174,9 +221,9 @@ My main research interests are CAD tools for analog integrated circuits, optimiz
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">Professional Social Networks</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Professional Social Networks</h2>
+<div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li><a href="http://www.researchgate.net/profile/Tiago_Oliveira_Weber">ResearchGate</a>
 </li>
