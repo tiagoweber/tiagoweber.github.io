@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anonymous Pro'), local('AnonymousPro'), url(https://fonts.gstatic.com/s/anonymouspro/v8/Zhfjj_gat3waL4JSju74ExEOS6Aq7hJAAidQNR3rgdU.woff2) format('woff2'), url(https://fonts.gstatic.com/s/anonymouspro/v8/Zhfjj_gat3waL4JSju74E1tUcs43uvLUMv3hfHgzs3w.woff) format('woff');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Anonymous Pro Bold'), local('AnonymousPro-Bold'), url(https://fonts.gstatic.com/s/anonymouspro/v8/WDf5lZYgdmmKhO8E1AQud8GfYvzQ_DwqEC2arHsRzXk.woff2) format('woff2'), url(https://fonts.gstatic.com/s/anonymouspro/v8/WDf5lZYgdmmKhO8E1AQudy_O50XgJwSsgBhwZ9pjuTs.woff) format('woff');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Anonymous Pro Italic'), local('AnonymousPro-Italic'), url(https://fonts.gstatic.com/s/anonymouspro/v8/q0u6LFHwttnT_69euiDbWC6lQeGIz_eTiUIAmQEHoRI.woff2) format('woff2'), url(https://fonts.gstatic.com/s/anonymouspro/v8/q0u6LFHwttnT_69euiDbWEOc-qcyZDPXUzSso1bA9YE.woff) format('woff');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Anonymous Pro Bold Italic'), local('AnonymousPro-BoldItalic'), url(https://fonts.gstatic.com/s/anonymouspro/v8/_fVr_XGln-cetWSUc-JpfOE-UnHJJqgmO_01JZd6B-Y.woff2) format('woff2'), url(https://fonts.gstatic.com/s/anonymouspro/v8/_fVr_XGln-cetWSUc-JpfGLkIvtLOz01sdqGPgcEBM8.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url(https://fonts.gstatic.com/s/lora/v9/4vqKRIwnQQGUQQh-PnvdMA.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lora/v9/5-AYViExptypIdFoLKAxTA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(https://fonts.gstatic.com/s/lora/v9/P18Nsu9EiYldSvHIj_0e5w.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lora/v9/XpaepWHcooQHSRnzoohUng.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(https://fonts.gstatic.com/s/lora/v9/_RSiB1sBuflZfa9fxV8cOg.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lora/v9/wXeMvRh7Gui36p_I04Ex6g.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(https://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lora/v9/_IxjUs2lbQSu0MyFEAfa7T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(https://fonts.gstatic.com/s/merriweather/v8/ZvcMqxEwPfh2qDWBPxn6nk4GofcKVZz6wtzX_QUIqsI.woff2) format('woff2'), url(https://fonts.gstatic.com/s/merriweather/v8/ZvcMqxEwPfh2qDWBPxn6nmFp2sMiApZm5Dx7NpSTOZk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url(https://fonts.gstatic.com/s/merriweather/v8/RFda8w1V0eDZheqfcyQ4EOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(https://fonts.gstatic.com/s/merriweather/v8/RFda8w1V0eDZheqfcyQ4EHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(https://fonts.gstatic.com/s/merriweather/v8/ZvcMqxEwPfh2qDWBPxn6nnNuWYKPzoeKl5tYj8yhly0.woff2) format('woff2'), url(https://fonts.gstatic.com/s/merriweather/v8/ZvcMqxEwPfh2qDWBPxn6nnl4twXkwp3_u9ZoePkT564.woff) format('woff');
+}
+
+
+
+
+body {
+    font-family:Lora,serif;
+    font-size:16px;
+    line-height:1.52;
+    background-color:#f8f8f8;
+    text-rendering:optimizeLegibility
+
+    /*
+    font-family: "Gill Sans W01 Book";
+    font-size: 16px;
+    text-rendering: optimizelegibility;
+    font-feature-settings: "kern";
+    */ 
+    padding: 35px;
+    width: 90% ;
+
+    color: #000 ;
+    margin: auto ;
+    background-image: url(/static/pics/bg.jpg);
+    background-origin: border-box ;
+	
+}
+
+a {
+    color: black;
+    font-weight: bold ;
+}
+
+a:hover {
+    color: black;
+}
+
+
+h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    text-decoration: underline ;
+    font-weight: bold ;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 0px;
+    font-weight: bold ;
+}
+
+h4#thequote {
+    padding-bottom: 25px;
+    margin-bottom: 25px ;
+    font-style: italic ;
+    clear: both;
+
+}
+
+h1.title {
+    font-family: Lora,serif ;
+    font-style: italic ;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+div.col-md-4 {
+    padding-top: 0px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    border-left: 1px solid #BBB
+}
+
+div#postamble {
+    bottom: 0px;
+    width: 95%;
+    /* Set the fixed height of the footer here */
+    text-align: center;
+    clear: both;
+}
+
+div#org-div-home-and-up {
+    display: none ;
+}
+
+div#content {
+    background-color: white;
+    border: 1px solid black;
+    padding: 15px ;
+    padding-left: 35px ;
+    padding-right: 35px;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+    min-height: 800px;
+}
+
+code {
+    color: #1E1C1D;
+    background-color: #ECECEC;
+}
+
+.org-src-container {
+    font-weight: bold ;
+}

@@ -1,0 +1,106 @@
+@media all and (min-width: 1000px){
+    body {
+        max-width: 80%;
+        margin: auto; } }
+
+@media all and (max-width: 1000px){
+    body { margin: 1em; } }
+
+body {
+  font-family: "Ubuntu", serif; }
+
+#me {
+  position: absolute;
+  top: 0.5em;
+  width: 300px;
+  height: 300px;
+  background-image: url(eric-schulte.jpg); }
+
+@media all and (min-width: 1000px){
+    #me { left: 10%; } }
+
+@media all and (max-width: 1000px){
+    #me { left: 1em; } }
+
+#me:hover {
+    background-image: url(eric-schulte.png); }
+
+#contact {
+  position: absolute;
+  top: 2.25em; }
+
+@media all and (min-width: 1000px){
+    #contact { right: 10%; } }
+
+@media all and (max-width: 1000px){
+    #contact { right: 1em; } }
+
+#pgp {
+  position: absolute;
+  font-size: 0.625em;
+  top: 6.125em; }
+
+@media all and (min-width: 1000px){
+    #pgp { right: 10%; } }
+
+@media all and (max-width: 1000px){
+    #pgp { right: 1em; } }
+
+.title {
+  text-align: left;
+  margin-left: 310px;
+  border-bottom-style: solid;
+  border-bottom-color: lightgray; }
+
+#table-of-contents {
+  margin-left: 310px; }
+  #table-of-contents h2 {
+    display: none; }
+  #table-of-contents ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0; }
+
+#outline-container-publications li {
+  margin: 1em;
+  list-style-type: none; }
+
+h1, h2, h3, h4 {
+  font-weight: normal; }
+
+#content {
+  color: #2e2e2e; }
+
+#outline-container-research {
+  padding-top: 100px; }
+
+.outline-text-3 {
+  margin-left: 2em; }
+
+h3 {
+  margin-left: 1em;
+  color: black;
+  border-bottom-style: solid;
+  border-bottom-color: lightgray; }
+
+a {
+  text-decoration: none;
+  color: #4a708b; }
+
+a:hover {
+  text-decoration: underline; }
+
+.img-link a {
+  color: white; }
+
+blockquote {
+  border-left: 1px solid gray;
+  padding-left: 4px; }
+
+#doc-info {
+  margin-top: 3em;
+  margin: auto;
+  float: center;
+  text-align: center;
+  font-size: 8pt;
+  max-width: 75%; }
