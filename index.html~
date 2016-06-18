@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2015-11-24 Tue 01:16 -->
+<!-- 2016-06-18 Sáb 08:49 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Towalker" />
+<meta  name="author" content="Tiago" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -148,7 +148,10 @@ for the JavaScript code in this tag.
 <h2 id="sec-1">About</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-I have obtained my Doctorate in Microelectronics at the University of São Paulo (USP) in 2015 and have received the BS Degree in Electrical Engineering at the Federal University of Santa Maria in 2010. I'm currently a member of the Integrated Systems Laboratory. My recent activities are related to the design and test of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. 
+I have obtained my Doctorate in Microelectronics at the University of São Paulo (USP) in 2015 
+and have received the BS Degree in Electrical Engineering at the Federal University of Santa Maria in 2010. 
+I was a member of the Integrated Systems Laboratory (LSI) where my work was related to the design and test of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. 
+Currently I am a professor at the Federal University of Santa Catarina (UFSC), Araranguá, Brazil. 
 </p>
 </div>
 </div>
@@ -227,6 +230,8 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h3 id="sec-4-1">Journal publications</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
+<li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016; <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a> 
+</li>
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012; <a href="http://link.springer.com/article/10.1007%252Fs10470-012-9939-z">Link</a>
 </li>
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012. <a href="http://www.sbmicro.org.br/jics/html/volume7n1.html">Link</a>
