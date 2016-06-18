@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2015-11-24 Tue 01:06 -->
+<!-- 2015-11-24 Tue 01:16 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Towalker" />
@@ -294,7 +294,7 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h2 id="sec-7">Generalities</h2>
 <div class="outline-text-2" id="text-7">
 <ul class="org-ul">
-<li><a href="data/.emacs">Personal emacs config file</a>
+<li><a href="data/emacs.txt">Personal emacs config file</a> 
 </li>
 </ul>
 </div>
