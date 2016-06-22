@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-06-20 Seg 23:43 -->
+<!-- 2016-06-22 Qua 11:14 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -161,12 +161,24 @@ for the JavaScript code in this tag.
 <div id="outline-container-sec-1" class="outline-2">
 <h2 id="sec-1">About</h2>
 <div class="outline-text-2" id="text-1">
-<p>
-I have obtained my Doctorate in Microelectronics at the University of São Paulo (USP) in 2015 
-and have received the BS Degree in Electrical Engineering at the Federal University of Santa Maria in 2010. 
-I was a member of the Integrated Systems Laboratory (LSI) where my work was related to the design and test of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. 
-Currently I am a professor at the Federal University of Santa Catarina (UFSC), Araranguá, Brazil. 
+
+<div class="figure">
+<p><img src="img/linkedin.png" alt="linkedin.png" width="200px image" title="Photo" align="right" /> 
 </p>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">I have obtained my Doctorate in Microelectronics at the University of São Paulo (USP) in 2015 and have received the BS Degree in Electrical Engineering at the Federal University of Santa Maria in 2010. I was a member of the Integrated Systems Laboratory (LSI) where my work was related to the design and test of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. Currently I am a professor at the Federal University of Santa Catarina (UFSC), Araranguá, Brazil.</td>
+</tr>
+</tbody>
+</table>
 </div>
 
 <div id="outline-container-sec-1-1" class="outline-3">
