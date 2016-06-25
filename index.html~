@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-06-25 Sáb 12:30 -->
+<!-- 2016-06-25 Sáb 12:31 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -380,6 +380,12 @@ This section is under construction. More specifically, I am adding a "comment" f
 <div class="outline-text-3" id="text-6-1">
 <p>
 Test entry 
+</p>
+
+<p>
+<div id="disqus_thread"></div><script> var disqus_config = function () {
+ this.page.url = tiagoweber.github.io; this.page.identifier = blogentry_25_06_2016_1;};
+ (function() {var d = document, s = d.createElement('script');s.src = 'http://tiagoweber.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </p>
 </div>
 </div>
