@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-06-23 Qui 22:50 -->
+<!-- 2016-06-23 Qui 22:55 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -199,45 +199,27 @@ My main research interests are:
 </ul>
 </div>
 </div>
-</div>
 
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Teaching</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Contact</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-<a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a>: I lecture classes to the Computer Engineering course:
+E-mail: tiago.weber (at) ufsc.br
 </p>
 
-<ul class="org-ul">
-<li>Second semester of 2016 (planned):
-<ul class="org-ul">
-<li>Electric Circuits
-</li>
-<li>Data Communication
-</li>
-<li>Signal Acquisition
-</li>
-</ul>
-</li>
-<li>First semester of 2016:  
-<ul class="org-ul">
-<li>Electric Circuits
-</li>
-<li>Fundamentals of Mathematics to Computer Science
-</li>
-</ul>
-</li>
-</ul>
+<p>
+Phone: +55 48 9111 2228  
+</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Education</h2>
-<div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">Doctorate in Microelectronics - June 2015</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Education</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Doctorate in Microelectronics - June 2015</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 University of São Paulo - São Paulo, Brazil
 </p>
@@ -250,9 +232,9 @@ University of São Paulo - São Paulo, Brazil
 </div>
 </div>
 
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2">B.S. in Electrical Engineering - Jan. 2010</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">B.S. in Electrical Engineering - Jan. 2010</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 Federal University of Santa Maria - Santa Maria, Brazil
 </p>
@@ -282,12 +264,13 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">Publications</h2>
-<div class="outline-text-2" id="text-4">
-</div><div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1">Journal publications</h3>
-<div class="outline-text-3" id="text-4-1">
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Publications</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">Journal publications</h3>
+<div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016; <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a> 
 </li>
@@ -299,9 +282,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 </div>
 
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2">Book chapter</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2">Book chapter</h3>
+<div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a>
 </li>
@@ -310,9 +293,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3">Conference publications</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3">Conference publications</h3>
+<div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013; <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=6644878&url=http%253A%252F%252Fieeexplore.ieee.org%252Fxpls%252Fabs_all.jsp%253Farnumber%253D6644878">Link</a>
 </li>
@@ -328,6 +311,38 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 </div>
 </div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Teaching</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a>: I lecture classes to the Computer Engineering course:
+</p>
+
+<ul class="org-ul">
+<li>Second semester of 2016 (planned):
+<ul class="org-ul">
+<li>Electric Circuits
+</li>
+<li>Data Communication
+</li>
+<li>Signal Acquisition
+</li>
+</ul>
+</li>
+<li>First semester of 2016:  
+<ul class="org-ul">
+<li>Electric Circuits
+</li>
+<li>Fundamentals of Mathematics to Computer Science
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
 
 <div id="outline-container-sec-5" class="outline-2">
 <h2 id="sec-5">Curriculum</h2>
@@ -358,19 +373,6 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <p>
 This section is under construction. More specifically, I am adding a "comment" feature to the site while still using org-mode as my publishing tool.
 </p>
-</div>
-
-<div id="outline-container-sec-6-1" class="outline-3">
-<h3 id="sec-6-1">Contact</h3>
-<div class="outline-text-3" id="text-6-1">
-<p>
-E-mail: tiago.weber (at) ufsc.br
-</p>
-
-<p>
-Phone: +55 48 9111 2228
-</p>
-</div>
 </div>
 </div>
 </div>
