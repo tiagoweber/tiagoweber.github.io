@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-06-26 Dom 18:11 -->
+<!-- 2016-06-26 Dom 18:12 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -393,7 +393,7 @@ This section is under construction. More specifically, I am adding a "comment" f
 <h3 id="sec-6-1"><a href="entry1.html">Entry1</a></h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
-<a href="index.html">Back to home</a> 
+<a href="../index.html">Back to home</a>
 </p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
