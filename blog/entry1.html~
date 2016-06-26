@@ -147,7 +147,7 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Creating a Blog with Emacs Org-mode</h1>
 <p>
-<a href="index.html">Back to home</a> 
+<a href="../index.html">Back to home</a>
 </p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
