@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber - Blog</title>
-<!-- 2016-06-27 Seg 17:39 -->
+<!-- 2016-06-27 Seg 18:42 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -205,19 +205,19 @@ by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">
 </table>
 
 <p>
-Picture this. You are creating a report, studying or preparing a class. While you write your text, you suddently feel that it is time to show in a circuit how your project works. Now the adventure begins: to add the results of a given simulation to your document, you will have to open your simulation software in another window, describe the circuit using an schematic editor, simulate it and then copy and paste the results to your text file. You might as well copy the image of some waveforms. You will also have to describe the circuit elements in such a way that the reader of your report knows what you have simulated. 
+Picture this. You are creating a report, studying or preparing a class. While you write your text, you suddenly feel that it is time to show in a circuit how your project works. Now the adventure begins: to add the results of a given simulation to your document, you will have to open your simulation software in another window, describe the circuit using an schematic editor, simulate it and then copy and paste the results to your text file. You might as well copy the image of some waveforms. Additionaly, You will also have to describe the circuit elements in such a way that the reader of your report knows what you have simulated. 
 </p>
 
 <p>
-In this process a lot can be lost: the quality of your schematic screenshots may or may not be delightful, but even if the quality is great, there is still a lot of information that is not accessible to the eyes in a schematic such as the various component properties, simulation parameters and component models. In top of that, if you are like me, you will lose a lot of time editing and working with the waveforms to make them fit well in the report. And this is usually made either with an image editor (such as Gimp or Inkscape) or with gnuplot (if you're performing the additional step of exporting the data out of the simulator). After you are done, if anything needs a change, you will have to repeat all this endevour onde again, for every change. In other words, you'll spend more time working with "report matters" than with conceptual matters.
+In this process a lot can be lost: the quality of your schematic screenshots may or may not be delightful to the eye, but even if the quality is great, there is still a lot of information that is not accessible through an image of the schematic. These can be the various component properties, simulation parameters and component models. In top of that, if you are like me, you will probably spend a lot of time editing and working with the waveforms to make them fit well in the report. And this is usually made either with an image editor (such as Gimp or Inkscape) or with gnuplot (if you're performing the additional step of exporting the data out of the simulator). After you are done, if anything needs a change, you will have to repeat all this endeavor once again, for every change. In other words, you'll spend more time working with "report matters" than with conceptual matters.
 </p>
 
 <p>
-Now here comes Emacs, Org-mode and Babel to save you. If you have never worked with emacs and you like programming, drop all you are doing and give it a great share of attention. Now, I admit it is hard to explain emacs philosophy without either sounding like a preacher or end up over simplifying its features and calling no attention to it. So I will make no such attempt, and will just say it is a programmable text editor which may fit your every need according to how you program it. Serve a full spoon of emacs tutorials and go for it. In the other hand, org-mode, which is an emacs mode, may have the power to fix your messy life (or improving your already organized one). 
+Now here comes Emacs, Org-mode and Babel to save you. If you have never worked with Emacs and you like programming, drop all you are doing and give it a great share of attention. Now, I admit it is hard to explain Emacs philosophy without sounding like a preacher. So I will make no such attempt, and will just say it is a customizable (programmable) text editor which may fit your every need according to how you program it. Get a full spoon of Emacs tutorials and go for it. On the other hand, Org-mode, which is an Emacs mode, may have the power to fix your messy life (or improving your already organized one). 
 </p>
 
 <p>
-But let us go back to our original problem. While using emacs and org-mode, you can add snippets of executable code through Babel. Now here comes the magic. While you add code to your report, you can actually run it and have its results directly added to the report. Doing that, you end up with a live document. It will update (results, graphs, text) according to your modifications in the code. This is related to the concept of <a href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a> and <a href="https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research">reproducible research</a>.
+But let us get back to our original problem. While using Emacs and Org-mode, you can add snippets of executable code through Babel. Now here comes the magic. According to the official <a href="http://orgmode.org/worg/org-contrib/babel/">Org-mode site</a>, "Babel is Org-mode's ability to execute source code within Org-mode documents". While you add code to your report, you can actually run it and have its results directly added to the report. Doing that, you end up with a live document. It will update (results, graphs, text) according to your modifications in the code. This relates with the concept of <a href="https://en.wikipedia.org/wiki/Literate_programming">literate programming</a> and <a href="https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research">reproducible research</a>.
 </p>
 
 <p>
@@ -264,7 +264,7 @@ So now you probably already understand what we are going to do. We will treat ou
 </li>
 <li>As in babel you can work with any language you desire and mix results from different code blocks, you can take results from your circuit and feed them into a matlab code, verilog, VHDL, verilog-a,&#x2026; Also, you can take results from other code block and feed it in your circuits.
 </li>
-<li>As you will be working in org-mode, you will be able to export your results to any format supported by it, like latex or html. For instance, this webpage (together with the simulation code) was made entirely in emacs.
+<li>As you will be working in Org-mode, you will be able to export your results to any format supported by it, like latex or html. For instance, this webpage (together with the simulation code) was made entirely in Emacs.
 </li>
 </ul>
 </div>
@@ -290,17 +290,15 @@ So now you probably already understand what we are going to do. We will treat ou
 What you need is basically 
 </p>
 <ul class="org-ul">
-<li>emacs
+<li><a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="http://orgmode.org/">Org-mode</a> (already in Emacs)
 </li>
-<li>org-mode (already in emacs)
+<li><a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (by Carlin J. Vieri)
 </li>
-<li>spice-mode
+<li><a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a> (if you want fontified netlist export to html)
 </li>
-<li>htmlize (if you want fontified netlist export to html)
+<li><a href="file:attachments/ob-spice.el">ob-spice</a> (described below) or some variation created by you
 </li>
-<li>ob-spice (described below) or some variation created by you
-</li>
-<li>a spice simulator capable of running in batch mode (from command line). In my case, I used ngspice.
+<li>a spice simulator capable of running in batch mode (from command line). In my case, I used <a href="http://ngspice.sourceforge.net/">Ngspice</a>.
 </li>
 </ul>
 </div>
@@ -309,17 +307,26 @@ What you need is basically
 <h4 id="sec-1-2-1">The ob-spice</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
-The community has build a <a href="http://orgmode.org/worg/org-contrib/babel/languages.html">wide range of language support to Babel</a>. However, I could not find spice in this list or anything related to spice simulation. Therefore, I created my own, which is admitedly in a very early stage of development. However, as it already does the job (at least for my needs) I decided to share it <a href="attachments/ob-spice.el">here</a>.
+The community has build a <a href="http://orgmode.org/worg/org-contrib/babel/languages.html">wide range of language support to Babel</a>. However, I could not find spice in this list or anything related to spice simulation. Therefore, I created my own, which is admittedly in a very early stage of development. However, as it already does the job (at least for my needs) I decided to share it <a href="attachments/ob-spice.el">here</a>.
 </p>
-</div>
-</div>
 
+<p>
+You will need to add something like this to your Emacs config to load this file:
+</p>
+<div class="org-src-container">
+
+<pre class="src src-elisp">(add-to-list 'load-path <span style="color: #4E9A06;">"~/.emacs.d/ob-spice/"</span>)
+(<span style="color: #A52A2A; font-weight: bold;">require</span> '<span style="color: #F5666D;">ob-spice</span>)
+</pre>
+</div>
+</div>
+</div>
 
 <div id="outline-container-sec-1-2-2" class="outline-4">
 <h4 id="sec-1-2-2">Exporting to PNG</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
-You need to add the line "set gnuplot_terminal=png" in the control section of your ngspice code. If you don't, ngspice will export to eps, which will not be previewed in org-mode. It is my intention to add this control option as default to ob-spice.
+You need to add the line "set gnuplot_terminal=png" in the control section of your Ngspice code. If you don't, Ngspice will export to eps, which will not be previewed in Org-mode. It is my intention to add this control option as default to ob-spice.
 </p>
 </div>
 </div>
@@ -328,8 +335,8 @@ You need to add the line "set gnuplot_terminal=png" in the control section of yo
 <h4 id="sec-1-2-3">Fontification</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
-Using spice-mode.el (link and authors), the fontification for spice circuits is recognized by babel in the buffer. 
-When I used it together with with htmlize (link and authors), however, there was a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in emacs. 
+Using <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a>, the fontification for spice circuits is recognized by babel in the buffer. 
+When I used it together with with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there was a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
 </p>
 </div>
@@ -337,15 +344,15 @@ To solve the problem, I just had to comment all lines that use make-local-hook f
 
 
 <div id="outline-container-sec-1-2-4" class="outline-4">
-<h4 id="sec-1-2-4">Removing ngspice plot persistence</h4>
+<h4 id="sec-1-2-4">Removing Ngspice plot persistence</h4>
 <div class="outline-text-4" id="text-1-2-4">
 <p>
-If you, like me, dislike having to close the plot window everytime you simulate your circuits, this tweak in ngspice spice might do the trick.
-For it, you will have to download the source code of ngspice and change 1 line of code.
+If you, like me, dislike having to close the plot window every time you simulate your circuits, this tweak in Ngspice spice might do the trick.
+For it, you will have to download the source code of Ngspice and change 1 line of code.
 </p>
 
 <p>
-I downloaded ngspice-26.tar.gz and altered "ngspice-26/src/frontend/plotting/gnuplot.c" to disable the persistance of gnuplot.
+I downloaded ngspice-26.tar.gz and altered "ngspice-26/src/frontend/plotting/gnuplot.c" to disable the persistence of gnuplot.
 </p>
 
 <p>
@@ -408,15 +415,30 @@ value_at_five_tau = 0.00671732
 <h3 id="sec-1-4">Final Words</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
-Using emacs and org-mode together with babel to run codes within a live document is an extremely useful productivity technique. In the case of spice circuits, it might help to create a bridge between simulating circuits, creating reports and interacting with different programming languages.
+Using Emacs and Org-mode to run codes within a live document is an extremely useful productivity technique. In the case of spice circuits, it might help to create a bridge between simulating circuits, creating reports and interacting with different programming languages.
 </p>
 
 
-<p>
-:<div id="disqus_thread"></div><script> var disqus_config = function () {
-:this.page.url = tiagoweber.github.io; this.page.identifier = entry1;};
-:(function() {var d = document, s = d.createElement('script'); s.src = '//tiagoweber.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })();</script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</p>
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */    
+    var disqus_config = function () {
+        this.page.url = tiagoweber.github.io;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = entry1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//tiagoweber.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 </div>
 </div>
