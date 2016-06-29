@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-06-29 Qua 11:50 -->
+<!-- 2016-06-29 Qua 11:57 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -109,7 +109,7 @@ ga('send', 'pageview');
 </script>
 <meta property="og:title" content="Simulating Circuits with Emacs, Org-mode, Babel and Ngspice"/>
 <meta property="og:type" content="article"/>
-<meta property="og:image" content="http://tiago.weber.github.io/blog/attachments/entry1_image_700_400.png"/>
+<meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/entry1_image_700_400.png"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
