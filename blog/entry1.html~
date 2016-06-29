@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</title>
-<!-- 2016-06-29 Qua 11:41 -->
+<title>Tiago Oliveira Weber</title>
+<!-- 2016-06-29 Qua 11:50 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -107,6 +107,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
 </script>
+<meta property="og:title" content="Simulating Circuits with Emacs, Org-mode, Babel and Ngspice"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://tiago.weber.github.io/blog/attachments/entry1_image_700_400.png"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -156,7 +159,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h1>
+<h1 class="title">Tiago Oliveira Weber</h1>
 <p>
 <a href="../index.html">Back to home</a>
 </p>
