@@ -3,8 +3,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</title>
-<!-- 2016-06-27 Seg 19:34 -->
+<title>Tiago Oliveira Weber - Blog</title>
+<!-- 2016-06-27 Seg 19:36 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -156,7 +156,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h1>
+<h1 class="title">Tiago Oliveira Weber - Blog</h1>
 <p>
 <a href="../index.html">Back to home</a>
 </p>
