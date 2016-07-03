@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-06-29 Qua 12:32 -->
+<!-- 2016-06-30 Qui 01:12 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -200,7 +200,7 @@ In this process a lot can be lost: the quality of your schematic screenshots may
 </p>
 
 <p>
-Now here comes Emacs, Org-mode and Babel to save you. If you have never worked with Emacs and you like programming, drop all you are doing and give it a great share of attention. Now, I admit it is hard to explain Emacs philosophy without sounding like a preacher. So I will make no such attempt, and will just say it is a customizable (programmable) text editor which may fit your every need according to how you program it. Get a full spoon of Emacs tutorials and go for it. On the other hand, Org-mode, which is an Emacs mode, may have the power to fix your messy life (or improving your already organized one). 
+Now here comes Emacs, Org-mode and Babel to save you. If you have never worked with Emacs and you like programming, drop all you are doing and give it a great share of attention. Now, I admit it is hard to explain Emacs philosophy without sounding like a preacher. So I will make no such attempt, and will just say it is a customizable (programmable) text editor which may fit your every need according to how you program it. Get a full spoon of Emacs tutorials and go for it. On the other hand, Org-mode, which is an Emacs mode, may have the power to fix your messy life (or improve your already organized one). 
 </p>
 
 <p>
@@ -323,7 +323,7 @@ You need to add the line "set gnuplot_terminal=png" in the control section of yo
 <div class="outline-text-4" id="text-1-2-3">
 <p>
 Using <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a>, the fontification for spice circuits is recognized by babel in the buffer. 
-When I used it together with with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there was a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
+When I used it together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there was a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
 </p>
 </div>
