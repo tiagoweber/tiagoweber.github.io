@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-07-03 Dom 04:15 -->
+<!-- 2016-07-03 Dom 04:21 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -306,6 +306,19 @@ You will need to add something like this to your Emacs config to load this file:
 (<span style="color: #A52A2A; font-weight: bold;">require</span> '<span style="color: #F5666D;">ob-spice</span>)
 </pre>
 </div>
+
+<p>
+When adding the netlist, you should create a header like the following (this is the one I used to create the previous opamp simulation):
+</p>
+<pre class="example">
+#+BEGIN_SRC spice :results drawer :exports both :var file="amplifier_vcvs_1000"
+... your netlist here ...
+#+END_SRC
+</pre>
+
+<p>
+In this example, the variable "file" is the name of the png file that will be created by ngspice and included in the report.
+</p>
 </div>
 </div>
 
