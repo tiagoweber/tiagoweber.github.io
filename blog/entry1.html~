@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-07-04 Seg 01:38 -->
+<!-- 2016-07-07 Qui 19:36 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -259,7 +259,7 @@ What you need is basically
 <ul class="org-ul">
 <li><a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="http://orgmode.org/">Org-mode</a> (already in Emacs)
 </li>
-<li><a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (by Carlin J. Vieri)
+<li><a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (by Carlin J. Vieri) or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a> (by Van der Plas, Rouat and Vieri)
 </li>
 <li><a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a> (if you want fontified netlist export to html)
 </li>
@@ -315,8 +315,7 @@ You need to add the line "set gnuplot_terminal=png" in the control section of yo
 <h4 id="sec-1-2-3">Fontification</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
-Using <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a>, the fontification for spice circuits is recognized by babel in the buffer. 
-When I used it together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there was a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
+Using the original <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a>) the fontification for spice circuits is recognized by babel in the buffer. If you use the newer version, it is all fine (I thank to Colin for pointing this new version on the comment section). If you use the original spice-mode version together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there is a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
 </p>
 </div>
