@@ -1,7 +1,7 @@
 ;;; ob-spice.el --- org-babel functions for spice evaluation
 
 ;; Author: Tiago Oliveira Weber
-;; Version: 0.2
+;; Version: 0.1
 ;; Homepage: http://tiagoweber.github.io
 
 ;; Org-Babel support for evaluating spice script.
@@ -20,7 +20,8 @@
   (let* (
 	 (vars (mapcar #'cdr (org-babel-get-header params :var)))
 	 )
-    ;; replace variable names preceded by '$' with the value of the variable (based on ob-gnuplot.el)
+    ;; replace any variable names preceded by '$' with the actual
+    ;; value of the variable
     (mapc (lambda (pair)
 	    (setq body (replace-regexp-in-string
 			(format "\\$%s" (car pair)) (cdr pair) body)))
@@ -36,13 +37,12 @@
 	)    
     (org-babel-eval "ngspice -b " body)
     (setq textfile (concat (cdar vars) ".txt"))
-    (setq imagefile (concat (cdar vars) ".png"))
     ;; produce results    
     (concat
      (if (file-readable-p textfile)
 	 (get-string-from-file textfile))
      '"#+ATTR_HTML: :width 600px"
-     (concat "\n [[file:./" imagefile "]]")
+     (concat "\n [[file:./" (cdar vars) ".png]]")
      )
     )
   )
