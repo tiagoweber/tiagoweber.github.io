@@ -2,7 +2,6 @@
 
 ;; Author: Tiago Oliveira Weber
 ;; Version: 0.2
-;; 2016
 ;; Homepage: http://tiagoweber.github.io
 
 ;; Org-Babel support for evaluating spice script.
@@ -21,15 +20,10 @@
   (let* (
 	 (vars (mapcar #'cdr (org-babel-get-header params :var)))
 	 )
-    ;; replace variable names preceded by '$' with its value
-    ;; and if it is not a string, convert it to string
+    ;; replace variable names preceded by '$' with the value of the variable (based on ob-gnuplot.el)
     (mapc (lambda (pair)
 	    (setq body (replace-regexp-in-string
-			(format "\\$%s" (car pair))
-			(if (stringp (cdr pair)) (cdr pair)   ;then
-			    (number-to-string (cdr pair)) ; else
-			    )
-			body)))
+			(format "\\$%s" (car pair)) (cdr pair) body)))
 	  vars)
     )
   body
