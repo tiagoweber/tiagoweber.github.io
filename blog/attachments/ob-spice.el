@@ -35,15 +35,22 @@
 	(vars (mapcar #'cdr (org-babel-get-header params :var)))	
 	)    
     (org-babel-eval "ngspice -b " body)
-    (setq textfile (concat (cdar vars) ".txt"))
-    (setq imagefile (concat (cdar vars) ".png"))
+
+    ;; loop through all pairs (elements) of the list vars and set text and image file if finds "file" var
+    (mapc (lambda (pair)
+	    (when (string= (car pair) "file")
+	      (setq textfile (concat (cdr pair) ".txt"))
+	      (setq imagefile (concat (cdr pair) ".png"))	      
+	      )
+	    )
+	  vars)
     ;; produce results    
     (concat
      (if (file-readable-p textfile)
 	 (get-string-from-file textfile))
      '"#+ATTR_HTML: :width 600px"
-     (concat "\n [[file:./" imagefile "]]")
-     )
+     (concat "\n [[file:./" imagefile "]]")     
+     )    
     )
   )
 
