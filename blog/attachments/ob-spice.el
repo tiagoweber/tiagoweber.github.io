@@ -1,7 +1,7 @@
 ;;; ob-spice.el --- org-babel functions for spice evaluation
 
 ;; Author: Tiago Oliveira Weber
-;; Version: 0.2
+;; Version: 0.3
 ;; 2016
 ;; Homepage: http://tiagoweber.github.io
 
@@ -16,24 +16,66 @@
 
 (add-to-list 'org-babel-tangle-lang-exts '("spice" . "cir"))
 
+(defun ob-spice-concat (wordlist)
+  "Concat elements of a list of string into a string separated by spaces"
+  ;; example of usage
+  ;; (ob-spice-concat '("This" "is" "a" "long" "journey"))  
+  (setq newtext (car wordlist)) ; first word is without space before
+  (setq wordlist (rest wordlist)) ; exclude the first word from the list
+  (dolist (word wordlist newtext) (setq newtext (concat newtext " " word)) )  ;loop through the list and concatenate the values
+  )
+
+
+
 (defun org-babel-expand-body:spice (body params)
   "Expand BODY according to PARAMS, return the expanded body."
   (let* (
 	 (vars (mapcar #'cdr (org-babel-get-header params :var)))
 	 )
-    ;; replace variable names preceded by '$' with its value
-    ;; and if it is not a string, convert it to string
-    (mapc (lambda (pair)
-	    (setq body (replace-regexp-in-string
-			(format "\\$%s" (car pair))
-			(if (stringp (cdr pair)) (cdr pair)   ;then
-			    (number-to-string (cdr pair)) ; else
-			    )
-			body)))
-	  vars)
-    )
-  body
-  )
+    
+    (setq newbody "");
+    (setq bodylinelist (split-string body "\n"))
+    (dolist (line bodylinelist newbody) (progn  ;loop through list of lines
+					  (setq wordlist (split-string line " "))
+					  (setq firstword 1)
+					  (dolist (word wordlist) (progn  ;loop through the words
+								    (if (string-match "\\$\\(.*\\)\\[\\(.*\\)\\]" word)
+									(progn 
+									  ;; if matchs a vector variable format
+									  (setq varname (match-string 1 word))
+									  (setq varindex (match-string 2 word))
+									  ;; search varname in vars and use the value of varindex to word
+									   (setq word (nth (string-to-number varindex)
+											   (car
+											    (assoc-default varname vars
+													   (lambda (key candidate)
+													     (string= key candidate))))))
+									   (if (not (stringp word)) (setq word (number-to-string word)))
+									   )
+								      ) ;; end of (if (string-match "\\$\\(.*\\)\\[\\(.*\\)\\]" word))
+								      (if (string-match "\\$\\(.*\\)" word)
+									  (progn
+									    ;; if matchs a non-vector variable format
+									    (setq varname (match-string 1 word))
+									    (setq word
+										  (assoc-default varname vars
+												 (lambda (key candidate)
+												   (string= key candidate))))
+									    (if (not (stringp word)) (setq word (number-to-string word)))
+									    )
+									);; end of (if (string-match "\\$\\(.*\\)" word)
+								      		  				    
+						  (setq newbody (concat newbody
+									(if (not (eq firstword 1)) " ")
+									word))
+						  (setq firstword 0)
+						  ) ;; end of (progn
+						  ) ;; end of (dolist (word wordlist))
+						  
+					  (setq newbody (concat newbody "\n"))
+					  ) ;; end of (progn ;; loop through list of lines ... )
+	    ) ;; end of (dolist (line bodylinelist)  ...function ...)	   
+    ))
 
 (defun org-babel-execute:spice (body params)
   "Execute a block of Spice code with org-babel."
@@ -55,7 +97,7 @@
      (if (file-readable-p textfile)
 	 (get-string-from-file textfile))
      '"#+ATTR_HTML: :width 600px"
-     (concat "\n [[file:./" imagefile "]]")     
+     (concat "\n [[file:./" imagefile "]]")      ;; it should do this only if imagefile exists
      )    
     )
   )
