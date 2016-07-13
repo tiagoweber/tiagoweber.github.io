@@ -96,9 +96,10 @@
     (concat
      (if (file-readable-p textfile)
 	 (get-string-from-file textfile))
-     '"#+ATTR_HTML: :width 600px"
-     (concat "\n [[file:./" imagefile "]]")      ;; it should do this only if imagefile exists
-     )    
+     (if (file-readable-p imagefile)
+	 (concat '"#+ATTR_HTML: :width 600px \n [[file:./" imagefile "]]")
+       )
+     )  
     )
   )
 
