@@ -45,23 +45,32 @@
 									  (setq varname (match-string 1 word))
 									  (setq varindex (match-string 2 word))
 									  ;; search varname in vars and use the value of varindex to word
-									   (setq word (nth (string-to-number varindex)
+									  (setq newword (nth (string-to-number varindex)
 											   (car
 											    (assoc-default varname vars
 													   (lambda (key candidate)
 													     (string= key candidate))))))
-									   (if (not (stringp word)) (setq word (number-to-string word)))
-									   )
+
+									   (if (not (eq newword nil))
+									       (if (not (stringp newword))
+										   (setq word (number-to-string newword))
+										 (setq word newword)
+										 ))
+									   )							     
 								      ) ;; end of (if (string-match "\\$\\(.*\\)\\[\\(.*\\)\\]" word))
 								      (if (string-match "\\$\\(.*\\)" word)
 									  (progn
 									    ;; if matchs a non-vector variable format
 									    (setq varname (match-string 1 word))
-									    (setq word
+									    (setq newword
 										  (assoc-default varname vars
 												 (lambda (key candidate)
 												   (string= key candidate))))
-									    (if (not (stringp word)) (setq word (number-to-string word)))
+									    (if (not (eq newword nil))
+										(if (not (stringp newword))
+										    (setq word (number-to-string newword))
+										  (setq word newword)
+										  ))
 									    )
 									);; end of (if (string-match "\\$\\(.*\\)" word)
 								      		  				    
