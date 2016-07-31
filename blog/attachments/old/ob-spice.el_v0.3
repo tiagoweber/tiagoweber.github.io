@@ -1,7 +1,7 @@
 ;;; ob-spice.el --- org-babel functions for spice evaluation
 
 ;; Author: Tiago Oliveira Weber
-;; Version: 0.4
+;; Version: 0.3
 ;; 2016
 ;; Homepage: http://tiagoweber.github.io
 
@@ -58,40 +58,22 @@
 										 ))
 									   )							     
 								      ) ;; end of (if (string-match "\\$\\(.*\\)\\[\\(.*\\)\\]" word))
-								    (if (string-match "\\$\\(.*\\)\\." word) ;; if variable has a dot in the end
-									(progn
-									  ;; if matchs a non-vector variable format
+								      (if (string-match "\\$\\(.*\\)" word)
+									  (progn
+									    ;; if matchs a non-vector variable format
 									    (setq varname (match-string 1 word))
 									    (setq newword
 										  (assoc-default varname vars
 												 (lambda (key candidate)
 												   (string= key candidate))))
 									    (if (not (eq newword nil))
-										(progn 
-										  (if (not (stringp newword))
-										      (setq newword (number-to-string newword)))
-										  (setq word (replace-match (concat newword ".")  nil nil word))
-										  ;(setq word word)
-										  )
-									      ))
-								      );; end of (if (string-match "\\$\\(.*\\)\\." word)
-								    (if (string-match "\\$\\(.*\\)" word)
-								    	(progn
-								    	  ;; if matchs a non-vector variable format
-								    	    (setq varname (match-string 1 word))
-								    	    (setq newword
-								    		  (assoc-default varname vars
-								    				 (lambda (key candidate)
-								    				   (string= key candidate))))
-								    	    (if (not (eq newword nil))
-								    		(if (not (stringp newword))
-								    		    (setq word (number-to-string newword))
-								    		  (setq word newword)
-								    		  ))
-								    	    )
-								      );; end of (if (string-match "\\$\\(.*\\)" word)
-
-								    
+										(if (not (stringp newword))
+										    (setq word (number-to-string newword))
+										  (setq word newword)
+										  ))
+									    )
+									);; end of (if (string-match "\\$\\(.*\\)" word)
+								      		  				    
 						  (setq newbody (concat newbody
 									(if (not (eq firstword 1)) " ")
 									word))
