@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-07-08 Sex 20:39 -->
+<!-- 2016-08-04 Qui 18:35 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -191,6 +191,7 @@ But let us get back to our original problem. While using Emacs and Org-mode, you
 So now you probably already understand what we are going to do. We will treat our circuit as code (a netlist) and pass it to a spice simulator to run. After it runs, we will get its outputs and add them <i>automagically</i> in the report. Here is an example (the source code fontification is due to <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a>):
 </p>
 
+
 <div class="org-src-container">
 
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
@@ -210,11 +211,18 @@ So now you probably already understand what we are going to do. We will treat ou
 </pre>
 </div>
 
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<div class="figure">
-<p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" width="600px" />
-</p>
-</div>
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" /></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
@@ -377,15 +385,21 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </pre>
 </div>
 
-<p>
-value_at_tau = 0.36798
-value_at_five_tau = 0.00671732
-</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-<div class="figure">
-<p><img src="./timeconstant.png" alt="timeconstant.png" width="600px" />
-</p>
-</div>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left">value_at_tau = 0.36798value_at_five_tau = 0.00671732</td>
+<td class="left"><img src="./timeconstant.png" alt="timeconstant.png" /></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
