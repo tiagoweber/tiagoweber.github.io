@@ -32,7 +32,7 @@
   (let* (
 	 (vars (mapcar #'cdr (org-babel-get-header params :var)))
 	 )
-
+    
     (setq newbody "");
     (setq bodylinelist (split-string body "\n"))
     (dolist (line bodylinelist newbody) (progn  ;loop through list of lines
@@ -101,8 +101,7 @@
 						  
 					  (setq newbody (concat newbody "\n"))
 					  ) ;; end of (progn ;; loop through list of lines ... )
-	    ) ;; end of (dolist (line bodylinelist)  ...function ...)
-
+	    ) ;; end of (dolist (line bodylinelist)  ...function ...)	   
     ))
 
 (defun org-babel-execute:spice (body params)
@@ -110,20 +109,6 @@
   (let ((body (org-babel-expand-body:spice body params))
 	(vars (mapcar #'cdr (org-babel-get-header params :var)))	
 	)    
-
-    ;;******************************
-    ;; clean temporary files
-    (mapc (lambda (pair)
-	    (when (string= (car pair) "file")
-	      (setq textfile (concat (cdr pair) ".txt"))
-	      (setq imagefile (concat (cdr pair) ".png"))	      
-	      )
-	    )
-	  vars)
-;;    (if (file-readable-p textfile)    (delete-file textfile))
-;;    (if (file-readable-p imagefile)    (delete-file imagefile))
-    ;;*******************************
-
     (org-babel-eval "ngspice -b " body)
 
     ;; loop through all pairs (elements) of the list vars and set text and image file if finds "file" var
@@ -134,38 +119,14 @@
 	      )
 	    )
 	  vars)
-    ;; produce results        
-    ;; THE FOLLOWING WAS COMMENTED TEMPORARILY
-    ;; (concat
-    ;;  (if (file-readable-p textfile)
-    ;; 	 (get-string-from-file textfile))
-    ;;  (if (file-readable-p imagefile)
-    ;; 	 (concat '"#+ATTR_HTML: :width 600px \n [[file:./" imagefile "]]")
-    ;;    )
-    ;;  )
-
-    ;; ;; Get measurement values from text-file by splitting comma separated values   
-    (if (file-readable-p textfile)
-	(progn	  
-	  (setq rawtext (get-string-from-file textfile))
-	  ;;(setq rawtext (replace-regexp-in-string "\n" "" rawtext))
-	  (setq rawtext (replace-regexp-in-string "\n" "" rawtext))
-	  (setq result (split-string rawtext ","))
-	  )      
-      )    
-    (if (file-readable-p imagefile)
-	(progn
-	  ;; test if result exist already
-	  ;;(if (boundp 'result)
-	      (add-to-list 'result (concat '"[[file:./" imagefile "]]") t)    ;; add imagefile to last entry
-	    ;;(concat '"[[file:./" imagefile "]]")
-	    ;;)  
-	  )
-      )
-  result
-    ;; Produce output like     '(test test2)
-    ;;'(test test2)
-    
+    ;; produce results    
+    (concat
+     (if (file-readable-p textfile)
+	 (get-string-from-file textfile))
+     (if (file-readable-p imagefile)
+	 (concat '"#+ATTR_HTML: :width 600px \n [[file:./" imagefile "]]")
+       )
+     )  
     )
   )
 
