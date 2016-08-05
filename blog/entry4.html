@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-08-04 Qui 19:07 -->
+<!-- 2016-08-05 Sex 08:19 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -107,7 +107,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
 </script>
-<meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/Matlab Interaction within Emacs"/>
+<meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and OCTAVE/Matlab Interaction within Emacs"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/project_700_400.png"/>
 <script type="text/javascript">
@@ -175,11 +175,11 @@ Can you imagine being able to scratch new design ideas, perform calculations, ex
 </p>
 
 <p>
-Recently, I've made a <a href="./entry1.html">blog post</a> introducing  <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate NGSPICE within Emacs. In the present post I will show how we can use ob-spice to perform interaction between NGSPICE, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
+Recently, I've made a <a href="./entry1.html">blog post</a> introducing  <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
 </p>
 
 <p>
-In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to NGSPICE and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for this example we will use the <a href="https://fenix.tecnico.ulisboa.pt/downloadFile/1970943312271752/LM741.mod">LM741 spice model</a> from National Semiconductors).
+In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to Ngspice and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for this example we will use the <a href="https://fenix.tecnico.ulisboa.pt/downloadFile/1970943312271752/LM741.mod">LM741 spice model</a> from National Semiconductors).
 </p>
 <p>
 Although this is a simple design and simulation, let us use this case to get a grip about the process. From there on, you will be able to use the basic idea to develop much more complex design and  simulation cases. 
@@ -252,10 +252,10 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 
 <div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">Simulating the Circuit in NGSPICE</h4>
+<h4 id="sec-1-1-2">Simulating the Circuit in Ngspice</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
-With the vector in a variable we will now use it in a spice netlist to be simulated on NGSPICE. 
+With the vector in a variable we will now use it in a spice netlist to be simulated on Ngspice. 
 </p>
 
 <pre class="example">
@@ -311,7 +311,7 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 
 
 <p>
-The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The importance thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
+The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The important thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
 </p>
 
 <pre class="example">
@@ -391,7 +391,7 @@ You can present the result directly in your text with an inline code-block or in
 <pre class="src src-python"><span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|                         |Gain    |"</span>
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(vi[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Simulated (NGSPICE)     |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(ngspice_sim_var)
+<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Simulated (Ngspice)     |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(ngspice_sim_var)
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Absolute Error (Octave) |%.2g    |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][0])
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Relative Error (Octave) |%.2g %% |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][1])
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
@@ -418,7 +418,7 @@ You can present the result directly in your text with an inline code-block or in
 </tr>
 
 <tr>
-<td class="left">Simulated (NGSPICE)</td>
+<td class="left">Simulated (Ngspice)</td>
 <td class="left">-9.99943 V/V</td>
 </tr>
 
@@ -440,7 +440,7 @@ You can present the result directly in your text with an inline code-block or in
 <h4 id="sec-1-1-5">An Ocean of Possibilities</h4>
 <div class="outline-text-4" id="text-1-1-5">
 <p>
-The possibility to perform calculations in Octave or Matlab, simulate circuits based on these calculations on NGSPICE and take the results back to Octave again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
+The possibility to perform calculations in Octave or Matlab, simulate circuits based on these calculations on Ngspice and take the results back to Octave again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
 </p>
 
 

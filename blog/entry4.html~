@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-08-04 Qui 18:41 -->
+<!-- 2016-08-05 Sex 08:11 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -107,7 +107,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
 </script>
-<meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB Interaction within EMACS"/>
+<meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and OCTAVE/Matlab Interaction within Emacs"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/project_700_400.png"/>
 <script type="text/javascript">
@@ -164,22 +164,22 @@ for the JavaScript code in this tag.
 <a href="../index.html">Back to home</a>
 </p>
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB Interaction within EMACS</h2>
+<h2 id="sec-1">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Thu&gt;</span></span>
 </p>
 
 <p>
-Can you imagine being able to scratch new design ideas, perform calculations, execute circuit simulations, calculate some more based on the results and generate reports, all in the same place? Well, you can stop imagining and start working like crazy to develop your electric/electronic project on EMACS. 
+Can you imagine being able to scratch new design ideas, perform calculations, execute circuit simulations, calculate some more based on the results and generate reports, all in the same place? Well, you can stop imagining and start working like crazy to develop your electric/electronic project on Emacs. 
 </p>
 
 <p>
-Recently, I've made a <a href="./entry1.html">blog post</a> introducing  <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate NGSPICE within EMACS. In the present post I will show how we can use ob-spice to perform interaction between NGSPICE, OCTAVE (or MATLAB) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
+Recently, I've made a <a href="./entry1.html">blog post</a> introducing  <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
 </p>
 
 <p>
-In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in OCTAVE/MATLAB, pass the values to NGSPICE and measure the results so they can be used back in OCTAVE/MATLAB to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for this example we will use the <a href="https://fenix.tecnico.ulisboa.pt/downloadFile/1970943312271752/LM741.mod">LM741 spice model</a> from National Semiconductors).
+In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to Ngspice and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for this example we will use the <a href="https://fenix.tecnico.ulisboa.pt/downloadFile/1970943312271752/LM741.mod">LM741 spice model</a> from National Semiconductors).
 </p>
 <p>
 Although this is a simple design and simulation, let us use this case to get a grip about the process. From there on, you will be able to use the basic idea to develop much more complex design and  simulation cases. 
@@ -201,10 +201,10 @@ We will define as our design specification that the inverting opamp topology sha
 </div>
 
 <div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
+<h4 id="sec-1-1-1">Calculating the Resistors Values in Octave/Matlab</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
-First we want to calculate the value of our resistors. Let assume resistor R1 is 10k, and then calculate R2 in OCTAVE:
+First we want to calculate the value of our resistors. Let assume resistor R1 is 10k, and then calculate R2 in Octave:
 </p>
 
 <pre class="example">
@@ -246,16 +246,16 @@ ans <span style="color: #A020F0;">=</span> [gain<span style="color: #A020F0;">,<
 
 
 <p>
-What we have now is a vector with the gain and the resistor values. No rocket science on these calculations, but as we are using OCTAVE or MATLAB to perform them, you can see that sky is the limit for what we can do. 
+What we have now is a vector with the gain and the resistor values. No rocket science on these calculations, but as we are using Octave or Matlab to perform them, you can see that sky is the limit for what we can do. 
 </p>
 </div>
 </div>
 
 <div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">Simulating the Circuit in NGSPICE</h4>
+<h4 id="sec-1-1-2">Simulating the Circuit in Ngspice</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
-With the vector in a variable we will now use it in a spice netlist to be simulated on NGSPICE. 
+With the vector in a variable we will now use it in a spice netlist to be simulated on Ngspice. 
 </p>
 
 <pre class="example">
@@ -265,7 +265,7 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 
 <div class="org-src-container">
 
-<pre class="src src-spice" id="ngspice_sim"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
+<pre class="src src-spice" id="ngspice_sim"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">ac</span> 1 <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz) <span style="color: #2F8B58; font-weight: bold;">dc</span> 0
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[1]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[2]</span>
@@ -332,23 +332,23 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 
 <div id="outline-container-sec-1-1-3" class="outline-4">
-<h4 id="sec-1-1-3">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
+<h4 id="sec-1-1-3">Calculate the error between ideal and simulated on Octave/Matlab</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
-We will now get the results from the simulation back to OCTAVE in order to calculate the error between ideal and simulated. 
+We will now get the results from the simulation back to Octave in order to calculate the error between ideal and simulated. 
 </p>
 
 <pre class="example">
 #+NAME: error_calculation
-#+BEGIN_SRC octave :results drawer :exports both :var gain_OCTAVE=10 ngspice_results=ngspice_sim[0]
+#+BEGIN_SRC octave :results drawer :exports both :var gain_octave=10 ngspice_results=ngspice_sim[0]
 </pre>
 
 <div class="org-src-container">
 
-<pre class="src src-octave" id="error_cal">gain_OCTAVE <span style="color: #A020F0;">=</span> design_variables(1)<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="error_cal">gain_octave <span style="color: #A020F0;">=</span> design_variables(1)<span style="color: #A020F0;">;</span>
 gain_ngspice <span style="color: #A020F0;">=</span> str2num(gain_ngspice)
-error_absolute <span style="color: #A020F0;">=</span> abs((gain_OCTAVE<span style="color: #A020F0;">-</span>gain_ngspice))
-error_percentage <span style="color: #A020F0;">=</span> abs(error_absolute<span style="color: #A020F0;">/</span>gain_OCTAVE)
+error_absolute <span style="color: #A020F0;">=</span> abs((gain_octave<span style="color: #A020F0;">-</span>gain_ngspice))
+error_percentage <span style="color: #A020F0;">=</span> abs(error_absolute<span style="color: #A020F0;">/</span>gain_octave)
 ans <span style="color: #A020F0;">=</span> [error_absolute<span style="color: #A020F0;">,</span>error_percentage]<span style="color: #A020F0;">;</span>
 </pre>
 </div>
@@ -391,9 +391,9 @@ You can present the result directly in your text with an inline code-block or in
 <pre class="src src-python"><span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|                         |Gain    |"</span>
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(vi[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Simulated (NGSPICE)     |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(ngspice_sim_var)
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Absolute Error (OCTAVE) |%.2g    |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Relative Error (OCTAVE) |%.2g %% |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][1])
+<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Simulated (Ngspice)     |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(ngspice_sim_var)
+<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Absolute Error (Octave) |%.2g    |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][0])
+<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Relative Error (Octave) |%.2g %% |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][1])
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
 </pre>
 </div>
@@ -418,17 +418,17 @@ You can present the result directly in your text with an inline code-block or in
 </tr>
 
 <tr>
-<td class="left">Simulated (NGSPICE)</td>
+<td class="left">Simulated (Ngspice)</td>
 <td class="left">-9.99943 V/V</td>
 </tr>
 
 <tr>
-<td class="left">Absolute Error (OCTAVE)</td>
+<td class="left">Absolute Error (Octave)</td>
 <td class="left">0.00057</td>
 </tr>
 
 <tr>
-<td class="left">Relative Error (OCTAVE)</td>
+<td class="left">Relative Error (Octave)</td>
 <td class="left">5.7e-05 %</td>
 </tr>
 </tbody>
@@ -440,7 +440,7 @@ You can present the result directly in your text with an inline code-block or in
 <h4 id="sec-1-1-5">An Ocean of Possibilities</h4>
 <div class="outline-text-4" id="text-1-1-5">
 <p>
-The possibility to perform calculations in OCTAVE or MATLAB, simulate circuits based on these calculations on NGSPICE and take the results back to OCTAVE again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
+The possibility to perform calculations in Octave or Matlab, simulate circuits based on these calculations on Ngspice and take the results back to Octave again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
 </p>
 
 
