@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-08-05 Sex 08:11 -->
+<!-- 2016-08-05 Sex 08:19 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -311,7 +311,7 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 
 
 <p>
-The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The importance thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
+The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The important thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
 </p>
 
 <pre class="example">
