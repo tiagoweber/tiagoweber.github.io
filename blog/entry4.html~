@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-08-05 Sex 08:19 -->
+<!-- 2016-08-05 Sex 09:21 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -170,12 +170,18 @@ for the JavaScript code in this tag.
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Thu&gt;</span></span>
 </p>
 
+
+<div class="figure">
+<p><img src="./attachments/project_700_400.png" alt="project_700_400.png" width="400px image" title="Project" align="center" />
+</p>
+</div>
+
 <p>
-Can you imagine being able to scratch new design ideas, perform calculations, execute circuit simulations, calculate some more based on the results and generate reports, all in the same place? Well, you can stop imagining and start working like crazy to develop your electric/electronic project on Emacs. 
+Can you imagine being able to explore new design ideas, perform calculations, run circuit simulations, calculate some more based on the results and generate reports, all in the same place? Well, you can stop imagining and start developing your next electric/electronic project on Emacs. 
 </p>
 
 <p>
-Recently, I've made a <a href="./entry1.html">blog post</a> introducing  <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
+Recently, I've made a <a href="./entry1.html">blog post</a> introducing <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
 </p>
 
 <p>
