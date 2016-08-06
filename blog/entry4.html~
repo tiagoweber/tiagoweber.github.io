@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-08-05 Sex 22:03 -->
+<!-- 2016-08-05 Sex 22:14 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -277,8 +277,8 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[2]</span>
 <span style="color: #204A87;">*EOpamp out 0 0 inn 1000</span>
 <span style="color: #228b22; font-weight: bold;">xamp1</span> 0 inn vdd vss out <span style="color: #cd0000;">lm741/ns</span>
-<span style="color: #228b22; font-weight: bold;">vdd</span> vdd 0 2.5
-<span style="color: #228b22; font-weight: bold;">vss</span> vss 0 -2.5
+<span style="color: #228b22; font-weight: bold;">vdd</span> vdd 0 5
+<span style="color: #228b22; font-weight: bold;">vss</span> vss 0 -5
 <span style="color: #A52A2A; font-weight: bold;">.include</span> <span style="color: #4E9A06;">spice_library/LM741.MOD</span>
 <span style="color: #204A87;">*.tran 0.1</span><span style="color: #204A87;">m</span><span style="color: #204A87;">s 0.05s</span>
 <span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ac</span> <span style="color: #2F8B58; font-weight: bold;">dec</span> 100 1 100<span style="color: #F5666D;">e</span>6
