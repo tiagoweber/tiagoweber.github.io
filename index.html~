@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-08-04 Qui 18:22 -->
+<!-- 2016-08-06 Sáb 15:13 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -389,22 +389,23 @@ Federal University of Santa Maria - Santa Maria, Brazil
 
 
 <div id="outline-container-sec-6-1" class="outline-3">
-<h3 id="sec-6-1"><a href="./blog/entry4.html"> Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</a></h3>
+<h3 id="sec-6-1"><a href="./blog/entry4.html"> Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</a></h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Thu&gt;</span></span>
 </p>
 
+
 <p>
-Can you imagine being able to scratch new design ideas, perform calculations, execute circuit simulations, calculate some more based on the results and generate reports, all in the same place? Well, you can stop imagining and start working like crazy to develop your electric/electronic project on EMACS. 
+Can you imagine being able to explore new design ideas, perform calculations, run circuit simulations, calculate some more based on the results and generate reports, all in the same place? Well, you can stop imagining and start developing your next electric/electronic project on Emacs. 
 </p>
 
 <p>
-Recently, I've made a <a href="./entry1.html">blog post</a> introducing  <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel that I developed to be able to simulate NGSPICE within EMACS. In the present post I will show how we can use ob-spice to perform interaction between NGSPICE, OCTAVE (or MATLAB) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
+Recently, I've made a <a href="./entry1.html">blog post</a> introducing <a href="attachments/ob-spice.el">ob-spice</a>, which is a simple language extension to ob-babel to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
 </p>
 
 <p>
-In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in OCTAVE/MATLAB, pass the values to NGSPICE and measure the results so they can be used back in OCTAVE/MATLAB to calculate the error between the ideal response and the simulated one. The error will be due to the opamp cha <a href="././blog/entry4.html">&#x2026; Read more</a>
+In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to Ngspice and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for th <a href="././blog/entry4.html">&#x2026; Read more</a>
 </p>
 </div>
 </div>
