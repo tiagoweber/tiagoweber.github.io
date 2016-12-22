@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-12-15 Qui 13:35 -->
+<!-- 2016-06-25 Sáb 14:12 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -107,20 +107,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
 </script>
-<script language="JavaScript">
-<!--
-function autoResize(id){
-var newheight;
-var newwidth;
-if(document.getElementById){
-newheight = document.getElementById(id).contentWindow.document .body.scrollHeight;
-newwidth = document.getElementById(id).contentWindow.document .body.scrollWidth;
-}
-document.getElementById(id).height = (newheight) + "px";
-document.getElementById(id).width = (newwidth) + "px";
-}
-//-->
-</script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -222,7 +208,7 @@ E-mail: tiago.weber (at) ufsc.br
 </p>
 
 <p>
-Phone: +55 48 9.111 2228  
+Phone: +55 48 9111 2228  
 </p>
 </div>
 </div>
@@ -331,35 +317,25 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h2 id="sec-4">Teaching</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-<a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a>: I lecture to classes of the Computer Engineering course
+<a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a>: I lecture classes to the Computer Engineering course:
 </p>
 
 <ul class="org-ul">
-<li>First semester of 2017 (planned):
+<li>Second semester of 2016 (planned):
 <ul class="org-ul">
-<li>Special Topics in Analog Microelectronics (in portuguese: "Tópicos Especiais em Microeletrônica Analógica")
+<li>Electric Circuits
 </li>
-<li>Electric Circuits for Computer Engineering (in portuguese: "Circuitos Elétricos para Computação")
+<li>Data Communication
 </li>
-<li>Signal Acquisition (in portuguese: "Aquisição de Sinais")
-</li>
-</ul>
-</li>
-<li>Second semester of 2016:
-<ul class="org-ul">
-<li>Electric Circuits for Computer Engineering (in portuguese: "Circuitos Elétricos para Computação")
-</li>
-<li>Data Communication (in portuguese: "Comunicação de Dados")
-</li>
-<li>Signal Acquisition (in portuguese: "Aquisição de Sinais")
+<li>Signal Acquisition
 </li>
 </ul>
 </li>
 <li>First semester of 2016:  
 <ul class="org-ul">
-<li>Electric Circuits for Computer Engineering (in portuguese: "Circuitos Elétricos para Computação")
+<li>Electric Circuits
 </li>
-<li>Fundamentals of Mathematics to Computer Science (in portuguese: "Fundamentos Matemáticos para Computação")
+<li>Fundamentals of Mathematics to Computer Science
 </li>
 </ul>
 </li>
@@ -394,6 +370,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <div id="outline-container-sec-6" class="outline-2">
 <h2 id="sec-6">Blog</h2>
 <div class="outline-text-2" id="text-6">
+<p>
+This section is under construction. More specifically, I am adding a "comment" feature to the site while still using org-mode as my publishing tool.
+</p>
 </div>
 </div>
 </div>
