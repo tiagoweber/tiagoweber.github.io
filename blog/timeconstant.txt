@@ -1,0 +1,2 @@
+value_at_tau = 0.36798
+value_at_five_tau = 0.00671732
