@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Tiago Oliveira Weber</title>
+<!-- 2017-10-25 Qua 23:35 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Tiago" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="../themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="../themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="../themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="../themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="../themes/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="../themes/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="../themes/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="../themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-79541283-1', 'auto');
+ga('send', 'pageview');
+</script>
+<meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and OCTAVE/Matlab Interaction within Emacs"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/project_700_400.png"/>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Tiago Oliveira Weber</h1>
+<p>
+<a href="../index.html">Back to home</a>
+</p>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Thu&gt;</span></span>
+</p>
+
+
+<div class="figure">
+<p><img src="./attachments/mixed_signal_700_400.png" alt="mixed_signal_700_400.png" width="600px image" title="Project" align="center" />
+</p>
+</div>
+
+<p>
+Mixed-signal simulation is the type of simulation in which analog and digital signals coexist in the same circuit. There are many types of systems that can be best analyzed through mixed-signal simulation. They are paramount for simulating circuits including Analog-Digital and Digital-Analog Converters (ADCs and DACs). For instance, to simulate how a microcontroller interact with peripherals through an ADC, one could benefit from this type of simulation.
+</p>
+
+<p>
+In the seek of an open-source solution for mixed-signal simulation, I developed an Octave package (Octave is a open source software that uses the same language as Matlab) that allows Octave to control the simulation through ngspice shared api (using as base the ngspice/octave gateway made by &#x2026; ). 
+</p>
+
+<p>
+This is not even by far intended to be a solution for industry professionals. The focus is to allow high-level modelling using Octave/Matlab in simple projects. Hopefully, someone besides me will find use of it to explore system and circuit ideas.
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+We usually simulate analog circuits through SPICE circuit simulators. On the other hand, we usually use a Hardware Description Language (HDL) such as Verilog or VHDL using specific simulators for the digital section. If simulation time was not an issue, we could consider all signals as being analog and simulate the whole circuit as a SPICE netlist. However, due to the level of abstraction that digital circuits allow us to operate in, this would be an enormous waste of time. 
+</p>
+</div>
+
+
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">Different Tools for Different Problems</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Before introducing the proposed package, I would like to discuss some of the cases in which a designer might want to use different tool sets for simulation.
+</p>
+</div>
+
+<div id="outline-container-sec-1-1-1-1" class="outline-5">
+<h5 id="sec-1-1-1-1">System Simulation without Circuit Blocks</h5>
+<div class="outline-text-5" id="text-1-1-1-1">
+<p>
+There are other occasions in which we are only interested in high-level analysis of a system. On those cases, all blocks are described mathematically and no circuit simulator is needed. One of the most used commercial solutions to that is Matlab/Simulink®. The open-source solution would be Octave (if no GUI to draw diagram is needed) or Scilab/XCOS (if diagrams to describe the blocks are welcome).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-1-2" class="outline-5">
+<h5 id="sec-1-1-1-2">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
+<div class="outline-text-5" id="text-1-1-1-2">
+<p>
+Sometimes we are not interested in modelling a block with a high-level language, but only interested in analyzing the output of the circuit with the aid of these high-level tools. For those cases, usually Matlab or Octave are used to perform <b>post-simulation analysis</b>. In this approach, the circuit simulator acts independently and its output (waveforms and measurements) are used as input to a script in Matlab or Octave. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-1-1-3" class="outline-5">
+<h5 id="sec-1-1-1-3">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
+<div class="outline-text-5" id="text-1-1-1-3">
+<p>
+The case of interest of this article is when we want to model a block (e.g.: counter, ADC, DAC, sensor, receiver, transceiver, &#x2026;) in a more abstract way and simulate it together with other blocks described as circuits. 
+</p>
+
+<p>
+If the block we want to describe in a high-level language is digital, we will probably use Verilog or VHDL to describe it. If the block is analog, one of the options is to use <b>Verilog-A</b>. There are commercial and open-source tools that allow these models to be used in a simulation together with circuits. <b>QUCS</b> and <b>Ngspice</b> are open-source tools that provide a way to add Verilog-A models to the simulation, but not without some pain as you go through the compilation procedure of each block. Even using commercial tools, the debugging of what went wrong on a Verilog-A model is not for the fainted-hearted.
+</p>
+
+<p>
+However, sometimes I just want to add some high-level block without worrying about too much implementation details. In this case you could use <b>systemC-AMS</b>, which is a library for C++ which enables you to simulate digital and analog sections using transaction-level modelling (TLM).
+</p>
+
+<p>
+For these cases in which system functionality exploration is the ultimate goal, however, I would rather use a <b>well-known high-level language</b>, such as <b>Matlab</b> and <b>Octave</b> to model some blocks.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2">The Solution</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+In order to do co-simulation of blocks described as circuits and blocks described in high-level language using Octave, I propose a package to perform the interface between Ngspice and Octave. Easy prototyping is one of the reasons Matlab is one of the greatest tools for scientists. The codes are easy to write, to understand and to debug. 
+</p>
+
+<p>
+The objectives of this package are to:
+</p>
+<ul class="org-ul">
+<li>allow the use of Matlab or Octave to describe the digital blocks or analog blocks with voltage input/output;
+</li>
+<li>allow simulation of mixed-signal circuits using open-source tools;
+</li>
+</ul>
+
+<p>
+One using octave or matlab for modelling blocks needs to keep in mind this is not a synthesys-oriented approach. It is useful for behavioral modelling only.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Example (PWM block and analog output filter)</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">Octave Block to Describe a Simple PWM Logic</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<div class="org-src-container">
+
+<pre class="src src-octave" id="pwm"><span style="color: #A52A2A; font-weight: bold;">function</span> [pinvalue] <span style="color: #A020F0;">=</span> <span style="color: #00578E; font-weight: bold;">pwm</span>(pinvalue<span style="color: #A020F0;">,</span>currenttime<span style="color: #A020F0;">,</span>vhigh<span style="color: #A020F0;">,</span>isfirst)<span style="color: #A020F0;">;</span>
+
+    max_cycles <span style="color: #A020F0;">=</span> 40<span style="color: #A020F0;">;</span>
+    analog_in <span style="color: #A020F0;">=</span> pinvalue(1)<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">global</span> counter
+    <span style="color: #A52A2A; font-weight: bold;">if</span> (isfirst)
+        counter <span style="color: #A020F0;">=</span> 0<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">elseif</span> (counter <span style="color: #A020F0;">&gt;</span> max_cycles)
+        counter <span style="color: #A020F0;">=</span> 0<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">else</span> 
+        counter <span style="color: #A020F0;">=</span> counter <span style="color: #A020F0;">+</span> 1<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">end</span>    
+    idealdutycycle <span style="color: #A020F0;">=</span> analog_in<span style="color: #A020F0;">/</span>vhigh<span style="color: #A020F0;">;</span>    
+    high_cycles <span style="color: #A020F0;">=</span> round(max_cycles<span style="color: #A020F0;">*</span>idealdutycycle)<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">if</span> (counter <span style="color: #A020F0;">&lt;=</span> high_cycles)    
+        digital_out <span style="color: #A020F0;">=</span> vhigh<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">else</span>
+        digital_out <span style="color: #A020F0;">=</span> 0<span style="color: #A020F0;">;</span>
+    <span style="color: #A52A2A; font-weight: bold;">end</span>    
+    pinvalue(2) <span style="color: #A020F0;">=</span> digital_out<span style="color: #A020F0;">;</span>
+<span style="color: #A52A2A; font-weight: bold;">endfunction</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">SPICE Netlist of PWM Block and Analog Filter</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<div class="org-src-container">
+
+<pre class="src src-spice" id="ngspice_octave_pwm"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
+<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">clk_freq</span> = 1<span style="color: #F5666D;">e</span>6
+<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">clk_per</span> = '1/clk_freq'
+<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">cap_value</span> = 1<span style="color: #F5666D;">e</span>-6
+<span style="color: #228b22; font-weight: bold;">V1</span> vdd  0 5
+<span style="color: #228b22; font-weight: bold;">Xpwm</span> analogin outpwm clk <span style="color: #cd0000;">pwm</span>
+<span style="color: #228b22; font-weight: bold;">Rout</span> outpwm outpwm_filtered '(clk_per*40*2)/cap_value'
+<span style="color: #228b22; font-weight: bold;">Cout</span> outpwm_filtered 0 'cap_value'
+<span style="color: #228b22; font-weight: bold;">Rdummy</span> outpwm_filtered 0 10<span style="color: #F5666D;">meg</span>
+<span style="color: #228b22; font-weight: bold;">Vclock</span> clk 0 <span style="color: #2F8B58; font-weight: bold;">PULSE</span>(0 5 0 10<span style="color: #F5666D;">n</span> 10<span style="color: #F5666D;">n</span> 'clk_per/2' 'clk_per')
+<span style="color: #204A87;">*Vin analogin 0 SIN(2.5 1 1</span><span style="color: #204A87;">k</span><span style="color: #204A87;">)</span>
+<span style="color: #228b22; font-weight: bold;">Vin</span> analogin 0 <span style="color: #2F8B58; font-weight: bold;">PULSE</span>(2.5 4.5 0 10<span style="color: #F5666D;">n</span> 10<span style="color: #F5666D;">n</span> 0.5<span style="color: #F5666D;">e</span>-3 1<span style="color: #F5666D;">e</span>-3)
+<span style="color: #A52A2A; font-weight: bold;">.subckt</span><span style="color: #00578E; font-weight: bold;"> pwm </span>in1 out1 clock <span style="color: #0084C8; font-weight: bold;">edge</span>=1 <span style="color: #0084C8; font-weight: bold;">clockth</span>=2.5 <span style="color: #0084C8; font-weight: bold;">octave</span>=1 <span style="color: #0084C8; font-weight: bold;">vhigh</span>=5
+<span style="color: #A52A2A; font-weight: bold;">.ends</span>
+
+<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #F5666D;">e</span>-6 1<span style="color: #F5666D;">e</span>-3
+<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(outpwm_filtered) v(analogin)
+<span style="color: #A52A2A; font-weight: bold;">.end</span>
+
+<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #228b22; font-weight: bold;">run</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(analogin) v(outpwm_filtered) v(outpwm)</span>
+<span style="color: #F5666D; font-weight: bold;">.endc</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3">PWM Results</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><img src="./ngspice_octave_pwm.png" alt="ngspice_octave_pwm.png" /></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = tiagoweber.github.io;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = entry5; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };    
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//tiagoweber.disqus.com/embed.js';        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

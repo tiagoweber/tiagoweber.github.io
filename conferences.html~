@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Tiago Oliveira Weber</title>
-<!-- 2017-10-25 Qua 23:34 -->
+<!-- 2016-12-22 Qui 16:48 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Tiago" />
@@ -170,37 +170,134 @@ for the JavaScript code in this tag.
 </div><div id="outline-container-sec-1-1" class="outline-3">
 <h3 id="sec-1-1">Brazil</h3>
 <div class="outline-text-3" id="text-1-1">
-</div>
-
-<div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">SBCCI 2018 (31th Symposium on Integrated Circuits and Systems Design)</h4>
+</div><div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">SIM 2017 (32nd South Symposium on Microelectronics)</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <ul class="org-ul">
-<li>Link: <a href="http://wp.ufpel.edu.br/chipinthepampa2018/events/sbcci-2018/">http://wp.ufpel.edu.br/chipinthepampa2018/events/sbcci-2018/</a>
+<li>Link: <a href="http://emicro.c3.furg.br/sim2017">http://emicro.c3.furg.br/sim2017</a>
 </li>
-<li>Location: Bento Gonçalves - RS - Brazil
+<li>Deadline: February 3rd, 2017
 </li>
-<li>Abstract Submission: March 20th, 2017
+<li>Location: Rio Grande, RS, Brazil
 </li>
-<li>Paper Submission Deadline: March 27th, 2017
-</li>
-<li>Date: August 27th to 31st, 2018
+<li>Date: May 2nd to 5th, 2017    
 </li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">SBMicro 2018</h4>
+<h4 id="sec-1-1-2">EMICRO 2017 (19th Escola Sul de Microeletrônica)</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <ul class="org-ul">
-<li>Link: <a href="http://wp.ufpel.edu.br/chipinthepampa2018/events/sbmicro-2018/">http://wp.ufpel.edu.br/chipinthepampa2018/events/sbmicro-2018/</a>
+<li>Link: <a href="http://emicro.c3.furg.br/index.html">http://emicro.c3.furg.br/index.html</a>
 </li>
-<li>Location: Bento Gonçalves - RS - Brazil
+<li>Location: Rio Grande, RS, Brazil
 </li>
-<li>Deadline: March 31st, 2017
+<li>Date: May 2nd to 5th, 2017    
 </li>
-<li>Date: August 27th to September 31st, 2018
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3">SBMicro 2017 (Chip on the Sands)</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<ul class="org-ul">
+<li>Link: <a href="http://envelhecendo.com.br/sbmicro-2017/home">http://envelhecendo.com.br/sbmicro-2017/home</a>
+</li>
+<li>Location: Fortaleza - Ceará - Brazil
+</li>
+<li>Deadline: March 27th, 2017
+</li>
+<li>Date: August 28th to September 1st, 2017
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4">SBCCI 2017 (30th Symposium on Integrated Circuits and Systems Design)</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<ul class="org-ul">
+<li>Link: <a href="http://envelhecendo.com.br/sbcci-2017/home">http://envelhecendo.com.br/sbcci-2017/home</a>
+</li>
+<li>Location: Fortaleza - Ceará - Brazil
+</li>
+<li>Abstract Submission: March 20th, 2017
+</li>
+<li>Paper Submission Deadline: March 27th, 2017
+</li>
+<li>Date: August 28th to September 1st, 2017
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-1-5" class="outline-4">
+<h4 id="sec-1-1-5">SForum 2017 (17th Microelectronics Students Forum)</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<ul class="org-ul">
+<li>Link: <a href="http://envelhecendo.com.br/sforum-2017/home">http://envelhecendo.com.br/sforum-2017/home</a>
+</li>
+<li>Location: Fortaleza - Ceará - Brazil
+</li>
+<li>Paper Submission Deadline: March 22nd, 2017
+</li>
+<li>Date: August 28th to September 1st, 2017
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Argentina</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">LASCAS (8th IEEE Latin American Symposium on Circuits and Systems)</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<ul class="org-ul">
+<li>Link: <a href="http://ieee-lascas.org/">http://ieee-lascas.org/</a>
+</li>
+<li>Location: Bariloche, Argentina
+</li>
+<li><del>Paper Submission Deadline: November 7th, 2016</del> (due)
+</li>
+<li>Date: February 20th to 23rd, 2017
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">Iberchip (XXIII Workshop)</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<ul class="org-ul">
+<li>Link: <a href="http://ieee-lascas.org/iberchip/">http://ieee-lascas.org/iberchip/</a>
+</li>
+<li>Location: Bariloche, Argentina
+</li>
+<li><del>Paper Submission Deadline: November 7th, 2016</del> (due)
+</li>
+<li>Date: February 20th to 23rd, 2017
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3">PRIME-LA (1st IEEE PhD Research in Microelectronics and Electronics Conference)</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<ul class="org-ul">
+<li>Link: <a href="http://ieee-lascas.org/prime">http://ieee-lascas.org/prime</a>
+</li>
+<li>Location: Bariloche, Argentina
+</li>
+<li><del>Paper Submission Deadline: November 28th, 2016</del> (due)
+</li>
+<li>Date: February 20th to 23rd, 2017
 </li>
 </ul>
 </div>
