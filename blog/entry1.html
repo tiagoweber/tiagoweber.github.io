@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2018-04-02 Seg 01:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-12-22 Qui 16:54 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Tiago" />
+<meta name="generator" content="Org mode" />
+<meta name="author" content="tweber" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -46,27 +53,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -86,6 +177,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/htmlize.css"/>
@@ -115,7 +207,7 @@ ga('send', 'pageview');
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -164,12 +256,13 @@ for the JavaScript code in this tag.
 <a href="../index.html">Back to home</a>
 </p>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-orga1ed94a" class="outline-2">
+<h2 id="orga1ed94a">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
+<div class="outline-text-2" id="text-orga1ed94a">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-06-26 Sun&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-06-26 Dom&gt;</span></span>
 </p>
+
 
 <p>
 Picture this. You are creating a report, studying or preparing a class. While you write your text, you suddenly feel that it is time to show in a circuit how your project works. Now the adventure begins: to add the results of a given simulation to your document, you will have to open your simulation software in another window, describe the circuit using a schematic editor, simulate it and then copy and paste the results to your text file. You might as well copy the image of some waveforms. Additionaly, you will also have to describe the circuit elements in such a way that the reader of your report knows what you have simulated. 
@@ -193,7 +286,6 @@ So now you probably already understand what we are going to do. We will treat ou
 
 
 <div class="org-src-container">
-
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">dc</span> 0V <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz)
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn 10<span style="color: #F5666D;">k</span>
@@ -208,79 +300,63 @@ So now you probably already understand what we are going to do. We will treat ou
 <span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
 <span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(in) v(out) v(inn)</span>
 <span style="color: #F5666D; font-weight: bold;">.endc</span>
+
 </pre>
 </div>
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
-
-<colgroup>
-<col  class="left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="left"><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" /></td>
-</tr>
-</tbody>
-</table>
+<div class="figure">
+<p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
+</p>
+</div>
 </div>
 
 
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Advantages and Disadvantages</h3>
-<div class="outline-text-3" id="text-1-1">
-</div><div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">Advantages</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org174c2ca" class="outline-3">
+<h3 id="org174c2ca">Advantages and Disadvantages</h3>
+<div class="outline-text-3" id="text-org174c2ca">
+</div>
+<div id="outline-container-org7b66db6" class="outline-4">
+<h4 id="org7b66db6">Advantages</h4>
+<div class="outline-text-4" id="text-org7b66db6">
 <ul class="org-ul">
-<li>You can make changes to your circuit very easily and have them added to the report
-</li>
-<li>You don't need to leave emacs to simulate
-</li>
-<li>As in babel you can work with any language you desire and mix results from different code blocks, you can take results from your circuit and feed them into a matlab code, verilog, VHDL, verilog-a,&#x2026; Also, you can take results from other code block and feed it in your circuits.
-</li>
-<li>As you will be working in Org-mode, you will be able to export your results to any format supported by it, like latex or html. For instance, this webpage (together with the simulation code) was made entirely in Emacs.
-</li>
+<li>You can make changes to your circuit very easily and have them added to the report</li>
+<li>You don't need to leave emacs to simulate</li>
+<li>As in babel you can work with any language you desire and mix results from different code blocks, you can take results from your circuit and feed them into a matlab code, verilog, VHDL, verilog-a,&#x2026; Also, you can take results from other code block and feed it in your circuits.</li>
+<li>As you will be working in Org-mode, you will be able to export your results to any format supported by it, like latex or html. For instance, this webpage (together with the simulation code) was made entirely in Emacs.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">Disadvantages</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-org37127d7" class="outline-4">
+<h4 id="org37127d7">Disadvantages</h4>
+<div class="outline-text-4" id="text-org37127d7">
 <ul class="org-ul">
-<li>You will have no schematic image of the circuit (It would be interesting to create an netlist-to-schematic converter in elisp to workaround this)
-</li>
-<li>Working directly with netlists may require more knowledge of the circuit and the simulator than using GUI for schematic edition.
-</li>
+<li>You will have no schematic image of the circuit (It would be interesting to create an netlist-to-schematic converter in elisp to workaround this)</li>
+<li>Working directly with netlists may require more knowledge of the circuit and the simulator than using GUI for schematic edition.</li>
 </ul>
 </div>
 </div>
 </div>
 
-<div id="outline-container-sec-1-2" class="outline-3">
-<h3 id="sec-1-2">Basic Setup</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgd5dfc73" class="outline-3">
+<h3 id="orgd5dfc73">Basic Setup</h3>
+<div class="outline-text-3" id="text-orgd5dfc73">
 <p>
 What you need is basically 
 </p>
 <ul class="org-ul">
-<li><a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="http://orgmode.org/">Org-mode</a> (already in Emacs)
-</li>
-<li><a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (by Carlin J. Vieri) or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a> (by Van der Plas, Rouat and Vieri)
-</li>
-<li><a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a> (if you want fontified netlist export to html)
-</li>
-<li><a href="attachments/ob-spice.el">ob-spice</a> (described below) or some variation created by you
-</li>
-<li>a spice simulator capable of running in batch mode (from command line). In my case, I used <a href="http://ngspice.sourceforge.net/">Ngspice</a>.
-</li>
+<li><a href="https://www.gnu.org/software/emacs/">Emacs</a> and <a href="http://orgmode.org/">Org-mode</a> (already in Emacs)</li>
+<li><a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (by Carlin J. Vieri) or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a> (by Van der Plas, Rouat and Vieri)</li>
+<li><a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a> (if you want fontified netlist export to html)</li>
+<li><a href="attachments/ob-spice.el">ob-spice</a> (described below) or some variation created by you</li>
+<li>a spice simulator capable of running in batch mode (from command line). In my case, I used <a href="http://ngspice.sourceforge.net/">Ngspice</a>.</li>
 </ul>
 </div>
 
-<div id="outline-container-sec-1-2-1" class="outline-4">
-<h4 id="sec-1-2-1">The ob-spice</h4>
-<div class="outline-text-4" id="text-1-2-1">
+<div id="outline-container-org6f2c345" class="outline-4">
+<h4 id="org6f2c345">The ob-spice</h4>
+<div class="outline-text-4" id="text-org6f2c345">
 <p>
 The community has built a <a href="http://orgmode.org/worg/org-contrib/babel/languages.html">wide range of language support for Babel</a>. However, I could not find spice in this list or anything related to spice simulation. Therefore, I created my own, which is admittedly in a very early stage of development. However, as it already does the job (at least for my needs) I decided to share it <a href="attachments/ob-spice.el">here</a>.
 </p>
@@ -289,7 +365,6 @@ The community has built a <a href="http://orgmode.org/worg/org-contrib/babel/lan
 You will need to add something like this to your Emacs config to load this file:
 </p>
 <div class="org-src-container">
-
 <pre class="src src-elisp">(add-to-list 'load-path <span style="color: #4E9A06;">"~/.emacs.d/ob-spice/"</span>)
 (<span style="color: #A52A2A; font-weight: bold;">require</span> '<span style="color: #F5666D;">ob-spice</span>)
 </pre>
@@ -310,29 +385,29 @@ In this example, the variable "file" is the name of the png file that will be cr
 </div>
 </div>
 
-<div id="outline-container-sec-1-2-2" class="outline-4">
-<h4 id="sec-1-2-2">Exporting to PNG</h4>
-<div class="outline-text-4" id="text-1-2-2">
+<div id="outline-container-org525c18d" class="outline-4">
+<h4 id="org525c18d">Exporting to PNG</h4>
+<div class="outline-text-4" id="text-org525c18d">
 <p>
 You need to add the line "set gnuplot_terminal=png" in the control section of your Ngspice code. If you don't, Ngspice will export to eps, which will not be previewed in Org-mode. It is my intention to add this control option as default to ob-spice.
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-1-2-3" class="outline-4">
-<h4 id="sec-1-2-3">Fontification</h4>
-<div class="outline-text-4" id="text-1-2-3">
+<div id="outline-container-org816dae1" class="outline-4">
+<h4 id="org816dae1">Fontification</h4>
+<div class="outline-text-4" id="text-org816dae1">
 <p>
-Using the original <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a>) the fontification for spice circuits is recognized by babel in the buffer. If you use the newer version, it is all fine (I thank to Colin for pointing this new version on the comment section). If you use the original spice-mode version together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there is a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
+Using the original <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a>) the fontification for spice circuits is recognized by babel in the buffer. If you use the newer version, it is all fine (I thank Colin for pointing this new version on the comment section). If you use the original spice-mode version together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there is a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-sec-1-2-4" class="outline-4">
-<h4 id="sec-1-2-4">Removing Ngspice plot persistence</h4>
-<div class="outline-text-4" id="text-1-2-4">
+<div id="outline-container-orgf6be450" class="outline-4">
+<h4 id="orgf6be450">Removing Ngspice plot persistence</h4>
+<div class="outline-text-4" id="text-orgf6be450">
 <p>
 If you, like me, dislike having to close the plot window every time you simulate your circuits, this tweak in Ngspice spice might do the trick.
 For it, you will have to download the source code of Ngspice and change 1 line of code.
@@ -346,7 +421,6 @@ I downloaded ngspice-26.tar.gz and altered "ngspice-26/src/frontend/plotting/gnu
 I commented the line 245 and added a slightly changed version: just removed the "-" from the gnuplot options.
 </p>
 <div class="org-src-container">
-
 <pre class="src src-C"><span style="color: #204A87;">// </span><span style="color: #204A87;">(void) sprintf(buf, "xterm -e gnuplot %s - &amp;", filename_plt);   </span>
 (<span style="color: #2F8B58; font-weight: bold;">void</span>) sprintf(buf, <span style="color: #4E9A06;">"xterm -e gnuplot %s &amp;"</span>, filename_plt);
 </pre>
@@ -359,11 +433,10 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-sec-1-3" class="outline-3">
-<h3 id="sec-1-3">Another example: Measuring and plotting values of a RC circuit</h3>
-<div class="outline-text-3" id="text-1-3">
+<div id="outline-container-org9ca9f79" class="outline-3">
+<h3 id="org9ca9f79">Another example: Measuring and plotting values of a RC circuit</h3>
+<div class="outline-text-3" id="text-org9ca9f79">
 <div class="org-src-container">
-
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
 <span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #F5666D;">k</span>
 <span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #F5666D;">p</span>
@@ -389,33 +462,35 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">value_at_tau = 0.36798value_at_five_tau = 0.00671732</td>
-<td class="left"><img src="./timeconstant.png" alt="timeconstant.png" /></td>
+<td class="org-left">value_at_tau = 0.36798value_at_five_tau = 0.00671732</td>
+<td class="org-left"><img src="./timeconstant.png" alt="timeconstant.png" /></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<div id="outline-container-sec-1-4" class="outline-3">
-<h3 id="sec-1-4">Final Words</h3>
-<div class="outline-text-3" id="text-1-4">
+<div id="outline-container-orgc6375f2" class="outline-3">
+<h3 id="orgc6375f2">Final Words</h3>
+<div class="outline-text-3" id="text-orgc6375f2">
 <p>
 Using Emacs and Org-mode to run codes within a live document is an extremely useful productivity technique. In the case of spice circuits, it might help to create a bridge between simulating circuits, creating reports and interacting with different programming languages.
 </p>
 
 
-<div id="disqus_thread"></div>
-<script>
+<div class="HTML">
+<p>
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
     var disqus_config = function () {
-        this.page.url = tiagoweber.github.io;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = entry1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = tiagoweber.github.io;  <i>/ Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = entry1; /</i> Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };    
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
@@ -423,8 +498,11 @@ Using Emacs and Org-mode to run codes within a live document is an extremely use
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="<a href="https://disqus.com/?ref_noscript">https://disqus.com/?ref_noscript</a>" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+</p>
+
+</div>
 </div>
 </div>
 </div>

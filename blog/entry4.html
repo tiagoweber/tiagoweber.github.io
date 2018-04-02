@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2018-04-02 Seg 01:03 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
-<!-- 2016-12-22 Qui 16:59 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Tiago" />
+<meta name="generator" content="Org mode" />
+<meta name="author" content="tweber" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -46,27 +53,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -86,6 +177,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/htmlize.css"/>
@@ -115,7 +207,7 @@ ga('send', 'pageview');
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -163,11 +255,11 @@ for the JavaScript code in this tag.
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org6fa736a" class="outline-2">
+<h2 id="org6fa736a">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
+<div class="outline-text-2" id="text-org6fa736a">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Thu&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Qui&gt;</span></span>
 </p>
 
 
@@ -187,6 +279,7 @@ Recently, I've made a <a href="./entry1.html">blog post</a> introducing <a href=
 <p>
 In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to Ngspice and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for this example we will use the <a href="https://fenix.tecnico.ulisboa.pt/downloadFile/1970943312271752/LM741.mod">LM741 spice model</a> from National Semiconductors).
 </p>
+
 <p>
 Although this is a simple design and simulation, let us use this case to get a grip about the process. From there on, you will be able to use the basic idea to develop much more complex design and  simulation cases. 
 </p>
@@ -194,9 +287,9 @@ Although this is a simple design and simulation, let us use this case to get a g
 
 
 
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Procedure</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgf70a01c" class="outline-3">
+<h3 id="orgf70a01c">Procedure</h3>
+<div class="outline-text-3" id="text-orgf70a01c">
 <p>
 In order to better illustrate the procedure, I will show the header of each code-block. This would not be necessary in a normal report.
 </p>
@@ -206,21 +299,20 @@ We will define as our design specification that the inverting opamp topology sha
 </p>
 </div>
 
-<div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1">Calculating the Resistors Values in Octave/Matlab</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-orgf2ae293" class="outline-4">
+<h4 id="orgf2ae293">Calculating the Resistors Values in Octave/Matlab</h4>
+<div class="outline-text-4" id="text-orgf2ae293">
 <p>
 First we want to calculate the value of our resistors. Let us assume resistor R1 is 10k, and then calculate R2 in Octave:
 </p>
 
 <pre class="example">
 #+NAME: design_variables
-#+BEGIN_SRC octave :results drawer :exports both
+#+BEGIN_SRC octave :results drawer :exports both 
 </pre>
 
 <div class="org-src-container">
-
-<pre class="src src-octave" id="design_variables">gain<span style="color: #A020F0;">=-</span>10<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="orga486a6d">gain<span style="color: #A020F0;">=-</span>10<span style="color: #A020F0;">;</span>
 r1<span style="color: #A020F0;">=</span>10e3<span style="color: #A020F0;">;</span>
 r2 <span style="color: #A020F0;">=</span> <span style="color: #A020F0;">-</span>gain<span style="color: #A020F0;">*</span>r1<span style="color: #A020F0;">;</span>
 ans <span style="color: #A020F0;">=</span> [gain<span style="color: #A020F0;">,</span> r1<span style="color: #A020F0;">,</span> r2]<span style="color: #A020F0;">;</span>
@@ -231,17 +323,17 @@ ans <span style="color: #A020F0;">=</span> [gain<span style="color: #A020F0;">,<
 
 
 <colgroup>
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
-<td class="right">-10</td>
-<td class="right">10000</td>
-<td class="right">100000</td>
+<td class="org-right">-10</td>
+<td class="org-right">10000</td>
+<td class="org-right">100000</td>
 </tr>
 </tbody>
 </table>
@@ -257,9 +349,9 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 </div>
 
-<div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2">Simulating the Circuit in Ngspice</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-orgb07fd32" class="outline-4">
+<h4 id="orgb07fd32">Simulating the Circuit in Ngspice</h4>
+<div class="outline-text-4" id="text-orgb07fd32">
 <p>
 With the vector in a variable we will now use it in a spice netlist to be simulated on Ngspice. 
 </p>
@@ -270,8 +362,7 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 </pre>
 
 <div class="org-src-container">
-
-<pre class="src src-spice" id="ngspice_sim"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
+<pre class="src src-spice" id="org775f482"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">ac</span> 1 <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz) <span style="color: #2F8B58; font-weight: bold;">dc</span> 0
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[1]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[2]</span>
@@ -299,17 +390,17 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 
 
 <colgroup>
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
-<td class="right">-9.99943</td>
-<td class="right">-4.32624</td>
-<td class="left"><img src="./amplifier_sim.png" alt="amplifier_sim.png" /></td>
+<td class="org-right">-9.99943</td>
+<td class="org-right">-4.32624</td>
+<td class="org-left"><img src="./amplifier_sim.png" alt="amplifier_sim.png" /></td>
 </tr>
 </tbody>
 </table>
@@ -321,7 +412,7 @@ The simulation had 2 measurement outputs (the DC gain of the circuit and the gai
 </p>
 
 <pre class="example">
-echo "$&amp;var1,$&amp;var2,$&amp;var3" &gt; $file.txt
+echo "$&amp;var1,$&amp;var2,$&amp;var3" &gt; $file.txt 
 </pre>
 
 <p>
@@ -337,9 +428,9 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 </div>
 
-<div id="outline-container-sec-1-1-3" class="outline-4">
-<h4 id="sec-1-1-3">Calculate the error between ideal and simulated on Octave/Matlab</h4>
-<div class="outline-text-4" id="text-1-1-3">
+<div id="outline-container-org7704269" class="outline-4">
+<h4 id="org7704269">Calculate the error between ideal and simulated on Octave/Matlab</h4>
+<div class="outline-text-4" id="text-org7704269">
 <p>
 We will now get the results from the simulation back to Octave in order to calculate the error between ideal and simulated. 
 </p>
@@ -350,8 +441,7 @@ We will now get the results from the simulation back to Octave in order to calcu
 </pre>
 
 <div class="org-src-container">
-
-<pre class="src src-octave" id="error_cal">gain_octave <span style="color: #A020F0;">=</span> design_variables(1)<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="org5c7fa08">gain_octave <span style="color: #A020F0;">=</span> design_variables(1)<span style="color: #A020F0;">;</span>
 gain_ngspice <span style="color: #A020F0;">=</span> str2num(gain_ngspice)
 error_absolute <span style="color: #A020F0;">=</span> abs((gain_octave<span style="color: #A020F0;">-</span>gain_ngspice))
 error_percentage <span style="color: #A020F0;">=</span> abs(error_absolute<span style="color: #A020F0;">/</span>gain_octave)
@@ -363,17 +453,18 @@ ans <span style="color: #A020F0;">=</span> [error_absolute<span style="color: #A
 
 
 <colgroup>
-<col  class="right" />
+<col  class="org-right" />
 
-<col  class="right" />
+<col  class="org-right" />
 </colgroup>
 <tbody>
 <tr>
-<td class="right">0.0005699999999997374</td>
-<td class="right">5.699999999997374e-05</td>
+<td class="org-right">0.0005699999999997374</td>
+<td class="org-right">5.699999999997374e-05</td>
 </tr>
 </tbody>
 </table>
+
 
 <p>
 And <i>voilà</i>, you have now your DC gain error calculated. 
@@ -381,9 +472,9 @@ And <i>voilà</i>, you have now your DC gain error calculated.
 </div>
 </div>
 
-<div id="outline-container-sec-1-1-4" class="outline-4">
-<h4 id="sec-1-1-4">Present the Results</h4>
-<div class="outline-text-4" id="text-1-1-4">
+<div id="outline-container-orgeef72db" class="outline-4">
+<h4 id="orgeef72db">Present the Results</h4>
+<div class="outline-text-4" id="text-orgeef72db">
 <p>
 You can present the result directly in your text with an inline code-block or in fancier approaches, like creating a table as below (where I used python to print the results).
 </p>
@@ -393,7 +484,6 @@ You can present the result directly in your text with an inline code-block or in
 </pre>
 
 <div class="org-src-container">
-
 <pre class="src src-python"><span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|                         |Gain    |"</span>
 <span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(vi[0][0])
@@ -408,53 +498,55 @@ You can present the result directly in your text with an inline code-block or in
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">&#xa0;</td>
-<td class="left">Gain</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Gain</td>
 </tr>
 
 <tr>
-<td class="left">Ideal (specification)</td>
-<td class="left">-10.00000 V/V</td>
+<td class="org-left">Ideal (specification)</td>
+<td class="org-left">-10.00000 V/V</td>
 </tr>
 
 <tr>
-<td class="left">Simulated (Ngspice)</td>
-<td class="left">-9.99943 V/V</td>
+<td class="org-left">Simulated (Ngspice)</td>
+<td class="org-left">-9.99943 V/V</td>
 </tr>
 
 <tr>
-<td class="left">Absolute Error (Octave)</td>
-<td class="left">0.00057</td>
+<td class="org-left">Absolute Error (Octave)</td>
+<td class="org-left">0.00057</td>
 </tr>
 
 <tr>
-<td class="left">Relative Error (Octave)</td>
-<td class="left">5.7e-05 %</td>
+<td class="org-left">Relative Error (Octave)</td>
+<td class="org-left">5.7e-05 %</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<div id="outline-container-sec-1-1-5" class="outline-4">
-<h4 id="sec-1-1-5">Possibilities</h4>
-<div class="outline-text-4" id="text-1-1-5">
+<div id="outline-container-orgd9d0d0a" class="outline-4">
+<h4 id="orgd9d0d0a">Possibilities</h4>
+<div class="outline-text-4" id="text-orgd9d0d0a">
 <p>
 The possibility to perform calculations in Octave or Matlab, simulate circuits based on these calculations on Ngspice and take the results back to Octave again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
 </p>
 
 
-<div id="disqus_thread"></div>
-<script>
+<div class="HTML">
+<p>
+&lt;div id="disqus_thread"&gt;&lt;/div&gt;
+&lt;script&gt;
     var disqus_config = function () {
-        this.page.url = tiagoweber.github.io;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = entry4; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = tiagoweber.github.io;  <i>/ Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = entry4; /</i> Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };    
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
@@ -462,8 +554,11 @@ The possibility to perform calculations in Octave or Matlab, simulate circuits b
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+&lt;/script&gt;
+&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="<a href="https://disqus.com/?ref_noscript">https://disqus.com/?ref_noscript</a>" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
+</p>
+
+</div>
 </div>
 </div>
 </div>

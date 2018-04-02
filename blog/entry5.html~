@@ -3,30 +3,23 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-02 Seg 01:03 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="tweber" />
+<!-- 2017-10-25 Qua 23:35 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Tiago" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
+  .title  { text-align: center; }
   .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
+  .done   { color: green; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -53,111 +46,27 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara { display: inline; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -177,7 +86,6 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/htmlize.css"/>
@@ -207,7 +115,7 @@ ga('send', 'pageview');
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -255,11 +163,11 @@ for the JavaScript code in this tag.
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org1ee1079" class="outline-2">
-<h2 id="org1ee1079">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
-<div class="outline-text-2" id="text-org1ee1079">
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Qui&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Thu&gt;</span></span>
 </p>
 
 
@@ -281,35 +189,35 @@ This is not even by far intended to be a solution for industry professionals. Th
 </p>
 </div>
 
-<div id="outline-container-org5daaa84" class="outline-3">
-<h3 id="org5daaa84">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
-<div class="outline-text-3" id="text-org5daaa84">
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
 We usually simulate analog circuits through SPICE circuit simulators. On the other hand, we usually use a Hardware Description Language (HDL) such as Verilog or VHDL using specific simulators for the digital section. If simulation time was not an issue, we could consider all signals as being analog and simulate the whole circuit as a SPICE netlist. However, due to the level of abstraction that digital circuits allow us to operate in, this would be an enormous waste of time. 
 </p>
 </div>
 
 
-<div id="outline-container-org90e0afa" class="outline-4">
-<h4 id="org90e0afa">Different Tools for Different Problems</h4>
-<div class="outline-text-4" id="text-org90e0afa">
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1">Different Tools for Different Problems</h4>
+<div class="outline-text-4" id="text-1-1-1">
 <p>
 Before introducing the proposed package, I would like to discuss some of the cases in which a designer might want to use different tool sets for simulation.
 </p>
 </div>
 
-<div id="outline-container-org3293c01" class="outline-5">
-<h5 id="org3293c01">System Simulation without Circuit Blocks</h5>
-<div class="outline-text-5" id="text-org3293c01">
+<div id="outline-container-sec-1-1-1-1" class="outline-5">
+<h5 id="sec-1-1-1-1">System Simulation without Circuit Blocks</h5>
+<div class="outline-text-5" id="text-1-1-1-1">
 <p>
 There are other occasions in which we are only interested in high-level analysis of a system. On those cases, all blocks are described mathematically and no circuit simulator is needed. One of the most used commercial solutions to that is Matlab/Simulink®. The open-source solution would be Octave (if no GUI to draw diagram is needed) or Scilab/XCOS (if diagrams to describe the blocks are welcome).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org049da0f" class="outline-5">
-<h5 id="org049da0f">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
-<div class="outline-text-5" id="text-org049da0f">
+<div id="outline-container-sec-1-1-1-2" class="outline-5">
+<h5 id="sec-1-1-1-2">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
+<div class="outline-text-5" id="text-1-1-1-2">
 <p>
 Sometimes we are not interested in modelling a block with a high-level language, but only interested in analyzing the output of the circuit with the aid of these high-level tools. For those cases, usually Matlab or Octave are used to perform <b>post-simulation analysis</b>. In this approach, the circuit simulator acts independently and its output (waveforms and measurements) are used as input to a script in Matlab or Octave. 
 </p>
@@ -317,9 +225,9 @@ Sometimes we are not interested in modelling a block with a high-level language,
 </div>
 
 
-<div id="outline-container-orgce83e07" class="outline-5">
-<h5 id="orgce83e07">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
-<div class="outline-text-5" id="text-orgce83e07">
+<div id="outline-container-sec-1-1-1-3" class="outline-5">
+<h5 id="sec-1-1-1-3">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
+<div class="outline-text-5" id="text-1-1-1-3">
 <p>
 The case of interest of this article is when we want to model a block (e.g.: counter, ADC, DAC, sensor, receiver, transceiver, &#x2026;) in a more abstract way and simulate it together with other blocks described as circuits. 
 </p>
@@ -339,9 +247,9 @@ For these cases in which system functionality exploration is the ultimate goal, 
 </div>
 </div>
 
-<div id="outline-container-org20356b4" class="outline-4">
-<h4 id="org20356b4">The Solution</h4>
-<div class="outline-text-4" id="text-org20356b4">
+<div id="outline-container-sec-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2">The Solution</h4>
+<div class="outline-text-4" id="text-1-1-2">
 <p>
 In order to do co-simulation of blocks described as circuits and blocks described in high-level language using Octave, I propose a package to perform the interface between Ngspice and Octave. Easy prototyping is one of the reasons Matlab is one of the greatest tools for scientists. The codes are easy to write, to understand and to debug. 
 </p>
@@ -350,8 +258,10 @@ In order to do co-simulation of blocks described as circuits and blocks describe
 The objectives of this package are to:
 </p>
 <ul class="org-ul">
-<li>allow the use of Matlab or Octave to describe the digital blocks or analog blocks with voltage input/output;</li>
-<li>allow simulation of mixed-signal circuits using open-source tools;</li>
+<li>allow the use of Matlab or Octave to describe the digital blocks or analog blocks with voltage input/output;
+</li>
+<li>allow simulation of mixed-signal circuits using open-source tools;
+</li>
 </ul>
 
 <p>
@@ -364,15 +274,15 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 
 
 
-<div id="outline-container-org992c01f" class="outline-3">
-<h3 id="org992c01f">Example (PWM block and analog output filter)</h3>
-<div class="outline-text-3" id="text-org992c01f">
-</div>
-<div id="outline-container-orgc57c4c5" class="outline-4">
-<h4 id="orgc57c4c5">Octave Block to Describe a Simple PWM Logic</h4>
-<div class="outline-text-4" id="text-orgc57c4c5">
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Example (PWM block and analog output filter)</h3>
+<div class="outline-text-3" id="text-1-2">
+</div><div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1">Octave Block to Describe a Simple PWM Logic</h4>
+<div class="outline-text-4" id="text-1-2-1">
 <div class="org-src-container">
-<pre class="src src-octave" id="org5af153f"><span style="color: #A52A2A; font-weight: bold;">function</span> [pinvalue] <span style="color: #A020F0;">=</span> <span style="color: #00578E; font-weight: bold;">pwm</span>(pinvalue<span style="color: #A020F0;">,</span>currenttime<span style="color: #A020F0;">,</span>vhigh<span style="color: #A020F0;">,</span>isfirst)<span style="color: #A020F0;">;</span>
+
+<pre class="src src-octave" id="pwm"><span style="color: #A52A2A; font-weight: bold;">function</span> [pinvalue] <span style="color: #A020F0;">=</span> <span style="color: #00578E; font-weight: bold;">pwm</span>(pinvalue<span style="color: #A020F0;">,</span>currenttime<span style="color: #A020F0;">,</span>vhigh<span style="color: #A020F0;">,</span>isfirst)<span style="color: #A020F0;">;</span>
 
     max_cycles <span style="color: #A020F0;">=</span> 40<span style="color: #A020F0;">;</span>
     analog_in <span style="color: #A020F0;">=</span> pinvalue(1)<span style="color: #A020F0;">;</span>
@@ -398,11 +308,12 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 </div>
 </div>
 
-<div id="outline-container-orgd5af187" class="outline-4">
-<h4 id="orgd5af187">SPICE Netlist of PWM Block and Analog Filter</h4>
-<div class="outline-text-4" id="text-orgd5af187">
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2">SPICE Netlist of PWM Block and Analog Filter</h4>
+<div class="outline-text-4" id="text-1-2-2">
 <div class="org-src-container">
-<pre class="src src-spice" id="orgb385a6b"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
+
+<pre class="src src-spice" id="ngspice_octave_pwm"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
 <span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">clk_freq</span> = 1<span style="color: #F5666D;">e</span>6
 <span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">clk_per</span> = '1/clk_freq'
 <span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">cap_value</span> = 1<span style="color: #F5666D;">e</span>-6
@@ -431,25 +342,30 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 </div>
 </div>
 
-<div id="outline-container-orgfd7da69" class="outline-4">
-<h4 id="orgfd7da69">PWM Results</h4>
-<div class="outline-text-4" id="text-orgfd7da69">
-
-<div class="figure">
-<p><img src="./ngspice_octave_pwm.png" alt="ngspice_octave_pwm.png" />
-</p>
-</div>
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3">PWM Results</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
+<colgroup>
+<col  class="left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="left"><img src="./ngspice_octave_pwm.png" alt="ngspice_octave_pwm.png" /></td>
+</tr>
+</tbody>
+</table>
 
 
-<div class="HTML">
-<p>
-&lt;div id="disqus_thread"&gt;&lt;/div&gt;
-&lt;script&gt;
+
+
+<div id="disqus_thread"></div>
+<script>
     var disqus_config = function () {
-        this.page.url = tiagoweber.github.io;  <i>/ Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = entry5; /</i> Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = tiagoweber.github.io;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = entry5; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };    
     (function() {  // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
@@ -457,11 +373,8 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
-&lt;/script&gt;
-&lt;noscript&gt;Please enable JavaScript to view the &lt;a href="<a href="https://disqus.com/?ref_noscript">https://disqus.com/?ref_noscript</a>" rel="nofollow"&gt;comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
-</p>
-
-</div>
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 </div>
 </div>
