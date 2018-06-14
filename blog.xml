@@ -6,7 +6,7 @@
     <description>Cool RSS</description>    <item> 
       <title>Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and OCTAVE/Matlab Interaction within Emacs</title>
       <link>http://tiagoweber.github.io/blog/entry4.html</link>
-      <guid>http://example.com/item/123</guid>
+      <guid>http://tiagoweber.github.io/blog/entry4.html</guid>
       <pubDate>Sat, 4 Aug 2016</pubDate>   
       <description>
 
@@ -24,7 +24,7 @@ In our example we will design a simple opamp inverting topology. For that purpos
 	</item>    <item> 
       <title>Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source</title>
       <link>http://tiagoweber.github.io/blog/entry3.html</link>
-      <guid>http://example.com/item/123</guid>
+      <guid>http://tiagoweber.github.io/blog/entry3.html</guid>
       <pubDate>Wen, 6 Jul 2016</pubDate>   
       <description>
 
@@ -39,7 +39,7 @@ In my opinion all participants were very rational on their statements although h
 	</item>    <item> 
       <title>Software/Hardware Integration Lab</title>
       <link>http://tiagoweber.github.io/blog/entry2.html</link>
-      <guid>http://example.com/item/123</guid>
+      <guid>http://tiagoweber.github.io/blog/entry2.html</guid>
       <pubDate>Mon, 27 Jun 2016</pubDate>   
       <description>
 
@@ -54,25 +54,11 @@ The Software/Hardware Integration Lab (LISHA) was founded in 1985 to promote res
 My webpage at LISHA is https://lisha.ufsc.br/Weber and the announcement (in portuguese) of the start of LISHA at UFSC Araranguá is here.
 <a href= "http://tiagoweber.github.io/blog/entry2.html"> [... Read more]</a> </description>
 	</item>    <item> 
-      <title>Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</title>
-      <link>http://tiagoweber.github.io/blog/entry1.html</link>
-      <guid>http://example.com/item/123</guid>
-      <pubDate>Sat, 26 Jun 2016</pubDate>   
-      <description>
-
-
-
-
-**  Simulating Circuits with Emacs, Org-mode, Babel and Ngspice
-
-by Tiago Oliveira Weber 2016-06-26 Sun
-
-
-
-
-Picture this. You are creating a report, studying or preparing a class. While you write your text, you suddenly feel that it is time to show in a circuit how your project works. Now the adventure begins: to add the results of a given simulation to your document, you will have to open your simulation software in another window, describe the circuit using a schematic editor, simulate it and then copy and paste the results to your text file. You might as well copy the image of some waveforms. Additionaly, you will also have to describe the circuit elements in such a way that the reader of your report knows what you have simulated. 
-
-In this process a lot can be lost: the quality of your schematic screenshots may or may not be a delight to the eyes, but even if the quality is great, there is still a lot of information that is not accessible through an image of the schematic. These can be the various component properties, simulation parameters and component models. In top of that, if you are like me, you will probably spend a lot of time editing and working with the waveforms to make them fit well in the report. And this is usually made either with an image editor (such as Gimp or Inkscape) or with gnuplot (if you're performing the additional step of exporting the data out of the simulator). After you are done<a href= "http://tiagoweber.github.io/blog/entry1.html"> [... Read more]</a> </description>
+      <title>Software/Hardware Integration Lab</title>
+      <link>http://tiagoweber.github.io/blog/entry2.html</link>
+      <guid>http://tiagoweber.github.io/blog/entry2.html</guid>
+      <pubDate>Mon, 27 Jun 2016</pubDate>   
+      <description>nil<a href= "http://tiagoweber.github.io/blog/entry2.html"> [... Read more]</a> </description>
 	</item>
   </channel>
 </rss>
