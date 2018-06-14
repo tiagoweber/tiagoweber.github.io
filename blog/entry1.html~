@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-02 Seg 01:03 -->
+<!-- 2018-06-14 Qui 09:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -202,6 +202,8 @@ ga('send', 'pageview');
 <meta property="og:title" content="Simulating Circuits with Emacs, Org-mode, Babel and Ngspice"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/entry1_image_700_400.png"/>
+<meta property="link" content="http://tiagoweber.github.io/blog/entry1.html"/>
+<meta property="pubdate" content="Sat, 26 Jun 2016"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -253,7 +255,7 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Tiago Oliveira Weber</h1>
 <p>
-<a href="../index.html">Back to home</a>
+<a href="../index.html">Back to home</a>   <a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"><img src="/feed-icon.gif" style="border:0"/></a><br>
 </p>
 
 <div id="outline-container-orga1ed94a" class="outline-2">
