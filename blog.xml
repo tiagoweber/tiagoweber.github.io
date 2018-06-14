@@ -11,6 +11,7 @@
       <description>
 
 
+
 **  Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs
 
 by Tiago Oliveira Weber 2016-08-04 Thu
@@ -21,6 +22,21 @@ Can you imagine being able to explore new design ideas, perform calculations, ru
 Recently, I've made a ob-spice, which is a simple language extension to ob-babel to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
 
 In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to Ngspice and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for th<a href= "http://tiagoweber.github.io/blog/entry4.html"> [... Read more]</a> </description>
+	</item>    <item> 
+      <title>Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source</title>
+      <link>http://tiagoweber.github.io/blog/entry3.html</link>
+      <guid>http://tiagoweber.github.io/blog/entry3.html</guid>
+      <pubDate>Wen, 6 Jul 2016</pubDate>   
+      <description>
+
+
+**  Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source
+by Tiago Oliveira Weber 2016-07-06 Wen
+
+The DAC TV channel with the title "Lanza’s Tech Vision Challenge: Daring to Move to Open Source". The moderator was Lucio Lanza (from Lanza TechVentures) and the panelists were Warran Savage (from IP Extreme), Mark Templeton (from Scientific Ventures) and Michael Wishart (from eFabless).
+
+In my opinion all participants were very rational on their statements although having different points of view. I, as an open source advocate, felt very glad this type of discussion is taking place in such a relevant conference and with people that know from the inside out how the current EDA business works.
+<a href= "http://tiagoweber.github.io/blog/entry3.html"> [... Read more]</a> </description>
 	</item>    <item> 
       <title>Software/Hardware Integration Lab</title>
       <link>http://tiagoweber.github.io/blog/entry2.html</link>
