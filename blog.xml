@@ -11,6 +11,7 @@
       <description>
 
 
+Back home  @@html:a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"img src="../feed-icon.gif" style="border:0"//abr@@
 
 **  Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs
 
@@ -21,7 +22,7 @@ Can you imagine being able to explore new design ideas, perform calculations, ru
 
 Recently, I've made a ob-spice, which is a simple language extension to ob-babel to be able to simulate Ngspice within Emacs. In the present post I will show how we can use ob-spice to perform interaction between Ngspice, Octave (or Matlab) and any other language of our interest. While the experienced org-mode user would already assume this interaction possible from ob-babel features, it is the first demonstration of ob-spice receiving vector inputs (a new feature to ob-spice) and producing outputs back to other languages.
 
-In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to Ngspice and measure the results so they can be used back in Octave/Matlab to calculate the error between the ideal response and the simulated one. The error will be due to the opamp characteristics and limitations (for th<a href= "http://tiagoweber.github.io/blog/entry4.html"> [... Read more]</a> </description>
+In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to <a href= "http://tiagoweber.github.io/blog/entry4.html"> [... Read more]</a> </description>
 	</item>    <item> 
       <title>Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source</title>
       <link>http://tiagoweber.github.io/blog/entry3.html</link>
@@ -29,6 +30,7 @@ In our example we will design a simple opamp inverting topology. For that purpos
       <pubDate>Wen, 6 Jul 2016</pubDate>   
       <description>
 
+Back home  @@html:a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"img src="../feed-icon.gif" style="border:0"//abr@@
 
 **  Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source
 by Tiago Oliveira Weber 2016-07-06 Wen
@@ -44,6 +46,7 @@ In my opinion all participants were very rational on their statements although h
       <pubDate>Mon, 27 Jun 2016</pubDate>   
       <description>
 
+Back home   @@html:a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"img src="../feed-icon.gif" style="border:0"//abr@@
 
 **  Software/Hardware Integration Lab
 by Tiago Oliveira Weber 2016-06-27 Mon
@@ -63,6 +66,7 @@ My webpage at LISHA is https://lisha.ufsc.br/Weber and the announcement (in port
 
 
 
+Back home   @@html:a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"img src="../feed-icon.gif" style="border:0"//abr@@
 
 **  Simulating Circuits with Emacs, Org-mode, Babel and Ngspice
 
@@ -73,7 +77,7 @@ by Tiago Oliveira Weber 2016-06-26 Sun
 
 Picture this. You are creating a report, studying or preparing a class. While you write your text, you suddenly feel that it is time to show in a circuit how your project works. Now the adventure begins: to add the results of a given simulation to your document, you will have to open your simulation software in another window, describe the circuit using a schematic editor, simulate it and then copy and paste the results to your text file. You might as well copy the image of some waveforms. Additionaly, you will also have to describe the circuit elements in such a way that the reader of your report knows what you have simulated. 
 
-In this process a lot can be lost: the quality of your schematic screenshots may or may not be a delight to the eyes, but even if the quality is great, there is still a lot of information that is not accessible through an image of the schematic. These can be the various component properties, simulation parameters and component models. In top of that, if you are like me, you will probably spend a lot of time editing and working with the waveforms to make them fit well in the report. And this is usually made either with an image editor (such as Gimp or Inkscape) or with gnuplot (if you're performing the additional step of exporting the data out of the simulator). After you are done<a href= "http://tiagoweber.github.io/blog/entry1.html"> [... Read more]</a> </description>
+In this process a lot can be lost: the quality of your schematic screenshots may or may not be a delight to the eyes, but even if the quality is great, there is still a lot of information that is not accessible through an image of the schematic. These can be the various component properties, simulation parameters and component models. In top of that, if you are like me, you will probably spend a lot of time editing and working with the waveforms to make them fit<a href= "http://tiagoweber.github.io/blog/entry1.html"> [... Read more]</a> </description>
 	</item>
   </channel>
 </rss>
