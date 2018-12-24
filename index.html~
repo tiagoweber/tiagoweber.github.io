@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-12-14 Sex 19:47 -->
+<!-- 2018-12-15 Sáb 15:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -414,11 +414,11 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h4 id="org2afb934">Undergraduate thesis</h4>
 <div class="outline-text-4" id="text-org2afb934">
 <ul class="org-ul">
-<li>MARTINS, T. M. <i>Aplicação de Técnicas de Inteligência Artificial na Detecção do Comportamento Tipo-Depressivo em Camundongos através do Teste de Suspensão pela Cauda</i>. 2018. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber.</li>
+<li>MARTINS, T. M. <i>Aplicação de Técnicas de Inteligência Artificial na Detecção do Comportamento Tipo-Depressivo em Camundongos através do Teste de Suspensão pela Cauda</i>. 2018. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192344">Link</a></li>
 
-<li>MARTINS, J. F. <i>Matriz de Interconexão Eletrônica Programável para Prototipagem Rápida e Experimentação Remota</i>. 2018. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber.</li>
+<li>MARTINS, J. F. <i>Matriz de Interconexão Eletrônica Programável para Prototipagem Rápida e Experimentação Remota</i>. 2018. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192192">Link</a></li>
 
-<li>DA SILVA, L. L. <i>Sistema de monitoramento de energia elétrica utilizando o protocolo de comunicação MQTT</i>. 2018. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber</li>
+<li>DA SILVA, L. L. <i>Sistema de monitoramento de energia elétrica utilizando o protocolo de comunicação MQTT</i>. 2018. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber <a href="https://repositorio.ufsc.br/handle/123456789/192296">Link</a></li>
 
 <li>ROQUE, F. V. <i>Sistema de detecção de defeitos em tecidos utilizando algoritmos de classificação e wavelets</i>. 2017. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber <a href="https://repositorio.ufsc.br/handle/123456789/182275">Link</a></li>
 
@@ -646,6 +646,11 @@ This map is an attempt to help the visualization of microelectronics in Brazil. 
 <div class="outline-text-3" id="text-orgd98aa6f">
 <p>
 A list of upcoming conferences related to microelectronics can be seen in <a href="conferences.html">here</a>. 
+</p>
+
+
+<p>
+Pessoal, fiquei com uma dúvida em relação ao uso da categoria "Multimodal Learning Analytics" em nosso trabalho. Me parece que ela exigiria a existência de mais de uma fonte de dados/tipos de sensores (por exemplo, imagem e áudio). No entanto, no paper existirá apenas dados do kinect, a não ser que estejamos considerando os diferentes tipos de dados como sendo as categorias de eventos pré-processados. É esse o caso?
 </p>
 </div>
 </div>
