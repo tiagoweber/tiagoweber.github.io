@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-12-24 Seg 02:58 -->
+<!-- 2018-12-24 Seg 03:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Tiago Oliveira Weber</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="tweber" />
 <style type="text/css">
@@ -180,6 +180,39 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/hideshow.css"/>
+<script type="text/javascript" src="themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-79541283-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script language="JavaScript">
+<!--
+function autoResize(id){
+var newheight;
+var newwidth;
+if(document.getElementById){
+newheight = document.getElementById(id).contentWindow.document .body.scrollHeight;
+newwidth = document.getElementById(id).contentWindow.document .body.scrollWidth;
+}
+document.getElementById(id).height = (newheight) + "px";
+document.getElementById(id).width = (newwidth) + "px";
+}
+//-->
+</script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -229,51 +262,146 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org6e7ac10">Teaching</a>
-<ul>
-<li><a href="#org5d1c43e">Classes</a></li>
-<li><a href="#org4c50b18">Short Course</a></li>
-</ul>
-</li>
-<li><a href="#orgc85555a">Curriculum</a>
-<ul>
-<li><a href="#org21e6f48">Professional Social Networks</a></li>
-</ul>
-</li>
-<li><a href="#blog">Blog</a>
-<ul>
-<li><a href="#orge8ff3f8"> Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</a></li>
-<li><a href="#org3d9d965"> Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source</a></li>
-<li><a href="#org2f4b36b"> Software/Hardware Integration Lab</a></li>
-<li><a href="#orga229803"> Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</a></li>
-</ul>
-</li>
-<li><a href="#org6505da1">Microelectronics</a>
-<ul>
-<li><a href="#org54f8321">Map of Microelectronics in Brazil</a>
-<ul>
-<li><a href="#org1688718">List</a></li>
-</ul>
-</li>
-<li><a href="#orgd98aa6f">Upcoming Conferences</a></li>
-</ul>
-</li>
-</ul>
+<h1 class="title">Tiago Oliveira Weber</h1>
+
+<div id="outline-container-orgddd9f22" class="outline-2">
+<h2 id="orgddd9f22">About</h2>
+<div class="outline-text-2" id="text-orgddd9f22">
+
+<div class="figure">
+<p><img src="img/linkedin2.jpg" alt="linkedin2.jpg" width="200px image" title="Photo" align="right" /> 
+</p>
 </div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">I am currently a professor at the Federal University of Santa Catarina (UFSC), Araranguá, Brazil. I was a member of the Integrated Systems Laboratory (LSI) where my work was related to the design and test of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. I have obtained my Doctorate degree in Microelectronics at the University of São Paulo (USP) in 2015 and the BS degree in Electrical Engineering at the Federal University of Santa Maria in 2010.</td>
+</tr>
+</tbody>
+</table>
 </div>
+
+<div id="outline-container-orgb6eecd5" class="outline-3">
+<h3 id="orgb6eecd5">Research Interests</h3>
+<div class="outline-text-3" id="text-orgb6eecd5">
 <p>
-<a href="https://repositorio.ufsc.br/handle/123456789/192296">https://repositorio.ufsc.br/handle/123456789/192296</a>][Link]]
+My main research interests are: 
+</p>
+<ul class="org-ul">
+<li>CAD tools for analog integrated circuits</li>
+<li>optimization and metaheuristics</li>
+<li>analog integrated circuit design</li>
+<li>artificial intelligence techniques</li>
+<li>analog computing.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfcd02c9" class="outline-3">
+<h3 id="orgfcd02c9">Contact</h3>
+<div class="outline-text-3" id="text-orgfcd02c9">
+<p>
+E-mail: tiago.weber (at) ufsc.br
+</p>
+
+<p>
+Phone: +55 48 9.111 2228  
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf226de4" class="outline-2">
+<h2 id="orgf226de4">Education</h2>
+<div class="outline-text-2" id="text-orgf226de4">
+</div>
+<div id="outline-container-org0a66055" class="outline-3">
+<h3 id="org0a66055">Doctorate in Microelectronics - June 2015</h3>
+<div class="outline-text-3" id="text-org0a66055">
+<p>
+University of São Paulo - São Paulo, Brazil
 </p>
 
 <ul class="org-ul">
-<li>ROQUE, F. V. <i>Sistema de detecção de defeitos em tecidos utilizando algoritmos de classificação e wavelets</i>. 2017. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber <a href="https://repositorio.ufsc.br/handle/123456789/182275">Link</a></li>
-
-<li>MACARINI, L. A. B. <i>Sistema de detecção de defeitos em pisos cerâmicos baseado em processamento de imagens e aprendizado de máquina</i>. 2017. Trabalho de Conclusão de Curso (Engenharia de Computação) - Universidade Federal de Santa Catarina, Santa Catarina; Orientador: Tiago Oliveira Weber <a href="https://repositorio.ufsc.br/handle/123456789/182175">Link</a></li>
+<li>Dissertation Title (translated from Portuguese): Synthesis of analog integrated circuits in system-level and circuit-level using modern optimization methods</li>
+<li>Research Synopsis: analog integrated circuits are very important in modern electronic systems, performing tasks such as analog to digital conversion, digital to analog conversion, radio frequency communication, filtering and others. The design of this type of circuit requires attending to several performance specifications, being usually performed only by experienced designers. We developed techniques for the design of circuit-level and system-level analog circuits. As the optimization core, we proposed an algorithm based on Simulated Annealing while considering multiobjective information through the use of a crossover operator. An hybrid algorithm combining the proposed algorithm with Particle Swarm Optimization was created to properly explore the Pareto front. Tests indicated the algorithms are efficient for the design of analog circuits as well as outperform many other derivative-free algorithms when applied to purely mathematical problems.</li>
 </ul>
+</div>
+</div>
+
+<div id="outline-container-orgac20fa4" class="outline-3">
+<h3 id="orgac20fa4">B.S. in Electrical Engineering - Jan. 2010</h3>
+<div class="outline-text-3" id="text-orgac20fa4">
+<p>
+Federal University of Santa Maria - Santa Maria, Brazil
+</p>
+<ul class="org-ul">
+<li>Undergraduate Thesis Title (translated from Portuguese): Tool for integrated circuit synthesis with an educational approach</li>
+</ul>
+
+<p>
+&#x2013; Modules included:
+</p>
+<ul class="org-ul">
+<li>Analog Integrated Circuits Design</li>
+<li>Special Topics in Microelectronics</li>
+<li>Programmable Logic Systems</li>
+<li>Conception of Integrated Circuits</li>
+<li>Data Communication</li>
+<li>Signal Processing</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgfc7e432" class="outline-2">
+<h2 id="orgfc7e432">Publications</h2>
+<div class="outline-text-2" id="text-orgfc7e432">
+</div>
+<div id="outline-container-orgd08b01d" class="outline-3">
+<h3 id="orgd08b01d">Journal publications</h3>
+<div class="outline-text-3" id="text-orgd08b01d">
+<ul class="org-ul">
+<li>ADOLFSSON, J.; PABON, A. AYALA; BREGANT, M.; BRITTON, C.; BRULIN, G.; CARVALHO, D.; CHAMBERT, V.; CHINELLATO, D.; ESPAGNON, B.; HERRERA, H.D. HERNANDEZ; LJUBICIC, T.; MAHMOOD, S.M.; MJÖRNMARK, U.; MORAES, D.; MUNHOZ, M.G.; NOËL, G.; OSKARSSON, A.; OSTERMAN, L.; PILYAR, A.; READ, K.; RUETTE, A.; RUSSO, P.; SANCHES, B.C.S.; SEVERO, L.; SILVERMYR, D.; SUIRE, C.; TAMBAVE, G.J.; TUN-LANOË, K.M.M.; NOIJE, W. VAN; VELURE, A.; VERESCHAGIN, S.; WANLIN, E.; WEBER, T.O.; ZAPOROZHETS, S. SAMPA Chip: the New 32 Channels ASIC for the ALICE TPC and MCH Upgrades. <i>Journal of Instrumentation</i>, v.12, p.C04008 - C04008, 2017. <a href="10.1088/1748-0221/12/04/c04008">Link</a></li>
+<li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016; <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012; <a href="http://link.springer.com/article/10.1007%2Fs10470-012-9939-z">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012. <a href="http://www.sbmicro.org.br/jics/html/volume7n1.html">Link</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd27f2ac" class="outline-3">
+<h3 id="orgd27f2ac">Book chapter</h3>
+<div class="outline-text-3" id="text-orgd27f2ac">
+<ul class="org-ul">
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org880a992" class="outline-3">
+<h3 id="org880a992">Conference publications (not up-to-date)</h3>
+<div class="outline-text-3" id="text-org880a992">
+<ul class="org-ul">
+<li>MARTINS, J. F.; WEBER, T. O. Matriz de Interconexão Eletrônica Programável de Baixo Custo para Aplicação em Laboratório Remoto e Prototipagem Rápida <i>In: Anais do Simpósio Ibero-Americano de Tecnologias Educacionais (SITED)</i>, 2018, Araranguá, SC.</li>
+<li>MACARINI, L. A.; WEBER, T. O. Quality Control System for Ceramic Tiles using Segmentation-based Fractal Texture Analysis and SVM <i>In: CONFERENCE ON GRAPHICS, PATTERNS AND IMAGES, 30. (SIBGRAPI)</i>, 2017, Niterói, RJ. <a href="http://urlib.net/8JMKD3MGPAW/3PH2NFL">Link</a></li>
+<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013; <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6644878&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6644878">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;arnumber=5750289">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="http://dl.acm.org/citation.cfm?id=2020897">Link</a></li>
+<li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009 <a href="http://www.ing.unlp.edu.ar/cetad/iberchip/finalprogram.htm">Link</a></li>
+<li>HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05 <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008</li>
+</ul>
+</div>
+</div>
+</div>
 
 
 <div id="outline-container-org6e7ac10" class="outline-2">
@@ -496,11 +624,6 @@ A list of upcoming conferences related to microelectronics can be seen in <a hre
 </div>
 </div>
 </div>
-</div>
-<div id="postamble" class="status">
-<p class="author">Author: tweber</p>
-<p class="date">Created: 2018-12-24 Seg 02:58</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
