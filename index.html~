@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-12-24 Seg 03:12 -->
+<!-- 2018-12-24 Seg 03:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -387,15 +387,22 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-org880a992" class="outline-3">
-<h3 id="org880a992">Conference publications (not up-to-date)</h3>
-<div class="outline-text-3" id="text-org880a992">
+<div id="outline-container-org2be8323" class="outline-3">
+<h3 id="org2be8323">Conference publications</h3>
+<div class="outline-text-3" id="text-org2be8323">
 <ul class="org-ul">
+<li>MARTINS, J. F.; WEBER, T. O. Sistema Matricial de Interconexão Programável para Aplicação em Laboratórios Remotos de Eletrônica Analógica <i>In: Anais do 7º Simpósio de Integração Científica e Tecnológica do Sul Catarinense (SICT-SUL)</i>, 2018, Araranguá, SC. <a href="http://criciuma.ifsc.edu.br/anais-sict-sul/">Link</a></li>
 <li>MARTINS, J. F.; WEBER, T. O. Matriz de Interconexão Eletrônica Programável de Baixo Custo para Aplicação em Laboratório Remoto e Prototipagem Rápida <i>In: Anais do Simpósio Ibero-Americano de Tecnologias Educacionais (SITED)</i>, 2018, Araranguá, SC.</li>
 <li>MACARINI, L. A.; WEBER, T. O. Quality Control System for Ceramic Tiles using Segmentation-based Fractal Texture Analysis and SVM <i>In: CONFERENCE ON GRAPHICS, PATTERNS AND IMAGES, 30. (SIBGRAPI)</i>, 2017, Niterói, RJ. <a href="http://urlib.net/8JMKD3MGPAW/3PH2NFL">Link</a></li>
-<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013; <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6644878&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6644878">Link</a></li>
+</ul>
+
+<ul class="org-ul">
+<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013. <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6644878&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6644878">Link</a></li>
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;arnumber=5750289">Link</a></li>
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="http://dl.acm.org/citation.cfm?id=2020897">Link</a></li>
+</ul>
+
+<ul class="org-ul">
 <li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009 <a href="http://www.ing.unlp.edu.ar/cetad/iberchip/finalprogram.htm">Link</a></li>
 <li>HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05 <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008</li>
 </ul>
