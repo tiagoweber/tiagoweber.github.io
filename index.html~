@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-12-24 Seg 03:46 -->
+<!-- 2018-12-25 Ter 02:31 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -381,7 +381,7 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h3 id="orgd27f2ac">Book chapter</h3>
 <div class="outline-text-3" id="text-orgd27f2ac">
 <ul class="org-ul">
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing<i>Quenching with Crossovers and Particle Swarm Optimization. /Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a></li>
 </ul>
 </div>
 </div>
@@ -465,13 +465,30 @@ Federal University of Santa Maria - Santa Maria, Brazil
 <h3 id="org4c50b18">Short Course</h3>
 <div class="outline-text-3" id="text-org4c50b18">
 <ul class="org-ul">
-<li>Course in GNU Octave/Matlab and Applications for Engineers (in Portuguese: "Curso de GNU Octave / Matlab e Aplicações para Engenheiros"). This material was presented at the II Computer Engineering Academic Week in March 2018 at UFSC - Campus Araranguá - <a href="data/courses/octave_matlab_course_tweber_v1.pdf">Presentation in Portuguese</a></li>
+<li>Course in GNU Octave<i>Matlab and Applications for Engineers (in Portuguese: "Curso de GNU Octave / Matlab e Aplicações para Engenheiros"). This material was presented at the II Computer Engineering Academic Week in March 2018 at UFSC - Campus Araranguá - [[<a href="data">data</a></i>courses/octave_matlab_course_tweber_v1.pdf][Presentation in Portuguese]]</li>
 </ul>
 </div>
 </div>
 </div>
 
 
+
+<div id="outline-container-org38b6f0d" class="outline-2">
+<h2 id="org38b6f0d">Academic Advisory</h2>
+<div class="outline-text-2" id="text-org38b6f0d">
+<ul class="org-ul">
+<li>Thiago Matias Martins. Aplicação de Técnicas de Inteligência Artificial na Detecção do Comportamento Tipo-Depressivo em Camundongos através do Teste de Suspensão pela Cauda. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192344">Link</a></li>
+
+<li>Leonardo Loch da Silva. Sistema de monitoramento de energia elétrica utilizando o protocolo de comunicação MQTT. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192296">Link</a></li>
+
+<li>Julyan Figueredo Martins. Matriz de Interconexão Eletrônica Programável para Prototipagem Rápida e Experimentação Remota. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192192">Link</a></li>
+
+<li>Felipe Vieira Roque. Sistema de detecção de defeitos em tecidos utilizando algoritmos de classificação e wavelets. 2017. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/182275">Link</a></li>
+
+<li>Luiz Antonio Buschetto Macarini. <i>Sistema de detecção de defeitos em pisos cerâmicos baseado em processamento de imagens e aprendizado de máquina</i>. 2017. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/182175">Link</a></li>
+</ul>
+</div>
+</div>
 
 <div id="outline-container-orgc85555a" class="outline-2">
 <h2 id="orgc85555a">Curriculum</h2>
@@ -522,7 +539,7 @@ Recently, I've made a <a href="./entry1.html">blog post</a> introducing <a href=
 </p>
 
 <p>
-In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave/Matlab, pass the values to  <a href="././blog/entry4.html">&#x2026; Read more</a>
+In our example we will design a simple opamp inverting topology. For that purpose, we will calculate the resistor values in Octave<i>Matlab, pass the values to  [[file:.</i>./blog/entry4.org][&#x2026; Read more]]
 </p>
 
 <p>
