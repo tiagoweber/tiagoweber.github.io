@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-12-31 Seg 18:14 -->
+<!-- 2018-12-31 Seg 19:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -403,18 +403,23 @@ Here you will find:
 <h3 id="orge56bdde">Research Projects and Goals</h3>
 <div class="outline-text-3" id="text-orge56bdde">
 <p>
-By sharing my research projects and goals, my intention is to be transparent and communicate my professional road map to collaborators (other researchers, students and companies). 
+By sharing my research projects and goals, my intention is to communicate my professional road map to current and potential collaborators (other researchers, students and companies). 
 </p>
 </div>
 
 <div id="outline-container-orge7b7abd" class="outline-4">
 <h4 id="orge7b7abd">Research Line: Artificial Intelligence - Hardware Accelerators</h4>
 <div class="outline-text-4" id="text-orge7b7abd">
+<p>
+This research line aims the development of integrated circuits to provide hardware acceleration for Artificial Intelligence applications. 
+The objective is to develop new topologies and systems that improves the state-of-the-art on hardware-based machine learning.
+</p>
 </div>
 
-<div id="outline-container-org9af32f1" class="outline-5">
-<h5 id="org9af32f1">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org9af32f1">
+
+<div id="outline-container-orgdf33560" class="outline-5">
+<h5 id="orgdf33560">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgdf33560">
 </div>
 <ul class="org-ul">
 <li><a id="orgc268c5d"></a><span class="todo TODO">TODO</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
@@ -423,14 +428,20 @@ By sharing my research projects and goals, my intention is to be transparent and
 </div>
 </div>
 
-<div id="outline-container-org9c1d7bd" class="outline-4">
-<h4 id="org9c1d7bd">Research Line: Microelectronics / Analog Circuit Synthesis</h4>
-<div class="outline-text-4" id="text-org9c1d7bd">
+
+<div id="outline-container-orgd770e25" class="outline-4">
+<h4 id="orgd770e25">Research Line: Microelectronics / Analog Design Synthesis</h4>
+<div class="outline-text-4" id="text-orgd770e25">
+<p>
+This research line aims the development of techniques for analog design synthesis in circuit and system level. The objective is to advance the state-of-the art in analog circuit synthesis/optimization by bridging system-level optimization with circuit-level optimization. 
+</p>
 </div>
 
-<div id="outline-container-org798ec84" class="outline-5">
-<h5 id="org798ec84">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org798ec84">
+
+
+<div id="outline-container-orga1d2f89" class="outline-5">
+<h5 id="orga1d2f89">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orga1d2f89">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo STARTED">STARTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -446,11 +457,14 @@ By sharing my research projects and goals, my intention is to be transparent and
 <div id="outline-container-org3ab8d0f" class="outline-4">
 <h4 id="org3ab8d0f">Research Line: Artificial Intelligence - Software</h4>
 <div class="outline-text-4" id="text-org3ab8d0f">
+<p>
+This research line aims the development of new Artificial Intelligence techniques and applications.
+</p>
 </div>
 
-<div id="outline-container-orgdf33560" class="outline-5">
-<h5 id="orgdf33560">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgdf33560">
+<div id="outline-container-org2ec37ac" class="outline-5">
+<h5 id="org2ec37ac">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org2ec37ac">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
