@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-01 Ter 03:08 -->
+<!-- 2019-01-01 Ter 04:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -183,6 +183,7 @@
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/bigblow.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/mine.css"/>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
@@ -281,7 +282,7 @@ for the JavaScript code in this tag.
 </colgroup>
 <tbody>
 <tr>
-<td class="org-left">I am currently a professor at the Federal University of Santa Catarina (UFSC), Araranguá, Brazil. I was a member of the Integrated Systems Laboratory (LSI) where my work was related to the design and test of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. I have obtained my Doctorate degree in Microelectronics at the University of São Paulo (USP) in 2015 and the BS degree in Electrical Engineering at the Federal University of Santa Maria in 2010.</td>
+<td class="org-left">I am currently a professor at the Federal University of Santa Catarina (UFSC), Araranguá, Brazil. I was a member of the Integrated Systems Laboratory (LSI) where my work was related to the design and test  of an ASIC for the Time Projection Chamber of the ALICE experiment in LHC (Large Hadron Collider) - CERN. I have obtained my Doctorate degree in Microelectronics at the University of São Paulo (USP) in 2015 and the BS degree in Electrical Engineering at the Federal University of Santa Maria in 2010.</td>
 </tr>
 </tbody>
 </table>
@@ -394,7 +395,7 @@ Here you will find:
 </p>
 <ul class="org-ul">
 <li>My <a href="#orge56bdde">Research Projects and Goals</a></li>
-<li><a href="#org1f4b967">Previous Publications</a></li>
+<li><a href="#org6ee47b2">Publications</a></li>
 <li><a href="#org87e3801">2019 Conference Deadlines</a></li>
 </ul>
 </div>
@@ -406,6 +407,7 @@ Here you will find:
 By sharing my research projects and goals, the objective is to communicate my professional road map to current and potential collaborators (other researchers, students and companies). 
 </p>
 </div>
+
 
 <div id="outline-container-orge7b7abd" class="outline-4">
 <h4 id="orge7b7abd">Research Line: Artificial Intelligence - Hardware Accelerators</h4>
@@ -422,9 +424,10 @@ The objective is to develop new topologies and systems that improves the state-o
 </p>
 </div>
 
-<div id="outline-container-org2ec37ac" class="outline-5">
-<h5 id="org2ec37ac">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org2ec37ac">
+
+<div id="outline-container-org507dd08" class="outline-5">
+<h5 id="org507dd08">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org507dd08">
 </div>
 <ul class="org-ul">
 <li><a id="orgc268c5d"></a><span class="todo TODO">TODO</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
@@ -439,7 +442,7 @@ The objective is to develop new topologies and systems that improves the state-o
 <div class="outline-text-4" id="text-orgd770e25">
 
 <div class="figure">
-<p><img src="img/layout_en.png" alt="layout_en.png" width="400px image" title="Photo" align="left" /> 
+<p><img src="img/layout_en.png" alt="layout_en.png" width="200px image" title="Photo" align="left" /> 
 </p>
 </div>
 
@@ -449,10 +452,9 @@ This research line aims the development of techniques for analog design synthesi
 </div>
 
 
-
-<div id="outline-container-org741618f" class="outline-5">
-<h5 id="org741618f">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org741618f">
+<div id="outline-container-orgb24f88b" class="outline-5">
+<h5 id="orgb24f88b">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgb24f88b">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo STARTED">STARTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -464,7 +466,6 @@ This research line aims the development of techniques for analog design synthesi
 </div>
 </div>
 
-
 <div id="outline-container-org3ab8d0f" class="outline-4">
 <h4 id="org3ab8d0f">Research Line: Artificial Intelligence - Software</h4>
 <div class="outline-text-4" id="text-org3ab8d0f">
@@ -473,9 +474,9 @@ This research line aims the development of new Artificial Intelligence technique
 </p>
 </div>
 
-<div id="outline-container-org507dd08" class="outline-5">
-<h5 id="org507dd08">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org507dd08">
+<div id="outline-container-org9ca512d" class="outline-5">
+<h5 id="org9ca512d">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org9ca512d">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -487,9 +488,9 @@ This research line aims the development of new Artificial Intelligence technique
 </div>
 
 
-<div id="outline-container-org1f4b967" class="outline-3">
-<h3 id="org1f4b967">Previous Publications</h3>
-<div class="outline-text-3" id="text-org1f4b967">
+<div id="outline-container-org6ee47b2" class="outline-3">
+<h3 id="org6ee47b2">Publications</h3>
+<div class="outline-text-3" id="text-org6ee47b2">
 </div>
 <div id="outline-container-orgd08b01d" class="outline-4">
 <h4 id="orgd08b01d">Journal publications</h4>
