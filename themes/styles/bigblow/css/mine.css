@@ -1,0 +1,54 @@
+.FRAME_WRAPPER {
+    /*background-color: #FDFCD8; */
+    /*background-color: #FFFAF4; */
+    background-color: #FFFFFF; 
+    border: 0px solid #EEE9C3;
+    color: #302B13;
+    font-weight: normal;
+    position: relative;
+}
+
+.FRAME_WRAPPER:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.FRAME_LEFT {
+    float: left;
+    /*width: 35%;*/
+    height: auto;
+    /*overflow: hidden; */
+    /*display: block; */
+    margin: 0 auto;
+    /*top: 0; bottom: 0; left: 0; right: 0; */
+    bottom: 0;
+    margin-left: 100%;
+    margin-bottom: 10;
+    position:absolute;
+}
+
+
+.FRAME_RIGHT {
+    overflow: hidden;
+}
+
+.FRAME_BOTTOM {
+    clear: both;
+}
+
+
+
+/*
+.FRAME_LEFT:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.FRAME_RIGHT:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+*/

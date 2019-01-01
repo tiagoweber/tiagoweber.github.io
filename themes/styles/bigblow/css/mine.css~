@@ -1,0 +1,6 @@
+#FRAME1 {
+    background-color: #FDFCD8;
+    border: 1px solid #EEE9C3;
+    color: #302B13;
+    font-weight: normal;
+}
