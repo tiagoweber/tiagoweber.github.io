@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-02 Qua 16:05 -->
+<!-- 2019-01-02 Qua 16:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -276,7 +276,7 @@ for the JavaScript code in this tag.
 
 <p>
 <font size="4" face="Optima, sans-serif">
-Promote <b>technological advances</b> to enable  <b>new capabilities</b> to human activity  </font> 
+Promote <b>technological advances</b> to enable <br> <b>new capabilities</b> for human activity  </font> 
 </p>
 
 
@@ -444,9 +444,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org03cb384" class="outline-5">
-<h5 id="org03cb384">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org03cb384">
+<div id="outline-container-orge4980c5" class="outline-5">
+<h5 id="orge4980c5">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orge4980c5">
 </div>
 <ul class="org-ul">
 <li><a id="orgc268c5d"></a><span class="todo STARTED">STARTED</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
@@ -488,9 +488,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-orgfbd7732" class="outline-5">
-<h5 id="orgfbd7732">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgfbd7732">
+<div id="outline-container-org0d53a1f" class="outline-5">
+<h5 id="org0d53a1f">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org0d53a1f">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo SUBMITTED">SUBMITTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -530,9 +530,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orge4980c5" class="outline-5">
-<h5 id="orge4980c5">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orge4980c5">
+<div id="outline-container-org5f2a823" class="outline-5">
+<h5 id="org5f2a823">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org5f2a823">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
