@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-01 Ter 04:26 -->
+<!-- 2019-01-01 Ter 16:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -409,84 +409,146 @@ By sharing my research projects and goals, the objective is to communicate my pr
 </div>
 
 
-<div id="outline-container-orge7b7abd" class="outline-4">
-<h4 id="orge7b7abd">Research Line: Artificial Intelligence - Hardware Accelerators</h4>
-<div class="outline-text-4" id="text-orge7b7abd">
+<div id="outline-container-org363253f" class="outline-4">
+<h4 id="org363253f">Artificial Intelligence - Hardware Accelerators</h4>
+<div class="outline-text-4" id="text-org363253f">
+<p>
+<div class="FRAME_WRAPPER">
+<div class="FRAME_LEFT">
+</p>
+
 
 <div class="figure">
-<p><img src="img/intelligence_ic_rubik_small.png" alt="intelligence_ic_rubik_small.png" width="150px image" title="Photo" align="left" /> 
+<p><img src="img/intelligence_ic_rubik_small_alpha.png" alt="intelligence_ic_rubik_small_alpha.png" width="150px image" title="Photo" align="right" /> 
 </p>
 </div>
+
+<p>
+</div>
+<div class="FRAME_RIGHT">
+</p>
 
 <p>
 This research line aims the development of integrated circuits to provide hardware acceleration for Artificial Intelligence applications. 
 The objective is to develop new topologies and systems that improves the state-of-the-art on hardware-based machine learning.
 </p>
-</div>
-
-
-<div id="outline-container-org9ca512d" class="outline-5">
-<h5 id="org9ca512d">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org9ca512d">
-</div>
-<ul class="org-ul">
-<li><a id="orgc268c5d"></a><span class="todo TODO">TODO</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
-<li><a id="org8c8264a"></a><span class="todo TODO">TODO</span> Conference paper related to Digital Artificial Neuron Networks<br /></li>
-</ul>
-</div>
-</div>
-
-
-<div id="outline-container-orgd770e25" class="outline-4">
-<h4 id="orgd770e25">Research Line: Microelectronics / Analog Design Synthesis</h4>
-<div class="outline-text-4" id="text-orgd770e25">
-
-<div class="figure">
-<p><img src="img/layout_en.png" alt="layout_en.png" width="250px image" title="Photo" align="left" /> 
-</p>
-</div>
 
 <p>
-This research line aims the development of techniques for analog design synthesis in circuit and system level. The objective is to advance the state-of-the art in analog circuit synthesis/optimization by bridging system-level optimization with circuit-level optimization. 
+</div>
+<div class="FRAME_BOTTOM">
 </p>
 </div>
 
-
-<div id="outline-container-orgc026276" class="outline-5">
-<h5 id="orgc026276">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgc026276">
-</div>
-<ul class="org-ul">
-<li><a id="org36ed973"></a><span class="todo STARTED">STARTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
-<li><a id="orgb3a90b0"></a><span class="todo TODO">TODO</span> Journal paper related to New optimization algorithms for Integrated Circuit Design<br /></li>
-
-<li><a id="org2581a5b"></a><span class="todo TODO">TODO</span> Journal paper related to Open Integrated Circuit Testbenches<br /></li>
-<li><a id="orgf0ad0af"></a><span class="todo TODO">TODO</span> Journal paper related to Optimization Strategy for IC System Design<br /></li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org3ab8d0f" class="outline-4">
-<h4 id="org3ab8d0f">Research Line: Artificial Intelligence - Software</h4>
-<div class="outline-text-4" id="text-org3ab8d0f">
-<p>
-This research line aims the development of new Artificial Intelligence techniques and applications.
-</p>
-</div>
 
 <div id="outline-container-org25c1c6a" class="outline-5">
 <h5 id="org25c1c6a">2019 Research line publication goals:</h5>
 <div class="outline-text-5" id="text-org25c1c6a">
 </div>
 <ul class="org-ul">
+<li><a id="orgc268c5d"></a><span class="todo TODO">TODO</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
+<li><a id="org8c8264a"></a><span class="todo TODO">TODO</span> Conference paper related to Digital Artificial Neuron Networks<br />
+<div class="outline-text-6" id="text-org8c8264a">
+<p>
+</div> </div>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3b0cddb" class="outline-4">
+<h4 id="org3b0cddb">Microelectronics / Analog Design Synthesis</h4>
+<div class="outline-text-4" id="text-org3b0cddb">
+<p>
+<div class="FRAME_WRAPPER">
+<div class="FRAME_LEFT">
+</p>
+
+
+
+<div class="figure">
+<p><img src="img/layout_en_alpha.png" alt="layout_en_alpha.png" width="250px" height="150px image" title="Photo" align="left" /> 
+</p>
+</div>
+
+<p>
+</div>
+<div class="FRAME_RIGHT">
+</p>
+
+
+<p>
+This research line aims the development of techniques for analog design synthesis in circuit and system level. The objective is to advance the state-of-the art in analog circuit synthesis/optimization by bridging system-level optimization with circuit-level optimization. 
+</p>
+
+
+<p>
+</div>
+<div class="FRAME_BOTTOM">
+</p>
+</div>
+
+
+<div id="outline-container-org6faad01" class="outline-5">
+<h5 id="org6faad01">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org6faad01">
+</div>
+<ul class="org-ul">
+<li><a id="org36ed973"></a><span class="todo STARTED">STARTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
+<li><a id="orgb3a90b0"></a><span class="todo TODO">TODO</span> Journal paper related to New optimization algorithms for Integrated Circuit Design<br /></li>
+
+<li><a id="org2581a5b"></a><span class="todo TODO">TODO</span> Journal paper related to Open Integrated Circuit Testbenches<br /></li>
+<li><a id="orgf0ad0af"></a><span class="todo TODO">TODO</span> Journal paper related to Optimization Strategy for IC System Design<br />
+<div class="outline-text-6" id="text-orgf0ad0af">
+<p>
+</div> </div>
+</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd44b409" class="outline-4">
+<h4 id="orgd44b409">Artificial Intelligence - Software</h4>
+<div class="outline-text-4" id="text-orgd44b409">
+<p>
+<div class="FRAME_WRAPPER">
+<div class="FRAME_LEFT">
+</p>
+
+
+<p>
+</div>
+<div class="FRAME_RIGHT">
+</p>
+
+<p>
+This research line aims the development of new Artificial Intelligence techniques and applications.
+</p>
+
+<p>
+</div>
+<div class="FRAME_BOTTOM">
+</p>
+</div>
+<div id="outline-container-orgcb88ea9" class="outline-5">
+<h5 id="orgcb88ea9">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgcb88ea9">
+</div>
+<ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
 <li><a id="org720f984"></a><span class="todo TODO">TODO</span> Journal paper related to Brazilian Stock Market Prediction using Deep Neural Networks<br /></li>
-<li><a id="org9994678"></a><span class="todo TODO">TODO</span> Journal paper related to River Salinity Prediction Model<br /></li>
+<li><a id="org9994678"></a><span class="todo TODO">TODO</span> Journal paper related to River Salinity Prediction Model<br />
+<div class="outline-text-6" id="text-org9994678">
+<p>
+</div> </div>
+</p>
+</div>
+</li>
 </ul>
 </div>
 </div>
 </div>
-
 
 <div id="outline-container-org6ee47b2" class="outline-3">
 <h3 id="org6ee47b2">Publications</h3>
@@ -866,6 +928,7 @@ In this process a lot can be lost: the quality of your schematic screenshots may
 </div>
 </div>
 </div>
+
 
 <div id="outline-container-org6505da1" class="outline-2">
 <h2 id="org6505da1">Microelectronics</h2>

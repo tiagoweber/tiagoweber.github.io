@@ -52,3 +52,9 @@
     clear: both;
 }
 */
+
+.SUBMITTED {
+    background-color: #F2F2EE;
+    border: 1px solid #969696;
+    color: #969696;
+}
