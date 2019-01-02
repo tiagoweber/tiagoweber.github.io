@@ -2,7 +2,17 @@
     /*background-color: #FDFCD8; */
     /*background-color: #FFFAF4; */
     background-color: #FFFFFF; 
-    border: 0px solid #EEE9C3;
+    border: 2px solid #EEE9C3;
+    color: #302B13;
+    font-weight: normal;
+    position: relative;
+}
+
+.FRAME_WRAPPER_BOARD {
+    /*background-color: #FDFCD8; */
+    /*background-color: #FFFAF4; */
+    background-color: #FFFFFF; 
+    border: 2px solid #EEE9C3;
     color: #302B13;
     font-weight: normal;
     position: relative;
