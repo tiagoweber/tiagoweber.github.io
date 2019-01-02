@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-02 Qua 01:56 -->
+<!-- 2019-01-02 Qua 03:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -418,12 +418,6 @@ By sharing my research projects and goals, the objective is to communicate my pr
 <div class="FRAME_LEFT">
 </p>
 
-
-<div class="figure">
-<p><img src="img/intelligence_ic_rubik_small_alpha.png" alt="intelligence_ic_rubik_small_alpha.png" width="150px image" title="Photo" align="right" /> 
-</p>
-</div>
-
 <p>
 </div>
 <div class="FRAME_RIGHT">
@@ -442,9 +436,9 @@ The objective is to develop new topologies and systems that improves the state-o
 
 
 
-<div id="outline-container-orgcb88ea9" class="outline-5">
-<h5 id="orgcb88ea9">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgcb88ea9">
+<div id="outline-container-orge405dbd" class="outline-5">
+<h5 id="orge405dbd">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orge405dbd">
 </div>
 <ul class="org-ul">
 <li><a id="orgc268c5d"></a><span class="todo STARTED">STARTED</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
@@ -468,12 +462,6 @@ The objective is to develop new topologies and systems that improves the state-o
 </p>
 
 
-
-<div class="figure">
-<p><img src="img/layout_en_alpha.png" alt="layout_en_alpha.png" width="250px" height="150px image" title="Photo" align="left" /> 
-</p>
-</div>
-
 <p>
 </div>
 <div class="FRAME_RIGHT">
@@ -492,9 +480,9 @@ This research line aims the development of techniques for analog design synthesi
 </div>
 
 
-<div id="outline-container-org899af39" class="outline-5">
-<h5 id="org899af39">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org899af39">
+<div id="outline-container-orgf1f3a2d" class="outline-5">
+<h5 id="orgf1f3a2d">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgf1f3a2d">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo SUBMITTED">SUBMITTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -534,9 +522,9 @@ This research line aims the development of new Artificial Intelligence technique
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orge405dbd" class="outline-5">
-<h5 id="orge405dbd">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orge405dbd">
+<div id="outline-container-orge743e25" class="outline-5">
+<h5 id="orge743e25">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orge743e25">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -560,24 +548,81 @@ This research line aims the development of new Artificial Intelligence technique
 <div id="outline-container-orgd08b01d" class="outline-4">
 <h4 id="orgd08b01d">Journal publications</h4>
 <div class="outline-text-4" id="text-orgd08b01d">
+<p>
+<div class="FRAME_WRAPPER_BOARD">
+</p>
+
 <ul class="org-ul">
-<li>ADOLFSSON, J.; PABON, A. AYALA; BREGANT, M.; BRITTON, C.; BRULIN, G.; CARVALHO, D.; CHAMBERT, V.; CHINELLATO, D.; ESPAGNON, B.; HERRERA, H.D. HERNANDEZ; LJUBICIC, T.; MAHMOOD, S.M.; MJÖRNMARK, U.; MORAES, D.; MUNHOZ, M.G.; NOËL, G.; OSKARSSON, A.; OSTERMAN, L.; PILYAR, A.; READ, K.; RUETTE, A.; RUSSO, P.; SANCHES, B.C.S.; SEVERO, L.; SILVERMYR, D.; SUIRE, C.; TAMBAVE, G.J.; TUN-LANOË, K.M.M.; NOIJE, W. VAN; VELURE, A.; VERESCHAGIN, S.; WANLIN, E.; WEBER, T.O.; ZAPOROZHETS, S. SAMPA Chip: the New 32 Channels ASIC for the ALICE TPC and MCH Upgrades. <i>Journal of Instrumentation</i>, v.12, p.C04008 - C04008, 2017. <a href="10.1088/1748-0221/12/04/c04008">Link</a></li>
+<li>ADOLFSSON, J.; PABON, A. AYALA; BREGANT, M.; BRITTON, C.; BRULIN, G.; CARVALHO, D.; CHAMBERT, V.; CHINELLATO, D.; ESPAGNON, B.; HERRERA, H.D. HERNANDEZ; LJUBICIC, T.; MAHMOOD, S.M.; MJÖRNMARK, U.; MORAES, D.; MUNHOZ, M.G.; NOËL, G.; OSKARSSON, A.; OSTERMAN, L.; PILYAR, A.; READ, K.; RUETTE, A.; RUSSO, P.; SANCHES, B.C.S.; SEVERO, L.; SILVERMYR, D.; SUIRE, C.; TAMBAVE, G.J.; TUN-LANOË, K.M.M.; NOIJE, W. VAN; VELURE, A.; VERESCHAGIN, S.; WANLIN, E.; WEBER, T.O.; ZAPOROZHETS, S. SAMPA Chip: the New 32 Channels ASIC for the ALICE TPC and MCH Upgrades. <i>Journal of Instrumentation</i>, v.12, p.C04008 - C04008, 2017. <a href="http://iopscience.iop.org/article/10.1088/1748-0221/12/04/C04008">Link</a></li>
+
 <li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016; <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a></li>
+</ul>
+
+<p width="500px image" title="Photo" align="center">
+<img src="img/sampa_board.jpg" alt="sampa_board.jpg" width="500px image" title="Photo" align="center" /> 
+SAMPA Chip. Photo: Marcos Santos/USP Imagens 
+</p>
+
+<p>
+</div>
+</p>
+
+
+<p>
+<div class="FRAME_WRAPPER_BOARD">
+</p>
+
+<ul class="org-ul">
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012; <a href="http://link.springer.com/article/10.1007%2Fs10470-012-9939-z">Link</a></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
+</p>
+</div>
+
+<p>
+</div>
+</p>
+
+<p>
+<div class="FRAME_WRAPPER_BOARD">
+</p>
+
+<ul class="org-ul">
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012. <a href="http://www.sbmicro.org.br/jics/html/volume7n1.html">Link</a></li>
 </ul>
+
+<p>
+</div>
+</p>
 </div>
 </div>
+
 
 <div id="outline-container-orgd27f2ac" class="outline-4">
 <h4 id="orgd27f2ac">Book chapter</h4>
 <div class="outline-text-4" id="text-orgd27f2ac">
+<p>
+<div class="FRAME_WRAPPER_BOARD">
+</p>
+
 <ul class="org-ul">
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing<i>Quenching with Crossovers and Particle Swarm Optimization. /Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a></li>
 </ul>
-</div>
+
+
+<div class="figure">
+<p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
+</p>
 </div>
 
+<p>
+</div>
+</p>
+</div>
+</div>
 
 <div id="outline-container-org2be8323" class="outline-4">
 <h4 id="org2be8323">Conference publications</h4>
