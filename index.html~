@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-01-02 Qua 16:10 -->
+<!-- 2019-01-10 Qui 11:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -195,8 +195,8 @@
 <script type="text/javascript" src="themes/styles/bigblow/js/mine.js"></script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
@@ -270,15 +270,6 @@ for the JavaScript code in this tag.
 <div id="outline-container-orgddd9f22" class="outline-2">
 <h2 id="orgddd9f22">About</h2>
 <div class="outline-text-2" id="text-orgddd9f22">
-<p>
-<font size="3" align="right" face="Optima, sans-serif"> <i>Professional vision</i> </font>  :
-</p>
-
-<p>
-<font size="4" face="Optima, sans-serif">
-Promote <b>technological advances</b> to enable <b>new capabilities</b> for human activity  </font> 
-</p>
-
 
 <div class="figure">
 <p><img src="img/linkedin2.jpg" alt="linkedin2.jpg" width="200px image" title="Photo" align="right" /> 
@@ -444,9 +435,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org5f2a823" class="outline-5">
-<h5 id="org5f2a823">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org5f2a823">
+<div id="outline-container-org22fb628" class="outline-5">
+<h5 id="org22fb628">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org22fb628">
 </div>
 <ul class="org-ul">
 <li><a id="orgc268c5d"></a><span class="todo STARTED">STARTED</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
@@ -488,9 +479,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-org8df5d62" class="outline-5">
-<h5 id="org8df5d62">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org8df5d62">
+<div id="outline-container-orgb642342" class="outline-5">
+<h5 id="orgb642342">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgb642342">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo SUBMITTED">SUBMITTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -530,9 +521,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-org22fb628" class="outline-5">
-<h5 id="org22fb628">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org22fb628">
+<div id="outline-container-org9150ba7" class="outline-5">
+<h5 id="org9150ba7">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org9150ba7">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
