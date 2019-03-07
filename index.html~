@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-03-07 Qui 11:46 -->
+<!-- 2019-03-07 Qui 11:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -435,9 +435,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org28e0faa" class="outline-5">
-<h5 id="org28e0faa">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org28e0faa">
+<div id="outline-container-orge87121c" class="outline-5">
+<h5 id="orge87121c">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orge87121c">
 </div>
 <ul class="org-ul">
 <li><a id="orgc268c5d"></a><span class="todo STARTED">STARTED</span> Journal paper related to Analog Artificial Neuron Networks<br /></li>
@@ -479,9 +479,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-org46e4353" class="outline-5">
-<h5 id="org46e4353">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org46e4353">
+<div id="outline-container-org06735d2" class="outline-5">
+<h5 id="org06735d2">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org06735d2">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo SUBMITTED">SUBMITTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -521,9 +521,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orge87121c" class="outline-5">
-<h5 id="orge87121c">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orge87121c">
+<div id="outline-container-org5b1a9db" class="outline-5">
+<h5 id="org5b1a9db">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org5b1a9db">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -655,31 +655,15 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 
 <colgroup>
 <col  class="org-left" />
-</colgroup>
 
-<colgroup>
 <col  class="org-left" />
-</colgroup>
 
-<colgroup>
 <col  class="org-left" />
-</colgroup>
 
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-
-<colgroup>
-<col  class="org-left" />
-</colgroup>
-
-<colgroup>
 <col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">January</th>
-<th scope="col" class="org-left">February</th>
 <th scope="col" class="org-left">March</th>
 <th scope="col" class="org-left">April</th>
 <th scope="col" class="org-left">May</th>
@@ -688,8 +672,6 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </thead>
 <tbody>
 <tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">10th: <a href="https://www.newcas2019.org/">NEWCAS</a></td>
 <td class="org-left">18th: <a href="http://www.psi.poli.usp.br/chipinsampa/sbcci2019/">SBCCI</a></td>
 <td class="org-left">SBMICRO</td>
 <td class="org-left"><a href="https://vlsi-soc.pe/">VLSI-SoC</a></td>
@@ -697,8 +679,6 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">31st: <a href="http://www.psi.poli.usp.br/chipinsampa/inscit-2019/">INSCIT</a></td>
 <td class="org-left">24th: <a href="http://www.aimspress.com/newsinfo/1077.html">Special issue</a> on Bio-inspired &#x2026;</td>
 <td class="org-left">FEEC</td>
@@ -709,14 +689,10 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">3rd: <a href="http://www.psi.poli.usp.br/chipinsampa/wcas-2019/">WCAS</a></td>
 </tr>
 
 <tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -727,14 +703,6 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 
 <ul class="org-ul">
 <li><p>
-<a href="https://www.newcas2019.org/">NEWCAS</a> (IEEE International New Circuits and Systems Conference)
-</p>
-
-<p>
-Top-ranked papers will be on IEEE Transactions on Circuits and Systems-I.
-</p></li>
-
-<li><p>
 <a href="http://www.psi.poli.usp.br/chipinsampa/sbcci2019/">SBCCI</a> (Symposium on Integrated Circuits and Systems Design)
 </p>
 
@@ -742,6 +710,7 @@ Top-ranked papers will be on IEEE Transactions on Circuits and Systems-I.
 Top-ranked papers will be on JICS.
 Co-located with WCAS, Sforum, FEEC and INSCIT
 </p></li>
+
 <li><a href="http://www.psi.poli.usp.br/chipinsampa/inscit-2019/">INSCIT</a> (Symposium on Instrumentation Systems, Circuits and Transducers)</li>
 <li><a href="http://www.psi.poli.usp.br/chipinsampa/wcas-2019/">WCAS</a></li>
 <li><a href="http://www.psi.poli.usp.br/chipinsampa/sforum2019/">SForum</a></li>
