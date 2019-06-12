@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-06-12 Qua 12:25 -->
+<!-- 2019-06-12 Qua 12:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -298,8 +298,9 @@ for the JavaScript code in this tag.
 <p>
 My main research interests are: 
 </p>
+
 <ul class="org-ul">
-<li>artificial intelligence hardware (mixed-signal hardware accelerators) and analog computing.</li>
+<li>analog computing;</li>
 <li>CAD tools for analog integrated circuits;</li>
 <li>optimization, metaheuristics and artificial intelligence techniques;</li>
 <li>data acquisition and instrumentation.</li>
@@ -433,9 +434,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-orgb940c58" class="outline-5">
-<h5 id="orgb940c58">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgb940c58">
+<div id="outline-container-orgfe4ab73" class="outline-5">
+<h5 id="orgfe4ab73">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgfe4ab73">
 </div>
 <ul class="org-ul">
 <li><a id="org58d7974"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -477,9 +478,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-org4196320" class="outline-5">
-<h5 id="org4196320">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org4196320">
+<div id="outline-container-orgdc5a32a" class="outline-5">
+<h5 id="orgdc5a32a">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgdc5a32a">
 </div>
 <ul class="org-ul">
 <li><a id="org36ed973"></a><span class="todo SUBMITTED">SUBMITTED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
@@ -519,9 +520,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orgffd7184" class="outline-5">
-<h5 id="orgffd7184">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgffd7184">
+<div id="outline-container-org564428d" class="outline-5">
+<h5 id="org564428d">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org564428d">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -757,6 +758,11 @@ Will be held in NYU Abu Dhabi.
 <h3 id="org5d1c43e">Classes</h3>
 <div class="outline-text-3" id="text-org5d1c43e">
 <ul class="org-ul">
+<li>First semester of 2019:
+<ul class="org-ul">
+<li>Electric Circuits for Computer Engineering (in Portuguese: "Circuitos Elétricos para Computação")</li>
+<li>Signal Acquisition Systems (in Portuguese: "Sistemas de Aquisição de Sinais")</li>
+</ul></li>
 <li>Second semester of 2018:
 <ul class="org-ul">
 <li>Electric Circuits for Computer Engineering (in Portuguese: "Circuitos Elétricos para Computação")</li>
