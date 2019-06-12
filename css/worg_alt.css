@@ -148,6 +148,10 @@ content: "*** "
     a:visited {text-decoration: none; font-weight: 400;}
     a:hover {text-decoration: underline;}
 
+    .approved {
+	color: #006666;
+    }
+
     .todo {
 	color: #CA0000;
     }
