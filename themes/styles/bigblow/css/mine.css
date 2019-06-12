@@ -68,3 +68,9 @@
     border: 1px solid #969696;
     color: #969696;
 }
+
+.APPROVED {
+    background-color: #cbf0bb;
+    border: 1px solid #15cf5e;
+    color: #137019;
+}
