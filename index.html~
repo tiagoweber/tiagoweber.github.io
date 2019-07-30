@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-07-30 Ter 17:40 -->
+<!-- 2019-07-30 Ter 20:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -433,9 +433,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org8595976" class="outline-5">
-<h5 id="org8595976">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org8595976">
+<div id="outline-container-orgc273468" class="outline-5">
+<h5 id="orgc273468">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgc273468">
 </div>
 <ul class="org-ul">
 <li><a id="org58d7974"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -477,12 +477,16 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-org2d985c1" class="outline-5">
-<h5 id="org2d985c1">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org2d985c1">
+<div id="outline-container-org52ef47a" class="outline-5">
+<h5 id="org52ef47a">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org52ef47a">
 </div>
 <ul class="org-ul">
-<li><a id="org36ed973"></a><span class="todo APPROVED">APPROVED</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br /></li>
+<li><a id="org36ed973"></a><span class="done DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
+<div class="outline-text-6" id="text-org36ed973">
+</div>
+</li>
+
 <li><a id="orgb3a90b0"></a><span class="todo STARTED">STARTED</span> Journal paper related to New optimization algorithms for Integrated Circuit Design<br /></li>
 
 <li><a id="org2581a5b"></a><span class="todo TODO">TODO</span> Journal paper related to Open Integrated Circuit Testbenches<br /></li>
@@ -519,9 +523,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orgc273468" class="outline-5">
-<h5 id="orgc273468">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgc273468">
+<div id="outline-container-org65801ce" class="outline-5">
+<h5 id="org65801ce">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org65801ce">
 </div>
 <ul class="org-ul">
 <li><a id="orga1eee4a"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -550,9 +554,13 @@ This research line objective is the development of new Artificial Intelligence t
 </p>
 
 <ul class="org-ul">
+<li>HERNANDEZ, H.; SANCHES, B.; CARVALHO, D.; BREGANT, M.; PABON, A. A.; WILTON, R.; HERNANDEZ,  R. A.; WEBER, T. O.; COUTO, A.; LOMBARDI, A.; ALARCON, H.; MARTINS, T. A.; MUNHOZ, M. G.; NOIJE; W. V. A Monolithic 32-channel Front-End and DSP ASIC for Gaseous Detectors. <i>IEEE Transactions on Instrumentation and Measurement</i>, DOI 10.1109/TIM.2019.2931016, 2019. <a href="https://ieeexplore.ieee.org/document/8772086/">Link</a>
+
+<ul class="org-ul">
 <li>ADOLFSSON, J.; PABON, A. AYALA; BREGANT, M.; BRITTON, C.; BRULIN, G.; CARVALHO, D.; CHAMBERT, V.; CHINELLATO, D.; ESPAGNON, B.; HERRERA, H.D. HERNANDEZ; LJUBICIC, T.; MAHMOOD, S.M.; MJÖRNMARK, U.; MORAES, D.; MUNHOZ, M.G.; NOËL, G.; OSKARSSON, A.; OSTERMAN, L.; PILYAR, A.; READ, K.; RUETTE, A.; RUSSO, P.; SANCHES, B.C.S.; SEVERO, L.; SILVERMYR, D.; SUIRE, C.; TAMBAVE, G.J.; TUN-LANOË, K.M.M.; NOIJE, W. VAN; VELURE, A.; VERESCHAGIN, S.; WANLIN, E.; WEBER, T.O.; ZAPOROZHETS, S. SAMPA Chip: the New 32 Channels ASIC for the ALICE TPC and MCH Upgrades. <i>Journal of Instrumentation</i>, v.12, p.C04008 - C04008, 2017. <a href="http://iopscience.iop.org/article/10.1088/1748-0221/12/04/C04008">Link</a></li>
 
-<li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016; <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a></li>
+<li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016. <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a></li>
+</ul></li>
 </ul>
 
 <p width="500px image" title="Photo" align="center">
