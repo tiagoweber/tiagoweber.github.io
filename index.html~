@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-05 Seg 01:50 -->
+<!-- 2019-08-05 Seg 01:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -433,9 +433,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-orgeedc98d" class="outline-5">
-<h5 id="orgeedc98d">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgeedc98d">
+<div id="outline-container-org9b2cc77" class="outline-5">
+<h5 id="org9b2cc77">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org9b2cc77">
 </div>
 <ul class="org-ul">
 <li><a id="org186303f"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -477,9 +477,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-orged77bc8" class="outline-5">
-<h5 id="orged77bc8">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orged77bc8">
+<div id="outline-container-orgdfa22da" class="outline-5">
+<h5 id="orgdfa22da">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgdfa22da">
 </div>
 <ul class="org-ul">
 <li><a id="org26425c6"></a><span class="todo DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
@@ -523,9 +523,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-org9b2cc77" class="outline-5">
-<h5 id="org9b2cc77">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org9b2cc77">
+<div id="outline-container-orgd1d653b" class="outline-5">
+<h5 id="orgd1d653b">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgd1d653b">
 </div>
 <ul class="org-ul">
 <li><a id="org0994980"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -665,17 +665,17 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 </p>
 </div>
 
-<div id="outline-container-org0feba2d" class="outline-4">
-<h4 id="org0feba2d">Related to Electronics and Microelectronics (all classified as A1)</h4>
-<div class="outline-text-4" id="text-org0feba2d">
+<div id="outline-container-orgebee084" class="outline-4">
+<h4 id="orgebee084">Related to Electronics and Microelectronics</h4>
+<div class="outline-text-4" id="text-orgebee084">
 <ul class="org-ul">
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919">IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS. I, REGULAR PAPERS</a></li>
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43">IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS</a></li>
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71">IEEE TRANSACTIONS ON PARALLEL AND DISTRIBUTED SYSTEMS</a></li>
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=3468">IEEE TRANSACTIONS ON SYSTEMS, MAN AND CYBERNETICS. PART A. SYSTEMS AND HUMANS</a></li>
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=92">IEEE TRANSACTIONS ON VERY LARGE SCALE INTEGRATION (VLSI) SYSTEMS</a></li>
-<li><a href="https://www.iospress.nl/journal/integrated-computer-aided-engineering/">INTEGRATED COMPUTER-AIDED ENGINEERING</a></li>
-<li><a href="https://www.journals.elsevier.com/signal-processing">SIGNAL PROCESSING</a></li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919">IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS. I, REGULAR PAPERS</a> - A1</li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43">IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS</a> - A1</li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=71">IEEE TRANSACTIONS ON PARALLEL AND DISTRIBUTED SYSTEMS</a> - A1</li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=3468">IEEE TRANSACTIONS ON SYSTEMS, MAN AND CYBERNETICS. PART A. SYSTEMS AND HUMANS</a> - A1</li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=92">IEEE TRANSACTIONS ON VERY LARGE SCALE INTEGRATION (VLSI) SYSTEMS</a> - A1</li>
+<li><a href="https://www.iospress.nl/journal/integrated-computer-aided-engineering/">INTEGRATED COMPUTER-AIDED ENGINEERING</a> - A1</li>
+<li><a href="https://www.journals.elsevier.com/signal-processing">SIGNAL PROCESSING</a> - A1</li>
 </ul>
 </div>
 </div>
@@ -684,32 +684,31 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 <h4 id="orgf4e2a34">Related to Instrumentation</h4>
 <div class="outline-text-4" id="text-orgf4e2a34">
 <ul class="org-ul">
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=19">IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT</a></li>
-<li><a href="https://www.mdpi.com/journal/sensors">SENSORS (BASEL)</a></li>
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7361">IEEE SENSORS JOURNAL</a></li>
-<li><a href="https://www.journals.elsevier.com/sensors-and-actuators-a-physical">SENSORS AND ACTUATORS A: Physical</a></li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=19">IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT</a> - A1</li>
+<li><a href="https://www.mdpi.com/journal/sensors">SENSORS (BASEL)</a> - A1</li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7361">IEEE SENSORS JOURNAL</a> - A1</li>
+<li><a href="https://www.journals.elsevier.com/sensors-and-actuators-a-physical">SENSORS AND ACTUATORS A: Physical</a> - A1</li>
+<li><a href="https://iopscience.iop.org/journal/1748-0221">JOURNAL OF INSTRUMENTATION</a> - A2</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7109a12" class="outline-4">
-<h4 id="org7109a12">Related to Machine Learning and Optimization (all classified as A1)</h4>
-<div class="outline-text-4" id="text-org7109a12">
-<ul class="org-ul">
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4235">IEEE TRANSACTIONS ON EVOLUTIONARY COMPUTATION</a></li>
-<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385">IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS</a></li>
-<li><a href="https://www.journals.elsevier.com/international-journal-of-approximate-reasoning">INTERNATIONAL JOURNAL OF APPROXIMATE REASONING</a></li>
-</ul>
 
+<div id="outline-container-orgb358ed7" class="outline-4">
+<h4 id="orgb358ed7">Related to Machine Learning and Optimization</h4>
+<div class="outline-text-4" id="text-orgb358ed7">
 <ul class="org-ul">
-<li><a href="https://www.springer.com/mathematics/journal/10957">JOURNAL OF OPTIMIZATION THEORY AND APPLICATIONS</a></li>
-<li><a href="https://link.springer.com/journal/41274">JOURNAL OF THE OPERATIONAL RESEARCH SOCIETY</a></li>
-<li><a href="https://link.springer.com/journal/10994">MACHINE LEARNING</a></li>
-<li><a href="https://www.mitpressjournals.org/loi/neco">NEURAL COMPUTATION</a></li>
-<li><a href="https://www.journals.elsevier.com/neural-networks">NEURAL NETWORKS</a></li>
-<li><a href="https://www.journals.elsevier.com/neurocomputing">NEUROCOMPUTING (AMSTERDAM)</a></li>
-<li><a href="https://www.siam.org/publications/journals/siam-journal-on-optimization-siopt">SIAM JOURNAL ON OPTIMIZATION</a></li>
-<li><a href="https://www.journals.elsevier.com/swarm-and-evolutionary-computation">SWARM AND EVOLUTIONARY COMPUTATION</a></li>
-<li><a href="https://www.jair.org/index.php/jair">THE JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH</a></li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4235">IEEE TRANSACTIONS ON EVOLUTIONARY COMPUTATION</a> - A1</li>
+<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385">IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS</a> - A1</li>
+<li><a href="https://www.journals.elsevier.com/international-journal-of-approximate-reasoning">INTERNATIONAL JOURNAL OF APPROXIMATE REASONING</a> - A1</li>
+<li><a href="https://www.springer.com/mathematics/journal/10957">JOURNAL OF OPTIMIZATION THEORY AND APPLICATIONS</a> - A1</li>
+<li><a href="https://link.springer.com/journal/41274">JOURNAL OF THE OPERATIONAL RESEARCH SOCIETY</a> - A1</li>
+<li><a href="https://link.springer.com/journal/10994">MACHINE LEARNING</a> - A1</li>
+<li><a href="https://www.mitpressjournals.org/loi/neco">NEURAL COMPUTATION</a> - A1</li>
+<li><a href="https://www.journals.elsevier.com/neural-networks">NEURAL NETWORKS</a> - A1</li>
+<li><a href="https://www.journals.elsevier.com/neurocomputing">NEUROCOMPUTING (AMSTERDAM)</a> - A1</li>
+<li><a href="https://www.siam.org/publications/journals/siam-journal-on-optimization-siopt">SIAM JOURNAL ON OPTIMIZATION</a> - A1</li>
+<li><a href="https://www.journals.elsevier.com/swarm-and-evolutionary-computation">SWARM AND EVOLUTIONARY COMPUTATION</a> - A1</li>
+<li><a href="https://www.jair.org/index.php/jair">THE JOURNAL OF ARTIFICIAL INTELLIGENCE RESEARCH</a> - A1</li>
 </ul>
 </div>
 </div>
