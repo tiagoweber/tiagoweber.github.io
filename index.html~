@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-05 Seg 00:40 -->
+<!-- 2019-08-05 Seg 00:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -433,9 +433,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org99ea758" class="outline-5">
-<h5 id="org99ea758">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org99ea758">
+<div id="outline-container-orgdee1f19" class="outline-5">
+<h5 id="orgdee1f19">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgdee1f19">
 </div>
 <ul class="org-ul">
 <li><a id="org186303f"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -477,9 +477,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-orge4ea4a2" class="outline-5">
-<h5 id="orge4ea4a2">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orge4ea4a2">
+<div id="outline-container-orga65162f" class="outline-5">
+<h5 id="orga65162f">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orga65162f">
 </div>
 <ul class="org-ul">
 <li><a id="org26425c6"></a><span class="todo DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
@@ -523,9 +523,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orgdee1f19" class="outline-5">
-<h5 id="orgdee1f19">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgdee1f19">
+<div id="outline-container-org2a97ec2" class="outline-5">
+<h5 id="org2a97ec2">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org2a97ec2">
 </div>
 <ul class="org-ul">
 <li><a id="org0994980"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -977,7 +977,7 @@ In this process a lot can be lost: the quality of your schematic screenshots may
 This map is an attempt to help the visualization of microelectronics in Brazil. Special thanks to Andre Couto and Luciana Shiroma for supplying inicial information about the private companies.
 </p>
 
-<iframe width="550" height="400" frameborder="0" #+HTML:src="https://widgets.scribblemaps.com/myl/?d&z&l&gc&af&mc&lat=-17.229332495224924&lng=-47.42284669999998&vz=3&type=road&ti&s&width=550&height=400&id=XN0bwOGANG" style="border:0; max-width: 100%;" #+HTML:allowfullscreen allow="geolocation"></iframe>
+<iframe width="550" height="400" frameborder="0" src="https://widgets.scribblemaps.com/myl/?d&z&l&gc&af&mc&lat=-17.229332495224924&lng=-47.42284669999998&vz=3&type=road&ti&s&width=550&height=400&id=XN0bwOGANG" style="border:0; max-width: 100%;" allowfullscreen allow="geolocation"></iframe>
 </div>
 
 <div id="outline-container-org4a3005f" class="outline-4">
