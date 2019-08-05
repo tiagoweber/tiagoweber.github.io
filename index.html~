@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-05 Seg 02:17 -->
+<!-- 2019-08-05 Seg 02:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -450,9 +450,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org64280bd" class="outline-5">
-<h5 id="org64280bd">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org64280bd">
+<div id="outline-container-orgdc9e759" class="outline-5">
+<h5 id="orgdc9e759">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgdc9e759">
 </div>
 <ul class="org-ul">
 <li><a id="org186303f"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -494,9 +494,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-orgd0819e4" class="outline-5">
-<h5 id="orgd0819e4">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgd0819e4">
+<div id="outline-container-org951974f" class="outline-5">
+<h5 id="org951974f">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org951974f">
 </div>
 <ul class="org-ul">
 <li><a id="org26425c6"></a><span class="todo DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
@@ -540,9 +540,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orgdc9e759" class="outline-5">
-<h5 id="orgdc9e759">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgdc9e759">
+<div id="outline-container-org7966d52" class="outline-5">
+<h5 id="org7966d52">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org7966d52">
 </div>
 <ul class="org-ul">
 <li><a id="org0994980"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
@@ -865,6 +865,30 @@ In this process a lot can be lost: the quality of your schematic screenshots may
 </div>
 
 
+<div id="outline-container-org2c886cd" class="outline-2">
+<h2 id="org2c886cd">Microelectronics</h2>
+<div class="outline-text-2" id="text-org2c886cd">
+</div>
+<div id="outline-container-org69edf46" class="outline-3">
+<h3 id="org69edf46">Map of Microelectronics in Brazil</h3>
+<div class="outline-text-3" id="text-org69edf46">
+<p>
+This map is an attempt to help the visualization of microelectronics in Brazil. Special thanks to Andre Couto and Luciana Shiroma for supplying inicial information about the private companies.
+</p>
+
+<iframe width="550" height="400" frameborder="0" src="https://widgets.scribblemaps.com/myl/?d&z&l&gc&af&mc&lat=-17.229332495224924&lng=-47.42284669999998&vz=3&type=road&ti&s&width=550&height=400&id=XN0bwOGANG" style="border:0; max-width: 100%;" allowfullscreen allow="geolocation"></iframe>
+</div>
+
+<div id="outline-container-org4a3005f" class="outline-4">
+<h4 id="org4a3005f">List</h4>
+<div class="outline-text-4" id="text-org4a3005f">
+<iframe src="https://docs.google.com/spreadsheets/d/1cITi7SfyIErCCMjsERpNXjgOsw7JBm_wfuCWmnyG6t0/pubhtml?gid=560775876&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+</div>
+</div>
+</div>
+</div>
+
+
 <div id="outline-container-org8b2b04a" class="outline-2">
 <h2 id="org8b2b04a">Journal links</h2>
 <div class="outline-text-2" id="text-org8b2b04a">
@@ -934,30 +958,6 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 <li><a href="https://www.igi-global.com/journal/international-journal-distance-education-technologies/1078">INTERNATIONAL JOURNAL OF DISTANCE EDUCATION TECHNOLOGIES</a> - B1</li>
 <li><a href="https://onlinelibrary.wiley.com/journal/10990542">COMPUTER APPLICATIONS IN ENGINEERING EDUCATION</a> - B1</li>
 </ul>
-</div>
-</div>
-</div>
-
-
-<div id="outline-container-org2c886cd" class="outline-2">
-<h2 id="org2c886cd">Microelectronics</h2>
-<div class="outline-text-2" id="text-org2c886cd">
-</div>
-<div id="outline-container-org69edf46" class="outline-3">
-<h3 id="org69edf46">Map of Microelectronics in Brazil</h3>
-<div class="outline-text-3" id="text-org69edf46">
-<p>
-This map is an attempt to help the visualization of microelectronics in Brazil. Special thanks to Andre Couto and Luciana Shiroma for supplying inicial information about the private companies.
-</p>
-
-<iframe width="550" height="400" frameborder="0" src="https://widgets.scribblemaps.com/myl/?d&z&l&gc&af&mc&lat=-17.229332495224924&lng=-47.42284669999998&vz=3&type=road&ti&s&width=550&height=400&id=XN0bwOGANG" style="border:0; max-width: 100%;" allowfullscreen allow="geolocation"></iframe>
-</div>
-
-<div id="outline-container-org4a3005f" class="outline-4">
-<h4 id="org4a3005f">List</h4>
-<div class="outline-text-4" id="text-org4a3005f">
-<iframe src="https://docs.google.com/spreadsheets/d/1cITi7SfyIErCCMjsERpNXjgOsw7JBm_wfuCWmnyG6t0/pubhtml?gid=560775876&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
-</div>
 </div>
 </div>
 </div>
