@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-05 Seg 12:41 -->
+<!-- 2019-08-05 Seg 12:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -328,15 +328,15 @@ Our plans for the future are as important as where we are right now. To provide 
 <div id="outline-container-org026a042" class="outline-3">
 <h3 id="org026a042">Contact</h3>
 <div class="outline-text-3" id="text-org026a042">
-<p>
-E-mail: tiago.weber (at) ufsc.br
-</p>
+<ul class="org-ul">
+<li>E-mail: tiago.weber (at) ufsc.br</li>
+<li>Phone: +55 48 9.111 2228</li>
+<li><a href="http://www.researchgate.net/profile/Tiago_Oliveira_Weber">ResearchGate</a></li>
+<li><a href="https://br.linkedin.com/in/tiago-oliveira-weber-95aa1b8">LinkedIn</a></li>
+</ul>
+</div>
+</div>
 
-<p>
-Phone: +55 48 9.111 2228  
-</p>
-</div>
-</div>
 
 <div id="outline-container-org893c82c" class="outline-3">
 <h3 id="org893c82c">Curriculum</h3>
@@ -347,15 +347,7 @@ Phone: +55 48 9.111 2228
 </div>
 </div>
 
-<div id="outline-container-org5cd3bb0" class="outline-3">
-<h3 id="org5cd3bb0">Professional Social Networks</h3>
-<div class="outline-text-3" id="text-org5cd3bb0">
-<ul class="org-ul">
-<li><a href="http://www.researchgate.net/profile/Tiago_Oliveira_Weber">ResearchGate</a></li>
-<li><a href="https://br.linkedin.com/in/tiago-oliveira-weber-95aa1b8">LinkedIn</a></li>
-</ul>
-</div>
-</div>
+
 
 
 <div id="outline-container-org830fff7" class="outline-3">
@@ -450,9 +442,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org7966d52" class="outline-5">
-<h5 id="org7966d52">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org7966d52">
+<div id="outline-container-org8b4033d" class="outline-5">
+<h5 id="org8b4033d">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org8b4033d">
 </div>
 <ul class="org-ul">
 <li><a id="org186303f"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -494,9 +486,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-org5a22ada" class="outline-5">
-<h5 id="org5a22ada">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org5a22ada">
+<div id="outline-container-org3711182" class="outline-5">
+<h5 id="org3711182">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org3711182">
 </div>
 <ul class="org-ul">
 <li><a id="org26425c6"></a><span class="todo DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
@@ -540,9 +532,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-org8b4033d" class="outline-5">
-<h5 id="org8b4033d">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org8b4033d">
+<div id="outline-container-org8664a4f" class="outline-5">
+<h5 id="org8664a4f">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org8664a4f">
 </div>
 <ul class="org-ul">
 <li><a id="org0994980"></a><span class="todo STARTED">STARTED</span> Journal paper related to Corporal Postures<br /></li>
