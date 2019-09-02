@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-08-13 Ter 03:17 -->
+<!-- 2019-09-02 Seg 17:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -442,9 +442,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 
 
 
-<div id="outline-container-org6621f2c" class="outline-5">
-<h5 id="org6621f2c">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org6621f2c">
+<div id="outline-container-org38167ae" class="outline-5">
+<h5 id="org38167ae">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org38167ae">
 </div>
 <ul class="org-ul">
 <li><a id="org186303f"></a><span class="todo APPROVED">APPROVED</span> Conference paper related to Analog Artificial Neural Networks - SBCCI 2019<br /></li>
@@ -486,9 +486,9 @@ This research line aims at the development of techniques for analog design synth
 </div>
 
 
-<div id="outline-container-orgc459fb3" class="outline-5">
-<h5 id="orgc459fb3">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgc459fb3">
+<div id="outline-container-org9f72c06" class="outline-5">
+<h5 id="org9f72c06">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-org9f72c06">
 </div>
 <ul class="org-ul">
 <li><a id="org26425c6"></a><span class="todo DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
@@ -532,9 +532,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-org38167ae" class="outline-5">
-<h5 id="org38167ae">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org38167ae">
+<div id="outline-container-orgb21f17f" class="outline-5">
+<h5 id="orgb21f17f">2019 Research line publication goals:</h5>
+<div class="outline-text-5" id="text-orgb21f17f">
 </div>
 <ul class="org-ul">
 <li><a id="org0994980"></a><span class="todo DONE">DONE</span> Journal paper related to Corporal Postures<br /></li>
@@ -657,6 +657,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 <h4 id="org7b75fbc">Conference publications</h4>
 <div class="outline-text-4" id="text-org7b75fbc">
 <ul class="org-ul">
+<li>WEBER, T. O.; LABRES, D. S.; CABRERA, F. L. Amplifier-based MOS Analog Neural Network Implementation and Weights Optimization <i>In:  Proceedings of the 32nd Symposium on Integrated Circuits and Systems (SBCCI)</i>, 2019, São Paulo, SP. <b>(won SBCCI Best Paper Award)</b></li>
 <li>ROQUE, F. V.; MACARINI, L. A.; CROTTI, Y.; WEBER, T. O., CECHINEL, C. Detecção de defeitos visuais em tecidos utilizando Wavelets e algoritmos de aprendizado de máquina <i>In: Anais do Computer on the beach</i>, 2019, Florianópolis, SC. <a href="https://siaiap32.univali.br/seer/index.php/acotb/article/view/14359">Link</a></li>
 <li>MARTINS, J. F.; WEBER, T. O. Sistema Matricial de Interconexão Programável para Aplicação em Laboratórios Remotos de Eletrônica Analógica <i>In: Anais do 7º Simpósio de Integração Científica e Tecnológica do Sul Catarinense (SICT-SUL)</i>, 2018, Araranguá, SC. <a href="http://criciuma.ifsc.edu.br/anais-sict-sul/">Link</a></li>
 <li>MARTINS, J. F.; WEBER, T. O. Matriz de Interconexão Eletrônica Programável de Baixo Custo para Aplicação em Laboratório Remoto e Prototipagem Rápida <i>In: Anais do Simpósio Ibero-Americano de Tecnologias Educacionais (SITED)</i>, 2018, Araranguá, SC.</li>
