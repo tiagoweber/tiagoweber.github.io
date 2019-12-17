@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-11-17 Dom 10:48 -->
+<!-- 2019-12-17 Ter 17:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -439,25 +439,6 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-
-
-
-<div id="outline-container-org8f66a13" class="outline-5">
-<h5 id="org8f66a13">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org8f66a13">
-</div>
-<ul class="org-ul">
-<li><a id="org41d9b8a"></a><span class="todo DONE">DONE</span> Conference paper related to Analog Artificial Neural Networks - (won the <b>Best Paper Award on SBCCI 2019</b>)<br /></li>
-<li><a id="orgbf0d62e"></a><span class="todo STARTED">STARTED</span> Journal paper related to Analog Artificial Neural Networks<br /></li>
-<li><a id="orgd1d1699"></a><span class="todo TODO">TODO</span> Conference paper related to Digital Artificial Neural Networks<br />
-<div class="outline-text-6" id="text-orgd1d1699">
-<p>
-</div> </div>
-</p>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div id="outline-container-orgf0cff65" class="outline-4">
 <h4 id="orgf0cff65">Microelectronics / Analog Design Synthesis</h4>
@@ -484,30 +465,6 @@ This research line aims at the development of techniques for analog design synth
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-
-
-<div id="outline-container-org390ed51" class="outline-5">
-<h5 id="org390ed51">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-org390ed51">
-</div>
-<ul class="org-ul">
-<li><a id="org26425c6"></a><span class="todo DONE">DONE</span> Journal paper related to the SAMPA Chip (32 Channels ASIC for the ALICE TPC and MCH Upgrades)<br />
-<div class="outline-text-6" id="text-org26425c6">
-</div>
-</li>
-
-<li><a id="org947d25e"></a><span class="todo STARTED">STARTED</span> Journal paper related to New optimization algorithms for Integrated Circuit Design<br /></li>
-
-<li><a id="org5820b57"></a><span class="todo TODO">TODO</span> Journal paper related to Open Integrated Circuit Testbenches<br /></li>
-<li><a id="org4d8bf00"></a><span class="todo TODO">TODO</span> Journal paper related to Optimization Strategy for IC System Design<br />
-<div class="outline-text-6" id="text-org4d8bf00">
-<p>
-</div> </div>
-</p>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div id="outline-container-org283e903" class="outline-4">
 <h4 id="org283e903">Artificial Intelligence - Software</h4>
@@ -532,24 +489,9 @@ This research line objective is the development of new Artificial Intelligence t
 <div class="FRAME_BOTTOM">
 </p>
 </div>
-<div id="outline-container-orgf656c48" class="outline-5">
-<h5 id="orgf656c48">2019 Research line publication goals:</h5>
-<div class="outline-text-5" id="text-orgf656c48">
-</div>
-<ul class="org-ul">
-<li><a id="org0994980"></a><span class="todo DONE">DONE</span> Journal paper related to Corporal Postures<br /></li>
-<li><a id="org89c1df0"></a><span class="todo TODO">TODO</span> Journal paper related to Brazilian Stock Market Prediction using Deep Neural Networks<br /></li>
-<li><a id="orge0ab599"></a><span class="todo TODO">TODO</span> Journal paper related to River Salinity Prediction Model<br />
-<div class="outline-text-6" id="text-orge0ab599">
-<p>
-</div> </div>
-</p>
-</div>
-</li>
-</ul>
 </div>
 </div>
-</div>
+
 
 <div id="outline-container-orga8f69af" class="outline-3">
 <h3 id="orga8f69af">Publications</h3>
