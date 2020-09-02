@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-06 Seg 20:55 -->
+<!-- 2020-09-02 Qua 10:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -255,11 +255,11 @@ for the JavaScript code in this tag.
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org1ee1079" class="outline-2">
-<h2 id="org1ee1079">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
-<div class="outline-text-2" id="text-org1ee1079">
+<div id="outline-container-orgd4b984b" class="outline-2">
+<h2 id="orgd4b984b">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
+<div class="outline-text-2" id="text-orgd4b984b">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Qui&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-Qui&gt;</span></span>
 </p>
 
 
@@ -281,35 +281,35 @@ This is not even by far intended to be a solution for industry professionals. Th
 </p>
 </div>
 
-<div id="outline-container-org5daaa84" class="outline-3">
-<h3 id="org5daaa84">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
-<div class="outline-text-3" id="text-org5daaa84">
+<div id="outline-container-org27b6ac8" class="outline-3">
+<h3 id="org27b6ac8">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
+<div class="outline-text-3" id="text-org27b6ac8">
 <p>
 We usually simulate analog circuits through SPICE circuit simulators. On the other hand, we usually use a Hardware Description Language (HDL) such as Verilog or VHDL using specific simulators for the digital section. If simulation time was not an issue, we could consider all signals as being analog and simulate the whole circuit as a SPICE netlist. However, due to the level of abstraction that digital circuits allow us to operate in, this would be an enormous waste of time. 
 </p>
 </div>
 
 
-<div id="outline-container-org90e0afa" class="outline-4">
-<h4 id="org90e0afa">Different Tools for Different Problems</h4>
-<div class="outline-text-4" id="text-org90e0afa">
+<div id="outline-container-org671afd3" class="outline-4">
+<h4 id="org671afd3">Different Tools for Different Problems</h4>
+<div class="outline-text-4" id="text-org671afd3">
 <p>
 Before introducing the proposed package, I would like to discuss some of the cases in which a designer might want to use different tool sets for simulation.
 </p>
 </div>
 
-<div id="outline-container-org3293c01" class="outline-5">
-<h5 id="org3293c01">System Simulation without Circuit Blocks</h5>
-<div class="outline-text-5" id="text-org3293c01">
+<div id="outline-container-org7fc0b5a" class="outline-5">
+<h5 id="org7fc0b5a">System Simulation without Circuit Blocks</h5>
+<div class="outline-text-5" id="text-org7fc0b5a">
 <p>
 There are other occasions in which we are only interested in high-level analysis of a system. On these cases, all blocks are described mathematically and no circuit simulator is needed. One of the most used commercial solutions to that is Matlab/Simulink®. The open-source solution would be Octave (if no GUI to draw diagram is needed) or Scilab/XCOS (if diagrams to describe the blocks are welcome).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org049da0f" class="outline-5">
-<h5 id="org049da0f">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
-<div class="outline-text-5" id="text-org049da0f">
+<div id="outline-container-org721a130" class="outline-5">
+<h5 id="org721a130">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
+<div class="outline-text-5" id="text-org721a130">
 <p>
 Sometimes we are not interested in modelling a block with a high-level language, but only interested in analyzing the output of the circuit with the aid of these high-level tools. For those cases, usually Matlab or Octave are used to perform <b>post-simulation analysis</b>. In this approach, the circuit simulator acts independently and its output (waveforms and measurements) are used as input to a script in Matlab or Octave. 
 </p>
@@ -317,9 +317,9 @@ Sometimes we are not interested in modelling a block with a high-level language,
 </div>
 
 
-<div id="outline-container-orgce83e07" class="outline-5">
-<h5 id="orgce83e07">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
-<div class="outline-text-5" id="text-orgce83e07">
+<div id="outline-container-orgc490351" class="outline-5">
+<h5 id="orgc490351">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
+<div class="outline-text-5" id="text-orgc490351">
 <p>
 The case of interest of this article is when we want to model a block (e.g.: counter, ADC, DAC, sensor, receiver, transceiver, &#x2026;) in a more abstract way and simulate it together with other blocks described as circuits. 
 </p>
@@ -339,9 +339,9 @@ For the cases in which system functionality exploration is the ultimate goal, ho
 </div>
 </div>
 
-<div id="outline-container-org20356b4" class="outline-4">
-<h4 id="org20356b4">The Solution</h4>
-<div class="outline-text-4" id="text-org20356b4">
+<div id="outline-container-orgad37400" class="outline-4">
+<h4 id="orgad37400">The Solution</h4>
+<div class="outline-text-4" id="text-orgad37400">
 <p>
 In order to do co-simulation of blocks described as circuits and blocks described in high-level language using Octave, I propose a package to perform the interface between Ngspice and Octave. Easy prototyping is one of the reasons Matlab is one of the greatest tools for scientists. The codes are easy to write, to understand and to debug. 
 </p>
@@ -364,76 +364,76 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 
 
 
-<div id="outline-container-org992c01f" class="outline-3">
-<h3 id="org992c01f">Example (PWM block and analog output filter)</h3>
-<div class="outline-text-3" id="text-org992c01f">
+<div id="outline-container-org6934a56" class="outline-3">
+<h3 id="org6934a56">Example (PWM block and analog output filter)</h3>
+<div class="outline-text-3" id="text-org6934a56">
 </div>
-<div id="outline-container-orgc57c4c5" class="outline-4">
-<h4 id="orgc57c4c5">Octave Block to Describe a Simple PWM Logic</h4>
-<div class="outline-text-4" id="text-orgc57c4c5">
+<div id="outline-container-org7bccd2e" class="outline-4">
+<h4 id="org7bccd2e">Octave Block to Describe a Simple PWM Logic</h4>
+<div class="outline-text-4" id="text-org7bccd2e">
 <div class="org-src-container">
-<pre class="src src-octave" id="org5af153f"><span style="color: #A52A2A; font-weight: bold;">function</span> [pinvalue] <span style="color: #A020F0;">=</span> <span style="color: #00578E; font-weight: bold;">pwm</span>(pinvalue<span style="color: #A020F0;">,</span>currenttime<span style="color: #A020F0;">,</span>vhigh<span style="color: #A020F0;">,</span>isfirst)<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="orgef5ba2f"><span style="color: #0000FF;">function</span> [pinvalue] <span style="color: #006FE0;">=</span> <span style="color: #006699;">pwm</span>(pinvalue<span style="color: #006FE0;">,</span>currenttime<span style="color: #006FE0;">,</span>vhigh<span style="color: #006FE0;">,</span>isfirst)<span style="color: #006FE0;">;</span>
 
-    max_cycles <span style="color: #A020F0;">=</span> 40<span style="color: #A020F0;">;</span>
-    analog_in <span style="color: #A020F0;">=</span> pinvalue(1)<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">global</span> counter
-    <span style="color: #A52A2A; font-weight: bold;">if</span> (isfirst)
-        counter <span style="color: #A020F0;">=</span> 0<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">elseif</span> (counter <span style="color: #A020F0;">&gt;</span> max_cycles)
-        counter <span style="color: #A020F0;">=</span> 0<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">else</span> 
-        counter <span style="color: #A020F0;">=</span> counter <span style="color: #A020F0;">+</span> 1<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">end</span>    
-    idealdutycycle <span style="color: #A020F0;">=</span> analog_in<span style="color: #A020F0;">/</span>vhigh<span style="color: #A020F0;">;</span>    
-    high_cycles <span style="color: #A020F0;">=</span> round(max_cycles<span style="color: #A020F0;">*</span>idealdutycycle)<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">if</span> (counter <span style="color: #A020F0;">&lt;=</span> high_cycles)    
-        digital_out <span style="color: #A020F0;">=</span> vhigh<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">else</span>
-        digital_out <span style="color: #A020F0;">=</span> 0<span style="color: #A020F0;">;</span>
-    <span style="color: #A52A2A; font-weight: bold;">end</span>    
-    pinvalue(2) <span style="color: #A020F0;">=</span> digital_out<span style="color: #A020F0;">;</span>
-<span style="color: #A52A2A; font-weight: bold;">endfunction</span>
+    max_cycles <span style="color: #006FE0;">=</span> 40<span style="color: #006FE0;">;</span>
+    analog_in <span style="color: #006FE0;">=</span> pinvalue(1)<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">global</span> counter
+    <span style="color: #0000FF;">if</span> (isfirst)
+        counter <span style="color: #006FE0;">=</span> 0<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">elseif</span> (counter <span style="color: #006FE0;">&gt;</span> max_cycles)
+        counter <span style="color: #006FE0;">=</span> 0<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">else</span> 
+        counter <span style="color: #006FE0;">=</span> counter <span style="color: #006FE0;">+</span> 1<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">end</span>    
+    idealdutycycle <span style="color: #006FE0;">=</span> analog_in<span style="color: #006FE0;">/</span>vhigh<span style="color: #006FE0;">;</span>    
+    high_cycles <span style="color: #006FE0;">=</span> round(max_cycles<span style="color: #006FE0;">*</span>idealdutycycle)<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">if</span> (counter <span style="color: #006FE0;">&lt;=</span> high_cycles)    
+        digital_out <span style="color: #006FE0;">=</span> vhigh<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">else</span>
+        digital_out <span style="color: #006FE0;">=</span> 0<span style="color: #006FE0;">;</span>
+    <span style="color: #0000FF;">end</span>    
+    pinvalue(2) <span style="color: #006FE0;">=</span> digital_out<span style="color: #006FE0;">;</span>
+<span style="color: #0000FF;">endfunction</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgd5af187" class="outline-4">
-<h4 id="orgd5af187">SPICE Netlist of PWM Block and Analog Filter</h4>
-<div class="outline-text-4" id="text-orgd5af187">
+<div id="outline-container-org1520b2a" class="outline-4">
+<h4 id="org1520b2a">SPICE Netlist of PWM Block and Analog Filter</h4>
+<div class="outline-text-4" id="text-org1520b2a">
 <div class="org-src-container">
-<pre class="src src-spice" id="orgb385a6b"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">clk_freq</span> = 1<span style="color: #F5666D;">e</span>6
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">clk_per</span> = '1/clk_freq'
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">aram</span> <span style="color: #0084C8; font-weight: bold;">cap_value</span> = 1<span style="color: #F5666D;">e</span>-6
+<pre class="src src-spice" id="org5915260"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">aram</span> <span style="color: #BA36A5;">clk_freq</span> = 1<span style="color: #D0372D;">e</span>6
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">aram</span> <span style="color: #BA36A5;">clk_per</span> = '1/clk_freq'
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">aram</span> <span style="color: #BA36A5;">cap_value</span> = 1<span style="color: #D0372D;">e</span>-6
 <span style="color: #228b22; font-weight: bold;">V1</span> vdd  0 5
 <span style="color: #228b22; font-weight: bold;">Xpwm</span> analogin outpwm clk <span style="color: #cd0000;">pwm</span>
 <span style="color: #228b22; font-weight: bold;">Rout</span> outpwm outpwm_filtered '(clk_per*40*2)/cap_value'
 <span style="color: #228b22; font-weight: bold;">Cout</span> outpwm_filtered 0 'cap_value'
-<span style="color: #228b22; font-weight: bold;">Rdummy</span> outpwm_filtered 0 10<span style="color: #F5666D;">meg</span>
-<span style="color: #228b22; font-weight: bold;">Vclock</span> clk 0 <span style="color: #2F8B58; font-weight: bold;">PULSE</span>(0 5 0 10<span style="color: #F5666D;">n</span> 10<span style="color: #F5666D;">n</span> 'clk_per/2' 'clk_per')
-<span style="color: #204A87;">*Vin analogin 0 SIN(2.5 1 1</span><span style="color: #204A87;">k</span><span style="color: #204A87;">)</span>
-<span style="color: #228b22; font-weight: bold;">Vin</span> analogin 0 <span style="color: #2F8B58; font-weight: bold;">PULSE</span>(2.5 4.5 0 10<span style="color: #F5666D;">n</span> 10<span style="color: #F5666D;">n</span> 0.5<span style="color: #F5666D;">e</span>-3 1<span style="color: #F5666D;">e</span>-3)
-<span style="color: #A52A2A; font-weight: bold;">.subckt</span><span style="color: #00578E; font-weight: bold;"> pwm </span>in1 out1 clock <span style="color: #0084C8; font-weight: bold;">edge</span>=1 <span style="color: #0084C8; font-weight: bold;">clockth</span>=2.5 <span style="color: #0084C8; font-weight: bold;">octave</span>=1 <span style="color: #0084C8; font-weight: bold;">vhigh</span>=5
-<span style="color: #A52A2A; font-weight: bold;">.ends</span>
+<span style="color: #228b22; font-weight: bold;">Rdummy</span> outpwm_filtered 0 10<span style="color: #D0372D;">meg</span>
+<span style="color: #228b22; font-weight: bold;">Vclock</span> clk 0 <span style="color: #6434A3;">PULSE</span>(0 5 0 10<span style="color: #D0372D;">n</span> 10<span style="color: #D0372D;">n</span> 'clk_per/2' 'clk_per')
+<span style="color: #8D8D84; font-style: italic;">*Vin analogin 0 SIN(2.5 1 1</span><span style="color: #8D8D84; font-style: italic;">k</span><span style="color: #8D8D84; font-style: italic;">)</span>
+<span style="color: #228b22; font-weight: bold;">Vin</span> analogin 0 <span style="color: #6434A3;">PULSE</span>(2.5 4.5 0 10<span style="color: #D0372D;">n</span> 10<span style="color: #D0372D;">n</span> 0.5<span style="color: #D0372D;">e</span>-3 1<span style="color: #D0372D;">e</span>-3)
+<span style="color: #0000FF;">.subckt</span><span style="color: #006699;"> pwm </span>in1 out1 clock <span style="color: #BA36A5;">edge</span>=1 <span style="color: #BA36A5;">clockth</span>=2.5 <span style="color: #BA36A5;">octave</span>=1 <span style="color: #BA36A5;">vhigh</span>=5
+<span style="color: #0000FF;">.ends</span>
 
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #F5666D;">e</span>-6 1<span style="color: #F5666D;">e</span>-3
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(outpwm_filtered) v(analogin)
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #D0372D;">e</span>-6 1<span style="color: #D0372D;">e</span>-3
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(outpwm_filtered) v(analogin)
+<span style="color: #0000FF;">.end</span>
 
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(analogin) v(outpwm_filtered) v(outpwm)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(analogin) v(outpwm_filtered) v(outpwm)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgfd7da69" class="outline-4">
-<h4 id="orgfd7da69">PWM Results</h4>
-<div class="outline-text-4" id="text-orgfd7da69">
+<div id="outline-container-org29d3444" class="outline-4">
+<h4 id="org29d3444">PWM Results</h4>
+<div class="outline-text-4" id="text-org29d3444">
 
 <div class="figure">
 <p><img src="./ngspice_octave_pwm.png" alt="ngspice_octave_pwm.png" />

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-02 Seg 01:03 -->
+<!-- 2020-09-02 Qua 10:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -255,41 +255,41 @@ for the JavaScript code in this tag.
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org5c8fba8" class="outline-2">
-<h2 id="org5c8fba8">Interfacing NGSPICE and OCTAVE/MATLAB within Emacs</h2>
-<div class="outline-text-2" id="text-org5c8fba8">
+<div id="outline-container-orgf0dc968" class="outline-2">
+<h2 id="orgf0dc968">Interfacing NGSPICE and OCTAVE/MATLAB within Emacs</h2>
+<div class="outline-text-2" id="text-orgf0dc968">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-06-26 Dom&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-Dom&gt;</span></span>
 </p>
 </div>
 </div>
 
-<div id="outline-container-orga3cbbfe" class="outline-2">
-<h2 id="orga3cbbfe">Examples</h2>
-<div class="outline-text-2" id="text-orga3cbbfe">
+<div id="outline-container-org7c96d68" class="outline-2">
+<h2 id="org7c96d68">Examples</h2>
+<div class="outline-text-2" id="text-org7c96d68">
 </div>
-<div id="outline-container-orga1d279e" class="outline-3">
-<h3 id="orga1d279e">Octave and Ngspice</h3>
-<div class="outline-text-3" id="text-orga1d279e">
+<div id="outline-container-org25a83d6" class="outline-3">
+<h3 id="org25a83d6">Octave and Ngspice</h3>
+<div class="outline-text-3" id="text-org25a83d6">
 </div>
-<div id="outline-container-orga9482e0" class="outline-4">
-<h4 id="orga9482e0">Example using fixed values on variables (WORKS)</h4>
-<div class="outline-text-4" id="text-orga9482e0">
+<div id="outline-container-org2f63f19" class="outline-4">
+<h4 id="org2f63f19">Example using fixed values on variables (WORKS)</h4>
+<div class="outline-text-4" id="text-org2f63f19">
 <div class="org-src-container">
-<pre class="src src-spice" id="org92cfb25"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
-<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">dc</span> 0V <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz)
-<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">r1</span>
-<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">r2</span>
+<pre class="src src-spice" id="org1327135"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
+<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
+<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1</span>
+<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r2</span>
 <span style="color: #228b22; font-weight: bold;">EOpamp</span> out 0 0 inn 1000
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #F5666D;">m</span>s 0.05s
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(in)
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">m</span><span style="color: #A52A2A; font-weight: bold;">eas</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> vtest find v(in) <span style="color: #0084C8; font-weight: bold;">at</span>=0.04<span style="color: #F5666D;">e</span>-3
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #D0372D;">m</span>s 0.05s
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(in)
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">m</span><span style="color: #0000FF;">eas</span><span style="color: #6434A3;"> tran</span> vtest find v(in) <span style="color: #BA36A5;">at</span>=0.04<span style="color: #D0372D;">e</span>-3
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(in) v(out) v(inn)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(in) v(out) v(inn)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 
 </pre>
 </div>
@@ -309,14 +309,14 @@ by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">
 </div>
 
 
-<div id="outline-container-org9785124" class="outline-4">
-<h4 id="org9785124">Example using a single variable result from previous code block (WORKS)</h4>
-<div class="outline-text-4" id="text-org9785124">
+<div id="outline-container-orgdea1fcd" class="outline-4">
+<h4 id="orgdea1fcd">Example using a single variable result from previous code block (WORKS)</h4>
+<div class="outline-text-4" id="text-orgdea1fcd">
 <div class="org-src-container">
-<pre class="src src-octave" id="org897719c">gain<span style="color: #A020F0;">=-</span>2<span style="color: #A020F0;">;</span>
-r1<span style="color: #A020F0;">=</span>10e3<span style="color: #A020F0;">;</span>
-r2 <span style="color: #A020F0;">=</span> <span style="color: #A020F0;">-</span>gain<span style="color: #A020F0;">*</span>r1<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> r2<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="org8835cc0">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
+r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
+r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -326,19 +326,19 @@ ans <span style="color: #A020F0;">=</span> r2<span style="color: #A020F0;">;</sp
 
 <div class="org-src-container">
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
-<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">dc</span> 0V <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz)
-<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">r1</span>
-<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">r2</span>
+<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
+<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1</span>
+<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r2</span>
 <span style="color: #228b22; font-weight: bold;">EOpamp</span> out 0 0 inn 1000
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #F5666D;">m</span>s 0.05s
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(in)
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">m</span><span style="color: #A52A2A; font-weight: bold;">eas</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> vtest find v(in) <span style="color: #0084C8; font-weight: bold;">at</span>=0.04<span style="color: #F5666D;">e</span>-3
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #D0372D;">m</span>s 0.05s
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(in)
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">m</span><span style="color: #0000FF;">eas</span><span style="color: #6434A3;"> tran</span> vtest find v(in) <span style="color: #BA36A5;">at</span>=0.04<span style="color: #D0372D;">e</span>-3
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(in) v(out) v(inn)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(in) v(out) v(inn)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 
 </pre>
 </div>
@@ -352,14 +352,14 @@ ans <span style="color: #A020F0;">=</span> r2<span style="color: #A020F0;">;</sp
 </div>
 
 
-<div id="outline-container-org684a8e7" class="outline-4">
-<h4 id="org684a8e7">Example using a vector result from previous code block (WORKS)</h4>
-<div class="outline-text-4" id="text-org684a8e7">
+<div id="outline-container-org6062977" class="outline-4">
+<h4 id="org6062977">Example using a vector result from previous code block (WORKS)</h4>
+<div class="outline-text-4" id="text-org6062977">
 <div class="org-src-container">
-<pre class="src src-octave" id="orgfe77442">gain<span style="color: #A020F0;">=-</span>3<span style="color: #A020F0;">;</span>
-r1<span style="color: #A020F0;">=</span>10e3<span style="color: #A020F0;">;</span>
-r2 <span style="color: #A020F0;">=</span> <span style="color: #A020F0;">-</span>gain<span style="color: #A020F0;">*</span>r1<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="orgd4d64d1">gain<span style="color: #006FE0;">=-</span>3<span style="color: #006FE0;">;</span>
+r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
+r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -380,20 +380,20 @@ ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">
 </table>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="org9c388b1"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
-<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">dc</span> 0V <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz)
-<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">r1[0]</span>
-<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">r1[1]</span>
+<pre class="src src-spice" id="org8380e0a"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
+<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
+<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1[0]</span>
+<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1[1]</span>
 <span style="color: #228b22; font-weight: bold;">EOpamp</span> out 0 0 inn 1000
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #F5666D;">m</span>s 0.05s
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(in)
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">m</span><span style="color: #A52A2A; font-weight: bold;">eas</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> vtest find v(in) <span style="color: #0084C8; font-weight: bold;">at</span>=0.04e-3c
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #D0372D;">m</span>s 0.05s
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(in)
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">m</span><span style="color: #0000FF;">eas</span><span style="color: #6434A3;"> tran</span> vtest find v(in) <span style="color: #BA36A5;">at</span>=0.04e-3c
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(in) v(out) v(inn)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(in) v(out) v(inn)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 
@@ -407,21 +407,21 @@ ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">
 
 <div class="org-src-container">
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
-<span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #F5666D;">k</span>
-<span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #F5666D;">p</span>
-<span style="color: #A52A2A; font-weight: bold;">.IC</span> V(1)=1
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #F5666D;">n</span> 0.1<span style="color: #F5666D;">u</span>
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(1)
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
+<span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #D0372D;">p</span>
+<span style="color: #0000FF;">.IC</span> V(1)=1
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #D0372D;">n</span> 0.1<span style="color: #D0372D;">u</span>
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(1)
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(1)</span>
-<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #0084C8; font-weight: bold;">at</span>=1<span style="color: #F5666D;">e</span>-8
-<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_five_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #0084C8; font-weight: bold;">at</span>=5<span style="color: #F5666D;">e</span>-8
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #0084C8; font-weight: bold;">value_at_tau</span> = <span style="color: #4E9A06;">"$&amp;value_at_tau"</span> &gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt</span>
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #0084C8; font-weight: bold;">value_at_five_tau</span> = <span style="color: #4E9A06;">"$&amp;value_at_five_tau"</span> &gt;&gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(1)</span>
+<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #BA36A5;">at</span>=1<span style="color: #D0372D;">e</span>-8
+<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_five_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #BA36A5;">at</span>=5<span style="color: #D0372D;">e</span>-8
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #BA36A5;">value_at_tau</span> = <span style="color: #008000;">"$&amp;value_at_tau"</span> &gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt</span>
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #BA36A5;">value_at_five_tau</span> = <span style="color: #008000;">"$&amp;value_at_five_tau"</span> &gt;&gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 
@@ -444,25 +444,25 @@ ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">
 </div>
 
 
-<div id="outline-container-org3deb15c" class="outline-4">
-<h4 id="org3deb15c">Example using output from ngspice to octave</h4>
-<div class="outline-text-4" id="text-org3deb15c">
+<div id="outline-container-org78ef48a" class="outline-4">
+<h4 id="org78ef48a">Example using output from ngspice to octave</h4>
+<div class="outline-text-4" id="text-org78ef48a">
 <div class="org-src-container">
-<pre class="src src-spice" id="org8dec452"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
-<span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #F5666D;">k</span>
-<span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #F5666D;">p</span>
-<span style="color: #A52A2A; font-weight: bold;">.IC</span> V(1)=1
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #F5666D;">n</span> 0.1<span style="color: #F5666D;">u</span>
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(1)
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<pre class="src src-spice" id="org2be3549"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
+<span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
+<span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #D0372D;">p</span>
+<span style="color: #0000FF;">.IC</span> V(1)=1
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #D0372D;">n</span> 0.1<span style="color: #D0372D;">u</span>
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(1)
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(1)</span>
-<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #0084C8; font-weight: bold;">at</span>=1<span style="color: #F5666D;">e</span>-8
-<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_five_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #0084C8; font-weight: bold;">at</span>=5<span style="color: #F5666D;">e</span>-8
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #4E9A06;">"$&amp;value_at_tau,$&amp;value_at_five_tau"</span> &gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(1)</span>
+<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #BA36A5;">at</span>=1<span style="color: #D0372D;">e</span>-8
+<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_five_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #BA36A5;">at</span>=5<span style="color: #D0372D;">e</span>-8
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #008000;">"$&amp;value_at_tau,$&amp;value_at_five_tau"</span> &gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 
@@ -489,8 +489,8 @@ ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">
 
 
 <div class="org-src-container">
-<pre class="src src-octave">a <span style="color: #A020F0;">=</span> 2
-ans <span style="color: #A020F0;">=</span> test
+<pre class="src src-octave">a <span style="color: #006FE0;">=</span> 2
+ans <span style="color: #006FE0;">=</span> test
 </pre>
 </div>
 
@@ -502,18 +502,18 @@ ans <span style="color: #A020F0;">=</span> test
 </div>
 
 
-<div id="outline-container-org63f8495" class="outline-3">
-<h3 id="org63f8495">Octave only (for test)</h3>
-<div class="outline-text-3" id="text-org63f8495">
+<div id="outline-container-orgf5d15d6" class="outline-3">
+<h3 id="orgf5d15d6">Octave only (for test)</h3>
+<div class="outline-text-3" id="text-orgf5d15d6">
 </div>
-<div id="outline-container-orgd1f5eaa" class="outline-4">
-<h4 id="orgd1f5eaa">Test octave to octave vector (WORKS)</h4>
-<div class="outline-text-4" id="text-orgd1f5eaa">
+<div id="outline-container-orgbe3f51e" class="outline-4">
+<h4 id="orgbe3f51e">Test octave to octave vector (WORKS)</h4>
+<div class="outline-text-4" id="text-orgbe3f51e">
 <div class="org-src-container">
-<pre class="src src-octave" id="org4c2f40e">gain<span style="color: #A020F0;">=-</span>2<span style="color: #A020F0;">;</span>
-r1<span style="color: #A020F0;">=</span>10e3<span style="color: #A020F0;">;</span>
-r2 <span style="color: #A020F0;">=</span> <span style="color: #A020F0;">-</span>gain<span style="color: #A020F0;">*</span>r1<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="org7dbc181">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
+r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
+r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -534,8 +534,8 @@ ans <span style="color: #A020F0;">=</span> [r1 r2]<span style="color: #A020F0;">
 </table>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org7d77c09">vo<span style="color: #A020F0;">=</span>vi<span style="color: #A020F0;">.*</span>2<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> vo<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="orgacc0573">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -558,20 +558,20 @@ ans <span style="color: #A020F0;">=</span> vo<span style="color: #A020F0;">;</sp
 </div>
 
 
-<div id="outline-container-orge5a095b" class="outline-4">
-<h4 id="orge5a095b">Test octave vector to octave element (WORKS)</h4>
-<div class="outline-text-4" id="text-orge5a095b">
+<div id="outline-container-org0b6b372" class="outline-4">
+<h4 id="org0b6b372">Test octave vector to octave element (WORKS)</h4>
+<div class="outline-text-4" id="text-org0b6b372">
 <div class="org-src-container">
-<pre class="src src-octave" id="org2377144">vo<span style="color: #A020F0;">=</span>vi<span style="color: #A020F0;">.*</span>2<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> vo<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="orgd7c5ff5">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org80b18d6" class="outline-4">
-<h4 id="org80b18d6">Test octave vector to perl</h4>
-<div class="outline-text-4" id="text-org80b18d6">
+<div id="outline-container-org2c8a3eb" class="outline-4">
+<h4 id="org2c8a3eb">Test octave vector to perl</h4>
+<div class="outline-text-4" id="text-org2c8a3eb">
 <p>
 10000
 </p>
