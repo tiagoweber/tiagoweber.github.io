@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-03 Qua 19:53 -->
+<!-- 2021-03-15 Seg 19:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -265,7 +265,6 @@ for the JavaScript code in this tag.
 <body>
 <div id="content">
 <h1 class="title">Tiago Oliveira Weber</h1>
-
 
 <div id="outline-container-org858b921" class="outline-2">
 <h2 id="org858b921">About</h2>
@@ -552,7 +551,7 @@ Setting environment. Image from the paper above.
 </p>
 
 <ul class="org-ul">
-<li>ADOLFSSON, J. et al. The upgrade of the ALICE TPC with GEMs and continuous readout, <i>pre-print arXiv:2012.09518</i>, 2020. <a href="http://arxiv.org/abs/2012.09518">Link</a>  (also submitted to JINST)</li>
+<li>ADOLFSSON, J. et al. The upgrade of the ALICE TPC with GEMs and continuous readout, <i>Journal of Instrumentation</i>, v. 16, n. 3, P03022, 2021. <a href="https://iopscience.iop.org/article/10.1088/1748-0221/16/03/P03022">Link</a></li>
 
 <li>HERNANDEZ, H.; SANCHES, B.; CARVALHO, D.; BREGANT, M.; PABON, A. A.; WILTON, R.; HERNANDEZ,  R. A.; WEBER, T. O.; COUTO, A.; LOMBARDI, A.; ALARCON, H.; MARTINS, T. A.; MUNHOZ, M. G.; NOIJE; W. V. A Monolithic 32-channel Front-End and DSP ASIC for Gaseous Detectors. <i>IEEE Transactions on Instrumentation and Measurement</i>, DOI 10.1109/TIM.2019.2931016, 2019. <a href="https://ieeexplore.ieee.org/document/8772086/">Link</a></li>
 
@@ -746,9 +745,9 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 </ul>
 </div>
 
-<div id="outline-container-orgf194a95" class="outline-4">
-<h4 id="orgf194a95">Honors related to teaching at UFSC</h4>
-<div class="outline-text-4" id="text-orgf194a95">
+<div id="outline-container-orgb48e2e4" class="outline-4">
+<h4 id="orgb48e2e4">Honors related to my teaching activity at UFSC</h4>
+<div class="outline-text-4" id="text-orgb48e2e4">
 <ul class="org-ul">
 <li>Patrono da Turma de Engenharia de Computação - Turma 2020/2</li>
 <li>Professor homenageado da turma de Engenharia de Computação - Turma 2019/2</li>
