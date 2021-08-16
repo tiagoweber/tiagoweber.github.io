@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-06 Seg 21:12 -->
+<!-- 2021-08-16 Seg 18:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -196,8 +209,10 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
+
 </script>
 <meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and OCTAVE/Matlab Interaction within Emacs"/>
 <meta property="og:type" content="article"/>
@@ -205,50 +220,26 @@ ga('send', 'pageview');
 <meta property="link" content="http://tiagoweber.github.io/blog/entry4.html"/>
 <meta property="pubdate" content="Sat, 4 Aug 2016"/>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -258,15 +249,15 @@ for the JavaScript code in this tag.
 <a href="http://tiagoweber.github.io/index.html#blog">Back home</a>  <a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"><img src="../feed-icon.gif" style="border:0"/></a><br>
 </p>
 
-<div id="outline-container-org6fa736a" class="outline-2">
-<h2 id="org6fa736a">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
-<div class="outline-text-2" id="text-org6fa736a">
+<div id="outline-container-org68a271c" class="outline-2">
+<h2 id="org68a271c">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
+<div class="outline-text-2" id="text-org68a271c">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Qui&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-Qui&gt;</span></span>
 </p>
 
 
-<div class="figure">
+<div id="orge161499" class="figure">
 <p><img src="./attachments/project_700_400.png" alt="project_700_400.png" width="400px image" title="Project" align="center" />
 </p>
 </div>
@@ -290,9 +281,9 @@ Although this is a simple design and simulation, let us use this case to get a g
 
 
 
-<div id="outline-container-orgf70a01c" class="outline-3">
-<h3 id="orgf70a01c">Procedure</h3>
-<div class="outline-text-3" id="text-orgf70a01c">
+<div id="outline-container-org98cd846" class="outline-3">
+<h3 id="org98cd846">Procedure</h3>
+<div class="outline-text-3" id="text-org98cd846">
 <p>
 In order to better illustrate the procedure, I will show the header of each code-block. This would not be necessary in a normal report.
 </p>
@@ -302,23 +293,23 @@ We will define as our design specification that the inverting opamp topology sha
 </p>
 </div>
 
-<div id="outline-container-orgf2ae293" class="outline-4">
-<h4 id="orgf2ae293">Calculating the Resistors Values in Octave/Matlab</h4>
-<div class="outline-text-4" id="text-orgf2ae293">
+<div id="outline-container-org771ceba" class="outline-4">
+<h4 id="org771ceba">Calculating the Resistors Values in Octave/Matlab</h4>
+<div class="outline-text-4" id="text-org771ceba">
 <p>
 First we want to calculate the value of our resistors. Let us assume resistor R1 is 10k, and then calculate R2 in Octave:
 </p>
 
-<pre class="example">
+<pre class="example" id="orgcc08b50">
 #+NAME: design_variables
 #+BEGIN_SRC octave :results drawer :exports both 
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="orga486a6d">gain<span style="color: #A020F0;">=-</span>10<span style="color: #A020F0;">;</span>
-r1<span style="color: #A020F0;">=</span>10e3<span style="color: #A020F0;">;</span>
-r2 <span style="color: #A020F0;">=</span> <span style="color: #A020F0;">-</span>gain<span style="color: #A020F0;">*</span>r1<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> [gain<span style="color: #A020F0;">,</span> r1<span style="color: #A020F0;">,</span> r2]<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="org888eec3">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
+r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
+r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> [gain<span style="color: #006FE0;">,</span> r1<span style="color: #006FE0;">,</span> r2]<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -352,40 +343,40 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 </div>
 
-<div id="outline-container-orgb07fd32" class="outline-4">
-<h4 id="orgb07fd32">Simulating the Circuit in Ngspice</h4>
-<div class="outline-text-4" id="text-orgb07fd32">
+<div id="outline-container-orged787b9" class="outline-4">
+<h4 id="orged787b9">Simulating the Circuit in Ngspice</h4>
+<div class="outline-text-4" id="text-orged787b9">
 <p>
 With the vector in a variable we will now use it in a spice netlist to be simulated on Ngspice. 
 </p>
 
-<pre class="example">
+<pre class="example" id="org22bf134">
 #+NAME: ngspice_sim 
 #+BEGIN_SRC spice :results drawer :exports both :var design=design_variables file="amplifier_sim"
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="org775f482"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
-<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">ac</span> 1 <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz) <span style="color: #2F8B58; font-weight: bold;">dc</span> 0
-<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[1]</span>
-<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[2]</span>
-<span style="color: #204A87;">*EOpamp out 0 0 inn 1000</span>
+<pre class="src src-spice" id="orgd38b6ce"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
+<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">ac</span> 1 <span style="color: #6434A3;">sin</span>(0 0.1 100Hz) <span style="color: #6434A3;">dc</span> 0
+<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[1]</span>
+<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[2]</span>
+<span style="color: #8D8D84; font-style: italic;">*EOpamp out 0 0 inn 1000</span>
 <span style="color: #228b22; font-weight: bold;">xamp1</span> 0 inn vdd vss out <span style="color: #cd0000;">lm741/ns</span>
 <span style="color: #228b22; font-weight: bold;">vdd</span> vdd 0 5
 <span style="color: #228b22; font-weight: bold;">vss</span> vss 0 -5
-<span style="color: #A52A2A; font-weight: bold;">.include</span> <span style="color: #4E9A06;">spice_library/LM741.MOD</span>
-<span style="color: #204A87;">*.tran 0.1</span><span style="color: #204A87;">m</span><span style="color: #204A87;">s 0.05s</span>
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ac</span> <span style="color: #2F8B58; font-weight: bold;">dec</span> 100 1 100<span style="color: #F5666D;">e</span>6
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.include</span> <span style="color: #008000;">spice_library/LM741.MOD</span>
+<span style="color: #8D8D84; font-style: italic;">*.tran 0.1</span><span style="color: #8D8D84; font-style: italic;">m</span><span style="color: #8D8D84; font-style: italic;">s 0.05s</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ac</span> <span style="color: #6434A3;">dec</span> 100 1 100<span style="color: #D0372D;">e</span>6
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">let</span> <span style="color: #0084C8; font-weight: bold;">gain</span> = v(out)/v(in)
-<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_dc find <span style="color: #cd0000;">gain</span> <span style="color: #0084C8; font-weight: bold;">at</span>=1
-<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_at_100k find <span style="color: #cd0000;">gain</span> <span style="color: #0084C8; font-weight: bold;">at</span>=100<span style="color: #F5666D;">k</span>
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #4E9A06;">"$&amp;gain_dc,$&amp;gain_at_100k"</span> &gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt </span>
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file vdb(in) vdb(out)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">let</span> <span style="color: #BA36A5;">gain</span> = v(out)/v(in)
+<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_dc find <span style="color: #cd0000;">gain</span> <span style="color: #BA36A5;">at</span>=1
+<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_at_100k find <span style="color: #cd0000;">gain</span> <span style="color: #BA36A5;">at</span>=100<span style="color: #D0372D;">k</span>
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #008000;">"$&amp;gain_dc,$&amp;gain_at_100k"</span> &gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt </span>
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file vdb(in) vdb(out)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 
@@ -402,7 +393,7 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 <tbody>
 <tr>
 <td class="org-right">-9.99943</td>
-<td class="org-right">-4.32624</td>
+<td class="org-right">-4.32609</td>
 <td class="org-left"><img src="./amplifier_sim.png" alt="amplifier_sim.png" /></td>
 </tr>
 </tbody>
@@ -414,14 +405,14 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The important thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
 </p>
 
-<pre class="example">
+<pre class="example" id="org54c6d0a">
 echo "$&amp;var1,$&amp;var2,$&amp;var3" &gt; $file.txt 
 </pre>
 
 <p>
 For plot, you use "gnuplot $file signal_names":
 </p>
-<pre class="example">
+<pre class="example" id="org8077089">
 gnuplot $file vdb(in) vdb(out)
 </pre>
 
@@ -431,24 +422,24 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 </div>
 
-<div id="outline-container-org7704269" class="outline-4">
-<h4 id="org7704269">Calculate the error between ideal and simulated on Octave/Matlab</h4>
-<div class="outline-text-4" id="text-org7704269">
+<div id="outline-container-org629da71" class="outline-4">
+<h4 id="org629da71">Calculate the error between ideal and simulated on Octave/Matlab</h4>
+<div class="outline-text-4" id="text-org629da71">
 <p>
 We will now get the results from the simulation back to Octave in order to calculate the error between ideal and simulated. 
 </p>
 
-<pre class="example">
+<pre class="example" id="org03d8a8c">
 #+NAME: error_calculation
 #+BEGIN_SRC octave :results drawer :exports both :var gain_octave=10 ngspice_results=ngspice_sim[0]
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org5c7fa08">gain_octave <span style="color: #A020F0;">=</span> design_variables(1)<span style="color: #A020F0;">;</span>
-gain_ngspice <span style="color: #A020F0;">=</span> str2num(gain_ngspice)
-error_absolute <span style="color: #A020F0;">=</span> abs((gain_octave<span style="color: #A020F0;">-</span>gain_ngspice))
-error_percentage <span style="color: #A020F0;">=</span> abs(error_absolute<span style="color: #A020F0;">/</span>gain_octave)
-ans <span style="color: #A020F0;">=</span> [error_absolute<span style="color: #A020F0;">,</span>error_percentage]<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="org3cb5a28">gain_octave <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
+gain_ngspice <span style="color: #006FE0;">=</span> str2num(gain_ngspice)
+error_absolute <span style="color: #006FE0;">=</span> abs((gain_octave<span style="color: #006FE0;">-</span>gain_ngspice))
+error_percentage <span style="color: #006FE0;">=</span> abs(error_absolute<span style="color: #006FE0;">/</span>gain_octave)
+ans <span style="color: #006FE0;">=</span> [error_absolute<span style="color: #006FE0;">,</span>error_percentage]<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -475,25 +466,25 @@ And <i>voilà</i>, you have now your DC gain error calculated.
 </div>
 </div>
 
-<div id="outline-container-orgeef72db" class="outline-4">
-<h4 id="orgeef72db">Present the Results</h4>
-<div class="outline-text-4" id="text-orgeef72db">
+<div id="outline-container-orgddf9322" class="outline-4">
+<h4 id="orgddf9322">Present the Results</h4>
+<div class="outline-text-4" id="text-orgddf9322">
 <p>
 You can present the result directly in your text with an inline code-block or in fancier approaches, like creating a table as below (where I used python to print the results).
 </p>
 
-<pre class="example">
+<pre class="example" id="org2f438ad">
 #+BEGIN_SRC python :results output drawer :exports results :var vi=design_variables ngspice_sim_var=ngspice_sim[0;0] error_calculation_var=error_cal
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|                         |Gain    |"</span>
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(vi[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Simulated (Ngspice)     |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(ngspice_sim_var)
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Absolute Error (Octave) |%.2g    |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Relative Error (Octave) |%.2g %% |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][1])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
+<pre class="src src-python"><span style="color: #0000FF;">print</span> <span style="color: #008000;">"|-------------------------+--------|"</span>
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"|                         |Gain    |"</span>
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #006FE0;">float</span>(vi[0][0])
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Simulated (Ngspice)     |%.5f V/V|"</span> %<span style="color: #006FE0;">float</span>(ngspice_sim_var)
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Absolute Error (Octave) |%.2g    |"</span> %<span style="color: #006FE0;">float</span>(error_calculation_var[0][0])
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Relative Error (Octave) |%.2g %% |"</span> %<span style="color: #006FE0;">float</span>(error_calculation_var[0][1])
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"|-------------------------+--------|"</span>
 </pre>
 </div>
 
@@ -535,9 +526,9 @@ You can present the result directly in your text with an inline code-block or in
 </div>
 </div>
 
-<div id="outline-container-orgd9d0d0a" class="outline-4">
-<h4 id="orgd9d0d0a">Possibilities</h4>
-<div class="outline-text-4" id="text-orgd9d0d0a">
+<div id="outline-container-orgf91c134" class="outline-4">
+<h4 id="orgf91c134">Possibilities</h4>
+<div class="outline-text-4" id="text-orgf91c134">
 <p>
 The possibility to perform calculations in Octave or Matlab, simulate circuits based on these calculations on Ngspice and take the results back to Octave again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
 </p>

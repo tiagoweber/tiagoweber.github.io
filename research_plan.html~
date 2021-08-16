@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-16 Seg 18:31 -->
+<!-- 2018-12-31 Seg 16:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -161,19 +161,6 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -196,7 +183,6 @@
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/bigblow.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/hideshow.css"/>
-<link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/mine.css"/>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
@@ -205,41 +191,62 @@
 <script type="text/javascript" src="themes/styles/bigblow/js/bigblow.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/hideshow.js"></script>
 <script type="text/javascript" src="themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
-<script type="text/javascript" src="themes/styles/bigblow/js/mine.js"></script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
-
 </script>
 <meta property="og:title" content="Upcoming Microelectronics Conferences"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/entry1_image_700_400.png"/>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
@@ -249,60 +256,60 @@ ga('send', 'pageview');
 <a href="./index.html">Back to home</a>
 </p>
 
-<div id="outline-container-org3ba565f" class="outline-2">
-<h2 id="org3ba565f">2019 Research Goals</h2>
-<div class="outline-text-2" id="text-org3ba565f">
+<div id="outline-container-org54de459" class="outline-2">
+<h2 id="org54de459">2019 Research Goals</h2>
+<div class="outline-text-2" id="text-org54de459">
 <p>
 By sharing my research plans, my intention is to communicate my professional roadmap and be transparent with colaborators (other researchers, students, companies, &#x2026;). 
 </p>
 </div>
 
-<div id="outline-container-org5763659" class="outline-3">
-<h3 id="org5763659">2019 Journal Publication Goals <code>[0%]</code></h3>
-<div class="outline-text-3" id="text-org5763659">
+<div id="outline-container-orgdd07b6e" class="outline-3">
+<h3 id="orgdd07b6e">2019 Journal Publication Goals <code>[0%]</code></h3>
+<div class="outline-text-3" id="text-orgdd07b6e">
 </div>
-<div id="outline-container-org5956476" class="outline-4">
-<h4 id="org5956476"><span class="todo STARTED">STARTED</span> Topic: SAMPA Chip</h4>
-</div>
-
-<div id="outline-container-org38a1253" class="outline-4">
-<h4 id="org38a1253"><span class="todo STARTED">STARTED</span> Topic: Corporal Postures</h4>
+<div id="outline-container-org7ea5246" class="outline-4">
+<h4 id="org7ea5246"><span class="todo STARTED">STARTED</span> Topic: SAMPA Chip</h4>
 </div>
 
-<div id="outline-container-org727519b" class="outline-4">
-<h4 id="org727519b"><span class="todo TODO">TODO</span> Topic: New optimization algorithms for Integrated Circuit Design</h4>
+<div id="outline-container-org208e01c" class="outline-4">
+<h4 id="org208e01c"><span class="todo STARTED">STARTED</span> Topic: Corporal Postures</h4>
 </div>
 
-<div id="outline-container-orge392d36" class="outline-4">
-<h4 id="orge392d36"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
+<div id="outline-container-org29b4039" class="outline-4">
+<h4 id="org29b4039"><span class="todo TODO">TODO</span> Topic: New optimization algorithms for Integrated Circuit Design</h4>
 </div>
 
-<div id="outline-container-org84a36a6" class="outline-4">
-<h4 id="org84a36a6"><span class="todo TODO">TODO</span> Topic: Open Integrated Circuit Testbenches</h4>
+<div id="outline-container-orgf6fa5c5" class="outline-4">
+<h4 id="orgf6fa5c5"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
 </div>
 
-<div id="outline-container-orge2ae6cb" class="outline-4">
-<h4 id="orge2ae6cb"><span class="todo TODO">TODO</span> Topic: Optimization Strategy for IC System Design</h4>
-</div>
-</div>
-
-
-<div id="outline-container-org6a52f12" class="outline-3">
-<h3 id="org6a52f12">2019 Conference Publication Goals <code>[0%]</code></h3>
-<div class="outline-text-3" id="text-org6a52f12">
-</div>
-<div id="outline-container-orgb4e0864" class="outline-4">
-<h4 id="orgb4e0864"><span class="todo TODO">TODO</span> Topic: Digital Artificial Neuron Networks</h4>
+<div id="outline-container-org27ee374" class="outline-4">
+<h4 id="org27ee374"><span class="todo TODO">TODO</span> Topic: Open Integrated Circuit Testbenches</h4>
 </div>
 
-<div id="outline-container-org3a2b0a2" class="outline-4">
-<h4 id="org3a2b0a2"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
+<div id="outline-container-org57f4255" class="outline-4">
+<h4 id="org57f4255"><span class="todo TODO">TODO</span> Topic: Optimization Strategy for IC System Design</h4>
 </div>
 </div>
 
-<div id="outline-container-org3acc436" class="outline-3">
-<h3 id="org3acc436">2019 Deadlines</h3>
-<div class="outline-text-3" id="text-org3acc436">
+
+<div id="outline-container-org7db15c5" class="outline-3">
+<h3 id="org7db15c5">2019 Conference Publication Goals <code>[0%]</code></h3>
+<div class="outline-text-3" id="text-org7db15c5">
+</div>
+<div id="outline-container-org1c0dab2" class="outline-4">
+<h4 id="org1c0dab2"><span class="todo TODO">TODO</span> Topic: Digital Artificial Neuron Networks</h4>
+</div>
+
+<div id="outline-container-org4c40282" class="outline-4">
+<h4 id="org4c40282"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
+</div>
+</div>
+
+<div id="outline-container-org09ba141" class="outline-3">
+<h3 id="org09ba141">2019 Deadlines</h3>
+<div class="outline-text-3" id="text-org09ba141">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
