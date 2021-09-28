@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-26 Dom 00:24 -->
+<!-- 2021-09-28 Ter 17:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -262,7 +262,7 @@ document.getElementById(id).width = (newwidth) + "px";
 <h2 id="org858b921">About</h2>
 <div class="outline-text-2" id="text-org858b921">
 
-<div id="org387883f" class="figure">
+<div id="orge6a1023" class="figure">
 <p><img src="img/photob.jpg" alt="photob.jpg" width="200px image" title="Photo" align="right" /> 
 </p>
 </div>
@@ -573,7 +573,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org5a1caf6" class="figure">
+<div id="org286f925" class="figure">
 <p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -609,7 +609,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org32153f0" class="figure">
+<div id="orgbe9ef40" class="figure">
 <p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -634,13 +634,16 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 <ul class="org-ul">
-<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013. <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp%3D&amp;arnumber%3D6644878&amp;url%3Dhttp%253A%252F%252Fieeexplore.ieee.org%252Fxpls%252Fabs_all.jsp%253Farnumber%253D6644878">Link</a></li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload%3Dtrue&amp;arnumber%3D5750289">Link</a></li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="http://dl.acm.org/citation.cfm?id%3D2020897">Link</a></li>
+<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013. <a href="https://doi.org/10.1109/SBCCI.2013.6644878">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="https://doi.org/10.1109/LASCAS.2011.5750289">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="https://doi.org/10.1145/2020876.2020897">Link</a></li>
 </ul>
 
 <ul class="org-ul">
-<li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009 <a href="http://www.ing.unlp.edu.ar/cetad/iberchip/finalprogram.htm">Link</a></li>
+<li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009</li>
+</ul>
+
+<ul class="org-ul">
 <li>HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05 <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008</li>
 </ul>
 </div>
