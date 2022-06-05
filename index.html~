@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-28 Ter 17:06 -->
+<!-- 2022-06-05 dom 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -211,7 +211,6 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
 </script>
@@ -220,49 +219,71 @@ ga('send', 'pageview');
 function autoResize(id){
 var newheight;
 var newwidth;
-
 if(document.getElementById){
 newheight = document.getElementById(id).contentWindow.document .body.scrollHeight;
 newwidth = document.getElementById(id).contentWindow.document .body.scrollWidth;
 }
-
 document.getElementById(id).height = (newheight) + "px";
 document.getElementById(id).width = (newwidth) + "px";
 }
 //-->
 </script>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
 <div id="content">
 <h1 class="title">Tiago Oliveira Weber</h1>
 
-<div id="outline-container-org858b921" class="outline-2">
-<h2 id="org858b921">About</h2>
-<div class="outline-text-2" id="text-org858b921">
+<div id="outline-container-org2b28493" class="outline-2">
+<h2 id="org2b28493">About</h2>
+<div class="outline-text-2" id="text-org2b28493">
 
-<div id="orgad503fa" class="figure">
+<div class="figure">
 <p><img src="img/photob.jpg" alt="photob.jpg" width="200px image" title="Photo" align="right" /> 
 </p>
 </div>
@@ -283,9 +304,9 @@ document.getElementById(id).width = (newwidth) + "px";
 
 
 
-<div id="outline-container-org1f037b1" class="outline-3">
-<h3 id="org1f037b1">Research Interests</h3>
-<div class="outline-text-3" id="text-org1f037b1">
+<div id="outline-container-org50fecfe" class="outline-3">
+<h3 id="org50fecfe">Research Interests</h3>
+<div class="outline-text-3" id="text-org50fecfe">
 <p>
 My main research interests are: 
 </p>
@@ -298,9 +319,9 @@ My main research interests are:
 </div>
 </div>
 
-<div id="outline-container-org282a6ec" class="outline-3">
-<h3 id="org282a6ec">Goals</h3>
-<div class="outline-text-3" id="text-org282a6ec">
+<div id="outline-container-org13ee99c" class="outline-3">
+<h3 id="org13ee99c">Goals</h3>
+<div class="outline-text-3" id="text-org13ee99c">
 <p>
 Our plans for the future are as important as where we are right now. To provide a better insight about my professional goals, I've decided to share my short and long-term objectives. 
 </p>
@@ -316,9 +337,9 @@ Our plans for the future are as important as where we are right now. To provide 
 </div>
 
 
-<div id="outline-container-org64564b5" class="outline-3">
-<h3 id="org64564b5">Contact</h3>
-<div class="outline-text-3" id="text-org64564b5">
+<div id="outline-container-orgeabcca6" class="outline-3">
+<h3 id="orgeabcca6">Contact</h3>
+<div class="outline-text-3" id="text-orgeabcca6">
 <ul class="org-ul">
 <li>E-mail: tiago.weber (at) ufrgs.br</li>
 <li><a href="http://www.researchgate.net/profile/Tiago_Oliveira_Weber">ResearchGate</a></li>
@@ -329,9 +350,9 @@ Our plans for the future are as important as where we are right now. To provide 
 </div>
 
 
-<div id="outline-container-orgb9e8cf7" class="outline-3">
-<h3 id="orgb9e8cf7">Curriculum</h3>
-<div class="outline-text-3" id="text-orgb9e8cf7">
+<div id="outline-container-org79502d7" class="outline-3">
+<h3 id="org79502d7">Curriculum</h3>
+<div class="outline-text-3" id="text-org79502d7">
 <ul class="org-ul">
 <li><a href="http://lattes.cnpq.br/6453626164328516">Lattes</a></li>
 </ul>
@@ -341,13 +362,13 @@ Our plans for the future are as important as where we are right now. To provide 
 
 
 
-<div id="outline-container-orgf391902" class="outline-3">
-<h3 id="orgf391902">Education</h3>
-<div class="outline-text-3" id="text-orgf391902">
+<div id="outline-container-org450379e" class="outline-3">
+<h3 id="org450379e">Education</h3>
+<div class="outline-text-3" id="text-org450379e">
 </div>
-<div id="outline-container-orgd2a9548" class="outline-4">
-<h4 id="orgd2a9548">Doctoral Degree in Microelectronics - June 2015</h4>
-<div class="outline-text-4" id="text-orgd2a9548">
+<div id="outline-container-orgdefe0ce" class="outline-4">
+<h4 id="orgdefe0ce">Doctoral Degree in Microelectronics - June 2015</h4>
+<div class="outline-text-4" id="text-orgdefe0ce">
 <p>
 University of São Paulo - São Paulo, Brazil
 </p>
@@ -359,9 +380,9 @@ University of São Paulo - São Paulo, Brazil
 </div>
 </div>
 
-<div id="outline-container-orge5d62f0" class="outline-4">
-<h4 id="orge5d62f0">B.Sc. in Electrical Engineering - Jan. 2010</h4>
-<div class="outline-text-4" id="text-orge5d62f0">
+<div id="outline-container-org2ff859c" class="outline-4">
+<h4 id="org2ff859c">B.Sc. in Electrical Engineering - Jan. 2010</h4>
+<div class="outline-text-4" id="text-org2ff859c">
 <p>
 Federal University of Santa Maria - Santa Maria, Brazil
 </p>
@@ -386,9 +407,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-org7e9c0b4" class="outline-2">
-<h2 id="org7e9c0b4">Research</h2>
-<div class="outline-text-2" id="text-org7e9c0b4">
+<div id="outline-container-orgb562462" class="outline-2">
+<h2 id="orgb562462">Research</h2>
+<div class="outline-text-2" id="text-orgb562462">
 <p>
 Here you will find:
 </p>
@@ -398,18 +419,18 @@ Here you will find:
 </ul>
 </div>
 
-<div id="outline-container-orgf446b41" class="outline-3">
-<h3 id="orgf446b41">Research Projects and Goals</h3>
-<div class="outline-text-3" id="text-orgf446b41">
+<div id="outline-container-org3f7af66" class="outline-3">
+<h3 id="org3f7af66">Research Projects and Goals</h3>
+<div class="outline-text-3" id="text-org3f7af66">
 <p>
 By sharing my research projects and goals, the objective is to communicate my professional road map to current and potential collaborators (other researchers, students and companies). 
 </p>
 </div>
 
 
-<div id="outline-container-orgf91627c" class="outline-4">
-<h4 id="orgf91627c">Artificial Intelligence - Hardware Accelerators</h4>
-<div class="outline-text-4" id="text-orgf91627c">
+<div id="outline-container-org811a4fc" class="outline-4">
+<h4 id="org811a4fc">Artificial Intelligence - Hardware Accelerators</h4>
+<div class="outline-text-4" id="text-org811a4fc">
 <p>
 <div class="FRAME_WRAPPER">
 <div class="FRAME_LEFT">
@@ -435,9 +456,9 @@ Analog and mixed-signal solutions are being studied to improve figures-of-merit 
 </p>
 </div>
 </div>
-<div id="outline-container-orgdbd159e" class="outline-4">
-<h4 id="orgdbd159e">Microelectronics / Analog Design Synthesis</h4>
-<div class="outline-text-4" id="text-orgdbd159e">
+<div id="outline-container-org60367b9" class="outline-4">
+<h4 id="org60367b9">Microelectronics / Analog Design Synthesis</h4>
+<div class="outline-text-4" id="text-org60367b9">
 <p>
 <div class="FRAME_WRAPPER">
 <div class="FRAME_LEFT">
@@ -465,9 +486,9 @@ This research line aims at the development of techniques for analog design synth
 </p>
 </div>
 </div>
-<div id="outline-container-org0eca01c" class="outline-4">
-<h4 id="org0eca01c">Artificial Intelligence applied to Instrumentation</h4>
-<div class="outline-text-4" id="text-org0eca01c">
+<div id="outline-container-org58bdc6a" class="outline-4">
+<h4 id="org58bdc6a">Artificial Intelligence applied to Instrumentation</h4>
+<div class="outline-text-4" id="text-org58bdc6a">
 <p>
 <div class="FRAME_WRAPPER">
 <div class="FRAME_LEFT">
@@ -496,13 +517,13 @@ This research line objective is the development of new Artificial Intelligence t
 </div>
 
 
-<div id="outline-container-orgc976197" class="outline-3">
-<h3 id="orgc976197">Publications</h3>
-<div class="outline-text-3" id="text-orgc976197">
+<div id="outline-container-org95c9f76" class="outline-3">
+<h3 id="org95c9f76">Publications</h3>
+<div class="outline-text-3" id="text-org95c9f76">
 </div>
-<div id="outline-container-orgfd27e9e" class="outline-4">
-<h4 id="orgfd27e9e">Journal publications (per topic)</h4>
-<div class="outline-text-4" id="text-orgfd27e9e">
+<div id="outline-container-org8b71fd9" class="outline-4">
+<h4 id="org8b71fd9">Journal publications (per topic)</h4>
+<div class="outline-text-4" id="text-org8b71fd9">
 <p>
 <div class="FRAME_WRAPPER_BOARD">
 </p>
@@ -573,7 +594,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org00293b5" class="figure">
+<div class="figure">
 <p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -597,9 +618,9 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </div>
 
 
-<div id="outline-container-orgf108872" class="outline-4">
-<h4 id="orgf108872">Book chapter</h4>
-<div class="outline-text-4" id="text-orgf108872">
+<div id="outline-container-org71eaff5" class="outline-4">
+<h4 id="org71eaff5">Book chapter</h4>
+<div class="outline-text-4" id="text-org71eaff5">
 <p>
 <div class="FRAME_WRAPPER_BOARD">
 </p>
@@ -609,7 +630,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org19cc58b" class="figure">
+<div class="figure">
 <p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -620,9 +641,9 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </div>
 </div>
 
-<div id="outline-container-orgb5ec36f" class="outline-4">
-<h4 id="orgb5ec36f">Conference publications</h4>
-<div class="outline-text-4" id="text-orgb5ec36f">
+<div id="outline-container-org48b981d" class="outline-4">
+<h4 id="org48b981d">Conference publications</h4>
+<div class="outline-text-4" id="text-org48b981d">
 <ul class="org-ul">
 <li>BUSCHETTO, L. A.; ROQUE, F. V.; CASAGRANDE, L.; WEBER, T. O.; CECHINEL C. A Block-Processing Approach Using Texture Analysis for Fabric Defect Detection <i>In: Anais do Computer on the beach</i>, Florianópolis, SC, 2020. <a href="https://doi.org/10.14210/cotb.v11n1.p221-228">Link</a></li>
 <li>ROQUE, F.; CECHINEL, C.; MUNÕZ, R.; LEMOS, R.; WEBER, T. O. Encontrando os padrões sequenciais em apresentações orais de estudantes utilizando Sequential Pattern Mining <i>In: Anais do Simpósio Brasileiro de Informática na Educação (SBIE)</i>, 2019. <a href="https://br-ie.org/pub/index.php/sbie/article/view/8923">Link</a></li>
@@ -652,13 +673,13 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </div>
 
 
-<div id="outline-container-org40159f8" class="outline-2">
-<h2 id="org40159f8">Teaching and Academic Advisory</h2>
-<div class="outline-text-2" id="text-org40159f8">
+<div id="outline-container-orgf0587cc" class="outline-2">
+<h2 id="orgf0587cc">Teaching and Academic Advisory</h2>
+<div class="outline-text-2" id="text-orgf0587cc">
 </div>
-<div id="outline-container-org7221944" class="outline-3">
-<h3 id="org7221944">Classes at the <a href="http://www.ufrgs.br/english/home">Federal University of Rio Grande do Sul (UFRGS)</a></h3>
-<div class="outline-text-3" id="text-org7221944">
+<div id="outline-container-org86864bd" class="outline-3">
+<h3 id="org86864bd">Classes at the <a href="http://www.ufrgs.br/english/home">Federal University of Rio Grande do Sul (UFRGS)</a></h3>
+<div class="outline-text-3" id="text-org86864bd">
 <p>
 My lectures at UFRGS are mainly to the <a href="https://www.ufrgs.br/engele/en/overview/">Electrical Engineering course</a>.
 </p>
@@ -686,9 +707,9 @@ My lectures at UFRGS are mainly to the <a href="https://www.ufrgs.br/engele/en/o
 </div>
 </div>
 
-<div id="outline-container-org9fcae7c" class="outline-3">
-<h3 id="org9fcae7c">Classes at the <a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a></h3>
-<div class="outline-text-3" id="text-org9fcae7c">
+<div id="outline-container-org71bcf82" class="outline-3">
+<h3 id="org71bcf82">Classes at the <a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a></h3>
+<div class="outline-text-3" id="text-org71bcf82">
 <p>
 My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineering course</a>:
 </p>
@@ -742,9 +763,9 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 </ul>
 </div>
 
-<div id="outline-container-orgb48e2e4" class="outline-4">
-<h4 id="orgb48e2e4">Honors related to my teaching activity at UFSC</h4>
-<div class="outline-text-4" id="text-orgb48e2e4">
+<div id="outline-container-orgb81c4b9" class="outline-4">
+<h4 id="orgb81c4b9">Honors related to my teaching activity at UFSC</h4>
+<div class="outline-text-4" id="text-orgb81c4b9">
 <ul class="org-ul">
 <li>Patrono da Turma de Engenharia de Computação - Turma 2020/2</li>
 <li>Professor homenageado da turma de Engenharia de Computação - Turma 2019/2</li>
@@ -753,9 +774,9 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 </div>
 </div>
 
-<div id="outline-container-org69db6a0" class="outline-3">
-<h3 id="org69db6a0">Short Course</h3>
-<div class="outline-text-3" id="text-org69db6a0">
+<div id="outline-container-orgd2d6856" class="outline-3">
+<h3 id="orgd2d6856">Short Course</h3>
+<div class="outline-text-3" id="text-orgd2d6856">
 <ul class="org-ul">
 <li>Course in GNU Octave / Matlab and Applications for Engineers (in Portuguese: "Curso de GNU Octave / Matlab e Aplicações para Engenheiros"). This material was presented at the II Computer Engineering Academic Week in March 2018 at UFSC - Campus Araranguá - <a href="data/courses/octave_matlab_course_tweber_v1.pdf">Presentation in Portuguese</a></li>
 </ul>
@@ -764,10 +785,12 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 
 
 
-<div id="outline-container-orgfabd792" class="outline-3">
-<h3 id="orgfabd792">Academic Advisory</h3>
-<div class="outline-text-3" id="text-orgfabd792">
+<div id="outline-container-org52d6f4a" class="outline-3">
+<h3 id="org52d6f4a">Academic Advisory</h3>
+<div class="outline-text-3" id="text-org52d6f4a">
 <ul class="org-ul">
+<li>Lucas Henz Garcia. <i>Detecção de emoções utilizando redes neurais convolucionais em sistemas com recursos limitados de hardware</i>. 2021. Trabalho de Conclusão de Curso. (Graduação em Engenharia Elétrica) - Universidade Federal do Rio Grande do Sul. Orientador: Tiago Oliveira Weber. <a href="http://hdl.handle.net/10183/234173">Link</a></li>
+
 <li>Thiago Matias Martins. <i>Aplicação de Técnicas de Inteligência Artificial na Detecção do Comportamento Tipo-Depressivo em Camundongos através do Teste de Suspensão pela Cauda</i>. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192344">Link</a></li>
 
 <li>Leonardo Loch da Silva. <i>Sistema de monitoramento de energia elétrica utilizando o protocolo de comunicação MQTT</i>. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192296">Link</a></li>
@@ -785,7 +808,7 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 
 
 
-<div id="outline-container-blog" class="outline-2">
+<div id="outline-container-orgc4c7f67" class="outline-2">
 <h2 id="blog">Blog</h2>
 <div class="outline-text-2" id="text-blog">
 <p>
@@ -797,11 +820,11 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 </p>
 </div>
 
-<div id="outline-container-orgddfe8ab" class="outline-3">
-<h3 id="orgddfe8ab"><a href="./blog/entry4.html"> Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</a></h3>
-<div class="outline-text-3" id="text-orgddfe8ab">
+<div id="outline-container-org707153d" class="outline-3">
+<h3 id="org707153d"><a href="./blog/entry4.html"> Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</a></h3>
+<div class="outline-text-3" id="text-org707153d">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-Qui&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-qui&gt;</span></span>
 </p>
 
 
@@ -823,11 +846,11 @@ In our example we will design a simple opamp inverting topology. For that purpos
 </div>
 </div>
 
-<div id="outline-container-org024f244" class="outline-3">
-<h3 id="org024f244"><a href="./blog/entry3.html"> Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source</a></h3>
-<div class="outline-text-3" id="text-org024f244">
+<div id="outline-container-org574123c" class="outline-3">
+<h3 id="org574123c"><a href="./blog/entry3.html"> Design Automation Conferece (DAC) Video About Moving EDA Tools to Open Source</a></h3>
+<div class="outline-text-3" id="text-org574123c">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;06/07/2016-Qua&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;06/07/2016-qua&gt;</span></span>
 </p>
 
 <p>
@@ -845,11 +868,11 @@ In my opinion all participants were very rational on their statements although h
 </div>
 </div>
 
-<div id="outline-container-orgb34be8e" class="outline-3">
-<h3 id="orgb34be8e"><a href="./blog/entry2.html"> Software/Hardware Integration Lab</a></h3>
-<div class="outline-text-3" id="text-orgb34be8e">
+<div id="outline-container-org6d3e811" class="outline-3">
+<h3 id="org6d3e811"><a href="./blog/entry2.html"> Software/Hardware Integration Lab</a></h3>
+<div class="outline-text-3" id="text-org6d3e811">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;27/06/2016-Seg&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;27/06/2016-seg&gt;</span></span>
 </p>
 
 <p>
@@ -871,11 +894,11 @@ My webpage at LISHA is <a href="https://lisha.ufsc.br/Weber">https://lisha.ufsc.
 </div>
 </div>
 
-<div id="outline-container-org48e9255" class="outline-3">
-<h3 id="org48e9255"><a href="./blog/entry1.html"> Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</a></h3>
-<div class="outline-text-3" id="text-org48e9255">
+<div id="outline-container-orgbcbf90a" class="outline-3">
+<h3 id="orgbcbf90a"><a href="./blog/entry1.html"> Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</a></h3>
+<div class="outline-text-3" id="text-orgbcbf90a">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-Dom&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-dom&gt;</span></span>
 </p>
 
 
@@ -893,13 +916,13 @@ In this process a lot can be lost: the quality of your schematic screenshots may
 </div>
 
 
-<div id="outline-container-org238bdbd" class="outline-2">
-<h2 id="org238bdbd">Microelectronics</h2>
-<div class="outline-text-2" id="text-org238bdbd">
+<div id="outline-container-org9ba99fa" class="outline-2">
+<h2 id="org9ba99fa">Microelectronics</h2>
+<div class="outline-text-2" id="text-org9ba99fa">
 </div>
-<div id="outline-container-org894bd82" class="outline-3">
-<h3 id="org894bd82">Map of Microelectronics in Brazil</h3>
-<div class="outline-text-3" id="text-org894bd82">
+<div id="outline-container-org3e856a3" class="outline-3">
+<h3 id="org3e856a3">Map of Microelectronics in Brazil</h3>
+<div class="outline-text-3" id="text-org3e856a3">
 <p>
 This map is an attempt to help the visualization of microelectronics in Brazil. Special thanks to Andre Couto and Luciana Shiroma for supplying inicial information about the private companies.
 </p>
@@ -907,9 +930,9 @@ This map is an attempt to help the visualization of microelectronics in Brazil. 
 <iframe width="550" height="400" frameborder="0" src="https://widgets.scribblemaps.com/myl/?d&z&l&gc&af&mc&lat=-17.229332495224924&lng=-47.42284669999998&vz=3&type=road&ti&s&width=550&height=400&id=XN0bwOGANG" style="border:0; max-width: 100%;" allowfullscreen allow="geolocation"></iframe>
 </div>
 
-<div id="outline-container-org1f0ab85" class="outline-4">
-<h4 id="org1f0ab85">List</h4>
-<div class="outline-text-4" id="text-org1f0ab85">
+<div id="outline-container-org20f8c93" class="outline-4">
+<h4 id="org20f8c93">List</h4>
+<div class="outline-text-4" id="text-org20f8c93">
 <iframe src="https://docs.google.com/spreadsheets/d/1cITi7SfyIErCCMjsERpNXjgOsw7JBm_wfuCWmnyG6t0/pubhtml?gid=560775876&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
 </div>
 </div>
@@ -917,9 +940,9 @@ This map is an attempt to help the visualization of microelectronics in Brazil. 
 </div>
 
 
-<div id="outline-container-orgfcf83e1" class="outline-2">
-<h2 id="orgfcf83e1">Journal links</h2>
-<div class="outline-text-2" id="text-orgfcf83e1">
+<div id="outline-container-orge16137d" class="outline-2">
+<h2 id="orge16137d">Journal links</h2>
+<div class="outline-text-2" id="text-orge16137d">
 <p>
 This is a list of some relevant journals in my fields of interest. 
 </p>
@@ -929,9 +952,9 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 </p>
 </div>
 
-<div id="outline-container-orgf8ad059" class="outline-4">
-<h4 id="orgf8ad059">Related to Electronics and Microelectronics</h4>
-<div class="outline-text-4" id="text-orgf8ad059">
+<div id="outline-container-org276902f" class="outline-4">
+<h4 id="org276902f">Related to Electronics and Microelectronics</h4>
+<div class="outline-text-4" id="text-org276902f">
 <ul class="org-ul">
 <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8919">IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS. I, REGULAR PAPERS</a> - A1</li>
 <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=43">IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS</a> - A1</li>
@@ -944,9 +967,9 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 </ul>
 </div>
 </div>
-<div id="outline-container-org27f11a8" class="outline-4">
-<h4 id="org27f11a8">Related to Instrumentation</h4>
-<div class="outline-text-4" id="text-org27f11a8">
+<div id="outline-container-org93fb2c7" class="outline-4">
+<h4 id="org93fb2c7">Related to Instrumentation</h4>
+<div class="outline-text-4" id="text-org93fb2c7">
 <ul class="org-ul">
 <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=19">IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT</a> - A1</li>
 <li><a href="https://www.mdpi.com/journal/sensors">SENSORS (BASEL)</a> - A1</li>
@@ -957,9 +980,9 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 </div>
 </div>
 
-<div id="outline-container-orgc3cf9b7" class="outline-4">
-<h4 id="orgc3cf9b7">Related to Machine Learning and Optimization</h4>
-<div class="outline-text-4" id="text-orgc3cf9b7">
+<div id="outline-container-org1391a3b" class="outline-4">
+<h4 id="org1391a3b">Related to Machine Learning and Optimization</h4>
+<div class="outline-text-4" id="text-org1391a3b">
 <ul class="org-ul">
 <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4235">IEEE TRANSACTIONS ON EVOLUTIONARY COMPUTATION</a> - A1</li>
 <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385">IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS</a> - A1</li>
@@ -977,9 +1000,9 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 </div>
 </div>
 
-<div id="outline-container-org7891d66" class="outline-4">
-<h4 id="org7891d66">Related to Education and Engineering</h4>
-<div class="outline-text-4" id="text-org7891d66">
+<div id="outline-container-org1d43c31" class="outline-4">
+<h4 id="org1d43c31">Related to Education and Engineering</h4>
+<div class="outline-text-4" id="text-org1d43c31">
 <ul class="org-ul">
 <li><a href="https://www.journals.elsevier.com/computers-and-education">COMPUTERS AND EDUCATION</a> - A1</li>
 <li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=13">IEEE TRANSACTIONS ON EDUCATION</a> - A2</li>
