@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-02 Seg 01:03 -->
+<!-- 2022-06-05 dom 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -207,7 +220,7 @@ ga('send', 'pageview');
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -255,11 +268,11 @@ for the JavaScript code in this tag.
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org98a0d01" class="outline-2">
-<h2 id="org98a0d01">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</h2>
-<div class="outline-text-2" id="text-org98a0d01">
+<div id="outline-container-org63cd744" class="outline-2">
+<h2 id="org63cd744">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</h2>
+<div class="outline-text-2" id="text-org63cd744">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-08-04 Qui&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-qui&gt;</span></span>
 </p>
 
 <p>
@@ -281,9 +294,9 @@ Although this is a simple design and simulation, let us use this case to get a g
 
 
 
-<div id="outline-container-org9a62e80" class="outline-3">
-<h3 id="org9a62e80">Procedure</h3>
-<div class="outline-text-3" id="text-org9a62e80">
+<div id="outline-container-org51b3ab1" class="outline-3">
+<h3 id="org51b3ab1">Procedure</h3>
+<div class="outline-text-3" id="text-org51b3ab1">
 <p>
 In order to better illustrate the procedure, I will show the header of each code-block. This would not be necessary in a normal report.
 </p>
@@ -293,9 +306,9 @@ We will define as our design specification that the inverting opamp topology sha
 </p>
 </div>
 
-<div id="outline-container-org468188f" class="outline-4">
-<h4 id="org468188f">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
-<div class="outline-text-4" id="text-org468188f">
+<div id="outline-container-orgf8c308f" class="outline-4">
+<h4 id="orgf8c308f">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
+<div class="outline-text-4" id="text-orgf8c308f">
 <p>
 First we want to calculate the value of our resistors. Let assume resistor R1 is 10k, and then calculate R2 in OCTAVE:
 </p>
@@ -306,10 +319,10 @@ First we want to calculate the value of our resistors. Let assume resistor R1 is
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org3b13e7b">gain<span style="color: #A020F0;">=-</span>10<span style="color: #A020F0;">;</span>
-r1<span style="color: #A020F0;">=</span>10e3<span style="color: #A020F0;">;</span>
-r2 <span style="color: #A020F0;">=</span> <span style="color: #A020F0;">-</span>gain<span style="color: #A020F0;">*</span>r1<span style="color: #A020F0;">;</span>
-ans <span style="color: #A020F0;">=</span> [gain<span style="color: #A020F0;">,</span> r1<span style="color: #A020F0;">,</span> r2]<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="org367e94d">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
+r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
+r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
+ans <span style="color: #006FE0;">=</span> [gain<span style="color: #006FE0;">,</span> r1<span style="color: #006FE0;">,</span> r2]<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -343,9 +356,9 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 </div>
 
-<div id="outline-container-org3ed0c4f" class="outline-4">
-<h4 id="org3ed0c4f">Simulating the Circuit in NGSPICE</h4>
-<div class="outline-text-4" id="text-org3ed0c4f">
+<div id="outline-container-orgfd91a68" class="outline-4">
+<h4 id="orgfd91a68">Simulating the Circuit in NGSPICE</h4>
+<div class="outline-text-4" id="text-orgfd91a68">
 <p>
 With the vector in a variable we will now use it in a spice netlist to be simulated on NGSPICE. 
 </p>
@@ -356,27 +369,27 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="orge959f84"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
-<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">ac</span> 1 <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz) <span style="color: #2F8B58; font-weight: bold;">dc</span> 0
-<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[1]</span>
-<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #204A87;">$</span><span style="color: #4E9A06;">design[2]</span>
-<span style="color: #204A87;">*EOpamp out 0 0 inn 1000</span>
+<pre class="src src-spice" id="org3894901"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
+<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">ac</span> 1 <span style="color: #6434A3;">sin</span>(0 0.1 100Hz) <span style="color: #6434A3;">dc</span> 0
+<span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[1]</span>
+<span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[2]</span>
+<span style="color: #8D8D84; font-style: italic;">*EOpamp out 0 0 inn 1000</span>
 <span style="color: #228b22; font-weight: bold;">xamp1</span> 0 inn vdd vss out <span style="color: #cd0000;">lm741/ns</span>
 <span style="color: #228b22; font-weight: bold;">vdd</span> vdd 0 2.5
 <span style="color: #228b22; font-weight: bold;">vss</span> vss 0 -2.5
-<span style="color: #A52A2A; font-weight: bold;">.include</span> <span style="color: #4E9A06;">spice_library/LM741.MOD</span>
-<span style="color: #204A87;">*.tran 0.1</span><span style="color: #204A87;">m</span><span style="color: #204A87;">s 0.05s</span>
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ac</span> <span style="color: #2F8B58; font-weight: bold;">dec</span> 100 1 100<span style="color: #F5666D;">e</span>6
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.include</span> <span style="color: #008000;">spice_library/LM741.MOD</span>
+<span style="color: #8D8D84; font-style: italic;">*.tran 0.1</span><span style="color: #8D8D84; font-style: italic;">m</span><span style="color: #8D8D84; font-style: italic;">s 0.05s</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ac</span> <span style="color: #6434A3;">dec</span> 100 1 100<span style="color: #D0372D;">e</span>6
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">let</span> <span style="color: #0084C8; font-weight: bold;">gain</span> = v(out)/v(in)
-<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_dc find <span style="color: #cd0000;">gain</span> <span style="color: #0084C8; font-weight: bold;">at</span>=1
-<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_at_100k find <span style="color: #cd0000;">gain</span> <span style="color: #0084C8; font-weight: bold;">at</span>=100<span style="color: #F5666D;">k</span>
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #4E9A06;">"$&amp;gain_dc,$&amp;gain_at_100k"</span> &gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt </span>
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file vdb(in) vdb(out)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">let</span> <span style="color: #BA36A5;">gain</span> = v(out)/v(in)
+<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_dc find <span style="color: #cd0000;">gain</span> <span style="color: #BA36A5;">at</span>=1
+<span style="color: #228b22; font-weight: bold;">meas</span> ac gain_at_100k find <span style="color: #cd0000;">gain</span> <span style="color: #BA36A5;">at</span>=100<span style="color: #D0372D;">k</span>
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #008000;">"$&amp;gain_dc,$&amp;gain_at_100k"</span> &gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt </span>
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file vdb(in) vdb(out)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 
@@ -393,7 +406,7 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 <tbody>
 <tr>
 <td class="org-right">-9.99943</td>
-<td class="org-right">-4.32624</td>
+<td class="org-right">-4.32609</td>
 <td class="org-left"><img src="./amplifier_sim.png" alt="amplifier_sim.png" /></td>
 </tr>
 </tbody>
@@ -422,9 +435,9 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 </div>
 
-<div id="outline-container-org8f35a16" class="outline-4">
-<h4 id="org8f35a16">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
-<div class="outline-text-4" id="text-org8f35a16">
+<div id="outline-container-org4a812bd" class="outline-4">
+<h4 id="org4a812bd">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
+<div class="outline-text-4" id="text-org4a812bd">
 <p>
 We will now get the results from the simulation back to OCTAVE in order to calculate the error between ideal and simulated. 
 </p>
@@ -435,11 +448,11 @@ We will now get the results from the simulation back to OCTAVE in order to calcu
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org54a6b1f">gain_OCTAVE <span style="color: #A020F0;">=</span> design_variables(1)<span style="color: #A020F0;">;</span>
-gain_ngspice <span style="color: #A020F0;">=</span> str2num(gain_ngspice)
-error_absolute <span style="color: #A020F0;">=</span> abs((gain_OCTAVE<span style="color: #A020F0;">-</span>gain_ngspice))
-error_percentage <span style="color: #A020F0;">=</span> abs(error_absolute<span style="color: #A020F0;">/</span>gain_OCTAVE)
-ans <span style="color: #A020F0;">=</span> [error_absolute<span style="color: #A020F0;">,</span>error_percentage]<span style="color: #A020F0;">;</span>
+<pre class="src src-octave" id="orgf66d482">gain_OCTAVE <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
+gain_ngspice <span style="color: #006FE0;">=</span> str2num(gain_ngspice)
+error_absolute <span style="color: #006FE0;">=</span> abs((gain_OCTAVE<span style="color: #006FE0;">-</span>gain_ngspice))
+error_percentage <span style="color: #006FE0;">=</span> abs(error_absolute<span style="color: #006FE0;">/</span>gain_OCTAVE)
+ans <span style="color: #006FE0;">=</span> [error_absolute<span style="color: #006FE0;">,</span>error_percentage]<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 
@@ -466,9 +479,9 @@ And <i>voilà</i>, you have now your DC gain error calculated.
 </div>
 </div>
 
-<div id="outline-container-orgbe5a4f1" class="outline-4">
-<h4 id="orgbe5a4f1">Present the Results</h4>
-<div class="outline-text-4" id="text-orgbe5a4f1">
+<div id="outline-container-org093a8ec" class="outline-4">
+<h4 id="org093a8ec">Present the Results</h4>
+<div class="outline-text-4" id="text-org093a8ec">
 <p>
 You can present the result directly in your text with an inline code-block or in fancier approaches, like creating a table as below (where I used python to print the results).
 </p>
@@ -478,56 +491,20 @@ You can present the result directly in your text with an inline code-block or in
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-python"><span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|                         |Gain    |"</span>
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(vi[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Simulated (NGSPICE)     |%.5f V/V|"</span> %<span style="color: #A020F0;">float</span>(ngspice_sim_var)
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Absolute Error (OCTAVE) |%.2g    |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][0])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"| Relative Error (OCTAVE) |%.2g %% |"</span> %<span style="color: #A020F0;">float</span>(error_calculation_var[0][1])
-<span style="color: #A52A2A; font-weight: bold;">print</span> <span style="color: #4E9A06;">"|-------------------------+--------|"</span>
+<pre class="src src-python"><span style="color: #0000FF;">print</span> <span style="color: #008000;">"|-------------------------+--------|"</span>
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"|                         |Gain    |"</span>
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Ideal (specification)   |%.5f V/V|"</span> %<span style="color: #006FE0;">float</span>(vi[0][0])
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Simulated (NGSPICE)     |%.5f V/V|"</span> %<span style="color: #006FE0;">float</span>(ngspice_sim_var)
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Absolute Error (OCTAVE) |%.2g    |"</span> %<span style="color: #006FE0;">float</span>(error_calculation_var[0][0])
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"| Relative Error (OCTAVE) |%.2g %% |"</span> %<span style="color: #006FE0;">float</span>(error_calculation_var[0][1])
+<span style="color: #0000FF;">print</span> <span style="color: #008000;">"|-------------------------+--------|"</span>
 </pre>
 </div>
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">Gain</td>
-</tr>
-
-<tr>
-<td class="org-left">Ideal (specification)</td>
-<td class="org-left">-10.00000 V/V</td>
-</tr>
-
-<tr>
-<td class="org-left">Simulated (NGSPICE)</td>
-<td class="org-left">-9.99943 V/V</td>
-</tr>
-
-<tr>
-<td class="org-left">Absolute Error (OCTAVE)</td>
-<td class="org-left">0.00057</td>
-</tr>
-
-<tr>
-<td class="org-left">Relative Error (OCTAVE)</td>
-<td class="org-left">5.7e-05 %</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 
-<div id="outline-container-org6bc1702" class="outline-4">
-<h4 id="org6bc1702">Discussion</h4>
+<div id="outline-container-org80d472f" class="outline-4">
+<h4 id="org80d472f">Discussion</h4>
 </div>
 </div>
 </div>

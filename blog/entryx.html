@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-16 Seg 18:32 -->
+<!-- 2022-06-05 dom 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -209,35 +209,57 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
-
 </script>
 <meta property="og:title" content="Simulating Circuits with Emacs, Org-mode, Babel and Ngspice"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/entry1_image_700_400.png"/>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
@@ -246,28 +268,28 @@ ga('send', 'pageview');
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-orgf0dc968" class="outline-2">
-<h2 id="orgf0dc968">Interfacing NGSPICE and OCTAVE/MATLAB within Emacs</h2>
-<div class="outline-text-2" id="text-orgf0dc968">
+<div id="outline-container-org7121bca" class="outline-2">
+<h2 id="org7121bca">Interfacing NGSPICE and OCTAVE/MATLAB within Emacs</h2>
+<div class="outline-text-2" id="text-org7121bca">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-Dom&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-dom&gt;</span></span>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7c96d68" class="outline-2">
-<h2 id="org7c96d68">Examples</h2>
-<div class="outline-text-2" id="text-org7c96d68">
+<div id="outline-container-orgcee35a1" class="outline-2">
+<h2 id="orgcee35a1">Examples</h2>
+<div class="outline-text-2" id="text-orgcee35a1">
 </div>
-<div id="outline-container-org25a83d6" class="outline-3">
-<h3 id="org25a83d6">Octave and Ngspice</h3>
-<div class="outline-text-3" id="text-org25a83d6">
+<div id="outline-container-org8e7d609" class="outline-3">
+<h3 id="org8e7d609">Octave and Ngspice</h3>
+<div class="outline-text-3" id="text-org8e7d609">
 </div>
-<div id="outline-container-org2f63f19" class="outline-4">
-<h4 id="org2f63f19">Example using fixed values on variables (WORKS)</h4>
-<div class="outline-text-4" id="text-org2f63f19">
+<div id="outline-container-org84514f2" class="outline-4">
+<h4 id="org84514f2">Example using fixed values on variables (WORKS)</h4>
+<div class="outline-text-4" id="text-org84514f2">
 <div class="org-src-container">
-<pre class="src src-spice" id="org1327135"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
+<pre class="src src-spice" id="orgccb632f"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r2</span>
@@ -286,13 +308,13 @@ by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">
 </div>
 
 
-<div id="org3b3a517" class="figure">
+<div class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
 
 
-<div id="orgf91cedf" class="figure">
+<div class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" width="600px" />
 </p>
 </div>
@@ -300,11 +322,11 @@ by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">
 </div>
 
 
-<div id="outline-container-orgdea1fcd" class="outline-4">
-<h4 id="orgdea1fcd">Example using a single variable result from previous code block (WORKS)</h4>
-<div class="outline-text-4" id="text-orgdea1fcd">
+<div id="outline-container-org7f1f098" class="outline-4">
+<h4 id="org7f1f098">Example using a single variable result from previous code block (WORKS)</h4>
+<div class="outline-text-4" id="text-org7f1f098">
 <div class="org-src-container">
-<pre class="src src-octave" id="org8835cc0">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org2e783f0">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</span>
@@ -335,7 +357,7 @@ ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</sp
 </div>
 
 
-<div id="orgc0c6fda" class="figure">
+<div class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
@@ -343,11 +365,11 @@ ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</sp
 </div>
 
 
-<div id="outline-container-org6062977" class="outline-4">
-<h4 id="org6062977">Example using a vector result from previous code block (WORKS)</h4>
-<div class="outline-text-4" id="text-org6062977">
+<div id="outline-container-org92c3d9d" class="outline-4">
+<h4 id="org92c3d9d">Example using a vector result from previous code block (WORKS)</h4>
+<div class="outline-text-4" id="text-org92c3d9d">
 <div class="org-src-container">
-<pre class="src src-octave" id="orgd4d64d1">gain<span style="color: #006FE0;">=-</span>3<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org20af8db">gain<span style="color: #006FE0;">=-</span>3<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">;</span>
@@ -371,7 +393,7 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </table>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="org8380e0a"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
+<pre class="src src-spice" id="org30b30b2"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1[0]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1[1]</span>
@@ -389,7 +411,7 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </div>
 
 
-<div id="org7930268" class="figure">
+<div class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
@@ -435,11 +457,11 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </div>
 
 
-<div id="outline-container-org78ef48a" class="outline-4">
-<h4 id="org78ef48a">Example using output from ngspice to octave</h4>
-<div class="outline-text-4" id="text-org78ef48a">
+<div id="outline-container-orgb670f53" class="outline-4">
+<h4 id="orgb670f53">Example using output from ngspice to octave</h4>
+<div class="outline-text-4" id="text-orgb670f53">
 <div class="org-src-container">
-<pre class="src src-spice" id="org2be3549"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
+<pre class="src src-spice" id="orgfacccb9"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
 <span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
 <span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #D0372D;">p</span>
 <span style="color: #0000FF;">.IC</span> V(1)=1
@@ -493,15 +515,15 @@ ans <span style="color: #006FE0;">=</span> test
 </div>
 
 
-<div id="outline-container-orgf5d15d6" class="outline-3">
-<h3 id="orgf5d15d6">Octave only (for test)</h3>
-<div class="outline-text-3" id="text-orgf5d15d6">
+<div id="outline-container-orgbbacd67" class="outline-3">
+<h3 id="orgbbacd67">Octave only (for test)</h3>
+<div class="outline-text-3" id="text-orgbbacd67">
 </div>
-<div id="outline-container-orgbe3f51e" class="outline-4">
-<h4 id="orgbe3f51e">Test octave to octave vector (WORKS)</h4>
-<div class="outline-text-4" id="text-orgbe3f51e">
+<div id="outline-container-orga5f186b" class="outline-4">
+<h4 id="orga5f186b">Test octave to octave vector (WORKS)</h4>
+<div class="outline-text-4" id="text-orga5f186b">
 <div class="org-src-container">
-<pre class="src src-octave" id="org7dbc181">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org4d872ef">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">;</span>
@@ -525,7 +547,7 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </table>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="orgd7c5ff5">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org2edfd56">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</span>
 </pre>
 </div>
@@ -549,23 +571,20 @@ ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</sp
 </div>
 
 
-<div id="outline-container-org0b6b372" class="outline-4">
-<h4 id="org0b6b372">Test octave vector to octave element (WORKS)</h4>
-<div class="outline-text-4" id="text-org0b6b372">
+<div id="outline-container-org06a4bdb" class="outline-4">
+<h4 id="org06a4bdb">Test octave vector to octave element (WORKS)</h4>
+<div class="outline-text-4" id="text-org06a4bdb">
 <div class="org-src-container">
-<pre class="src src-octave" id="org1488edf">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org6a0926d">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2c8a3eb" class="outline-4">
-<h4 id="org2c8a3eb">Test octave vector to perl</h4>
-<div class="outline-text-4" id="text-org2c8a3eb">
-<p>
-10000
-</p>
+<div id="outline-container-org5b3a209" class="outline-4">
+<h4 id="org5b3a209">Test octave vector to perl</h4>
+<div class="outline-text-4" id="text-org5b3a209">
 </div>
 </div>
 </div>

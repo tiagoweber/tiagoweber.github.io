@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-06 Seg 21:06 -->
+<!-- 2021-08-16 Seg 18:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
+    overflow: auto;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -196,8 +209,10 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
+
 </script>
 <meta property="og:title" content="Simulating Circuits with Emacs, Org-mode, Babel and Ngspice"/>
 <meta property="og:type" content="article"/>
@@ -205,50 +220,26 @@ ga('send', 'pageview');
 <meta property="link" content="http://tiagoweber.github.io/blog/entry1.html"/>
 <meta property="pubdate" content="Sat, 26 Jun 2016"/>
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
 </script>
 </head>
 <body>
@@ -258,11 +249,11 @@ for the JavaScript code in this tag.
 <a href="http://tiagoweber.github.io/index.html#blog">Back home</a>   <a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"><img src="../feed-icon.gif" style="border:0"/></a><br>
 </p>
 
-<div id="outline-container-orga1ed94a" class="outline-2">
-<h2 id="orga1ed94a">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
-<div class="outline-text-2" id="text-orga1ed94a">
+<div id="outline-container-org7d00805" class="outline-2">
+<h2 id="org7d00805">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
+<div class="outline-text-2" id="text-org7d00805">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-06-26 Dom&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-Dom&gt;</span></span>
 </p>
 
 
@@ -289,38 +280,38 @@ So now you probably already understand what we are going to do. We will treat ou
 
 <div class="org-src-container">
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
-<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #2F8B58; font-weight: bold;">dc</span> 0V <span style="color: #2F8B58; font-weight: bold;">sin</span>(0 0.1 100Hz)
-<span style="color: #228b22; font-weight: bold;">r1</span> in inn 10<span style="color: #F5666D;">k</span>
-<span style="color: #228b22; font-weight: bold;">r2</span> inn out 10<span style="color: #F5666D;">k</span>
+<span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
+<span style="color: #228b22; font-weight: bold;">r1</span> in inn 10<span style="color: #D0372D;">k</span>
+<span style="color: #228b22; font-weight: bold;">r2</span> inn out 10<span style="color: #D0372D;">k</span>
 <span style="color: #228b22; font-weight: bold;">EOpamp</span> out 0 0 inn 1000
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #F5666D;">m</span>s 0.05s
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(in)
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">m</span><span style="color: #A52A2A; font-weight: bold;">eas</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> vtest find v(in) <span style="color: #0084C8; font-weight: bold;">at</span>=0.04<span style="color: #F5666D;">e</span>-3
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 0.1<span style="color: #D0372D;">m</span>s 0.05s
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(in)
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">m</span><span style="color: #0000FF;">eas</span><span style="color: #6434A3;"> tran</span> vtest find v(in) <span style="color: #BA36A5;">at</span>=0.04<span style="color: #D0372D;">e</span>-3
+<span style="color: #0000FF;">.end</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(in) v(out) v(inn)</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(in) v(out) v(inn)</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 
 </pre>
 </div>
 
 
-<div class="figure">
+<div id="org63fcec6" class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org174c2ca" class="outline-3">
-<h3 id="org174c2ca">Advantages and Disadvantages</h3>
-<div class="outline-text-3" id="text-org174c2ca">
+<div id="outline-container-org5aa4ad6" class="outline-3">
+<h3 id="org5aa4ad6">Advantages and Disadvantages</h3>
+<div class="outline-text-3" id="text-org5aa4ad6">
 </div>
-<div id="outline-container-org7b66db6" class="outline-4">
-<h4 id="org7b66db6">Advantages</h4>
-<div class="outline-text-4" id="text-org7b66db6">
+<div id="outline-container-org5819b46" class="outline-4">
+<h4 id="org5819b46">Advantages</h4>
+<div class="outline-text-4" id="text-org5819b46">
 <ul class="org-ul">
 <li>You can make changes to your circuit very easily and have them added to the report</li>
 <li>You don't need to leave emacs to simulate</li>
@@ -330,9 +321,9 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 </div>
 
-<div id="outline-container-org37127d7" class="outline-4">
-<h4 id="org37127d7">Disadvantages</h4>
-<div class="outline-text-4" id="text-org37127d7">
+<div id="outline-container-orgf67f8c3" class="outline-4">
+<h4 id="orgf67f8c3">Disadvantages</h4>
+<div class="outline-text-4" id="text-orgf67f8c3">
 <ul class="org-ul">
 <li>You will have no schematic image of the circuit (It would be interesting to create an netlist-to-schematic converter in elisp to workaround this)</li>
 <li>Working directly with netlists may require more knowledge of the circuit and the simulator than using GUI for schematic edition.</li>
@@ -341,9 +332,9 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 </div>
 
-<div id="outline-container-orgd5dfc73" class="outline-3">
-<h3 id="orgd5dfc73">Basic Setup</h3>
-<div class="outline-text-3" id="text-orgd5dfc73">
+<div id="outline-container-org3e8f0c4" class="outline-3">
+<h3 id="org3e8f0c4">Basic Setup</h3>
+<div class="outline-text-3" id="text-org3e8f0c4">
 <p>
 What you need is basically 
 </p>
@@ -356,9 +347,9 @@ What you need is basically
 </ul>
 </div>
 
-<div id="outline-container-org6f2c345" class="outline-4">
-<h4 id="org6f2c345">The ob-spice</h4>
-<div class="outline-text-4" id="text-org6f2c345">
+<div id="outline-container-org4af0632" class="outline-4">
+<h4 id="org4af0632">The ob-spice</h4>
+<div class="outline-text-4" id="text-org4af0632">
 <p>
 The community has built a <a href="http://orgmode.org/worg/org-contrib/babel/languages.html">wide range of language support for Babel</a>. However, I could not find spice in this list or anything related to spice simulation. Therefore, I created my own, which is admittedly in a very early stage of development. However, as it already does the job (at least for my needs) I decided to share it <a href="attachments/ob-spice.el">here</a>.
 </p>
@@ -367,15 +358,15 @@ The community has built a <a href="http://orgmode.org/worg/org-contrib/babel/lan
 You will need to add something like this to your Emacs config to load this file:
 </p>
 <div class="org-src-container">
-<pre class="src src-elisp">(add-to-list 'load-path <span style="color: #4E9A06;">"~/.emacs.d/ob-spice/"</span>)
-(<span style="color: #A52A2A; font-weight: bold;">require</span> '<span style="color: #F5666D;">ob-spice</span>)
+<pre class="src src-elisp">(add-to-list 'load-path <span style="color: #008000;">"~/.emacs.d/ob-spice/"</span>)
+(<span style="color: #0000FF;">require</span> '<span style="color: #D0372D;">ob-spice</span>)
 </pre>
 </div>
 
 <p>
 When adding the netlist, you should create a header like the following (this is the one I used to create the previous opamp simulation):
 </p>
-<pre class="example">
+<pre class="example" id="orgf880808">
 #+BEGIN_SRC spice :results drawer :exports both :var file="amplifier_vcvs_1000"
 ... your netlist here ...
 #+END_SRC
@@ -387,18 +378,18 @@ In this example, the variable "file" is the name of the png file that will be cr
 </div>
 </div>
 
-<div id="outline-container-org525c18d" class="outline-4">
-<h4 id="org525c18d">Exporting to PNG</h4>
-<div class="outline-text-4" id="text-org525c18d">
+<div id="outline-container-org43a27e7" class="outline-4">
+<h4 id="org43a27e7">Exporting to PNG</h4>
+<div class="outline-text-4" id="text-org43a27e7">
 <p>
 You need to add the line "set gnuplot_terminal=png" in the control section of your Ngspice code. If you don't, Ngspice will export to eps, which will not be previewed in Org-mode. It is my intention to add this control option as default to ob-spice.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org816dae1" class="outline-4">
-<h4 id="org816dae1">Fontification</h4>
-<div class="outline-text-4" id="text-org816dae1">
+<div id="outline-container-org1adf6f9" class="outline-4">
+<h4 id="org1adf6f9">Fontification</h4>
+<div class="outline-text-4" id="text-org1adf6f9">
 <p>
 Using the original <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a>) the fontification for spice circuits is recognized by babel in the buffer. If you use the newer version, it is all fine (I thank Colin for pointing this new version on the comment section). If you use the original spice-mode version together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there is a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
@@ -407,9 +398,9 @@ To solve the problem, I just had to comment all lines that use make-local-hook f
 </div>
 
 
-<div id="outline-container-orgf6be450" class="outline-4">
-<h4 id="orgf6be450">Removing Ngspice plot persistence</h4>
-<div class="outline-text-4" id="text-orgf6be450">
+<div id="outline-container-org769c521" class="outline-4">
+<h4 id="org769c521">Removing Ngspice plot persistence</h4>
+<div class="outline-text-4" id="text-org769c521">
 <p>
 If you, like me, dislike having to close the plot window every time you simulate your circuits, this tweak in Ngspice spice might do the trick.
 For it, you will have to download the source code of Ngspice and change 1 line of code.
@@ -423,8 +414,8 @@ I downloaded ngspice-26.tar.gz and altered "ngspice-26/src/frontend/plotting/gnu
 I commented the line 245 and added a slightly changed version: just removed the "-" from the gnuplot options.
 </p>
 <div class="org-src-container">
-<pre class="src src-C"><span style="color: #204A87;">// </span><span style="color: #204A87;">(void) sprintf(buf, "xterm -e gnuplot %s - &amp;", filename_plt);   </span>
-(<span style="color: #2F8B58; font-weight: bold;">void</span>) sprintf(buf, <span style="color: #4E9A06;">"xterm -e gnuplot %s &amp;"</span>, filename_plt);
+<pre class="src src-C"><span style="color: #8D8D84;">// </span><span style="color: #8D8D84; font-style: italic;">(void) sprintf(buf, "xterm -e gnuplot %s - &amp;", filename_plt);   </span>
+(<span style="color: #6434A3;">void</span>) <span style="color: #006699;">sprintf</span>(buf, <span style="color: #008000;">"xterm -e gnuplot %s &amp;"</span>, filename_plt);
 </pre>
 </div>
 
@@ -435,28 +426,28 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-org9ca9f79" class="outline-3">
-<h3 id="org9ca9f79">Another example: Measuring and plotting values of a RC circuit</h3>
-<div class="outline-text-3" id="text-org9ca9f79">
+<div id="outline-container-org8af60a5" class="outline-3">
+<h3 id="org8af60a5">Another example: Measuring and plotting values of a RC circuit</h3>
+<div class="outline-text-3" id="text-org8af60a5">
 <div class="org-src-container">
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
-<span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #F5666D;">k</span>
-<span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #F5666D;">p</span>
+<span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
+<span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #D0372D;">p</span>
 
-<span style="color: #A52A2A; font-weight: bold;">.IC</span> V(1)=1
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #F5666D;">n</span> 0.1<span style="color: #F5666D;">u</span>
-<span style="color: #A52A2A; font-weight: bold;">.</span><span style="color: #A52A2A; font-weight: bold;">p</span><span style="color: #A52A2A; font-weight: bold;">rint</span><span style="color: #2F8B58; font-weight: bold;"> tran</span> v(1)
-<span style="color: #A52A2A; font-weight: bold;">.end</span>
+<span style="color: #0000FF;">.IC</span> V(1)=1
+<span style="color: #0000FF;">.</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">t</span><span style="color: #ff00ff; font-weight: bold; text-decoration: underline;">ran</span> 1<span style="color: #D0372D;">n</span> 0.1<span style="color: #D0372D;">u</span>
+<span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">rint</span><span style="color: #6434A3;"> tran</span> v(1)
+<span style="color: #0000FF;">.end</span>
 
-<span style="color: #A52A2A; font-weight: bold;">.control</span>
+<span style="color: #0000FF;">.control</span>
 <span style="color: #228b22; font-weight: bold;">run</span>
-<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #0084C8; font-weight: bold;">gnuplot_terminal</span>=png
-<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file v(1)</span>
-<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #0084C8; font-weight: bold;">at</span>=1<span style="color: #F5666D;">e</span>-8
-<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_five_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #0084C8; font-weight: bold;">at</span>=5<span style="color: #F5666D;">e</span>-8
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #0084C8; font-weight: bold;">value_at_tau</span> = <span style="color: #4E9A06;">"$&amp;value_at_tau"</span> &gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt</span>
-<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #0084C8; font-weight: bold;">value_at_five_tau</span> = <span style="color: #4E9A06;">"$&amp;value_at_five_tau"</span> &gt;&gt; <span style="color: #204A87;">$</span><span style="color: #4E9A06;">file.txt</span>
-<span style="color: #F5666D; font-weight: bold;">.endc</span>
+<span style="color: #228b22; font-weight: bold;">set</span> <span style="color: #BA36A5;">gnuplot_terminal</span>=png
+<span style="color: #228b22; font-weight: bold;">gnuplot</span> <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file v(1)</span>
+<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #BA36A5;">at</span>=1<span style="color: #D0372D;">e</span>-8
+<span style="color: #228b22; font-weight: bold;">meas</span> tran value_at_five_tau <span style="color: #cd0000;">find</span> V(1) <span style="color: #BA36A5;">at</span>=5<span style="color: #D0372D;">e</span>-8
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #BA36A5;">value_at_tau</span> = <span style="color: #008000;">"$&amp;value_at_tau"</span> &gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt</span>
+<span style="color: #228b22; font-weight: bold;">echo</span> <span style="color: #BA36A5;">value_at_five_tau</span> = <span style="color: #008000;">"$&amp;value_at_five_tau"</span> &gt;&gt; <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">file.txt</span>
+<span style="color: #ff0000; font-weight: bold;">.endc</span>
 </pre>
 </div>
 
@@ -478,9 +469,9 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-orgc6375f2" class="outline-3">
-<h3 id="orgc6375f2">Final Words</h3>
-<div class="outline-text-3" id="text-orgc6375f2">
+<div id="outline-container-orgf2ede63" class="outline-3">
+<h3 id="orgf2ede63">Final Words</h3>
+<div class="outline-text-3" id="text-orgf2ede63">
 <p>
 Using Emacs and Org-mode to run codes within a live document is an extremely useful productivity technique. In the case of spice circuits, it might help to create a bridge between simulating circuits, creating reports and interacting with different programming languages.
 </p>

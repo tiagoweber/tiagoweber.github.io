@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-16 Seg 18:32 -->
+<!-- 2022-06-05 dom 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -40,7 +40,7 @@
   }
   pre.src {
     position: relative;
-    overflow: auto;
+    overflow: visible;
     padding-top: 1.2em;
   }
   pre.src:before {
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
+  pre.src:hover:before { display: inline;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -209,10 +209,8 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
-
 </script>
 <meta property="og:title" content="Simulating Circuits with Emacs, Org-mode, Babel and Ngspice"/>
 <meta property="og:type" content="article"/>
@@ -220,26 +218,50 @@ ga('send', 'pageview');
 <meta property="link" content="http://tiagoweber.github.io/blog/entry1.html"/>
 <meta property="pubdate" content="Sat, 26 Jun 2016"/>
 <script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
 </script>
 </head>
 <body>
@@ -249,11 +271,11 @@ ga('send', 'pageview');
 <a href="http://tiagoweber.github.io/index.html#blog">Back home</a>   <a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"><img src="../feed-icon.gif" style="border:0"/></a><br>
 </p>
 
-<div id="outline-container-org7d00805" class="outline-2">
-<h2 id="org7d00805">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
-<div class="outline-text-2" id="text-org7d00805">
+<div id="outline-container-org2a893ed" class="outline-2">
+<h2 id="org2a893ed">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
+<div class="outline-text-2" id="text-org2a893ed">
 <p>
-by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-Dom&gt;</span></span>
+by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-dom&gt;</span></span>
 </p>
 
 
@@ -298,20 +320,20 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 
 
-<div id="org63fcec6" class="figure">
+<div class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-org5aa4ad6" class="outline-3">
-<h3 id="org5aa4ad6">Advantages and Disadvantages</h3>
-<div class="outline-text-3" id="text-org5aa4ad6">
+<div id="outline-container-org8f986cc" class="outline-3">
+<h3 id="org8f986cc">Advantages and Disadvantages</h3>
+<div class="outline-text-3" id="text-org8f986cc">
 </div>
-<div id="outline-container-org5819b46" class="outline-4">
-<h4 id="org5819b46">Advantages</h4>
-<div class="outline-text-4" id="text-org5819b46">
+<div id="outline-container-orga124bb4" class="outline-4">
+<h4 id="orga124bb4">Advantages</h4>
+<div class="outline-text-4" id="text-orga124bb4">
 <ul class="org-ul">
 <li>You can make changes to your circuit very easily and have them added to the report</li>
 <li>You don't need to leave emacs to simulate</li>
@@ -321,9 +343,9 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 </div>
 
-<div id="outline-container-orgf67f8c3" class="outline-4">
-<h4 id="orgf67f8c3">Disadvantages</h4>
-<div class="outline-text-4" id="text-orgf67f8c3">
+<div id="outline-container-org6b25648" class="outline-4">
+<h4 id="org6b25648">Disadvantages</h4>
+<div class="outline-text-4" id="text-org6b25648">
 <ul class="org-ul">
 <li>You will have no schematic image of the circuit (It would be interesting to create an netlist-to-schematic converter in elisp to workaround this)</li>
 <li>Working directly with netlists may require more knowledge of the circuit and the simulator than using GUI for schematic edition.</li>
@@ -332,9 +354,9 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 </div>
 
-<div id="outline-container-org3e8f0c4" class="outline-3">
-<h3 id="org3e8f0c4">Basic Setup</h3>
-<div class="outline-text-3" id="text-org3e8f0c4">
+<div id="outline-container-org6677f0c" class="outline-3">
+<h3 id="org6677f0c">Basic Setup</h3>
+<div class="outline-text-3" id="text-org6677f0c">
 <p>
 What you need is basically 
 </p>
@@ -347,9 +369,9 @@ What you need is basically
 </ul>
 </div>
 
-<div id="outline-container-org4af0632" class="outline-4">
-<h4 id="org4af0632">The ob-spice</h4>
-<div class="outline-text-4" id="text-org4af0632">
+<div id="outline-container-orgda7a92b" class="outline-4">
+<h4 id="orgda7a92b">The ob-spice</h4>
+<div class="outline-text-4" id="text-orgda7a92b">
 <p>
 The community has built a <a href="http://orgmode.org/worg/org-contrib/babel/languages.html">wide range of language support for Babel</a>. However, I could not find spice in this list or anything related to spice simulation. Therefore, I created my own, which is admittedly in a very early stage of development. However, as it already does the job (at least for my needs) I decided to share it <a href="attachments/ob-spice.el">here</a>.
 </p>
@@ -366,7 +388,7 @@ You will need to add something like this to your Emacs config to load this file:
 <p>
 When adding the netlist, you should create a header like the following (this is the one I used to create the previous opamp simulation):
 </p>
-<pre class="example" id="orgf880808">
+<pre class="example">
 #+BEGIN_SRC spice :results drawer :exports both :var file="amplifier_vcvs_1000"
 ... your netlist here ...
 #+END_SRC
@@ -378,18 +400,18 @@ In this example, the variable "file" is the name of the png file that will be cr
 </div>
 </div>
 
-<div id="outline-container-org43a27e7" class="outline-4">
-<h4 id="org43a27e7">Exporting to PNG</h4>
-<div class="outline-text-4" id="text-org43a27e7">
+<div id="outline-container-org632e4ea" class="outline-4">
+<h4 id="org632e4ea">Exporting to PNG</h4>
+<div class="outline-text-4" id="text-org632e4ea">
 <p>
 You need to add the line "set gnuplot_terminal=png" in the control section of your Ngspice code. If you don't, Ngspice will export to eps, which will not be previewed in Org-mode. It is my intention to add this control option as default to ob-spice.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org1adf6f9" class="outline-4">
-<h4 id="org1adf6f9">Fontification</h4>
-<div class="outline-text-4" id="text-org1adf6f9">
+<div id="outline-container-orgfa9540e" class="outline-4">
+<h4 id="orgfa9540e">Fontification</h4>
+<div class="outline-text-4" id="text-orgfa9540e">
 <p>
 Using the original <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a>) the fontification for spice circuits is recognized by babel in the buffer. If you use the newer version, it is all fine (I thank Colin for pointing this new version on the comment section). If you use the original spice-mode version together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there is a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
@@ -398,9 +420,9 @@ To solve the problem, I just had to comment all lines that use make-local-hook f
 </div>
 
 
-<div id="outline-container-org769c521" class="outline-4">
-<h4 id="org769c521">Removing Ngspice plot persistence</h4>
-<div class="outline-text-4" id="text-org769c521">
+<div id="outline-container-org720ba3c" class="outline-4">
+<h4 id="org720ba3c">Removing Ngspice plot persistence</h4>
+<div class="outline-text-4" id="text-org720ba3c">
 <p>
 If you, like me, dislike having to close the plot window every time you simulate your circuits, this tweak in Ngspice spice might do the trick.
 For it, you will have to download the source code of Ngspice and change 1 line of code.
@@ -426,9 +448,9 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-org8af60a5" class="outline-3">
-<h3 id="org8af60a5">Another example: Measuring and plotting values of a RC circuit</h3>
-<div class="outline-text-3" id="text-org8af60a5">
+<div id="outline-container-orgee46938" class="outline-3">
+<h3 id="orgee46938">Another example: Measuring and plotting values of a RC circuit</h3>
+<div class="outline-text-3" id="text-orgee46938">
 <div class="org-src-container">
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
 <span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
@@ -469,9 +491,9 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-orgf2ede63" class="outline-3">
-<h3 id="orgf2ede63">Final Words</h3>
-<div class="outline-text-3" id="text-orgf2ede63">
+<div id="outline-container-orgcd9085c" class="outline-3">
+<h3 id="orgcd9085c">Final Words</h3>
+<div class="outline-text-3" id="text-orgcd9085c">
 <p>
 Using Emacs and Org-mode to run codes within a live document is an extremely useful productivity technique. In the case of spice circuits, it might help to create a bridge between simulating circuits, creating reports and interacting with different programming languages.
 </p>
