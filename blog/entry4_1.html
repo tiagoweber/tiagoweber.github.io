@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-05 dom 17:27 -->
+<!-- 2022-08-24 qua 10:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="tweber" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,8 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="../themes/styles/bigblow/css/bigblow.css"/>
@@ -209,68 +209,24 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
+
 </script>
 <meta property="og:title" content="Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/project_700_400.png"/>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Tiago Oliveira Weber</h1>
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org63cd744" class="outline-2">
-<h2 id="org63cd744">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</h2>
-<div class="outline-text-2" id="text-org63cd744">
+<div id="outline-container-org54e140a" class="outline-2">
+<h2 id="org54e140a">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</h2>
+<div class="outline-text-2" id="text-org54e140a">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-qui&gt;</span></span>
 </p>
@@ -294,9 +250,9 @@ Although this is a simple design and simulation, let us use this case to get a g
 
 
 
-<div id="outline-container-org51b3ab1" class="outline-3">
-<h3 id="org51b3ab1">Procedure</h3>
-<div class="outline-text-3" id="text-org51b3ab1">
+<div id="outline-container-orgca6a480" class="outline-3">
+<h3 id="orgca6a480">Procedure</h3>
+<div class="outline-text-3" id="text-orgca6a480">
 <p>
 In order to better illustrate the procedure, I will show the header of each code-block. This would not be necessary in a normal report.
 </p>
@@ -306,20 +262,20 @@ We will define as our design specification that the inverting opamp topology sha
 </p>
 </div>
 
-<div id="outline-container-orgf8c308f" class="outline-4">
-<h4 id="orgf8c308f">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
-<div class="outline-text-4" id="text-orgf8c308f">
+<div id="outline-container-orgfedeead" class="outline-4">
+<h4 id="orgfedeead">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
+<div class="outline-text-4" id="text-orgfedeead">
 <p>
 First we want to calculate the value of our resistors. Let assume resistor R1 is 10k, and then calculate R2 in OCTAVE:
 </p>
 
-<pre class="example">
+<pre class="example" id="orga7908f9">
 #+NAME: design_variables
 #+BEGIN_SRC octave :results drawer :exports both 
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org367e94d">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org786e903">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [gain<span style="color: #006FE0;">,</span> r1<span style="color: #006FE0;">,</span> r2]<span style="color: #006FE0;">;</span>
@@ -356,20 +312,20 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 </div>
 
-<div id="outline-container-orgfd91a68" class="outline-4">
-<h4 id="orgfd91a68">Simulating the Circuit in NGSPICE</h4>
-<div class="outline-text-4" id="text-orgfd91a68">
+<div id="outline-container-org2d25ba7" class="outline-4">
+<h4 id="org2d25ba7">Simulating the Circuit in NGSPICE</h4>
+<div class="outline-text-4" id="text-org2d25ba7">
 <p>
 With the vector in a variable we will now use it in a spice netlist to be simulated on NGSPICE. 
 </p>
 
-<pre class="example">
+<pre class="example" id="orga4ad1c9">
 #+NAME: ngspice_sim 
 #+BEGIN_SRC spice :results drawer :exports both :var design=design_variables file="amplifier_sim"
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="org3894901"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
+<pre class="src src-spice" id="orgd3790ac"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">ac</span> 1 <span style="color: #6434A3;">sin</span>(0 0.1 100Hz) <span style="color: #6434A3;">dc</span> 0
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[1]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[2]</span>
@@ -418,14 +374,14 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The importance thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
 </p>
 
-<pre class="example">
+<pre class="example" id="org382d637">
 echo "$&amp;var1,$&amp;var2,$&amp;var3" &gt; $file.txt 
 </pre>
 
 <p>
 For plot, you use "gnuplot $file signal_names":
 </p>
-<pre class="example">
+<pre class="example" id="orgfa210a6">
 gnuplot $file vdb(in) vdb(out)
 </pre>
 
@@ -435,20 +391,20 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 </div>
 
-<div id="outline-container-org4a812bd" class="outline-4">
-<h4 id="org4a812bd">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
-<div class="outline-text-4" id="text-org4a812bd">
+<div id="outline-container-orga4d37c0" class="outline-4">
+<h4 id="orga4d37c0">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
+<div class="outline-text-4" id="text-orga4d37c0">
 <p>
 We will now get the results from the simulation back to OCTAVE in order to calculate the error between ideal and simulated. 
 </p>
 
-<pre class="example">
+<pre class="example" id="orgabfd8d2">
 #+NAME: error_calculation
 #+BEGIN_SRC octave :results drawer :exports both :var gain_OCTAVE=10 ngspice_results=ngspice_sim[0]
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="orgf66d482">gain_OCTAVE <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org0a936fd">gain_OCTAVE <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
 gain_ngspice <span style="color: #006FE0;">=</span> str2num(gain_ngspice)
 error_absolute <span style="color: #006FE0;">=</span> abs((gain_OCTAVE<span style="color: #006FE0;">-</span>gain_ngspice))
 error_percentage <span style="color: #006FE0;">=</span> abs(error_absolute<span style="color: #006FE0;">/</span>gain_OCTAVE)
@@ -479,14 +435,14 @@ And <i>voilà</i>, you have now your DC gain error calculated.
 </div>
 </div>
 
-<div id="outline-container-org093a8ec" class="outline-4">
-<h4 id="org093a8ec">Present the Results</h4>
-<div class="outline-text-4" id="text-org093a8ec">
+<div id="outline-container-org95535c6" class="outline-4">
+<h4 id="org95535c6">Present the Results</h4>
+<div class="outline-text-4" id="text-org95535c6">
 <p>
 You can present the result directly in your text with an inline code-block or in fancier approaches, like creating a table as below (where I used python to print the results).
 </p>
 
-<pre class="example">
+<pre class="example" id="orgce8665c">
 #+BEGIN_SRC python :results output drawer :exports results :var vi=design_variables ngspice_sim_var=ngspice_sim[0;0] error_calculation_var=error_cal
 </pre>
 
@@ -503,8 +459,8 @@ You can present the result directly in your text with an inline code-block or in
 </div>
 </div>
 
-<div id="outline-container-org80d472f" class="outline-4">
-<h4 id="org80d472f">Discussion</h4>
+<div id="outline-container-orgf8c81f0" class="outline-4">
+<h4 id="orgf8c81f0">Discussion</h4>
 </div>
 </div>
 </div>

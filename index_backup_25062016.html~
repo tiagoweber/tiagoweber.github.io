@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-04-02 Seg 01:03 -->
+<!-- 2022-06-05 dom 17:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -161,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -183,6 +196,7 @@
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/bigblow.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/mine.css"/>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/jquery.localscroll-min.js"></script>
@@ -191,6 +205,7 @@
 <script type="text/javascript" src="themes/styles/bigblow/js/bigblow.js"></script>
 <script type="text/javascript" src="themes/styles/bigblow/js/hideshow.js"></script>
 <script type="text/javascript" src="themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="themes/styles/bigblow/js/mine.js"></script>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -204,7 +219,7 @@ ga('send', 'pageview');
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -250,9 +265,9 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Tiago Oliveira Weber</h1>
 
-<div id="outline-container-orgdc42bc4" class="outline-2">
-<h2 id="orgdc42bc4">About</h2>
-<div class="outline-text-2" id="text-orgdc42bc4">
+<div id="outline-container-org8394b8a" class="outline-2">
+<h2 id="org8394b8a">About</h2>
+<div class="outline-text-2" id="text-org8394b8a">
 
 <div class="figure">
 <p><img src="img/linkedin.png" alt="linkedin.png" width="200px image" title="Photo" align="right" /> 
@@ -273,9 +288,9 @@ for the JavaScript code in this tag.
 </table>
 </div>
 
-<div id="outline-container-org898e68d" class="outline-3">
-<h3 id="org898e68d">Research Interests</h3>
-<div class="outline-text-3" id="text-org898e68d">
+<div id="outline-container-orgc7af90e" class="outline-3">
+<h3 id="orgc7af90e">Research Interests</h3>
+<div class="outline-text-3" id="text-orgc7af90e">
 <p>
 My main research interests are: 
 </p>
@@ -288,9 +303,9 @@ My main research interests are:
 </div>
 </div>
 
-<div id="outline-container-orgee53534" class="outline-3">
-<h3 id="orgee53534">Contact</h3>
-<div class="outline-text-3" id="text-orgee53534">
+<div id="outline-container-org8224b05" class="outline-3">
+<h3 id="org8224b05">Contact</h3>
+<div class="outline-text-3" id="text-org8224b05">
 <p>
 E-mail: tiago.weber (at) ufsc.br
 </p>
@@ -302,13 +317,13 @@ Phone: +55 48 9111 2228
 </div>
 </div>
 
-<div id="outline-container-org9c7a583" class="outline-2">
-<h2 id="org9c7a583">Education</h2>
-<div class="outline-text-2" id="text-org9c7a583">
+<div id="outline-container-org4660618" class="outline-2">
+<h2 id="org4660618">Education</h2>
+<div class="outline-text-2" id="text-org4660618">
 </div>
-<div id="outline-container-org9760e99" class="outline-3">
-<h3 id="org9760e99">Doctorate in Microelectronics - June 2015</h3>
-<div class="outline-text-3" id="text-org9760e99">
+<div id="outline-container-org099796f" class="outline-3">
+<h3 id="org099796f">Doctorate in Microelectronics - June 2015</h3>
+<div class="outline-text-3" id="text-org099796f">
 <p>
 University of São Paulo - São Paulo, Brazil
 </p>
@@ -320,9 +335,9 @@ University of São Paulo - São Paulo, Brazil
 </div>
 </div>
 
-<div id="outline-container-org3c24b3c" class="outline-3">
-<h3 id="org3c24b3c">B.S. in Electrical Engineering - Jan. 2010</h3>
-<div class="outline-text-3" id="text-org3c24b3c">
+<div id="outline-container-org603e18c" class="outline-3">
+<h3 id="org603e18c">B.S. in Electrical Engineering - Jan. 2010</h3>
+<div class="outline-text-3" id="text-org603e18c">
 <p>
 Federal University of Santa Maria - Santa Maria, Brazil
 </p>
@@ -346,24 +361,24 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-org029e1d0" class="outline-2">
-<h2 id="org029e1d0">Publications</h2>
-<div class="outline-text-2" id="text-org029e1d0">
+<div id="outline-container-orgbbdc6c0" class="outline-2">
+<h2 id="orgbbdc6c0">Publications</h2>
+<div class="outline-text-2" id="text-orgbbdc6c0">
 </div>
-<div id="outline-container-org6124cc3" class="outline-3">
-<h3 id="org6124cc3">Journal publications</h3>
-<div class="outline-text-3" id="text-org6124cc3">
+<div id="outline-container-orgd38b0e4" class="outline-3">
+<h3 id="orgd38b0e4">Journal publications</h3>
+<div class="outline-text-3" id="text-orgd38b0e4">
 <ul class="org-ul">
 <li>BARBOZA, S.H.I. ; BREGANT, M. ; CHAMBERT, V. ; ESPAGNON, B. ; HERRERA, H.D. HERNANDEZ ; MAHMOOD, S.M. ; MORAES, D. ; MUNHOZ, M.G. ; NOËL, G. ; PILYAR, A. ; RUSSO, P. ; SANCHES, B.C.S ; TAMBAVE, G.J. ; TUN-LANOË, K.M.M. ; NOIJE, W. VAN ; VELURE, A. ; VERESCHAGIN, S. ; WEBER, T.O. ; ZAPOROZHETS, S. . SAMPA chip: a new ASIC for the ALICE TPC and MCH upgrades. <i>Journal of Instrumentation</i>, v. 11, p. C02088-C02088, 2016; <a href="http://iopscience.iop.org/article/10.1088/1748-0221/11/02/C02088/meta">Link</a></li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012; <a href="http://link.springer.com/article/10.1007%2Fs10470-012-9939-z">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Circuit Synthesis Performing Fast Pareto Frontier Exploration and Analysis Through 3D Graphs. <i>Analog Integrated Circuits and Signal Processing</i>, Springer US,  v. 73, n. 3, p. 861-871, ISSN 0925-1030, 2012; <a href="http://link.springer.com/article/10.1007%252Fs10470-012-9939-z">Link</a></li>
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Multi-Objective Design of Analog Integrated Circuits using Simulated Annealing with Crossover Operator and Weight Adjusting. <i>JICS. Journal of Integrated Circuits and Systems</i>, v. 7, n. 1, p. 1-9, ISSN 1807-1953, 2012. <a href="http://www.sbmicro.org.br/jics/html/volume7n1.html">Link</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1e21986" class="outline-3">
-<h3 id="org1e21986">Book chapter</h3>
-<div class="outline-text-3" id="text-org1e21986">
+<div id="outline-container-org7aa0f79" class="outline-3">
+<h3 id="org7aa0f79">Book chapter</h3>
+<div class="outline-text-3" id="text-org7aa0f79">
 <ul class="org-ul">
 <li>WEBER, T.O.; NOIJE, W.A.M.V. Design of Analog Integrated Circuits using Simulated Annealing/Quenching with Crossovers and Particle Swarm Optimization. <i>Simulated Annealing - Advances, Applications and Hybridizations</i>, v. 1,  p. 219-244, Ed. InTech, ISBN 978-953-51-0710-1, 2012. <a href="http://www.intechopen.com/books/simulated-annealing-advances-applications-and-hybridizations/design-of-analog-integrated-circuits-using-simulated-annealing-quenching-combined-with-population-ba">Link</a></li>
 </ul>
@@ -371,13 +386,13 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-org35816e5" class="outline-3">
-<h3 id="org35816e5">Conference publications</h3>
-<div class="outline-text-3" id="text-org35816e5">
+<div id="outline-container-org4c7ca81" class="outline-3">
+<h3 id="org4c7ca81">Conference publications</h3>
+<div class="outline-text-3" id="text-org4c7ca81">
 <ul class="org-ul">
-<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013; <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp=&amp;arnumber=6644878&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6644878">Link</a></li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&amp;arnumber=5750289">Link</a></li>
-<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="http://dl.acm.org/citation.cfm?id=2020897">Link</a></li>
+<li>WEBER, T.O.; CHAPARRO, S.; NOIJE, W.A.M.V. Synthesis of a Narrow-band Low Noise Amplifier in a 180 nm CMOS Technology using Simulated Annealing with Crossover Operator. <i>In: Proceedings of the 26th Symposium on Integrated Circuits and Systems</i> p. 1-5, Curitiba, Brasil, 2013; <a href="http://ieeexplore.ieee.org/xpl/login.jsp?tp%3D&amp;arnumber%3D6644878&amp;url%3Dhttp%253A%252F%252Fieeexplore.ieee.org%252Fxpls%252Fabs_all.jsp%253Farnumber%253D6644878">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Performing Fast Pareto Frontier Exploration. <i>In: Proceedings of the 2nd IEEE Latin American Symposium on Circuits and Systems</i>,  p. 62-66, ISBN 978-1-4244-9484-2, Bogotá, Colômbia, 2011; <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload%3Dtrue&amp;arnumber%3D5750289">Link</a></li>
+<li>WEBER, T.O.; NOIJE, W.A.M.V. Analog Design Synthesis Method Using Simulated Annealing and Particle Swarm Optimization. <i>In: Proceedings of the 24th Symposium on Integrated Circuits and Systems</i>, p. 85-90, ISBN 978-1-4503-0828-1, João Pessoa, Brasil, 2011. <a href="http://dl.acm.org/citation.cfm?id%3D2020897">Link</a></li>
 <li>WEBER, T.O.; RODRIGUES, C. R. Automatic LC Oscillator Systematic Design using Matlab and SPICE Interaction <i>Iberchip Workshop, XV</i>, Buenos Aires - Argentina, March 2009 <a href="http://www.ing.unlp.edu.ar/cetad/iberchip/finalprogram.htm">Link</a></li>
 <li>HAYASAKA, H.; WEBER, T. O.; RODRIGUES, C. R. Oscilador LC à 2,4GHz Controlado por Tensão em Tecnologia AMI 05 <i>Jornadas de Jóvenes Investigadores</i>, XVI, Montevideo - Uruguay, October 2008</li>
 </ul>
@@ -386,9 +401,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-org130d0c2" class="outline-2">
-<h2 id="org130d0c2">Teaching</h2>
-<div class="outline-text-2" id="text-org130d0c2">
+<div id="outline-container-org73a078e" class="outline-2">
+<h2 id="org73a078e">Teaching</h2>
+<div class="outline-text-2" id="text-org73a078e">
 <p>
 <a href="http://en.ufsc.br/">Federal University of Santa Catarina (UFSC)</a>: I lecture classes to the Computer Engineering course:
 </p>
@@ -410,17 +425,17 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-org58bd18b" class="outline-2">
-<h2 id="org58bd18b">Curriculum</h2>
-<div class="outline-text-2" id="text-org58bd18b">
+<div id="outline-container-org97a298f" class="outline-2">
+<h2 id="org97a298f">Curriculum</h2>
+<div class="outline-text-2" id="text-org97a298f">
 <ul class="org-ul">
 <li><a href="http://lattes.cnpq.br/6453626164328516">Lattes</a></li>
 </ul>
 </div>
 
-<div id="outline-container-org1718bae" class="outline-3">
-<h3 id="org1718bae">Professional Social Networks</h3>
-<div class="outline-text-3" id="text-org1718bae">
+<div id="outline-container-org8844df3" class="outline-3">
+<h3 id="org8844df3">Professional Social Networks</h3>
+<div class="outline-text-3" id="text-org8844df3">
 <ul class="org-ul">
 <li><a href="http://www.researchgate.net/profile/Tiago_Oliveira_Weber">ResearchGate</a></li>
 <li><a href="https://br.linkedin.com/in/tiago-oliveira-weber-95aa1b8">LinkedIn</a></li>
@@ -430,9 +445,9 @@ Federal University of Santa Maria - Santa Maria, Brazil
 </div>
 
 
-<div id="outline-container-orgc04452c" class="outline-2">
-<h2 id="orgc04452c">Blog</h2>
-<div class="outline-text-2" id="text-orgc04452c">
+<div id="outline-container-org7962bb6" class="outline-2">
+<h2 id="org7962bb6">Blog</h2>
+<div class="outline-text-2" id="text-org7962bb6">
 <p>
 This section is under construction. More specifically, I am adding a "comment" feature to the site while still using org-mode as my publishing tool.
 </p>
