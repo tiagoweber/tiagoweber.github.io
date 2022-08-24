@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-24 qua 14:18 -->
+<!-- 2022-08-24 qua 14:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -240,7 +240,7 @@ document.getElementById(id).width = (newwidth) + "px";
 <h2 id="org3aaf744">About</h2>
 <div class="outline-text-2" id="text-org3aaf744">
 
-<div id="org8704c3d" class="figure">
+<div id="orga9ae34f" class="figure">
 <p><img src="img/photob.jpg" alt="photob.jpg" width="200px image" title="Photo" align="right" /> 
 </p>
 </div>
@@ -551,7 +551,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org2009133" class="figure">
+<div id="org625d43b" class="figure">
 <p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -587,7 +587,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org4621ced" class="figure">
+<div id="org6b5801f" class="figure">
 <p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -765,9 +765,7 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 <li>Lucas Raupp Hans. <i>Sistema de classificação de tipos de movimentos no esporte tênis utilizando sensores inerciais e técnicas de aprendizado de máquina supervisionado</i>. 2022. Trabalho de Conclusão de Curso. (Graduação em Engenharia Elétrica) - Universidade Federal do Rio Grande do Sul. Orientador: Tiago Oliveira Weber. <a href="http://hdl.handle.net/10183/245912">Link</a></li>
 
 <li>Lucas Henz Garcia. <i>Detecção de emoções utilizando redes neurais convolucionais em sistemas com recursos limitados de hardware</i>. 2021. Trabalho de Conclusão de Curso. (Graduação em Engenharia Elétrica) - Universidade Federal do Rio Grande do Sul. Orientador: Tiago Oliveira Weber. <a href="http://hdl.handle.net/10183/234173">Link</a></li>
-</ul>
 
-<ul class="org-ul">
 <li>Thiago Matias Martins. <i>Aplicação de Técnicas de Inteligência Artificial na Detecção do Comportamento Tipo-Depressivo em Camundongos através do Teste de Suspensão pela Cauda</i>. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192344">Link</a></li>
 
 <li>Leonardo Loch da Silva. <i>Sistema de monitoramento de energia elétrica utilizando o protocolo de comunicação MQTT</i>. 2018. Trabalho de Conclusão de Curso. (Graduação em Engenharia de Computação) - Universidade Federal de Santa Catarina. Orientador: Tiago Oliveira Weber. <a href="https://repositorio.ufsc.br/handle/123456789/192296">Link</a></li>
@@ -781,7 +779,6 @@ My lectures at UFSC were to the <a href="http://enc.ufsc.br/">Computer Engineeri
 </div>
 </div>
 </div>
-
 
 
 
