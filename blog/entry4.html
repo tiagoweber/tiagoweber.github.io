@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-24 qua 10:36 -->
+<!-- 2022-09-15 qui 20:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -227,15 +227,15 @@ ga('send', 'pageview');
 <a href="http://tiagoweber.github.io/index.html#blog">Back home</a>  <a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"><img src="../feed-icon.gif" style="border:0"/></a><br>
 </p>
 
-<div id="outline-container-org23586a5" class="outline-2">
-<h2 id="org23586a5">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
-<div class="outline-text-2" id="text-org23586a5">
+<div id="outline-container-org94a6141" class="outline-2">
+<h2 id="org94a6141">Integrate your Circuit Design Flow and Reports: Demonstration of Ngspice and Octave/Matlab Interaction within Emacs</h2>
+<div class="outline-text-2" id="text-org94a6141">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-qui&gt;</span></span>
 </p>
 
 
-<div id="org50ce89f" class="figure">
+<div id="orgdad22d9" class="figure">
 <p><img src="./attachments/project_700_400.png" alt="project_700_400.png" width="400px image" title="Project" align="center" />
 </p>
 </div>
@@ -259,9 +259,9 @@ Although this is a simple design and simulation, let us use this case to get a g
 
 
 
-<div id="outline-container-org8ba011f" class="outline-3">
-<h3 id="org8ba011f">Procedure</h3>
-<div class="outline-text-3" id="text-org8ba011f">
+<div id="outline-container-org9af9f09" class="outline-3">
+<h3 id="org9af9f09">Procedure</h3>
+<div class="outline-text-3" id="text-org9af9f09">
 <p>
 In order to better illustrate the procedure, I will show the header of each code-block. This would not be necessary in a normal report.
 </p>
@@ -271,20 +271,20 @@ We will define as our design specification that the inverting opamp topology sha
 </p>
 </div>
 
-<div id="outline-container-org595da6d" class="outline-4">
-<h4 id="org595da6d">Calculating the Resistors Values in Octave/Matlab</h4>
-<div class="outline-text-4" id="text-org595da6d">
+<div id="outline-container-orgb401b46" class="outline-4">
+<h4 id="orgb401b46">Calculating the Resistors Values in Octave/Matlab</h4>
+<div class="outline-text-4" id="text-orgb401b46">
 <p>
 First we want to calculate the value of our resistors. Let us assume resistor R1 is 10k, and then calculate R2 in Octave:
 </p>
 
-<pre class="example" id="orgc6bb104">
+<pre class="example" id="orgca6cc48">
 #+NAME: design_variables
 #+BEGIN_SRC octave :results drawer :exports both 
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org17d58a0">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="orgbe50dae">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [gain<span style="color: #006FE0;">,</span> r1<span style="color: #006FE0;">,</span> r2]<span style="color: #006FE0;">;</span>
@@ -321,20 +321,20 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 </div>
 
-<div id="outline-container-org25c258e" class="outline-4">
-<h4 id="org25c258e">Simulating the Circuit in Ngspice</h4>
-<div class="outline-text-4" id="text-org25c258e">
+<div id="outline-container-org1da2745" class="outline-4">
+<h4 id="org1da2745">Simulating the Circuit in Ngspice</h4>
+<div class="outline-text-4" id="text-org1da2745">
 <p>
 With the vector in a variable we will now use it in a spice netlist to be simulated on Ngspice. 
 </p>
 
-<pre class="example" id="orgd186d2a">
+<pre class="example" id="org9adffda">
 #+NAME: ngspice_sim 
 #+BEGIN_SRC spice :results drawer :exports both :var design=design_variables file="amplifier_sim"
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="org057ee37"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
+<pre class="src src-spice" id="orgfe78757"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in Octave</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">ac</span> 1 <span style="color: #6434A3;">sin</span>(0 0.1 100Hz) <span style="color: #6434A3;">dc</span> 0
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[1]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[2]</span>
@@ -383,14 +383,14 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The important thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
 </p>
 
-<pre class="example" id="org69bce38">
+<pre class="example" id="org8b51915">
 echo "$&amp;var1,$&amp;var2,$&amp;var3" &gt; $file.txt 
 </pre>
 
 <p>
 For plot, you use "gnuplot $file signal_names":
 </p>
-<pre class="example" id="org536725a">
+<pre class="example" id="orgdfaab98">
 gnuplot $file vdb(in) vdb(out)
 </pre>
 
@@ -400,20 +400,20 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 </div>
 
-<div id="outline-container-orgd85c731" class="outline-4">
-<h4 id="orgd85c731">Calculate the error between ideal and simulated on Octave/Matlab</h4>
-<div class="outline-text-4" id="text-orgd85c731">
+<div id="outline-container-org0af7666" class="outline-4">
+<h4 id="org0af7666">Calculate the error between ideal and simulated on Octave/Matlab</h4>
+<div class="outline-text-4" id="text-org0af7666">
 <p>
 We will now get the results from the simulation back to Octave in order to calculate the error between ideal and simulated. 
 </p>
 
-<pre class="example" id="org1467235">
+<pre class="example" id="org1105e8a">
 #+NAME: error_calculation
 #+BEGIN_SRC octave :results drawer :exports both :var gain_octave=10 ngspice_results=ngspice_sim[0]
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="orgd5d3457">gain_octave <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org1cf6b6a">gain_octave <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
 gain_ngspice <span style="color: #006FE0;">=</span> str2num(gain_ngspice)
 error_absolute <span style="color: #006FE0;">=</span> abs((gain_octave<span style="color: #006FE0;">-</span>gain_ngspice))
 error_percentage <span style="color: #006FE0;">=</span> abs(error_absolute<span style="color: #006FE0;">/</span>gain_octave)
@@ -444,14 +444,14 @@ And <i>voilà</i>, you have now your DC gain error calculated.
 </div>
 </div>
 
-<div id="outline-container-org0aa8d54" class="outline-4">
-<h4 id="org0aa8d54">Present the Results</h4>
-<div class="outline-text-4" id="text-org0aa8d54">
+<div id="outline-container-orgde0915e" class="outline-4">
+<h4 id="orgde0915e">Present the Results</h4>
+<div class="outline-text-4" id="text-orgde0915e">
 <p>
 You can present the result directly in your text with an inline code-block or in fancier approaches, like creating a table as below (where I used python to print the results).
 </p>
 
-<pre class="example" id="orgf6ac9de">
+<pre class="example" id="org6a07013">
 #+BEGIN_SRC python :results output drawer :exports results :var vi=design_variables ngspice_sim_var=ngspice_sim[0;0] error_calculation_var=error_cal
 </pre>
 
@@ -468,9 +468,9 @@ You can present the result directly in your text with an inline code-block or in
 </div>
 </div>
 
-<div id="outline-container-orga7411ac" class="outline-4">
-<h4 id="orga7411ac">Possibilities</h4>
-<div class="outline-text-4" id="text-orga7411ac">
+<div id="outline-container-orgacfaab2" class="outline-4">
+<h4 id="orgacfaab2">Possibilities</h4>
+<div class="outline-text-4" id="text-orgacfaab2">
 <p>
 The possibility to perform calculations in Octave or Matlab, simulate circuits based on these calculations on Ngspice and take the results back to Octave again all in the same text editor is incredible. When you add up the fact that this same customizible editor can export to most of your favorite formats like pdf, html, tex or txt, what you have is a designers's heaven. Of course there are lots of missing gaps that you won't be able to fullfill only with emacs. For instance, you won't be able to create a PCB layout in emacs, but org-mode can make it incredibly more easy to manage all your files, even the ones you can't directly treat with emacs.
 </p>

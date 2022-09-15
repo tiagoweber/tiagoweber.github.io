@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-24 qua 10:35 -->
+<!-- 2022-09-15 qui 20:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -224,15 +224,15 @@ ga('send', 'pageview');
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org7f6b6fe" class="outline-2">
-<h2 id="org7f6b6fe">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
-<div class="outline-text-2" id="text-org7f6b6fe">
+<div id="outline-container-orgc16f4ec" class="outline-2">
+<h2 id="orgc16f4ec">Open-Source Mixed-Signal Simulation: How to Describe Blocks in Octave/Matlab and Interact them with Ngspice</h2>
+<div class="outline-text-2" id="text-orgc16f4ec">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-qui&gt;</span></span>
 </p>
 
 
-<div id="orgbcb3b88" class="figure">
+<div id="org59bd8d5" class="figure">
 <p><img src="./attachments/mixed_signal_700_400.png" alt="mixed_signal_700_400.png" width="600px image" title="Project" align="center" />
 </p>
 </div>
@@ -250,35 +250,35 @@ This is not even by far intended to be a solution for industry professionals. Th
 </p>
 </div>
 
-<div id="outline-container-org7a4c32c" class="outline-3">
-<h3 id="org7a4c32c">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
-<div class="outline-text-3" id="text-org7a4c32c">
+<div id="outline-container-orge47dd3d" class="outline-3">
+<h3 id="orge47dd3d">How I Learned to Stop Worrying and Love Octave and Ngspice for Circuit Simulation</h3>
+<div class="outline-text-3" id="text-orge47dd3d">
 <p>
 We usually simulate analog circuits through SPICE circuit simulators. On the other hand, we usually use a Hardware Description Language (HDL) such as Verilog or VHDL using specific simulators for the digital section. If simulation time was not an issue, we could consider all signals as being analog and simulate the whole circuit as a SPICE netlist. However, due to the level of abstraction that digital circuits allow us to operate in, this would be an enormous waste of time. 
 </p>
 </div>
 
 
-<div id="outline-container-orgd71a969" class="outline-4">
-<h4 id="orgd71a969">Different Tools for Different Problems</h4>
-<div class="outline-text-4" id="text-orgd71a969">
+<div id="outline-container-orgb41749d" class="outline-4">
+<h4 id="orgb41749d">Different Tools for Different Problems</h4>
+<div class="outline-text-4" id="text-orgb41749d">
 <p>
 Before introducing the proposed package, I would like to discuss some of the cases in which a designer might want to use different tool sets for simulation.
 </p>
 </div>
 
-<div id="outline-container-org4429d4b" class="outline-5">
-<h5 id="org4429d4b">System Simulation without Circuit Blocks</h5>
-<div class="outline-text-5" id="text-org4429d4b">
+<div id="outline-container-org173fb4d" class="outline-5">
+<h5 id="org173fb4d">System Simulation without Circuit Blocks</h5>
+<div class="outline-text-5" id="text-org173fb4d">
 <p>
 There are other occasions in which we are only interested in high-level analysis of a system. On these cases, all blocks are described mathematically and no circuit simulator is needed. One of the most used commercial solutions to that is Matlab/Simulink®. The open-source solution would be Octave (if no GUI to draw diagram is needed) or Scilab/XCOS (if diagrams to describe the blocks are welcome).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org38bddb5" class="outline-5">
-<h5 id="org38bddb5">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
-<div class="outline-text-5" id="text-org38bddb5">
+<div id="outline-container-orgd3891bf" class="outline-5">
+<h5 id="orgd3891bf">Circuit Simulator and Post-Simulation Analysis with External Program</h5>
+<div class="outline-text-5" id="text-orgd3891bf">
 <p>
 Sometimes we are not interested in modelling a block with a high-level language, but only interested in analyzing the output of the circuit with the aid of these high-level tools. For those cases, usually Matlab or Octave are used to perform <b>post-simulation analysis</b>. In this approach, the circuit simulator acts independently and its output (waveforms and measurements) are used as input to a script in Matlab or Octave. 
 </p>
@@ -286,9 +286,9 @@ Sometimes we are not interested in modelling a block with a high-level language,
 </div>
 
 
-<div id="outline-container-org78d60cc" class="outline-5">
-<h5 id="org78d60cc">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
-<div class="outline-text-5" id="text-org78d60cc">
+<div id="outline-container-orgf00352b" class="outline-5">
+<h5 id="orgf00352b">Co-simulation of blocks described as circuits and blocks described in high-level language</h5>
+<div class="outline-text-5" id="text-orgf00352b">
 <p>
 The case of interest of this article is when we want to model a block (e.g.: counter, ADC, DAC, sensor, receiver, transceiver, &#x2026;) in a more abstract way and simulate it together with other blocks described as circuits. 
 </p>
@@ -308,9 +308,9 @@ For the cases in which system functionality exploration is the ultimate goal, ho
 </div>
 </div>
 
-<div id="outline-container-org2c72f0b" class="outline-4">
-<h4 id="org2c72f0b">The Solution</h4>
-<div class="outline-text-4" id="text-org2c72f0b">
+<div id="outline-container-org84d5e0f" class="outline-4">
+<h4 id="org84d5e0f">The Solution</h4>
+<div class="outline-text-4" id="text-org84d5e0f">
 <p>
 In order to do co-simulation of blocks described as circuits and blocks described in high-level language using Octave, I propose a package to perform the interface between Ngspice and Octave. Easy prototyping is one of the reasons Matlab is one of the greatest tools for scientists. The codes are easy to write, to understand and to debug. 
 </p>
@@ -333,15 +333,15 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 
 
 
-<div id="outline-container-org011dda9" class="outline-3">
-<h3 id="org011dda9">Example (PWM block and analog output filter)</h3>
-<div class="outline-text-3" id="text-org011dda9">
+<div id="outline-container-org662b2fe" class="outline-3">
+<h3 id="org662b2fe">Example (PWM block and analog output filter)</h3>
+<div class="outline-text-3" id="text-org662b2fe">
 </div>
-<div id="outline-container-orgec14bc9" class="outline-4">
-<h4 id="orgec14bc9">Octave Block to Describe a Simple PWM Logic</h4>
-<div class="outline-text-4" id="text-orgec14bc9">
+<div id="outline-container-org70104dd" class="outline-4">
+<h4 id="org70104dd">Octave Block to Describe a Simple PWM Logic</h4>
+<div class="outline-text-4" id="text-org70104dd">
 <div class="org-src-container">
-<pre class="src src-octave" id="orgbeffcda"><span style="color: #0000FF;">function</span> [pinvalue] <span style="color: #006FE0;">=</span> <span style="color: #006699;">pwm</span>(pinvalue<span style="color: #006FE0;">,</span>currenttime<span style="color: #006FE0;">,</span>vhigh<span style="color: #006FE0;">,</span>isfirst)<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org6047451"><span style="color: #0000FF;">function</span> [pinvalue] <span style="color: #006FE0;">=</span> <span style="color: #006699;">pwm</span>(pinvalue<span style="color: #006FE0;">,</span>currenttime<span style="color: #006FE0;">,</span>vhigh<span style="color: #006FE0;">,</span>isfirst)<span style="color: #006FE0;">;</span>
 
     max_cycles <span style="color: #006FE0;">=</span> 40<span style="color: #006FE0;">;</span>
     analog_in <span style="color: #006FE0;">=</span> pinvalue(1)<span style="color: #006FE0;">;</span>
@@ -367,11 +367,11 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 </div>
 </div>
 
-<div id="outline-container-org5abe434" class="outline-4">
-<h4 id="org5abe434">SPICE Netlist of PWM Block and Analog Filter</h4>
-<div class="outline-text-4" id="text-org5abe434">
+<div id="outline-container-org6fb9b1c" class="outline-4">
+<h4 id="org6fb9b1c">SPICE Netlist of PWM Block and Analog Filter</h4>
+<div class="outline-text-4" id="text-org6fb9b1c">
 <div class="org-src-container">
-<pre class="src src-spice" id="org57d5edb"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
+<pre class="src src-spice" id="org4a33088"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*PWM Test using Ngspice Octave Mixedsignal</span>
 <span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">aram</span> <span style="color: #BA36A5;">clk_freq</span> = 1<span style="color: #D0372D;">e</span>6
 <span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">aram</span> <span style="color: #BA36A5;">clk_per</span> = '1/clk_freq'
 <span style="color: #0000FF;">.</span><span style="color: #0000FF;">p</span><span style="color: #0000FF;">aram</span> <span style="color: #BA36A5;">cap_value</span> = 1<span style="color: #D0372D;">e</span>-6
@@ -400,11 +400,11 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 </div>
 </div>
 
-<div id="outline-container-org902da1e" class="outline-4">
-<h4 id="org902da1e">PWM Results</h4>
-<div class="outline-text-4" id="text-org902da1e">
+<div id="outline-container-org7bf8853" class="outline-4">
+<h4 id="org7bf8853">PWM Results</h4>
+<div class="outline-text-4" id="text-org7bf8853">
 
-<div id="orgaeaf49c" class="figure">
+<div id="org6c16a43" class="figure">
 <p><img src="./ngspice_octave_pwm.png" alt="ngspice_octave_pwm.png" />
 </p>
 </div>
@@ -412,7 +412,7 @@ One using octave or matlab for modelling blocks needs to keep in mind this is no
 
 
 
-<div class="HTML" id="orgd79ec6c">
+<div class="HTML" id="org9f8574e">
 <p>
 &lt;div id="disqus_thread"&gt;&lt;/div&gt;
 &lt;script&gt;

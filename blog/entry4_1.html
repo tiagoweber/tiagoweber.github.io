@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-24 qua 10:36 -->
+<!-- 2022-09-15 qui 20:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -224,9 +224,9 @@ ga('send', 'pageview');
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org54e140a" class="outline-2">
-<h2 id="org54e140a">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</h2>
-<div class="outline-text-2" id="text-org54e140a">
+<div id="outline-container-org25d6980" class="outline-2">
+<h2 id="org25d6980">Integrate your Circuit Design Flow and Reports: Demonstration of NGSPICE and OCTAVE/MATLAB interaction within EMACS</h2>
+<div class="outline-text-2" id="text-org25d6980">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;04/08/2016-qui&gt;</span></span>
 </p>
@@ -250,9 +250,9 @@ Although this is a simple design and simulation, let us use this case to get a g
 
 
 
-<div id="outline-container-orgca6a480" class="outline-3">
-<h3 id="orgca6a480">Procedure</h3>
-<div class="outline-text-3" id="text-orgca6a480">
+<div id="outline-container-org35847ed" class="outline-3">
+<h3 id="org35847ed">Procedure</h3>
+<div class="outline-text-3" id="text-org35847ed">
 <p>
 In order to better illustrate the procedure, I will show the header of each code-block. This would not be necessary in a normal report.
 </p>
@@ -262,20 +262,20 @@ We will define as our design specification that the inverting opamp topology sha
 </p>
 </div>
 
-<div id="outline-container-orgfedeead" class="outline-4">
-<h4 id="orgfedeead">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
-<div class="outline-text-4" id="text-orgfedeead">
+<div id="outline-container-org8571a73" class="outline-4">
+<h4 id="org8571a73">Calculating the Resistors Values in OCTAVE/MATLAB</h4>
+<div class="outline-text-4" id="text-org8571a73">
 <p>
 First we want to calculate the value of our resistors. Let assume resistor R1 is 10k, and then calculate R2 in OCTAVE:
 </p>
 
-<pre class="example" id="orga7908f9">
+<pre class="example" id="org138107f">
 #+NAME: design_variables
 #+BEGIN_SRC octave :results drawer :exports both 
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org786e903">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="orga17fcae">gain<span style="color: #006FE0;">=-</span>10<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [gain<span style="color: #006FE0;">,</span> r1<span style="color: #006FE0;">,</span> r2]<span style="color: #006FE0;">;</span>
@@ -312,20 +312,20 @@ What we have now is a vector with the gain and the resistor values. No rocket sc
 </div>
 </div>
 
-<div id="outline-container-org2d25ba7" class="outline-4">
-<h4 id="org2d25ba7">Simulating the Circuit in NGSPICE</h4>
-<div class="outline-text-4" id="text-org2d25ba7">
+<div id="outline-container-org057b86d" class="outline-4">
+<h4 id="org057b86d">Simulating the Circuit in NGSPICE</h4>
+<div class="outline-text-4" id="text-org057b86d">
 <p>
 With the vector in a variable we will now use it in a spice netlist to be simulated on NGSPICE. 
 </p>
 
-<pre class="example" id="orga4ad1c9">
+<pre class="example" id="orgd2c9769">
 #+NAME: ngspice_sim 
 #+BEGIN_SRC spice :results drawer :exports both :var design=design_variables file="amplifier_sim"
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="orgd3790ac"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
+<pre class="src src-spice" id="org13184df"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Opamp with resistor values calculated in OCTAVE</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">ac</span> 1 <span style="color: #6434A3;">sin</span>(0 0.1 100Hz) <span style="color: #6434A3;">dc</span> 0
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[1]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">design[2]</span>
@@ -374,14 +374,14 @@ With the vector in a variable we will now use it in a spice netlist to be simula
 The simulation had 2 measurement outputs (the DC gain of the circuit and the gain at 500 kHz) and one image (the input and output over frequency in dB). The importance thing to notice here is that you can produce multiple outputs. The <code>$file</code> is an important variable on ob-spice because it tells the extension where to look for the results. For textual outputs, you should use "echo" to generate comma separated values based on measurements and output them to $file.txt, like the example below:
 </p>
 
-<pre class="example" id="org382d637">
+<pre class="example" id="org3d5d525">
 echo "$&amp;var1,$&amp;var2,$&amp;var3" &gt; $file.txt 
 </pre>
 
 <p>
 For plot, you use "gnuplot $file signal_names":
 </p>
-<pre class="example" id="orgfa210a6">
+<pre class="example" id="org94d2378">
 gnuplot $file vdb(in) vdb(out)
 </pre>
 
@@ -391,20 +391,20 @@ You can check the <a href="http://ngspice.sourceforge.net/docs/ngspice-manual.pd
 </div>
 </div>
 
-<div id="outline-container-orga4d37c0" class="outline-4">
-<h4 id="orga4d37c0">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
-<div class="outline-text-4" id="text-orga4d37c0">
+<div id="outline-container-orged97e41" class="outline-4">
+<h4 id="orged97e41">Calculate the error between ideal and simulated on OCTAVE/MATLAB</h4>
+<div class="outline-text-4" id="text-orged97e41">
 <p>
 We will now get the results from the simulation back to OCTAVE in order to calculate the error between ideal and simulated. 
 </p>
 
-<pre class="example" id="orgabfd8d2">
+<pre class="example" id="org87019e0">
 #+NAME: error_calculation
 #+BEGIN_SRC octave :results drawer :exports both :var gain_OCTAVE=10 ngspice_results=ngspice_sim[0]
 </pre>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org0a936fd">gain_OCTAVE <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="orgd581848">gain_OCTAVE <span style="color: #006FE0;">=</span> design_variables(1)<span style="color: #006FE0;">;</span>
 gain_ngspice <span style="color: #006FE0;">=</span> str2num(gain_ngspice)
 error_absolute <span style="color: #006FE0;">=</span> abs((gain_OCTAVE<span style="color: #006FE0;">-</span>gain_ngspice))
 error_percentage <span style="color: #006FE0;">=</span> abs(error_absolute<span style="color: #006FE0;">/</span>gain_OCTAVE)
@@ -435,14 +435,14 @@ And <i>voilà</i>, you have now your DC gain error calculated.
 </div>
 </div>
 
-<div id="outline-container-org95535c6" class="outline-4">
-<h4 id="org95535c6">Present the Results</h4>
-<div class="outline-text-4" id="text-org95535c6">
+<div id="outline-container-org8912215" class="outline-4">
+<h4 id="org8912215">Present the Results</h4>
+<div class="outline-text-4" id="text-org8912215">
 <p>
 You can present the result directly in your text with an inline code-block or in fancier approaches, like creating a table as below (where I used python to print the results).
 </p>
 
-<pre class="example" id="orgce8665c">
+<pre class="example" id="orgca63f05">
 #+BEGIN_SRC python :results output drawer :exports results :var vi=design_variables ngspice_sim_var=ngspice_sim[0;0] error_calculation_var=error_cal
 </pre>
 
@@ -459,8 +459,8 @@ You can present the result directly in your text with an inline code-block or in
 </div>
 </div>
 
-<div id="outline-container-orgf8c81f0" class="outline-4">
-<h4 id="orgf8c81f0">Discussion</h4>
+<div id="outline-container-orgeb8d69c" class="outline-4">
+<h4 id="orgeb8d69c">Discussion</h4>
 </div>
 </div>
 </div>

@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-05 dom 17:27 -->
+<!-- 2022-08-24 qua 10:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="tweber" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,8 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="themes/styles/bigblow/css/bigblow.css"/>
@@ -211,120 +211,76 @@
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
 ga('create', 'UA-79541283-1', 'auto');
 ga('send', 'pageview');
+
 </script>
 <meta property="og:title" content="Upcoming Microelectronics Conferences"/>
 <meta property="og:type" content="article"/>
 <meta property="og:image" content="http://tiagoweber.github.io/blog/attachments/entry1_image_700_400.png"/>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Tiago Oliveira Weber</h1>
 <p>
 <a href="./index.html">Back to home</a>
 </p>
 
-<div id="outline-container-org904ba65" class="outline-2">
-<h2 id="org904ba65">2019 Research Goals</h2>
-<div class="outline-text-2" id="text-org904ba65">
+<div id="outline-container-orge0bf67d" class="outline-2">
+<h2 id="orge0bf67d">2019 Research Goals</h2>
+<div class="outline-text-2" id="text-orge0bf67d">
 <p>
 By sharing my research plans, my intention is to communicate my professional roadmap and be transparent with colaborators (other researchers, students, companies, &#x2026;). 
 </p>
 </div>
 
-<div id="outline-container-org84754e0" class="outline-3">
-<h3 id="org84754e0">2019 Journal Publication Goals <code>[0%]</code></h3>
-<div class="outline-text-3" id="text-org84754e0">
+<div id="outline-container-org01f74ff" class="outline-3">
+<h3 id="org01f74ff">2019 Journal Publication Goals <code>[0%]</code></h3>
+<div class="outline-text-3" id="text-org01f74ff">
 </div>
-<div id="outline-container-org722110a" class="outline-4">
-<h4 id="org722110a"><span class="todo STARTED">STARTED</span> Topic: SAMPA Chip</h4>
-</div>
-
-<div id="outline-container-orgda74bca" class="outline-4">
-<h4 id="orgda74bca"><span class="todo STARTED">STARTED</span> Topic: Corporal Postures</h4>
+<div id="outline-container-orgeb8e1a1" class="outline-4">
+<h4 id="orgeb8e1a1"><span class="todo STARTED">STARTED</span> Topic: SAMPA Chip</h4>
 </div>
 
-<div id="outline-container-org62ac25e" class="outline-4">
-<h4 id="org62ac25e"><span class="todo TODO">TODO</span> Topic: New optimization algorithms for Integrated Circuit Design</h4>
+<div id="outline-container-orgd85db0a" class="outline-4">
+<h4 id="orgd85db0a"><span class="todo STARTED">STARTED</span> Topic: Corporal Postures</h4>
 </div>
 
-<div id="outline-container-org716c112" class="outline-4">
-<h4 id="org716c112"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
+<div id="outline-container-orgeb866c1" class="outline-4">
+<h4 id="orgeb866c1"><span class="todo TODO">TODO</span> Topic: New optimization algorithms for Integrated Circuit Design</h4>
 </div>
 
-<div id="outline-container-orgc918e2c" class="outline-4">
-<h4 id="orgc918e2c"><span class="todo TODO">TODO</span> Topic: Open Integrated Circuit Testbenches</h4>
+<div id="outline-container-org830a3fb" class="outline-4">
+<h4 id="org830a3fb"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
 </div>
 
-<div id="outline-container-org3cb27c9" class="outline-4">
-<h4 id="org3cb27c9"><span class="todo TODO">TODO</span> Topic: Optimization Strategy for IC System Design</h4>
-</div>
-</div>
-
-
-<div id="outline-container-orgc73e0c4" class="outline-3">
-<h3 id="orgc73e0c4">2019 Conference Publication Goals <code>[0%]</code></h3>
-<div class="outline-text-3" id="text-orgc73e0c4">
-</div>
-<div id="outline-container-org1d5d52c" class="outline-4">
-<h4 id="org1d5d52c"><span class="todo TODO">TODO</span> Topic: Digital Artificial Neuron Networks</h4>
+<div id="outline-container-orge135254" class="outline-4">
+<h4 id="orge135254"><span class="todo TODO">TODO</span> Topic: Open Integrated Circuit Testbenches</h4>
 </div>
 
-<div id="outline-container-org5f9d913" class="outline-4">
-<h4 id="org5f9d913"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
+<div id="outline-container-orgb3119c3" class="outline-4">
+<h4 id="orgb3119c3"><span class="todo TODO">TODO</span> Topic: Optimization Strategy for IC System Design</h4>
 </div>
 </div>
 
-<div id="outline-container-org596fb7e" class="outline-3">
-<h3 id="org596fb7e">2019 Deadlines</h3>
-<div class="outline-text-3" id="text-org596fb7e">
+
+<div id="outline-container-org4c1cdf1" class="outline-3">
+<h3 id="org4c1cdf1">2019 Conference Publication Goals <code>[0%]</code></h3>
+<div class="outline-text-3" id="text-org4c1cdf1">
+</div>
+<div id="outline-container-org16f7b27" class="outline-4">
+<h4 id="org16f7b27"><span class="todo TODO">TODO</span> Topic: Digital Artificial Neuron Networks</h4>
+</div>
+
+<div id="outline-container-orgacc1709" class="outline-4">
+<h4 id="orgacc1709"><span class="todo TODO">TODO</span> Topic: Analog Artificial Neuron Networks</h4>
+</div>
+</div>
+
+<div id="outline-container-org09d43b1" class="outline-3">
+<h3 id="org09d43b1">2019 Deadlines</h3>
+<div class="outline-text-3" id="text-org09d43b1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 

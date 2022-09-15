@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-24 qua 10:35 -->
+<!-- 2022-09-15 qui 20:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -227,9 +227,9 @@ ga('send', 'pageview');
 <a href="http://tiagoweber.github.io/index.html#blog">Back home</a>   <a href="http://tiagoweber.github.io/blog.xml" style="float: right;" title="Subscribe to my feed"><img src="../feed-icon.gif" style="border:0"/></a><br>
 </p>
 
-<div id="outline-container-org1988514" class="outline-2">
-<h2 id="org1988514">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
-<div class="outline-text-2" id="text-org1988514">
+<div id="outline-container-org7af3647" class="outline-2">
+<h2 id="org7af3647">Simulating Circuits with Emacs, Org-mode, Babel and Ngspice</h2>
+<div class="outline-text-2" id="text-org7af3647">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-dom&gt;</span></span>
 </p>
@@ -276,20 +276,20 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 
 
-<div id="orgf8d0578" class="figure">
+<div id="org09199a0" class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orgcd0ee5d" class="outline-3">
-<h3 id="orgcd0ee5d">Advantages and Disadvantages</h3>
-<div class="outline-text-3" id="text-orgcd0ee5d">
+<div id="outline-container-org55bb8c4" class="outline-3">
+<h3 id="org55bb8c4">Advantages and Disadvantages</h3>
+<div class="outline-text-3" id="text-org55bb8c4">
 </div>
-<div id="outline-container-org0bd0ffc" class="outline-4">
-<h4 id="org0bd0ffc">Advantages</h4>
-<div class="outline-text-4" id="text-org0bd0ffc">
+<div id="outline-container-org4f6650c" class="outline-4">
+<h4 id="org4f6650c">Advantages</h4>
+<div class="outline-text-4" id="text-org4f6650c">
 <ul class="org-ul">
 <li>You can make changes to your circuit very easily and have them added to the report</li>
 <li>You don't need to leave emacs to simulate</li>
@@ -299,9 +299,9 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 </div>
 
-<div id="outline-container-org636659b" class="outline-4">
-<h4 id="org636659b">Disadvantages</h4>
-<div class="outline-text-4" id="text-org636659b">
+<div id="outline-container-orga75378a" class="outline-4">
+<h4 id="orga75378a">Disadvantages</h4>
+<div class="outline-text-4" id="text-orga75378a">
 <ul class="org-ul">
 <li>You will have no schematic image of the circuit (It would be interesting to create an netlist-to-schematic converter in elisp to workaround this)</li>
 <li>Working directly with netlists may require more knowledge of the circuit and the simulator than using GUI for schematic edition.</li>
@@ -310,9 +310,9 @@ So now you probably already understand what we are going to do. We will treat ou
 </div>
 </div>
 
-<div id="outline-container-org5867798" class="outline-3">
-<h3 id="org5867798">Basic Setup</h3>
-<div class="outline-text-3" id="text-org5867798">
+<div id="outline-container-org59562f2" class="outline-3">
+<h3 id="org59562f2">Basic Setup</h3>
+<div class="outline-text-3" id="text-org59562f2">
 <p>
 What you need is basically 
 </p>
@@ -325,9 +325,9 @@ What you need is basically
 </ul>
 </div>
 
-<div id="outline-container-org8584faf" class="outline-4">
-<h4 id="org8584faf">The ob-spice</h4>
-<div class="outline-text-4" id="text-org8584faf">
+<div id="outline-container-org8fe2a01" class="outline-4">
+<h4 id="org8fe2a01">The ob-spice</h4>
+<div class="outline-text-4" id="text-org8fe2a01">
 <p>
 The community has built a <a href="http://orgmode.org/worg/org-contrib/babel/languages.html">wide range of language support for Babel</a>. However, I could not find spice in this list or anything related to spice simulation. Therefore, I created my own, which is admittedly in a very early stage of development. However, as it already does the job (at least for my needs) I decided to share it <a href="attachments/ob-spice.el">here</a>.
 </p>
@@ -344,7 +344,7 @@ You will need to add something like this to your Emacs config to load this file:
 <p>
 When adding the netlist, you should create a header like the following (this is the one I used to create the previous opamp simulation):
 </p>
-<pre class="example" id="orgdcc273c">
+<pre class="example" id="org9fddbfe">
 #+BEGIN_SRC spice :results drawer :exports both :var file="amplifier_vcvs_1000"
 ... your netlist here ...
 #+END_SRC
@@ -356,18 +356,18 @@ In this example, the variable "file" is the name of the png file that will be cr
 </div>
 </div>
 
-<div id="outline-container-orgb9548ef" class="outline-4">
-<h4 id="orgb9548ef">Exporting to PNG</h4>
-<div class="outline-text-4" id="text-orgb9548ef">
+<div id="outline-container-org267cfe3" class="outline-4">
+<h4 id="org267cfe3">Exporting to PNG</h4>
+<div class="outline-text-4" id="text-org267cfe3">
 <p>
 You need to add the line "set gnuplot_terminal=png" in the control section of your Ngspice code. If you don't, Ngspice will export to eps, which will not be previewed in Org-mode. It is my intention to add this control option as default to ob-spice.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgfc8d377" class="outline-4">
-<h4 id="orgfc8d377">Fontification</h4>
-<div class="outline-text-4" id="text-orgfc8d377">
+<div id="outline-container-org1486cca" class="outline-4">
+<h4 id="org1486cca">Fontification</h4>
+<div class="outline-text-4" id="text-org1486cca">
 <p>
 Using the original <a href="http://web.mit.edu/~deberg/emacs/elisp/spice-mode.el">spice-mode</a> (or its <a href="https://github.com/snmishra/emacs-netlist-modes/blob/master/spice-mode/spice-mode.el">newer version</a>) the fontification for spice circuits is recognized by babel in the buffer. If you use the newer version, it is all fine (I thank Colin for pointing this new version on the comment section). If you use the original spice-mode version together with <a href="https://www.emacswiki.org/emacs/Htmlize">htmlize</a>, however, there is a problem due to the use of the function make-local-hook in spice-mode.el as it is no longer supported in Emacs. 
 To solve the problem, I just had to comment all lines that use make-local-hook function. It seems that removing those lines solved the problem without creating additional ones.
@@ -376,9 +376,9 @@ To solve the problem, I just had to comment all lines that use make-local-hook f
 </div>
 
 
-<div id="outline-container-org569ad7b" class="outline-4">
-<h4 id="org569ad7b">Removing Ngspice plot persistence</h4>
-<div class="outline-text-4" id="text-org569ad7b">
+<div id="outline-container-org59a6b7c" class="outline-4">
+<h4 id="org59a6b7c">Removing Ngspice plot persistence</h4>
+<div class="outline-text-4" id="text-org59a6b7c">
 <p>
 If you, like me, dislike having to close the plot window every time you simulate your circuits, this tweak in Ngspice spice might do the trick.
 For it, you will have to download the source code of Ngspice and change 1 line of code.
@@ -404,9 +404,9 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-org99d2ad0" class="outline-3">
-<h3 id="org99d2ad0">Another example: Measuring and plotting values of a RC circuit</h3>
-<div class="outline-text-3" id="text-org99d2ad0">
+<div id="outline-container-org4ea745a" class="outline-3">
+<h3 id="org4ea745a">Another example: Measuring and plotting values of a RC circuit</h3>
+<div class="outline-text-3" id="text-org4ea745a">
 <div class="org-src-container">
 <pre class="src src-spice"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
 <span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
@@ -447,9 +447,9 @@ After that, you need to run ./configure, make and make install. That's it, no mo
 </div>
 </div>
 
-<div id="outline-container-org5cf2343" class="outline-3">
-<h3 id="org5cf2343">Final Words</h3>
-<div class="outline-text-3" id="text-org5cf2343">
+<div id="outline-container-orgcc74cf9" class="outline-3">
+<h3 id="orgcc74cf9">Final Words</h3>
+<div class="outline-text-3" id="text-orgcc74cf9">
 <p>
 Using Emacs and Org-mode to run codes within a live document is an extremely useful productivity technique. In the case of spice circuits, it might help to create a bridge between simulating circuits, creating reports and interacting with different programming languages.
 </p>

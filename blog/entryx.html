@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-08-24 qua 10:35 -->
+<!-- 2022-09-15 qui 20:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -224,28 +224,28 @@ ga('send', 'pageview');
 <p>
 <a href="../index.html">Back to home</a>
 </p>
-<div id="outline-container-org9958145" class="outline-2">
-<h2 id="org9958145">Interfacing NGSPICE and OCTAVE/MATLAB within Emacs</h2>
-<div class="outline-text-2" id="text-org9958145">
+<div id="outline-container-org5a9ecc1" class="outline-2">
+<h2 id="org5a9ecc1">Interfacing NGSPICE and OCTAVE/MATLAB within Emacs</h2>
+<div class="outline-text-2" id="text-org5a9ecc1">
 <p>
 by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">&lt;26/06/2016-dom&gt;</span></span>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org90b81c9" class="outline-2">
-<h2 id="org90b81c9">Examples</h2>
-<div class="outline-text-2" id="text-org90b81c9">
+<div id="outline-container-org1439714" class="outline-2">
+<h2 id="org1439714">Examples</h2>
+<div class="outline-text-2" id="text-org1439714">
 </div>
-<div id="outline-container-orgb8d5797" class="outline-3">
-<h3 id="orgb8d5797">Octave and Ngspice</h3>
-<div class="outline-text-3" id="text-orgb8d5797">
+<div id="outline-container-orge5a076f" class="outline-3">
+<h3 id="orge5a076f">Octave and Ngspice</h3>
+<div class="outline-text-3" id="text-orge5a076f">
 </div>
-<div id="outline-container-org70320d7" class="outline-4">
-<h4 id="org70320d7">Example using fixed values on variables (WORKS)</h4>
-<div class="outline-text-4" id="text-org70320d7">
+<div id="outline-container-org06631c7" class="outline-4">
+<h4 id="org06631c7">Example using fixed values on variables (WORKS)</h4>
+<div class="outline-text-4" id="text-org06631c7">
 <div class="org-src-container">
-<pre class="src src-spice" id="org67bffd7"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
+<pre class="src src-spice" id="org3dbc50a"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r2</span>
@@ -264,13 +264,13 @@ by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">
 </div>
 
 
-<div id="org015e7d5" class="figure">
+<div id="orgcb10979" class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
 
 
-<div id="orgef76432" class="figure">
+<div id="org40d76d0" class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" width="600px" />
 </p>
 </div>
@@ -278,11 +278,11 @@ by Tiago Oliveira Weber <span class="timestamp-wrapper"><span class="timestamp">
 </div>
 
 
-<div id="outline-container-org87cb533" class="outline-4">
-<h4 id="org87cb533">Example using a single variable result from previous code block (WORKS)</h4>
-<div class="outline-text-4" id="text-org87cb533">
+<div id="outline-container-org68ad7f1" class="outline-4">
+<h4 id="org68ad7f1">Example using a single variable result from previous code block (WORKS)</h4>
+<div class="outline-text-4" id="text-org68ad7f1">
 <div class="org-src-container">
-<pre class="src src-octave" id="org17e8617">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org91cc5a4">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</span>
@@ -313,7 +313,7 @@ ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</sp
 </div>
 
 
-<div id="orga0e1044" class="figure">
+<div id="orgedb2465" class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
@@ -321,11 +321,11 @@ ans <span style="color: #006FE0;">=</span> r2<span style="color: #006FE0;">;</sp
 </div>
 
 
-<div id="outline-container-orgd1e3a06" class="outline-4">
-<h4 id="orgd1e3a06">Example using a vector result from previous code block (WORKS)</h4>
-<div class="outline-text-4" id="text-orgd1e3a06">
+<div id="outline-container-orge6c2d4b" class="outline-4">
+<h4 id="orge6c2d4b">Example using a vector result from previous code block (WORKS)</h4>
+<div class="outline-text-4" id="text-orge6c2d4b">
 <div class="org-src-container">
-<pre class="src src-octave" id="org14ed18c">gain<span style="color: #006FE0;">=-</span>3<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="orgc7bee52">gain<span style="color: #006FE0;">=-</span>3<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">;</span>
@@ -349,7 +349,7 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </table>
 
 <div class="org-src-container">
-<pre class="src src-spice" id="org38d8d58"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
+<pre class="src src-spice" id="orge3a25d6"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Virtual Ground Test: opamp </span><span style="color: #ffff00; background-color: #000000; font-weight: bold;">gain</span><span style="color: #ffff00; background-color: #000000; font-weight: bold;"> = 1000</span>
 <span style="color: #228b22; font-weight: bold;">vin</span> in 0 <span style="color: #6434A3;">dc</span> 0V <span style="color: #6434A3;">sin</span>(0 0.1 100Hz)
 <span style="color: #228b22; font-weight: bold;">r1</span> in inn <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1[0]</span>
 <span style="color: #228b22; font-weight: bold;">r2</span> inn out <span style="color: #8D8D84; font-style: italic;">$</span><span style="color: #008000;">r1[1]</span>
@@ -367,7 +367,7 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </div>
 
 
-<div id="orgc336455" class="figure">
+<div id="orgdbd1837" class="figure">
 <p><img src="./amplifier_vcvs_1000.png" alt="amplifier_vcvs_1000.png" />
 </p>
 </div>
@@ -413,11 +413,11 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </div>
 
 
-<div id="outline-container-org2815d86" class="outline-4">
-<h4 id="org2815d86">Example using output from ngspice to octave</h4>
-<div class="outline-text-4" id="text-org2815d86">
+<div id="outline-container-org8cc93f8" class="outline-4">
+<h4 id="org8cc93f8">Example using output from ngspice to octave</h4>
+<div class="outline-text-4" id="text-org8cc93f8">
 <div class="org-src-container">
-<pre class="src src-spice" id="org203744f"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
+<pre class="src src-spice" id="org3df8d34"><span style="color: #ffff00; background-color: #000000; font-weight: bold;">*Time Constant Measurement</span>
 <span style="color: #228b22; font-weight: bold;">r1</span> 1 0 10<span style="color: #D0372D;">k</span>
 <span style="color: #228b22; font-weight: bold;">c1</span> 1 0 1<span style="color: #D0372D;">p</span>
 <span style="color: #0000FF;">.IC</span> V(1)=1
@@ -471,15 +471,15 @@ ans <span style="color: #006FE0;">=</span> test
 </div>
 
 
-<div id="outline-container-org5654233" class="outline-3">
-<h3 id="org5654233">Octave only (for test)</h3>
-<div class="outline-text-3" id="text-org5654233">
+<div id="outline-container-org3a9146e" class="outline-3">
+<h3 id="org3a9146e">Octave only (for test)</h3>
+<div class="outline-text-3" id="text-org3a9146e">
 </div>
-<div id="outline-container-org75dcb53" class="outline-4">
-<h4 id="org75dcb53">Test octave to octave vector (WORKS)</h4>
-<div class="outline-text-4" id="text-org75dcb53">
+<div id="outline-container-org37a14bc" class="outline-4">
+<h4 id="org37a14bc">Test octave to octave vector (WORKS)</h4>
+<div class="outline-text-4" id="text-org37a14bc">
 <div class="org-src-container">
-<pre class="src src-octave" id="orga7922ff">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org5fbfc4b">gain<span style="color: #006FE0;">=-</span>2<span style="color: #006FE0;">;</span>
 r1<span style="color: #006FE0;">=</span>10e3<span style="color: #006FE0;">;</span>
 r2 <span style="color: #006FE0;">=</span> <span style="color: #006FE0;">-</span>gain<span style="color: #006FE0;">*</span>r1<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">;</span>
@@ -503,7 +503,7 @@ ans <span style="color: #006FE0;">=</span> [r1 r2]<span style="color: #006FE0;">
 </table>
 
 <div class="org-src-container">
-<pre class="src src-octave" id="org5a87ada">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="org99a5906">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</span>
 </pre>
 </div>
@@ -527,20 +527,20 @@ ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</sp
 </div>
 
 
-<div id="outline-container-org0d13151" class="outline-4">
-<h4 id="org0d13151">Test octave vector to octave element (WORKS)</h4>
-<div class="outline-text-4" id="text-org0d13151">
+<div id="outline-container-org2a7b933" class="outline-4">
+<h4 id="org2a7b933">Test octave vector to octave element (WORKS)</h4>
+<div class="outline-text-4" id="text-org2a7b933">
 <div class="org-src-container">
-<pre class="src src-octave" id="org0369102">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
+<pre class="src src-octave" id="orgdc2daf3">vo<span style="color: #006FE0;">=</span>vi<span style="color: #006FE0;">.*</span>2<span style="color: #006FE0;">;</span>
 ans <span style="color: #006FE0;">=</span> vo<span style="color: #006FE0;">;</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7a1ef1f" class="outline-4">
-<h4 id="org7a1ef1f">Test octave vector to perl</h4>
-<div class="outline-text-4" id="text-org7a1ef1f">
+<div id="outline-container-org7a183de" class="outline-4">
+<h4 id="org7a183de">Test octave vector to perl</h4>
+<div class="outline-text-4" id="text-org7a183de">
 </div>
 </div>
 </div>
