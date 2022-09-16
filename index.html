@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-15 qui 21:29 -->
+<!-- 2022-09-15 qui 21:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -240,7 +240,7 @@ document.getElementById(id).width = (newwidth) + "px";
 <h2 id="org50eb8bd">About</h2>
 <div class="outline-text-2" id="text-org50eb8bd">
 
-<div id="orgc1e302a" class="figure">
+<div id="org5d72d64" class="figure">
 <p><img src="img/photob.jpg" alt="photob.jpg" width="200px image" title="Photo" align="right" /> 
 </p>
 </div>
@@ -554,7 +554,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org59e8126" class="figure">
+<div id="org9643cb4" class="figure">
 <p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -590,7 +590,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org34759cf" class="figure">
+<div id="org7953f7c" class="figure">
 <p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -999,75 +999,6 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 <h3 id="org9325e48">For students enrolled in "Special Topics in Instrumentation II" (Tópicos Especiais em Instrumentação II)</h3>
 <div class="outline-text-3" id="text-org9325e48">
 </div>
-<div id="outline-container-orgeb00894" class="outline-4">
-<h4 id="orgeb00894">Use of EMLearn to export Python code to C</h4>
-<div class="outline-text-4" id="text-orgeb00894">
-<div class="org-src-container">
-<pre class="src src-python" id="org3da4a55"><span style="color: #0000FF;">import</span> os
-<span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
-<span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
-<span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
-<span style="color: #0000FF;">from</span> sklearn.preprocessing <span style="color: #0000FF;">import</span> OneHotEncoder, MinMaxScaler, StandardScaler
-
-<span style="color: #0000FF;">from</span> keras.models <span style="color: #0000FF;">import</span> Sequential
-<span style="color: #0000FF;">from</span> keras.layers <span style="color: #0000FF;">import</span> Dense
-
-
-<span style="color: #BA36A5;">data</span> = datasets.load_iris()
-
-<span style="color: #BA36A5;">X</span> = data[<span style="color: #008000;">'data'</span>]
-<span style="color: #BA36A5;">Y</span> = data[<span style="color: #008000;">'target'</span>]
-
-<span style="color: #8D8D84;"># </span><span style="color: #8D8D84; font-style: italic;">use and the scaled input the encoded output</span>
-<span style="color: #BA36A5;">enc</span> = OneHotEncoder()
-<span style="color: #BA36A5;">Y_enc</span> = enc.fit_transform(Y[:, np.newaxis]).toarray()
-<span style="color: #BA36A5;">Y</span> = Y_enc
-
-<span style="color: #BA36A5;">scaler</span> = MinMaxScaler()
-<span style="color: #BA36A5;">X_scaled</span> = scaler.fit_transform(X)
-<span style="color: #BA36A5;">X</span> = X_scaled
-
-<span style="color: #BA36A5;">X_train</span>, <span style="color: #BA36A5;">X_test</span>, <span style="color: #BA36A5;">Y_train</span>, <span style="color: #BA36A5;">Y_test</span> = train_test_split(X, Y, test_size=0.3, random_state=0)
-
-<span style="color: #BA36A5;">num_features</span> = X.shape[1]
-<span style="color: #BA36A5;">num_classes</span> = Y.shape[1]
-
-<span style="color: #BA36A5;">batch_size</span> = 1
-<span style="color: #BA36A5;">epochs</span> = 100
-
-
-<span style="color: #BA36A5;">model</span> = Sequential()
-model.add(Dense(5, input_dim=num_features, activation=<span style="color: #008000;">'tanh'</span>))
-model.add(Dense(num_classes, activation=<span style="color: #008000;">'softmax'</span>))
-model.summary()
-
-model.<span style="color: #006FE0;">compile</span>(loss=<span style="color: #008000;">'categorical_crossentropy'</span>, optimizer=<span style="color: #008000;">'adam'</span>, metrics=[<span style="color: #008000;">'accuracy'</span>])
-
-<span style="color: #BA36A5;">history</span> = model.fit(X_train, Y_train,
-                    batch_size=batch_size,
-                    epochs=epochs,
-                    verbose=1,
-                    )
-
-<span style="color: #BA36A5;">score_train</span> = model.evaluate(X_train, Y_train, verbose=0)
-<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Train loss:'</span>, score_train[0])
-<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Train accuracy:'</span>, score_train[1])
-
-<span style="color: #BA36A5;">score_test</span> = model.evaluate(X_test, Y_test, verbose=0)
-<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Test loss:'</span>, score_test[0])
-<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Test accuracy:'</span>, score_test[1])
-
-
-<span style="color: #0000FF;">import</span> emlearn
-<span style="color: #BA36A5;">cmodel</span> = emlearn.net.convert_keras(model, method=<span style="color: #008000;">'loadable'</span>) <span style="color: #8D8D84;">#</span><span style="color: #8D8D84; font-style: italic;">methods = pymodule or loadable</span>
-cmodel.save(<span style="color: #006FE0;">file</span>=<span style="color: #008000;">'iris_keras.h'</span>, name=<span style="color: #008000;">'iris'</span>)
-
-</pre>
-</div>
-</div>
-</div>
-
-
 <div id="outline-container-orgc07a8f2" class="outline-4">
 <h4 id="orgc07a8f2">Model Optimization</h4>
 <div class="outline-text-4" id="text-orgc07a8f2">
@@ -1101,7 +1032,7 @@ cmodel.save(<span style="color: #006FE0;">file</span>=<span style="color: #00800
 <li>Test using tflite for an MLP</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python" id="orge018804"><span style="color: #0000FF;">import</span> os
+<pre class="src src-python" id="orgacd886b"><span style="color: #0000FF;">import</span> os
 <span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
 <span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
 <span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
@@ -1299,7 +1230,7 @@ q_aware_model.summary()
 <li>Post-training quantization example using tensorflow lite</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python" id="orgacd886b"><span style="color: #0000FF;">import</span> os
+<pre class="src src-python" id="org72c0f39"><span style="color: #0000FF;">import</span> os
 <span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
 <span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
 <span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
@@ -1413,6 +1344,74 @@ model.<span style="color: #006FE0;">compile</span>(loss=<span style="color: #008
 <span style="color: #BA36A5;">integer_quant_model_file</span> = <span style="color: #008000;">'iris_model_integer_quantized.tflite'</span>
 <span style="color: #0000FF;">with</span> <span style="color: #006FE0;">open</span>(integer_quant_model_file, <span style="color: #008000;">'wb'</span>) <span style="color: #0000FF;">as</span> f:
   f.write(tflite_integer_quant_model)
+</pre>
+</div>
+
+
+
+<ul class="org-ul">
+<li>Use of EMLearn to export Python code to C</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-python" id="org3da4a55"><span style="color: #0000FF;">import</span> os
+<span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
+<span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
+<span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
+<span style="color: #0000FF;">from</span> sklearn.preprocessing <span style="color: #0000FF;">import</span> OneHotEncoder, MinMaxScaler, StandardScaler
+
+<span style="color: #0000FF;">from</span> keras.models <span style="color: #0000FF;">import</span> Sequential
+<span style="color: #0000FF;">from</span> keras.layers <span style="color: #0000FF;">import</span> Dense
+
+
+<span style="color: #BA36A5;">data</span> = datasets.load_iris()
+
+<span style="color: #BA36A5;">X</span> = data[<span style="color: #008000;">'data'</span>]
+<span style="color: #BA36A5;">Y</span> = data[<span style="color: #008000;">'target'</span>]
+
+<span style="color: #8D8D84;"># </span><span style="color: #8D8D84; font-style: italic;">use and the scaled input the encoded output</span>
+<span style="color: #BA36A5;">enc</span> = OneHotEncoder()
+<span style="color: #BA36A5;">Y_enc</span> = enc.fit_transform(Y[:, np.newaxis]).toarray()
+<span style="color: #BA36A5;">Y</span> = Y_enc
+
+<span style="color: #BA36A5;">scaler</span> = MinMaxScaler()
+<span style="color: #BA36A5;">X_scaled</span> = scaler.fit_transform(X)
+<span style="color: #BA36A5;">X</span> = X_scaled
+
+<span style="color: #BA36A5;">X_train</span>, <span style="color: #BA36A5;">X_test</span>, <span style="color: #BA36A5;">Y_train</span>, <span style="color: #BA36A5;">Y_test</span> = train_test_split(X, Y, test_size=0.3, random_state=0)
+
+<span style="color: #BA36A5;">num_features</span> = X.shape[1]
+<span style="color: #BA36A5;">num_classes</span> = Y.shape[1]
+
+<span style="color: #BA36A5;">batch_size</span> = 1
+<span style="color: #BA36A5;">epochs</span> = 100
+
+
+<span style="color: #BA36A5;">model</span> = Sequential()
+model.add(Dense(5, input_dim=num_features, activation=<span style="color: #008000;">'tanh'</span>))
+model.add(Dense(num_classes, activation=<span style="color: #008000;">'softmax'</span>))
+model.summary()
+
+model.<span style="color: #006FE0;">compile</span>(loss=<span style="color: #008000;">'categorical_crossentropy'</span>, optimizer=<span style="color: #008000;">'adam'</span>, metrics=[<span style="color: #008000;">'accuracy'</span>])
+
+<span style="color: #BA36A5;">history</span> = model.fit(X_train, Y_train,
+                    batch_size=batch_size,
+                    epochs=epochs,
+                    verbose=1,
+                    )
+
+<span style="color: #BA36A5;">score_train</span> = model.evaluate(X_train, Y_train, verbose=0)
+<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Train loss:'</span>, score_train[0])
+<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Train accuracy:'</span>, score_train[1])
+
+<span style="color: #BA36A5;">score_test</span> = model.evaluate(X_test, Y_test, verbose=0)
+<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Test loss:'</span>, score_test[0])
+<span style="color: #0000FF;">print</span>(<span style="color: #008000;">'Test accuracy:'</span>, score_test[1])
+
+
+<span style="color: #0000FF;">import</span> emlearn
+<span style="color: #BA36A5;">cmodel</span> = emlearn.net.convert_keras(model, method=<span style="color: #008000;">'loadable'</span>) <span style="color: #8D8D84;">#</span><span style="color: #8D8D84; font-style: italic;">methods = pymodule or loadable</span>
+cmodel.save(<span style="color: #006FE0;">file</span>=<span style="color: #008000;">'iris_keras.h'</span>, name=<span style="color: #008000;">'iris'</span>)
+
 </pre>
 </div>
 </div>
