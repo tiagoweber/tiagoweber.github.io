@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-15 qui 21:37 -->
+<!-- 2022-09-15 qui 21:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tiago Oliveira Weber</title>
@@ -240,7 +240,7 @@ document.getElementById(id).width = (newwidth) + "px";
 <h2 id="org50eb8bd">About</h2>
 <div class="outline-text-2" id="text-org50eb8bd">
 
-<div id="org756cf1f" class="figure">
+<div id="org68c5728" class="figure">
 <p><img src="img/photob.jpg" alt="photob.jpg" width="200px image" title="Photo" align="right" /> 
 </p>
 </div>
@@ -554,7 +554,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="orgd28c23f" class="figure">
+<div id="orge938605" class="figure">
 <p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -590,7 +590,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org15ea842" class="figure">
+<div id="orgc94ed57" class="figure">
 <p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -991,9 +991,9 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 </div>
 
 
-<div id="outline-container-for_classes" class="outline-2">
-<h2 id="for_classes">Links/Material for Classes</h2>
-<div class="outline-text-2" id="text-for_classes">
+<div id="outline-container-supplementary_material" class="outline-2">
+<h2 id="supplementary_material">Supplementary material</h2>
+<div class="outline-text-2" id="text-supplementary_material">
 </div>
 
 <div id="outline-container-org9325e48" class="outline-3">
@@ -1033,7 +1033,7 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 <li>Test using tflite for an MLP</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python" id="org72c0f39"><span style="color: #0000FF;">import</span> os
+<pre class="src src-python" id="orga2344a3"><span style="color: #0000FF;">import</span> os
 <span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
 <span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
 <span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
@@ -1231,7 +1231,7 @@ q_aware_model.summary()
 <li>Post-training quantization example using tensorflow lite</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python" id="orga2344a3"><span style="color: #0000FF;">import</span> os
+<pre class="src src-python" id="org03c74d1"><span style="color: #0000FF;">import</span> os
 <span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
 <span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
 <span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
