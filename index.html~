@@ -240,7 +240,7 @@ document.getElementById(id).width = (newwidth) + "px";
 <h2 id="org50eb8bd">About</h2>
 <div class="outline-text-2" id="text-org50eb8bd">
 
-<div id="org553b3a7" class="figure">
+<div id="org1aceb41" class="figure">
 <p><img src="img/photob.jpg" alt="photob.jpg" width="200px image" title="Photo" align="right" /> 
 </p>
 </div>
@@ -554,7 +554,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="orgc77c38a" class="figure">
+<div id="org469f9f6" class="figure">
 <p><img src="img/pareto_miller.png" alt="pareto_miller.png" width="600px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -590,7 +590,7 @@ SAMPA Chip. Photo: Marcos Santos/USP Imagens
 </ul>
 
 
-<div id="org6a209b3" class="figure">
+<div id="orgc9b9e3c" class="figure">
 <p><img src="img/sa_crossover_pso.jpg" alt="sa_crossover_pso.jpg" width="500px image" title="Photo" align="center" /> 
 </p>
 </div>
@@ -1062,7 +1062,7 @@ The classification (A1, A2, B1,&#x2026;) next to the journal name or section is 
 <li>Test using tflite for a MLP</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python" id="org9fa859e"><span style="color: #0000FF;">import</span> os
+<pre class="src src-python" id="org6297dae"><span style="color: #0000FF;">import</span> os
 <span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
 <span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
 <span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
@@ -1260,7 +1260,7 @@ q_aware_model.summary()
 <li>Post-training quantization example using tensorflow lite</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-python" id="org6297dae"><span style="color: #0000FF;">import</span> os
+<pre class="src src-python" id="org4c7f3a4"><span style="color: #0000FF;">import</span> os
 <span style="color: #0000FF;">import</span> numpy <span style="color: #0000FF;">as</span> np
 <span style="color: #0000FF;">from</span> sklearn <span style="color: #0000FF;">import</span> datasets
 <span style="color: #0000FF;">from</span> sklearn.model_selection <span style="color: #0000FF;">import</span> train_test_split
